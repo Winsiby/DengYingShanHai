@@ -1,0 +1,66 @@
+{
+  "Status": "ACQUIRED-FOR-MATERIAL-INSPECTION-NOT-ADOPTED",
+  "Asset": "Leather037",
+  "OfficialAssetPage": "https://ambientcg.com/a/Leather037",
+  "OfficialDownloadURL": "https://ambientcg.com/get?file=Leather037_2K-PNG.zip",
+  "CreationMethod": "PBRMultiAngle",
+  "License": "CC0-1.0",
+  "LicenseURL": "https://docs.ambientcg.com/license/",
+  "MetadataBytes": 57088064,
+  "ArchiveSHA256": "055968FEF7B4F1B401F30E9FA952E1B0ADE2DFB27C82F297CEF8E75EB67E3DC7",
+  "Files": [
+    {
+      "Name": "Leather037_2K-PNG.usdc",
+      "Bytes": 2878,
+      "SHA256": "5D257E136219523F2C487CE65D925616766E1591885C44B9A5FBFBD2D49B331F"
+    },
+    {
+      "Name": "Leather037_2K-PNG_Color.png",
+      "Bytes": 3214622,
+      "SHA256": "A7E4D626C598D14774E668E7541960DD4B3CD98BBE02B3F03921E7344A7A0BA4"
+    },
+    {
+      "Name": "Leather037_2K-PNG_Displacement.png",
+      "Bytes": 7656681,
+      "SHA256": "4313A3CED1EC150F7EABCF13D6E78B6B119D7DB73C2CA2150410BDEA159BA21B"
+    },
+    {
+      "Name": "Leather037_2K-PNG_NormalDX.png",
+      "Bytes": 21185960,
+      "SHA256": "A9E3ABE211BB3D03D4DB523E54272129736587211CF913388443B8B4991858BE"
+    },
+    {
+      "Name": "Leather037_2K-PNG_NormalGL.png",
+      "Bytes": 21186035,
+      "SHA256": "29D9EC22003D090AEB09764AC4F9770973B04459B9C369B4545E18663BFC9072"
+    },
+    {
+      "Name": "Leather037_2K-PNG_Roughness.png",
+      "Bytes": 2356926,
+      "SHA256": "704F08A62971C433AA0EE009B897C45E14BA51EC590AF014DDC3DDF69CD7B278"
+    },
+    {
+      "Name": "Leather037_2K-PNG.blend",
+      "Bytes": 1098996,
+      "SHA256": "D248D3F6307B5A5113734706D59536895C9FF470C21C3ADC94E08D1A9B58A767"
+    },
+    {
+      "Name": "Leather037_2K-PNG.mtlx",
+      "Bytes": 2287,
+      "SHA256": "187EE565A0E3053FBE4A593D607F80AC0714805217FB08A2C5A2FB25B8D9812D"
+    },
+    {
+      "Name": "Leather037_2K-PNG.tres",
+      "Bytes": 812,
+      "SHA256": "67DA70C8F14DA130FC999E28BB67BA8280E55668B61C913F4C5AFCF240A4BA0A"
+    },
+    {
+      "Name": "Leather037.png",
+      "Bytes": 381111,
+      "SHA256": "23380E2E942F1F4FD5D001B5C62E45E7D9C31CFA2F4167BCFE6679586FE690E8"
+    }
+  ],
+  "RasterPixelsEdited": false,
+  "ImportedToUE": false,
+  "HistoricalLeatherSpeciesClaimed": false
+}

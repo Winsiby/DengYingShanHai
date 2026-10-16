@@ -1,0 +1,45 @@
+{
+  "status": "PASS-ACTUAL-BAKED-TEXTURE-MESH-RENDER",
+  "images": [
+    {
+      "name": "T_DY_StageWing_BaseColor",
+      "source": "FILE",
+      "colorspace": "sRGB",
+      "size": [
+        2048,
+        2048
+      ],
+      "filepath": "C:\\Users\\lenovo\\.codex\\visualizations\\2026\\09\\30\\01a0f245-1d70-7ba1-9b69-e6db6a9b7948\\ArtProduction-20261014\\StageSources\\CurtainAuthored\\Baked-Run2\\T_DY_StageWing_BaseColor_2K.png",
+      "has_pixels": true
+    },
+    {
+      "name": "T_DY_StageWing_Normal_DX",
+      "source": "FILE",
+      "colorspace": "Non-Color",
+      "size": [
+        2048,
+        2048
+      ],
+      "filepath": "C:\\Users\\lenovo\\.codex\\visualizations\\2026\\09\\30\\01a0f245-1d70-7ba1-9b69-e6db6a9b7948\\ArtProduction-20261014\\StageSources\\CurtainAuthored\\Baked-Run2\\T_DY_StageWing_Normal_DX_2K.png",
+      "has_pixels": true
+    },
+    {
+      "name": "T_DY_StageWing_Roughness",
+      "source": "FILE",
+      "colorspace": "Non-Color",
+      "size": [
+        2048,
+        2048
+      ],
+      "filepath": "C:\\Users\\lenovo\\.codex\\visualizations\\2026\\09\\30\\01a0f245-1d70-7ba1-9b69-e6db6a9b7948\\ArtProduction-20261014\\StageSources\\CurtainAuthored\\Baked-Run2\\T_DY_StageWing_Roughness_2K.png",
+      "has_pixels": true
+    }
+  ],
+  "preview_files": [
+    "C:\\Users\\lenovo\\.codex\\visualizations\\2026\\09\\30\\01a0f245-1d70-7ba1-9b69-e6db6a9b7948\\ArtProduction-20261014\\StageSources\\CurtainAuthored\\Baked-Preview-Run1\\Curtain-Baked-DeepCrimson.png",
+    "C:\\Users\\lenovo\\.codex\\visualizations\\2026\\09\\30\\01a0f245-1d70-7ba1-9b69-e6db6a9b7948\\ArtProduction-20261014\\StageSources\\CurtainAuthored\\Baked-Preview-Run1\\Curtain-Baked-HemWeaveCloseup.png"
+  ],
+  "uses_bake_uv_channel_0": true,
+  "unrelated_plane_used": false,
+  "original_files_changed": false
+}

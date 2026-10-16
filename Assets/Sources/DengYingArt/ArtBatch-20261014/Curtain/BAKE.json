@@ -1,0 +1,141 @@
+{
+  "status": "PASS-ACTUAL-CURTAIN-2K-NATIVE-PBR-BAKE-PENDING-COLD-UV-VERIFY",
+  "source_blend": "C:\\Users\\lenovo\\.codex\\visualizations\\2026\\09\\30\\01a0f245-1d70-7ba1-9b69-e6db6a9b7948\\ArtProduction-20261014\\StageSources\\CurtainAuthored\\Run2\\DY_StageWingCurtain_Editable.blend",
+  "source_sha256": "78351D2E159362AD666F8E0A47A6DCA3D904DD9BD686B03EF038D3F5E3A9E218",
+  "source_unchanged": true,
+  "blender_version": "4.5.14 LTS",
+  "mesh_name": "SM_DY_StageWingCurtain",
+  "mesh_vertices": 11538,
+  "mesh_polygons": 11536,
+  "mesh_triangles": 23072,
+  "uv_channel_0": "BakeUV",
+  "uv_channel_1": "SourceUV",
+  "source_uv_preserved_exactly": true,
+  "uv_coverage": {
+    "resolution": 2048,
+    "covered_pixels": 1371766,
+    "coverage_percent": 32.7054500579834,
+    "overlapping_triangle_interior_pixels": 0,
+    "zero_area_uv_triangles": 0,
+    "triangles_without_pixel_centres": 2954,
+    "triangles": 23072,
+    "method": "actual BakeUV triangle raster at pixel centres; shared edges excluded"
+  },
+  "textures": [
+    {
+      "name": "BaseColor",
+      "path": "C:\\Users\\lenovo\\.codex\\visualizations\\2026\\09\\30\\01a0f245-1d70-7ba1-9b69-e6db6a9b7948\\ArtProduction-20261014\\StageSources\\CurtainAuthored\\Baked-Run2\\T_DY_StageWing_BaseColor_2K.png",
+      "bytes": 146342,
+      "sha256": "DCED3FAABD1E729E67A68900E3E6096CB07BCC4381A17A3DA4CB7DFB998667CF",
+      "color_space": "sRGB",
+      "native_bake_type": "EMIT",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "coverage_stats_stored_channels": {
+        "covered_rgb_min": [
+          0.23137256503105164,
+          0.027450982481241226,
+          0.07058823853731155
+        ],
+        "covered_rgb_max": [
+          0.25882354378700256,
+          0.0313725508749485,
+          0.09019608050584793
+        ],
+        "covered_rgb_std": [
+          0.006026335060596466,
+          0.000874235644005239,
+          0.004473998676985502
+        ],
+        "covered_alpha_min": 1.0,
+        "covered_alpha_max": 1.0
+      },
+      "normal_convention": null
+    },
+    {
+      "name": "Roughness",
+      "path": "C:\\Users\\lenovo\\.codex\\visualizations\\2026\\09\\30\\01a0f245-1d70-7ba1-9b69-e6db6a9b7948\\ArtProduction-20261014\\StageSources\\CurtainAuthored\\Baked-Run2\\T_DY_StageWing_Roughness_2K.png",
+      "bytes": 1250205,
+      "sha256": "185D36B9FCCFEBE54E653EC8C2F79261735F40045268323331084317754AE2BA",
+      "color_space": "Non-Color",
+      "native_bake_type": "ROUGHNESS",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "coverage_stats_stored_channels": {
+        "covered_rgb_min": [
+          0.7882353663444519,
+          0.7882353663444519,
+          0.7882353663444519
+        ],
+        "covered_rgb_max": [
+          0.847058892250061,
+          0.847058892250061,
+          0.847058892250061
+        ],
+        "covered_rgb_std": [
+          0.009780324064195156,
+          0.009780324064195156,
+          0.009780324064195156
+        ],
+        "covered_alpha_min": 1.0,
+        "covered_alpha_max": 1.0
+      },
+      "normal_convention": null
+    },
+    {
+      "name": "Normal_DX",
+      "path": "C:\\Users\\lenovo\\.codex\\visualizations\\2026\\09\\30\\01a0f245-1d70-7ba1-9b69-e6db6a9b7948\\ArtProduction-20261014\\StageSources\\CurtainAuthored\\Baked-Run2\\T_DY_StageWing_Normal_DX_2K.png",
+      "bytes": 2341488,
+      "sha256": "CECA2CFA63838BA65D11EE16506D66C37C101826C64796A8B711A4C105F56E94",
+      "color_space": "Non-Color",
+      "native_bake_type": "NORMAL",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "coverage_stats_stored_channels": {
+        "covered_rgb_min": [
+          0.3490196168422699,
+          0.35686275362968445,
+          0.9647059440612793
+        ],
+        "covered_rgb_max": [
+          0.6705882549285889,
+          0.6549019813537598,
+          1.0
+        ],
+        "covered_rgb_std": [
+          0.010286967270076275,
+          0.011925416998565197,
+          0.000262683373875916
+        ],
+        "covered_alpha_min": 1.0,
+        "covered_alpha_max": 1.0
+      },
+      "normal_convention": "DirectX tangent normal, negative green/Y; UE FlipGreenChannel=false"
+    }
+  ],
+  "fbx": {
+    "path": "C:\\Users\\lenovo\\.codex\\visualizations\\2026\\09\\30\\01a0f245-1d70-7ba1-9b69-e6db6a9b7948\\ArtProduction-20261014\\StageSources\\CurtainAuthored\\Baked-Run2\\SM_DY_StageWingCurtain_BakedUV.fbx",
+    "sha256": "FB6B092D197213778C2DF4BD2D3BE7D94B5B6BDC0189D318AEFBB85D7EE16818",
+    "bytes": 715260
+  },
+  "blend": {
+    "path": "C:\\Users\\lenovo\\.codex\\visualizations\\2026\\09\\30\\01a0f245-1d70-7ba1-9b69-e6db6a9b7948\\ArtProduction-20261014\\StageSources\\CurtainAuthored\\Baked-Run2\\DY_StageWingCurtain_BakedEditable.blend",
+    "sha256": "6AEF99E40E2F981D8D1B39846C2FCB6740E2D9EC158FB90EE761E9E804960CC7",
+    "bytes": 2135420
+  },
+  "bake_on_actual_curved_closed_mesh_not_plane": true,
+  "light_or_ao_baked_into_basecolor": false,
+  "normal_ue": "DX negative Y; import Non-Color/Normalmap, do not flip green",
+  "normal_blender": "Blender GL uses green inversion node when previewing DX texture",
+  "normal_fbx_auto_import_limit": "Do not trust FBX procedural-normal link conversion; explicitly assign delivered DX normal in UE material.",
+  "bitmap_image_generation_service": false,
+  "downloaded_source_images_edited": false,
+  "ue_imported": false,
+  "d_product_writes": false
+}
