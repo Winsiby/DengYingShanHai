@@ -1,0 +1,964 @@
+{
+  "Diffuse": {
+    "8k": {
+      "jpg": {
+        "size": 40260597,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/chinese_screen_panels/chinese_screen_panels_diff_8k.jpg",
+        "md5": "3b38178d0a5dcb5c4a1db862ddeab18b"
+      },
+      "png": {
+        "size": 205131107,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/chinese_screen_panels/chinese_screen_panels_diff_8k.png",
+        "md5": "c24872e6ee81fa8247b0ca49f49094c8"
+      },
+      "exr": {
+        "size": 99387166,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/chinese_screen_panels/chinese_screen_panels_diff_8k.exr",
+        "md5": "f67ed21fbbece674d9d7a626720fae6a"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 9723625,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/chinese_screen_panels/chinese_screen_panels_diff_4k.jpg",
+        "md5": "3f9d1826bd459422e2e77d08df18e7c1"
+      },
+      "png": {
+        "size": 59901422,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/chinese_screen_panels/chinese_screen_panels_diff_4k.png",
+        "md5": "a54fc906f00766ca60d0b8c424c452f3"
+      },
+      "exr": {
+        "size": 22281263,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/chinese_screen_panels/chinese_screen_panels_diff_4k.exr",
+        "md5": "de566c07ce67e72f0fdec1d7b22b275c"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2496906,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/chinese_screen_panels/chinese_screen_panels_diff_2k.jpg",
+        "md5": "d31518c166b7dabfb0ba16a00669f25e"
+      },
+      "png": {
+        "size": 16016213,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/chinese_screen_panels/chinese_screen_panels_diff_2k.png",
+        "md5": "89ffe8a283b96e252ad6dd508e64af56"
+      },
+      "exr": {
+        "size": 5310030,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/chinese_screen_panels/chinese_screen_panels_diff_2k.exr",
+        "md5": "e8854edb091e52c636c33b5bbad4ba28"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 666440,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/chinese_screen_panels/chinese_screen_panels_diff_1k.jpg",
+        "md5": "5aa7494de265d99a25e0c86daa2137a5"
+      },
+      "png": {
+        "size": 4282284,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/chinese_screen_panels/chinese_screen_panels_diff_1k.png",
+        "md5": "6fb59491a002ec29f0647114e0c79da2"
+      },
+      "exr": {
+        "size": 1407438,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/chinese_screen_panels/chinese_screen_panels_diff_1k.exr",
+        "md5": "210a967f0f36ead8697288899c57297b"
+      }
+    }
+  },
+  "nor_dx": {
+    "8k": {
+      "jpg": {
+        "size": 25945894,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/chinese_screen_panels/chinese_screen_panels_nor_dx_8k.jpg",
+        "md5": "fbc28a6c31055b56e926a44f6bf8259e"
+      },
+      "png": {
+        "size": 128042136,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/chinese_screen_panels/chinese_screen_panels_nor_dx_8k.png",
+        "md5": "e17da9623a28e1387c6eac5067a7016f"
+      },
+      "exr": {
+        "size": 54070934,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/chinese_screen_panels/chinese_screen_panels_nor_dx_8k.exr",
+        "md5": "2e6518959db45be1c84e140066fadd97"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 6927245,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/chinese_screen_panels/chinese_screen_panels_nor_dx_4k.jpg",
+        "md5": "aa85364c963be1a8dc42e2698afdee90"
+      },
+      "png": {
+        "size": 45170572,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/chinese_screen_panels/chinese_screen_panels_nor_dx_4k.png",
+        "md5": "9bddae0c225309c988d3bb63df79476e"
+      },
+      "exr": {
+        "size": 15716842,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/chinese_screen_panels/chinese_screen_panels_nor_dx_4k.exr",
+        "md5": "51cba649982d9083f2c30ff8fca9663b"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1671095,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/chinese_screen_panels/chinese_screen_panels_nor_dx_2k.jpg",
+        "md5": "c372032b4df4e6f4da4b89fe9d20ce8d"
+      },
+      "png": {
+        "size": 12984763,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/chinese_screen_panels/chinese_screen_panels_nor_dx_2k.png",
+        "md5": "2ef7db9fc2098d8ccf16fbcfddbfd3ef"
+      },
+      "exr": {
+        "size": 3776210,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/chinese_screen_panels/chinese_screen_panels_nor_dx_2k.exr",
+        "md5": "c9072dded4666707ca1badcffc8745b2"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 428925,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/chinese_screen_panels/chinese_screen_panels_nor_dx_1k.jpg",
+        "md5": "2963042ef520004286af41c2c65abcd5"
+      },
+      "png": {
+        "size": 3577668,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/chinese_screen_panels/chinese_screen_panels_nor_dx_1k.png",
+        "md5": "8bda644dac2958ddc9dd0e720d15b5d3"
+      },
+      "exr": {
+        "size": 917741,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/chinese_screen_panels/chinese_screen_panels_nor_dx_1k.exr",
+        "md5": "1d04e9e6169c7acece852e6351b7c873"
+      }
+    }
+  },
+  "nor_gl": {
+    "8k": {
+      "jpg": {
+        "size": 26028853,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/chinese_screen_panels/chinese_screen_panels_nor_gl_8k.jpg",
+        "md5": "f7a291ac4ab33eacc33510afdff457ce"
+      },
+      "png": {
+        "size": 128028496,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/chinese_screen_panels/chinese_screen_panels_nor_gl_8k.png",
+        "md5": "838c2893bcbf6be6f9af2bdd493046bb"
+      },
+      "exr": {
+        "size": 53950927,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/chinese_screen_panels/chinese_screen_panels_nor_gl_8k.exr",
+        "md5": "5b4c47af40366d2adb8b80289623c383"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 6917563,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/chinese_screen_panels/chinese_screen_panels_nor_gl_4k.jpg",
+        "md5": "3f91a9f61f3f6a311ce724fda2eb72d3"
+      },
+      "png": {
+        "size": 45305116,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/chinese_screen_panels/chinese_screen_panels_nor_gl_4k.png",
+        "md5": "6cb9c391f834c18f5cd839b03b2b2d99"
+      },
+      "exr": {
+        "size": 15778582,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/chinese_screen_panels/chinese_screen_panels_nor_gl_4k.exr",
+        "md5": "bb913be1a2f0e6b1f73c35ec54f4331f"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1667117,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/chinese_screen_panels/chinese_screen_panels_nor_gl_2k.jpg",
+        "md5": "3c91fd9bfd2ec89165b7e4d725cad79b"
+      },
+      "png": {
+        "size": 12999274,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/chinese_screen_panels/chinese_screen_panels_nor_gl_2k.png",
+        "md5": "ed7f0330306c7e0d5deaa78ea59f14db"
+      },
+      "exr": {
+        "size": 3795612,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/chinese_screen_panels/chinese_screen_panels_nor_gl_2k.exr",
+        "md5": "35941b936b73c07df3500367dc3aff12"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 428108,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/chinese_screen_panels/chinese_screen_panels_nor_gl_1k.jpg",
+        "md5": "5aefa3e752c297f545890b23f1d3397d"
+      },
+      "png": {
+        "size": 3575349,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/chinese_screen_panels/chinese_screen_panels_nor_gl_1k.png",
+        "md5": "30a006efffffdf30fd4b6d4f5eb28aaa"
+      },
+      "exr": {
+        "size": 923401,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/chinese_screen_panels/chinese_screen_panels_nor_gl_1k.exr",
+        "md5": "ba10034b59543ed3147cefd781c1815f"
+      }
+    }
+  },
+  "blend": {
+    "8k": {
+      "blend": {
+        "include": {
+          "textures/chinese_screen_panels_diff_8k.jpg": {
+            "size": 40260597,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/chinese_screen_panels/chinese_screen_panels_diff_8k.jpg",
+            "md5": "3b38178d0a5dcb5c4a1db862ddeab18b"
+          },
+          "textures/chinese_screen_panels_nor_gl_8k.exr": {
+            "size": 53950927,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/chinese_screen_panels/chinese_screen_panels_nor_gl_8k.exr",
+            "md5": "5b4c47af40366d2adb8b80289623c383"
+          },
+          "textures/chinese_screen_panels_rough_8k.exr": {
+            "size": 36002334,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/chinese_screen_panels/chinese_screen_panels_rough_8k.exr",
+            "md5": "f17755458273dc5053a32c8dc94d030a"
+          },
+          "textures/chinese_screen_panels_metal_8k.exr": {
+            "size": 582021,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/chinese_screen_panels/chinese_screen_panels_metal_8k.exr",
+            "md5": "b7a80fadde60fd0af4a843b0af328886"
+          }
+        },
+        "size": 132513,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/8k/chinese_screen_panels/chinese_screen_panels_8k.blend",
+        "md5": "f1aed0b7090797b6df71b923f528a92b"
+      }
+    },
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/chinese_screen_panels_nor_gl_4k.exr": {
+            "size": 15778582,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/chinese_screen_panels/chinese_screen_panels_nor_gl_4k.exr",
+            "md5": "bb913be1a2f0e6b1f73c35ec54f4331f"
+          },
+          "textures/chinese_screen_panels_diff_4k.jpg": {
+            "size": 9723625,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/chinese_screen_panels/chinese_screen_panels_diff_4k.jpg",
+            "md5": "3f9d1826bd459422e2e77d08df18e7c1"
+          },
+          "textures/chinese_screen_panels_rough_4k.exr": {
+            "size": 8465786,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/chinese_screen_panels/chinese_screen_panels_rough_4k.exr",
+            "md5": "f29019e63d396269471b5757e63c946f"
+          },
+          "textures/chinese_screen_panels_metal_4k.exr": {
+            "size": 216575,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/chinese_screen_panels/chinese_screen_panels_metal_4k.exr",
+            "md5": "077e8a12213ac3990542794c4ee6727b"
+          }
+        },
+        "size": 132400,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/4k/chinese_screen_panels/chinese_screen_panels_4k.blend",
+        "md5": "54d46788c484f02d79e0b4c381f1d0d0"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/chinese_screen_panels_diff_2k.jpg": {
+            "size": 2496906,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/chinese_screen_panels/chinese_screen_panels_diff_2k.jpg",
+            "md5": "d31518c166b7dabfb0ba16a00669f25e"
+          },
+          "textures/chinese_screen_panels_nor_gl_2k.exr": {
+            "size": 3795612,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/chinese_screen_panels/chinese_screen_panels_nor_gl_2k.exr",
+            "md5": "35941b936b73c07df3500367dc3aff12"
+          },
+          "textures/chinese_screen_panels_metal_2k.exr": {
+            "size": 86202,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/chinese_screen_panels/chinese_screen_panels_metal_2k.exr",
+            "md5": "53224e10f3c6f93be7b7b4e393764387"
+          },
+          "textures/chinese_screen_panels_rough_2k.exr": {
+            "size": 2107962,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/chinese_screen_panels/chinese_screen_panels_rough_2k.exr",
+            "md5": "429de56bb374aabbbde55716a39fbcd8"
+          }
+        },
+        "size": 132449,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/chinese_screen_panels/chinese_screen_panels_2k.blend",
+        "md5": "c5eb95cbb4e8f27d2cc6cd7405f69ddd"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/chinese_screen_panels_metal_1k.exr": {
+            "size": 35558,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/chinese_screen_panels/chinese_screen_panels_metal_1k.exr",
+            "md5": "f3a205368dccbb06055cf8b261c38932"
+          },
+          "textures/chinese_screen_panels_rough_1k.exr": {
+            "size": 570438,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/chinese_screen_panels/chinese_screen_panels_rough_1k.exr",
+            "md5": "3d57abbb305c0c59f2129aa8c7eee493"
+          },
+          "textures/chinese_screen_panels_nor_gl_1k.exr": {
+            "size": 923401,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/chinese_screen_panels/chinese_screen_panels_nor_gl_1k.exr",
+            "md5": "ba10034b59543ed3147cefd781c1815f"
+          },
+          "textures/chinese_screen_panels_diff_1k.jpg": {
+            "size": 666440,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/chinese_screen_panels/chinese_screen_panels_diff_1k.jpg",
+            "md5": "5aa7494de265d99a25e0c86daa2137a5"
+          }
+        },
+        "size": 132400,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/chinese_screen_panels/chinese_screen_panels_1k.blend",
+        "md5": "3592948b9bc3b6b3d574500da8a182b2"
+      }
+    }
+  },
+  "gltf": {
+    "8k": {
+      "gltf": {
+        "include": {
+          "textures/chinese_screen_panels_nor_gl_8k.jpg": {
+            "size": 26028853,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/chinese_screen_panels/chinese_screen_panels_nor_gl_8k.jpg",
+            "md5": "f7a291ac4ab33eacc33510afdff457ce"
+          },
+          "textures/chinese_screen_panels_diff_8k.jpg": {
+            "size": 40260597,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/chinese_screen_panels/chinese_screen_panels_diff_8k.jpg",
+            "md5": "3b38178d0a5dcb5c4a1db862ddeab18b"
+          },
+          "textures/chinese_screen_panels_arm_8k.jpg": {
+            "size": 37568295,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/chinese_screen_panels/chinese_screen_panels_arm_8k.jpg",
+            "md5": "c24a6adcf3fb567bb2c0bf915565c911"
+          },
+          "chinese_screen_panels.bin": {
+            "size": 35936,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/chinese_screen_panels/chinese_screen_panels.bin",
+            "md5": "f3ec2d7d0c14165e764e930112a31616"
+          }
+        },
+        "size": 4225,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/chinese_screen_panels/chinese_screen_panels_8k.gltf",
+        "md5": "b7794076e86cec912c6b71c397fbdc18"
+      }
+    },
+    "4k": {
+      "gltf": {
+        "include": {
+          "textures/chinese_screen_panels_arm_4k.jpg": {
+            "size": 8620150,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/chinese_screen_panels/chinese_screen_panels_arm_4k.jpg",
+            "md5": "6f2b9ceb4e8f29e683054f26e6c4de7d"
+          },
+          "textures/chinese_screen_panels_diff_4k.jpg": {
+            "size": 9723625,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/chinese_screen_panels/chinese_screen_panels_diff_4k.jpg",
+            "md5": "3f9d1826bd459422e2e77d08df18e7c1"
+          },
+          "textures/chinese_screen_panels_nor_gl_4k.jpg": {
+            "size": 6917563,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/chinese_screen_panels/chinese_screen_panels_nor_gl_4k.jpg",
+            "md5": "3f91a9f61f3f6a311ce724fda2eb72d3"
+          },
+          "chinese_screen_panels.bin": {
+            "size": 35936,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/chinese_screen_panels/chinese_screen_panels.bin",
+            "md5": "f3ec2d7d0c14165e764e930112a31616"
+          }
+        },
+        "size": 4225,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/chinese_screen_panels/chinese_screen_panels_4k.gltf",
+        "md5": "ddbcafece204188ff371ca12a002fe4a"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "textures/chinese_screen_panels_nor_gl_2k.jpg": {
+            "size": 1667117,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/chinese_screen_panels/chinese_screen_panels_nor_gl_2k.jpg",
+            "md5": "3c91fd9bfd2ec89165b7e4d725cad79b"
+          },
+          "textures/chinese_screen_panels_diff_2k.jpg": {
+            "size": 2496906,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/chinese_screen_panels/chinese_screen_panels_diff_2k.jpg",
+            "md5": "d31518c166b7dabfb0ba16a00669f25e"
+          },
+          "textures/chinese_screen_panels_arm_2k.jpg": {
+            "size": 2104738,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/chinese_screen_panels/chinese_screen_panels_arm_2k.jpg",
+            "md5": "5ed68d24ca62e97ec19184f3d557b986"
+          },
+          "chinese_screen_panels.bin": {
+            "size": 35936,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/chinese_screen_panels/chinese_screen_panels.bin",
+            "md5": "f3ec2d7d0c14165e764e930112a31616"
+          }
+        },
+        "size": 4225,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/chinese_screen_panels/chinese_screen_panels_2k.gltf",
+        "md5": "8e2def3c007a7b8d6216f70a3e5db647"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "textures/chinese_screen_panels_arm_1k.jpg": {
+            "size": 558223,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/chinese_screen_panels/chinese_screen_panels_arm_1k.jpg",
+            "md5": "2280069ab77f92ddab27cd93098d5253"
+          },
+          "textures/chinese_screen_panels_diff_1k.jpg": {
+            "size": 666440,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/chinese_screen_panels/chinese_screen_panels_diff_1k.jpg",
+            "md5": "5aa7494de265d99a25e0c86daa2137a5"
+          },
+          "chinese_screen_panels.bin": {
+            "size": 35936,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/chinese_screen_panels/chinese_screen_panels.bin",
+            "md5": "f3ec2d7d0c14165e764e930112a31616"
+          },
+          "textures/chinese_screen_panels_nor_gl_1k.jpg": {
+            "size": 428108,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/chinese_screen_panels/chinese_screen_panels_nor_gl_1k.jpg",
+            "md5": "5aefa3e752c297f545890b23f1d3397d"
+          }
+        },
+        "size": 4225,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/chinese_screen_panels/chinese_screen_panels_1k.gltf",
+        "md5": "757c0dbdcbb0eae54e6dfa8ea812caaa"
+      }
+    }
+  },
+  "usd": {
+    "8k": {
+      "usd": {
+        "include": {
+          "textures/chinese_screen_panels_diff_8k.jpg": {
+            "size": 40260597,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/chinese_screen_panels/chinese_screen_panels_diff_8k.jpg",
+            "md5": "3b38178d0a5dcb5c4a1db862ddeab18b"
+          },
+          "textures/chinese_screen_panels_nor_gl_8k.exr": {
+            "size": 53950927,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/chinese_screen_panels/chinese_screen_panels_nor_gl_8k.exr",
+            "md5": "5b4c47af40366d2adb8b80289623c383"
+          },
+          "textures/chinese_screen_panels_rough_8k.exr": {
+            "size": 36002334,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/chinese_screen_panels/chinese_screen_panels_rough_8k.exr",
+            "md5": "f17755458273dc5053a32c8dc94d030a"
+          },
+          "textures/chinese_screen_panels_metal_8k.exr": {
+            "size": 582021,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/chinese_screen_panels/chinese_screen_panels_metal_8k.exr",
+            "md5": "b7a80fadde60fd0af4a843b0af328886"
+          }
+        },
+        "size": 49330,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/8k/chinese_screen_panels/chinese_screen_panels_8k.usdc",
+        "md5": "16b2e6d0309645453a37134829c62d23"
+      }
+    },
+    "4k": {
+      "usd": {
+        "include": {
+          "textures/chinese_screen_panels_nor_gl_4k.exr": {
+            "size": 15778582,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/chinese_screen_panels/chinese_screen_panels_nor_gl_4k.exr",
+            "md5": "bb913be1a2f0e6b1f73c35ec54f4331f"
+          },
+          "textures/chinese_screen_panels_diff_4k.jpg": {
+            "size": 9723625,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/chinese_screen_panels/chinese_screen_panels_diff_4k.jpg",
+            "md5": "3f9d1826bd459422e2e77d08df18e7c1"
+          },
+          "textures/chinese_screen_panels_rough_4k.exr": {
+            "size": 8465786,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/chinese_screen_panels/chinese_screen_panels_rough_4k.exr",
+            "md5": "f29019e63d396269471b5757e63c946f"
+          },
+          "textures/chinese_screen_panels_metal_4k.exr": {
+            "size": 216575,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/chinese_screen_panels/chinese_screen_panels_metal_4k.exr",
+            "md5": "077e8a12213ac3990542794c4ee6727b"
+          }
+        },
+        "size": 49334,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/4k/chinese_screen_panels/chinese_screen_panels_4k.usdc",
+        "md5": "13d4c5cb2010c58633954aced99b0a53"
+      }
+    },
+    "2k": {
+      "usd": {
+        "include": {
+          "textures/chinese_screen_panels_diff_2k.jpg": {
+            "size": 2496906,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/chinese_screen_panels/chinese_screen_panels_diff_2k.jpg",
+            "md5": "d31518c166b7dabfb0ba16a00669f25e"
+          },
+          "textures/chinese_screen_panels_nor_gl_2k.exr": {
+            "size": 3795612,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/chinese_screen_panels/chinese_screen_panels_nor_gl_2k.exr",
+            "md5": "35941b936b73c07df3500367dc3aff12"
+          },
+          "textures/chinese_screen_panels_metal_2k.exr": {
+            "size": 86202,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/chinese_screen_panels/chinese_screen_panels_metal_2k.exr",
+            "md5": "53224e10f3c6f93be7b7b4e393764387"
+          },
+          "textures/chinese_screen_panels_rough_2k.exr": {
+            "size": 2107962,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/chinese_screen_panels/chinese_screen_panels_rough_2k.exr",
+            "md5": "429de56bb374aabbbde55716a39fbcd8"
+          }
+        },
+        "size": 49334,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/2k/chinese_screen_panels/chinese_screen_panels_2k.usdc",
+        "md5": "6a68a5015419168560596e188156fa11"
+      }
+    },
+    "1k": {
+      "usd": {
+        "include": {
+          "textures/chinese_screen_panels_metal_1k.exr": {
+            "size": 35558,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/chinese_screen_panels/chinese_screen_panels_metal_1k.exr",
+            "md5": "f3a205368dccbb06055cf8b261c38932"
+          },
+          "textures/chinese_screen_panels_rough_1k.exr": {
+            "size": 570438,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/chinese_screen_panels/chinese_screen_panels_rough_1k.exr",
+            "md5": "3d57abbb305c0c59f2129aa8c7eee493"
+          },
+          "textures/chinese_screen_panels_nor_gl_1k.exr": {
+            "size": 923401,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/chinese_screen_panels/chinese_screen_panels_nor_gl_1k.exr",
+            "md5": "ba10034b59543ed3147cefd781c1815f"
+          },
+          "textures/chinese_screen_panels_diff_1k.jpg": {
+            "size": 666440,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/chinese_screen_panels/chinese_screen_panels_diff_1k.jpg",
+            "md5": "5aa7494de265d99a25e0c86daa2137a5"
+          }
+        },
+        "size": 49357,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/1k/chinese_screen_panels/chinese_screen_panels_1k.usdc",
+        "md5": "8ea947913830b9fd9948f3a75a40c076"
+      }
+    }
+  },
+  "Metal": {
+    "8k": {
+      "jpg": {
+        "size": 1178613,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/chinese_screen_panels/chinese_screen_panels_metal_8k.jpg",
+        "md5": "c402bc08b2b10ed17bd82f1787a68606"
+      },
+      "png": {
+        "size": 536750,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/chinese_screen_panels/chinese_screen_panels_metal_8k.png",
+        "md5": "9e3af5130610c74b0e8c3f488a42ace6"
+      },
+      "exr": {
+        "size": 582021,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/chinese_screen_panels/chinese_screen_panels_metal_8k.exr",
+        "md5": "b7a80fadde60fd0af4a843b0af328886"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 326070,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/chinese_screen_panels/chinese_screen_panels_metal_4k.jpg",
+        "md5": "99aa19c711636ad8b54b9eb2c34bde92"
+      },
+      "png": {
+        "size": 187197,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/chinese_screen_panels/chinese_screen_panels_metal_4k.png",
+        "md5": "aa950b01a6907919806dee1fae28ad99"
+      },
+      "exr": {
+        "size": 216575,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/chinese_screen_panels/chinese_screen_panels_metal_4k.exr",
+        "md5": "077e8a12213ac3990542794c4ee6727b"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 96250,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/chinese_screen_panels/chinese_screen_panels_metal_2k.jpg",
+        "md5": "d73fc693ea92fc1bebd9ccbb301a7ff0"
+      },
+      "png": {
+        "size": 66571,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/chinese_screen_panels/chinese_screen_panels_metal_2k.png",
+        "md5": "29d46fb2f0f43bae97b9ea19a81b42a7"
+      },
+      "exr": {
+        "size": 86202,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/chinese_screen_panels/chinese_screen_panels_metal_2k.exr",
+        "md5": "53224e10f3c6f93be7b7b4e393764387"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 30124,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/chinese_screen_panels/chinese_screen_panels_metal_1k.jpg",
+        "md5": "7ae701a87882e3f02d5ef3df03ac841e"
+      },
+      "png": {
+        "size": 23870,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/chinese_screen_panels/chinese_screen_panels_metal_1k.png",
+        "md5": "65b5284de0699a0377fd497f5c96bd61"
+      },
+      "exr": {
+        "size": 35558,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/chinese_screen_panels/chinese_screen_panels_metal_1k.exr",
+        "md5": "f3a205368dccbb06055cf8b261c38932"
+      }
+    }
+  },
+  "arm": {
+    "8k": {
+      "jpg": {
+        "size": 37568295,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/chinese_screen_panels/chinese_screen_panels_arm_8k.jpg",
+        "md5": "c24a6adcf3fb567bb2c0bf915565c911"
+      },
+      "png": {
+        "size": 76667365,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/chinese_screen_panels/chinese_screen_panels_arm_8k.png",
+        "md5": "864b5e892021489499f335f1b168ecbe"
+      },
+      "exr": {
+        "size": 87935154,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/chinese_screen_panels/chinese_screen_panels_arm_8k.exr",
+        "md5": "f1d431c3f27fb7a67c5b1533ca600859"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 8620150,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/chinese_screen_panels/chinese_screen_panels_arm_4k.jpg",
+        "md5": "6f2b9ceb4e8f29e683054f26e6c4de7d"
+      },
+      "png": {
+        "size": 36837996,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/chinese_screen_panels/chinese_screen_panels_arm_4k.png",
+        "md5": "3de1e1d0fbd610a74951185e04a9b84a"
+      },
+      "exr": {
+        "size": 20211607,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/chinese_screen_panels/chinese_screen_panels_arm_4k.exr",
+        "md5": "97b1e2bb0c14fa3f65e97d7a07e472a3"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2104738,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/chinese_screen_panels/chinese_screen_panels_arm_2k.jpg",
+        "md5": "5ed68d24ca62e97ec19184f3d557b986"
+      },
+      "png": {
+        "size": 10669166,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/chinese_screen_panels/chinese_screen_panels_arm_2k.png",
+        "md5": "71b1fed3490342a84d0699d5275cb7e8"
+      },
+      "exr": {
+        "size": 4840231,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/chinese_screen_panels/chinese_screen_panels_arm_2k.exr",
+        "md5": "d1de918a7e486f53f12701799a54b904"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 558223,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/chinese_screen_panels/chinese_screen_panels_arm_1k.jpg",
+        "md5": "2280069ab77f92ddab27cd93098d5253"
+      },
+      "png": {
+        "size": 2990126,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/chinese_screen_panels/chinese_screen_panels_arm_1k.png",
+        "md5": "61323e6b53573ea4e6d2006e3b7fa5df"
+      },
+      "exr": {
+        "size": 1275577,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/chinese_screen_panels/chinese_screen_panels_arm_1k.exr",
+        "md5": "e31628e14fddc9e35bd3e86e18b363e2"
+      }
+    }
+  },
+  "fbx": {
+    "8k": {
+      "fbx": {
+        "include": {
+          "textures/chinese_screen_panels_diff_8k.jpg": {
+            "size": 40260597,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/chinese_screen_panels/chinese_screen_panels_diff_8k.jpg",
+            "md5": "3b38178d0a5dcb5c4a1db862ddeab18b"
+          },
+          "textures/chinese_screen_panels_nor_gl_8k.exr": {
+            "size": 53950927,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/chinese_screen_panels/chinese_screen_panels_nor_gl_8k.exr",
+            "md5": "5b4c47af40366d2adb8b80289623c383"
+          },
+          "textures/chinese_screen_panels_rough_8k.exr": {
+            "size": 36002334,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/chinese_screen_panels/chinese_screen_panels_rough_8k.exr",
+            "md5": "f17755458273dc5053a32c8dc94d030a"
+          },
+          "textures/chinese_screen_panels_metal_8k.exr": {
+            "size": 582021,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/chinese_screen_panels/chinese_screen_panels_metal_8k.exr",
+            "md5": "b7a80fadde60fd0af4a843b0af328886"
+          }
+        },
+        "size": 55212,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/8k/chinese_screen_panels/chinese_screen_panels_8k.fbx",
+        "md5": "86d26336c57c6ac2645631b59f219ec3"
+      }
+    },
+    "4k": {
+      "fbx": {
+        "include": {
+          "textures/chinese_screen_panels_nor_gl_4k.exr": {
+            "size": 15778582,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/chinese_screen_panels/chinese_screen_panels_nor_gl_4k.exr",
+            "md5": "bb913be1a2f0e6b1f73c35ec54f4331f"
+          },
+          "textures/chinese_screen_panels_diff_4k.jpg": {
+            "size": 9723625,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/chinese_screen_panels/chinese_screen_panels_diff_4k.jpg",
+            "md5": "3f9d1826bd459422e2e77d08df18e7c1"
+          },
+          "textures/chinese_screen_panels_rough_4k.exr": {
+            "size": 8465786,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/chinese_screen_panels/chinese_screen_panels_rough_4k.exr",
+            "md5": "f29019e63d396269471b5757e63c946f"
+          },
+          "textures/chinese_screen_panels_metal_4k.exr": {
+            "size": 216575,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/chinese_screen_panels/chinese_screen_panels_metal_4k.exr",
+            "md5": "077e8a12213ac3990542794c4ee6727b"
+          }
+        },
+        "size": 55212,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/4k/chinese_screen_panels/chinese_screen_panels_4k.fbx",
+        "md5": "37ebd4bf4772894bc54a3dd06d990608"
+      }
+    },
+    "2k": {
+      "fbx": {
+        "include": {
+          "textures/chinese_screen_panels_diff_2k.jpg": {
+            "size": 2496906,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/chinese_screen_panels/chinese_screen_panels_diff_2k.jpg",
+            "md5": "d31518c166b7dabfb0ba16a00669f25e"
+          },
+          "textures/chinese_screen_panels_nor_gl_2k.exr": {
+            "size": 3795612,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/chinese_screen_panels/chinese_screen_panels_nor_gl_2k.exr",
+            "md5": "35941b936b73c07df3500367dc3aff12"
+          },
+          "textures/chinese_screen_panels_metal_2k.exr": {
+            "size": 86202,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/chinese_screen_panels/chinese_screen_panels_metal_2k.exr",
+            "md5": "53224e10f3c6f93be7b7b4e393764387"
+          },
+          "textures/chinese_screen_panels_rough_2k.exr": {
+            "size": 2107962,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/chinese_screen_panels/chinese_screen_panels_rough_2k.exr",
+            "md5": "429de56bb374aabbbde55716a39fbcd8"
+          }
+        },
+        "size": 55212,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/chinese_screen_panels/chinese_screen_panels_2k.fbx",
+        "md5": "61a5108edaa2fadd03abe6fd94ab965b"
+      }
+    },
+    "1k": {
+      "fbx": {
+        "include": {
+          "textures/chinese_screen_panels_metal_1k.exr": {
+            "size": 35558,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/chinese_screen_panels/chinese_screen_panels_metal_1k.exr",
+            "md5": "f3a205368dccbb06055cf8b261c38932"
+          },
+          "textures/chinese_screen_panels_rough_1k.exr": {
+            "size": 570438,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/chinese_screen_panels/chinese_screen_panels_rough_1k.exr",
+            "md5": "3d57abbb305c0c59f2129aa8c7eee493"
+          },
+          "textures/chinese_screen_panels_nor_gl_1k.exr": {
+            "size": 923401,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/chinese_screen_panels/chinese_screen_panels_nor_gl_1k.exr",
+            "md5": "ba10034b59543ed3147cefd781c1815f"
+          },
+          "textures/chinese_screen_panels_diff_1k.jpg": {
+            "size": 666440,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/chinese_screen_panels/chinese_screen_panels_diff_1k.jpg",
+            "md5": "5aa7494de265d99a25e0c86daa2137a5"
+          }
+        },
+        "size": 55212,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/chinese_screen_panels/chinese_screen_panels_1k.fbx",
+        "md5": "5dc278dbcd796a54edc16fb87801c517"
+      }
+    }
+  },
+  "AO": {
+    "8k": {
+      "jpg": {
+        "size": 17387164,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/chinese_screen_panels/chinese_screen_panels_ao_8k.jpg",
+        "md5": "7f2b8a0e6b8704034683a0906440f7f5"
+      },
+      "png": {
+        "size": 19783913,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/chinese_screen_panels/chinese_screen_panels_ao_8k.png",
+        "md5": "954fe577b43130041ee73cbe154c75c6"
+      },
+      "exr": {
+        "size": 16385547,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/chinese_screen_panels/chinese_screen_panels_ao_8k.exr",
+        "md5": "ccdb6299a032d5dfce2aaa0558d9c52d"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 4947702,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/chinese_screen_panels/chinese_screen_panels_ao_4k.jpg",
+        "md5": "a848e54cf098712aac533a1a020d17c6"
+      },
+      "png": {
+        "size": 12297363,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/chinese_screen_panels/chinese_screen_panels_ao_4k.png",
+        "md5": "955c1e209d58587825eb2eb36ed6c2f0"
+      },
+      "exr": {
+        "size": 5063870,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/chinese_screen_panels/chinese_screen_panels_ao_4k.exr",
+        "md5": "75d1e7781d3a692cfbb2f78852d7dd2c"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1187159,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/chinese_screen_panels/chinese_screen_panels_ao_2k.jpg",
+        "md5": "2018bb92a3b70f634047baad65912e72"
+      },
+      "png": {
+        "size": 3776850,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/chinese_screen_panels/chinese_screen_panels_ao_2k.png",
+        "md5": "4e944b8f220b44e3d22129e5d86d0f1b"
+      },
+      "exr": {
+        "size": 1182780,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/chinese_screen_panels/chinese_screen_panels_ao_2k.exr",
+        "md5": "ae7bb336b6532634ed389a56bcf8c641"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 308189,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/chinese_screen_panels/chinese_screen_panels_ao_1k.jpg",
+        "md5": "f0a76623a306d0e7280e8a699e15997f"
+      },
+      "png": {
+        "size": 1097258,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/chinese_screen_panels/chinese_screen_panels_ao_1k.png",
+        "md5": "30379e5a0e857014f630415fe7dff9cd"
+      },
+      "exr": {
+        "size": 329925,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/chinese_screen_panels/chinese_screen_panels_ao_1k.exr",
+        "md5": "0964af99b58b9a63e839b2b13406d0b8"
+      }
+    }
+  },
+  "Rough": {
+    "8k": {
+      "jpg": {
+        "size": 32876598,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/chinese_screen_panels/chinese_screen_panels_rough_8k.jpg",
+        "md5": "8be1889e4c0e9a0bf31fff5976e5f091"
+      },
+      "png": {
+        "size": 48735607,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/chinese_screen_panels/chinese_screen_panels_rough_8k.png",
+        "md5": "2814dfe1531ce2c23de0a0109bc14df7"
+      },
+      "exr": {
+        "size": 36002334,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/chinese_screen_panels/chinese_screen_panels_rough_8k.exr",
+        "md5": "f17755458273dc5053a32c8dc94d030a"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 7523402,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/chinese_screen_panels/chinese_screen_panels_rough_4k.jpg",
+        "md5": "181a3f2f6d635813d7f2a8e9561f195f"
+      },
+      "png": {
+        "size": 18123383,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/chinese_screen_panels/chinese_screen_panels_rough_4k.png",
+        "md5": "b3e78b3d86c64f8ebf4240fc77ae8ac2"
+      },
+      "exr": {
+        "size": 8465786,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/chinese_screen_panels/chinese_screen_panels_rough_4k.exr",
+        "md5": "f29019e63d396269471b5757e63c946f"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1822928,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/chinese_screen_panels/chinese_screen_panels_rough_2k.jpg",
+        "md5": "f7ad264b9933fec41b7eaa095ffd6e54"
+      },
+      "png": {
+        "size": 5241162,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/chinese_screen_panels/chinese_screen_panels_rough_2k.png",
+        "md5": "79918ded1239bc336e15c41e9763d133"
+      },
+      "exr": {
+        "size": 2107962,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/chinese_screen_panels/chinese_screen_panels_rough_2k.exr",
+        "md5": "429de56bb374aabbbde55716a39fbcd8"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 475409,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/chinese_screen_panels/chinese_screen_panels_rough_1k.jpg",
+        "md5": "51a4120845e3cb15db9f8980a5c524fb"
+      },
+      "png": {
+        "size": 1430131,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/chinese_screen_panels/chinese_screen_panels_rough_1k.png",
+        "md5": "9cd8303ca9c635a8ed3f69d6181b2ef0"
+      },
+      "exr": {
+        "size": 570438,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/chinese_screen_panels/chinese_screen_panels_rough_1k.exr",
+        "md5": "3d57abbb305c0c59f2129aa8c7eee493"
+      }
+    }
+  }
+}

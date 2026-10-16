@@ -1,0 +1,50 @@
+{
+  "Status": "PASS",
+  "Asset": "Old Wooden Floor 02",
+  "Authors": [
+    "Charlotte Baglioni (Scanning)",
+    "Jenelle van Heerden (Processing)"
+  ],
+  "AssetPage": "https://polyhaven.com/a/old_wooden_floor_02",
+  "License": "CC0-1.0",
+  "LicensePage": "https://polyhaven.com/license",
+  "LicenseText": "C:\\Users\\lenovo\\.codex\\visualizations\\2026\\09\\30\\01a0f245-1d70-7ba1-9b69-e6db6a9b7948\\StageSpaceStage\\Sources\\CC0-1.0-legalcode.txt",
+  "LicenseSHA256": "A2010F343487D3F7618AFFE54F789F5487602331C0A8D03F49E9A7C547CF0499",
+  "AcquiredUtc": "2026-10-11T03:50:15.4888001Z",
+  "Files": [
+    {
+      "Kind": "Diffuse",
+      "Path": "C:\\Users\\lenovo\\.codex\\visualizations\\2026\\09\\30\\01a0f245-1d70-7ba1-9b69-e6db6a9b7948\\StageSpaceStage\\Sources\\old_wooden_floor_02_diff_2k.png",
+      "URL": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/old_wooden_floor_02/old_wooden_floor_02_diff_2k.png",
+      "Bytes": 21992097,
+      "MD5": "492bc82b8e024440fa6fd86705753ffb",
+      "SHA256": "D60C5E6193A08536F9D51FF70A2CAD79BC16AB216D6F28F18C61A6BDBA619029",
+      "Width": 2048,
+      "Height": 2048
+    },
+    {
+      "Kind": "nor_dx",
+      "Path": "C:\\Users\\lenovo\\.codex\\visualizations\\2026\\09\\30\\01a0f245-1d70-7ba1-9b69-e6db6a9b7948\\StageSpaceStage\\Sources\\old_wooden_floor_02_nor_dx_2k.png",
+      "URL": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/old_wooden_floor_02/old_wooden_floor_02_nor_dx_2k.png",
+      "Bytes": 20722136,
+      "MD5": "c3afe25674ef42c6ea6f01843b37b19c",
+      "SHA256": "E6534B04F22ED2154C431ACD63C4D841D6DE69236494CBFDF58FA6FAC0ACA1D2",
+      "Width": 2048,
+      "Height": 2048
+    },
+    {
+      "Kind": "arm",
+      "Path": "C:\\Users\\lenovo\\.codex\\visualizations\\2026\\09\\30\\01a0f245-1d70-7ba1-9b69-e6db6a9b7948\\StageSpaceStage\\Sources\\old_wooden_floor_02_arm_2k.png",
+      "URL": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/old_wooden_floor_02/old_wooden_floor_02_arm_2k.png",
+      "Bytes": 15409800,
+      "MD5": "64c9f36bf7690190a4dbea7d2dfd8d42",
+      "SHA256": "CCCFC53F964CC55754A9FC78F6300F3CDFB0829990D113AEFCF40FD5398E512C",
+      "Width": 2048,
+      "Height": 2048
+    }
+  ],
+  "Cost": 0,
+  "PixelsModified": false,
+  "WebsitePreviewRendersUsed": false,
+  "Imported": false
+}

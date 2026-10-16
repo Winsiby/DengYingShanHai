@@ -1,0 +1,48 @@
+{
+  "name": "Chinese Screen Panels",
+  "categories": [
+    "furniture"
+  ],
+  "type": 2,
+  "tags": [
+    "vintage",
+    "antique",
+    "old",
+    "wooden",
+    "ornate",
+    "asian",
+    "divider",
+    "wall"
+  ],
+  "authors": {
+    "Kirill Sannikov": "All"
+  },
+  "max_resolution": [
+    8192,
+    8192
+  ],
+  "polycount": 784,
+  "texel_density": 2987.0372221597772,
+  "dimensions": [
+    1293.9677834510803,
+    376.891165971756,
+    1603.1262874603271
+  ],
+  "staging": null,
+  "date_published": 1718928000,
+  "files_hash": "b500116411a2532f0c1d870f964c7375f8df40df",
+  "description": "Free 8K Chinese screen panels - ornate antique wooden room divider with painted peacocks, floral Asian motifs and vintage patina.",
+  "category_id": "cec55052-9277-5651-8075-b7dcda25de98",
+  "category": "Decor & Art/Ornaments/Room Dividers & Screens",
+  "attributes": {
+    "condition": [
+      "worn"
+    ],
+    "material": [
+      "wood"
+    ]
+  },
+  "img_version": "c3dace80",
+  "download_count": 8660,
+  "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/chinese_screen_panels.png?width=256&height=256&format=webp&v=c3dace80"
+}
