@@ -1,0 +1,32 @@
+{
+  "status": "PASS_LOCAL_BLENDER_FILE_TEXTURE_FULL_AND_HEAD_REVIEW",
+  "reviewed_after_final_normal_normalization_and_uv1_tangent_export": true,
+  "views": [
+    {
+      "file": "Lamp_Baked_Full.png",
+      "resolution": [1440, 1920],
+      "sha256": "0E72FD644361822B0C68A8CD031EB0505E965053683F4FB8139CB38AE2BFF278",
+      "conclusion": "Full lamp body, yoke, mast and two sled feet are complete and connected. Bronze patina, dark metal joints and wood grain remain visible. No blank or magenta material regions, missing geometry, obvious atlas seams or changed stand alignment were observed."
+    },
+    {
+      "file": "Lamp_Baked_Head.png",
+      "resolution": [1920, 1440],
+      "sha256": "6088A3103902215066FEF72FABEDA87AD3474E94E22C60944FFA618794603B05",
+      "conclusion": "Close view retains shell patina pattern, rolled rim, reflector, recessed optical window, screw heads and tilt clamp. Highlight continuity and visible normal response are coherent, with no obvious broken edge, doubled wood tint or missing optical partition."
+    }
+  ],
+  "source_comparison": {
+    "source_full": "D:/灯影山海/Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/Lamp_Full_Review.png",
+    "source_head": "D:/灯影山海/Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/Lamp_Head_Review.png",
+    "checked": "Both source images and both final baked images were opened and visually inspected.",
+    "conclusion": "Silhouette, bronze color and patina placement, structural assembly and wood orientation are consistent in these two views. The shared 2K atlases retain the visible source character; this is not a claim of pixel-identical preservation of unlimited procedural detail."
+  },
+  "material_render": "Lamp material partitions sample only external FILE atlas images. NormalMap uses BakeUV1 and strength 1. Source optical transmission, IOR and emission constants remain on its partition.",
+  "engine_and_settings": "Blender 4.5.14 LTS, Cycles CPU, 64 samples, source neutral lights/world/cameras, AgX and exposure 0 retained",
+  "not_verified": "UE native import, UE material rebuild and target hardware or packaged appearance; no UE instance was launched in this subtask",
+  "frozen_outputs": {
+    "DY_HeroSpotlight_Baked.blend": "0C3DA5E0D8A9980369BB9C6AA91D525EE1BB68724BFB970A7E4E7DEE3951612F",
+    "SM_DY_LampBody_Baked.fbx": "BD901C1505517318ECD25D202A17CBDDF4B5A1126598D7F4E4ABA170F80F6F94",
+    "SM_DY_LampStand_Baked.fbx": "3E8D0EC0DECDD037CCAD99D6F1BCA732277F5A1FB4A7EBEA3095817A1F3EE5F1"
+  }
+}

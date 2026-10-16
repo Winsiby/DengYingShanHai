@@ -1,0 +1,391 @@
+{
+  "status": "PASS_COLD_READ_TEXTURES_GEOMETRY_UV0_CORNER_NORMALS",
+  "textures": [
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_BaseColor.png",
+      "pixels": [
+        2048,
+        2048
+      ],
+      "sha256": "932FE04C73C8CD7F9321CC5B99513C7C88AA07AFE947DFF716219466B4234033",
+      "color_space": "sRGB",
+      "rgb_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rgb_max": [
+        0.6352941393852234,
+        0.5058823823928833,
+        0.45098042488098145
+      ],
+      "rgb_std": [
+        0.2521272599697113,
+        0.2038058638572693,
+        0.15625807642936707
+      ],
+      "nonconstant_rgb": true
+    },
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_ORM.png",
+      "pixels": [
+        2048,
+        2048
+      ],
+      "sha256": "F11E5E6E85EAFD65E9026B686D44A84B95387494E87BE213ABF8038740428C73",
+      "color_space": "Non-Color",
+      "rgb_min": [
+        1.0,
+        0.16078431904315948,
+        0.0
+      ],
+      "rgb_max": [
+        1.0,
+        0.5333333611488342,
+        0.8980392813682556
+      ],
+      "rgb_std": [
+        0.0,
+        0.08689773082733154,
+        0.4054293930530548
+      ],
+      "nonconstant_rgb": true,
+      "channels": "R=1 white AO, G=source Roughness, B=source Metallic"
+    },
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_NormalDX.png",
+      "pixels": [
+        2048,
+        2048
+      ],
+      "sha256": "2FE5DFC95852BC604EA88B65A8CD45E9D05DD8522772224D7AE20F98FB506862",
+      "color_space": "Non-Color",
+      "rgb_min": [
+        0.3921568989753723,
+        0.0,
+        0.0
+      ],
+      "rgb_max": [
+        0.5882353186607361,
+        1.0,
+        1.0
+      ],
+      "rgb_std": [
+        0.0034940822515636683,
+        0.012634526006877422,
+        0.016739845275878906
+      ],
+      "nonconstant_rgb": true,
+      "normal_vector_length_min_max": [
+        0.9948967695236206,
+        1.0049858093261719
+      ],
+      "normal_length_max_error": 0.0051032304763793945,
+      "channels": "Tangent R +X / G -Y / B +Z; no additional UE green flip"
+    },
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_BaseColor.png",
+      "pixels": [
+        2048,
+        2048
+      ],
+      "sha256": "AA72D165D53BB34451A02347C5241D72007109D522139664E2E3991DE4B79AB2",
+      "color_space": "sRGB",
+      "rgb_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rgb_max": [
+        0.5764706134796143,
+        0.4235294461250305,
+        0.3019607961177826
+      ],
+      "rgb_std": [
+        0.18542280793190002,
+        0.13223038613796234,
+        0.08443626016378403
+      ],
+      "nonconstant_rgb": true
+    },
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_ORM.png",
+      "pixels": [
+        2048,
+        2048
+      ],
+      "sha256": "D4E2386F88482213E9AE7500AF605BBBC7A99EECC44CDA3D025EF3528AF9B465",
+      "color_space": "Non-Color",
+      "rgb_min": [
+        1.0,
+        0.14901961386203766,
+        0.0
+      ],
+      "rgb_max": [
+        1.0,
+        0.8000000715255737,
+        0.8588235974311829
+      ],
+      "rgb_std": [
+        0.0,
+        0.11876515299081802,
+        0.30069059133529663
+      ],
+      "nonconstant_rgb": true,
+      "channels": "R=1 white AO, G=source Roughness, B=source Metallic"
+    },
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_NormalDX.png",
+      "pixels": [
+        2048,
+        2048
+      ],
+      "sha256": "54092BEF2CDFDE2F7E16F0605C981A57AB669C1A9EB2200F6449BC9CAD8568E8",
+      "color_space": "Non-Color",
+      "rgb_min": [
+        0.3490196168422699,
+        0.3529411852359772,
+        0.9725490808486938
+      ],
+      "rgb_max": [
+        0.6549019813537598,
+        0.658823549747467,
+        1.0
+      ],
+      "rgb_std": [
+        0.006593105383217335,
+        0.0046904431656003,
+        0.00047137413639575243
+      ],
+      "nonconstant_rgb": true,
+      "normal_vector_length_min_max": [
+        0.9960708022117615,
+        1.0040059089660645
+      ],
+      "normal_length_max_error": 0.004005908966064453,
+      "channels": "Tangent R +X / G -Y / B +Z; no additional UE green flip"
+    }
+  ],
+  "meshes": [
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\SM_DY_LampBody_Baked.fbx",
+      "vertices": 10113,
+      "triangles": 20016,
+      "geometry_max_component_error_m": 0.0,
+      "uv0_max_component_error": 0.0,
+      "corner_normal_max_angle_error_deg": 0.04538340642491499,
+      "uv_layers": [
+        "UVMap",
+        "BakeUV1"
+      ],
+      "uv1_finite_0_1": true,
+      "uv1_cold_overlap": {
+        "available": true,
+        "triangles_nonzero_uv": 20016,
+        "overlap_pairs": 0,
+        "first_overlap_pairs": [],
+        "uv_min": [
+          0.009548269212245941,
+          0.009548268280923367
+        ],
+        "uv_max": [
+          0.9904518127441406,
+          0.9895339012145996
+        ],
+        "method": "Strict triangle separating-axis overlap, 1e-9 UV tolerance; edges excluded"
+      },
+      "primary_fbx_tangent_basis": "BakeUV1 with Tangent/Binormal TypedIndex 0 on Layer 0",
+      "topology_matches_source_fbx": true,
+      "reference": "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\RuntimeVariant\\SM_DY_LampBody_Source.fbx"
+    },
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\SM_DY_LampStand_Baked.fbx",
+      "vertices": 6592,
+      "triangles": 13088,
+      "geometry_max_component_error_m": 0.0,
+      "uv0_max_component_error": 0.0,
+      "corner_normal_max_angle_error_deg": 0.030334768848535174,
+      "uv_layers": [
+        "UVMap",
+        "BakeUV1"
+      ],
+      "uv1_finite_0_1": true,
+      "uv1_cold_overlap": {
+        "available": true,
+        "triangles_nonzero_uv": 13088,
+        "overlap_pairs": 0,
+        "first_overlap_pairs": [],
+        "uv_min": [
+          0.009975476190447807,
+          0.009975454770028591
+        ],
+        "uv_max": [
+          0.9881811141967773,
+          0.9900245666503906
+        ],
+        "method": "Strict triangle separating-axis overlap, 1e-9 UV tolerance; edges excluded"
+      },
+      "primary_fbx_tangent_basis": "BakeUV1 with Tangent/Binormal TypedIndex 0 on Layer 0",
+      "topology_matches_source_fbx": true,
+      "reference": "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\RuntimeVariant\\SM_DY_LampStand_Source.fbx"
+    }
+  ],
+  "file_texture_graphs": [
+    {
+      "mesh": "SM_DY_LampBody_Baked",
+      "source_material": "M_DY_Bronze_Procedural_SOURCE",
+      "textures": [
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_BaseColor.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_ORM.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_NormalDX.png"
+      ],
+      "normal_uv": "BakeUV1",
+      "normal_strength": 1.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_strength": 0.0
+    },
+    {
+      "mesh": "SM_DY_LampBody_Baked",
+      "source_material": "M_DY_Bronze_Edge_SOURCE",
+      "textures": [
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_BaseColor.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_ORM.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_NormalDX.png"
+      ],
+      "normal_uv": "BakeUV1",
+      "normal_strength": 1.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_strength": 0.0
+    },
+    {
+      "mesh": "SM_DY_LampBody_Baked",
+      "source_material": "M_DY_BlackMetal_SOURCE",
+      "textures": [
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_BaseColor.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_ORM.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_NormalDX.png"
+      ],
+      "normal_uv": "BakeUV1",
+      "normal_strength": 1.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_strength": 0.0
+    },
+    {
+      "mesh": "SM_DY_LampBody_Baked",
+      "source_material": "M_DY_Reflector_SOURCE",
+      "textures": [
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_BaseColor.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_ORM.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_NormalDX.png"
+      ],
+      "normal_uv": "BakeUV1",
+      "normal_strength": 1.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_strength": 0.0
+    },
+    {
+      "mesh": "SM_DY_LampBody_Baked",
+      "source_material": "M_DY_OpticalWindow_SOURCE",
+      "textures": [
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_BaseColor.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_ORM.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_NormalDX.png"
+      ],
+      "normal_uv": "BakeUV1",
+      "normal_strength": 1.0,
+      "transmission": 0.3799999952316284,
+      "ior": 1.4600000381469727,
+      "emission_strength": 0.15000000596046448
+    },
+    {
+      "mesh": "SM_DY_LampBody_Baked",
+      "source_material": "M_DY_Wood_CC0_SOURCE",
+      "textures": [
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_BaseColor.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_ORM.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_NormalDX.png"
+      ],
+      "normal_uv": "BakeUV1",
+      "normal_strength": 1.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_strength": 0.0
+    },
+    {
+      "mesh": "SM_DY_LampStand_Baked",
+      "source_material": "M_DY_Bronze_Procedural_SOURCE",
+      "textures": [
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_BaseColor.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_ORM.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_NormalDX.png"
+      ],
+      "normal_uv": "BakeUV1",
+      "normal_strength": 1.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_strength": 0.0
+    },
+    {
+      "mesh": "SM_DY_LampStand_Baked",
+      "source_material": "M_DY_BlackMetal_SOURCE",
+      "textures": [
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_BaseColor.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_ORM.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_NormalDX.png"
+      ],
+      "normal_uv": "BakeUV1",
+      "normal_strength": 1.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_strength": 0.0
+    },
+    {
+      "mesh": "SM_DY_LampStand_Baked",
+      "source_material": "M_DY_Bronze_Edge_SOURCE",
+      "textures": [
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_BaseColor.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_ORM.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_NormalDX.png"
+      ],
+      "normal_uv": "BakeUV1",
+      "normal_strength": 1.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_strength": 0.0
+    },
+    {
+      "mesh": "SM_DY_LampStand_Baked",
+      "source_material": "M_DY_Wood_CC0_SOURCE",
+      "textures": [
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_BaseColor.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_ORM.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_NormalDX.png"
+      ],
+      "normal_uv": "BakeUV1",
+      "normal_strength": 1.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_strength": 0.0
+    },
+    {
+      "mesh": "SM_DY_LampStand_Baked",
+      "source_material": "M_DY_Rubber_SOURCE",
+      "textures": [
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_BaseColor.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_ORM.png",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_NormalDX.png"
+      ],
+      "normal_uv": "BakeUV1",
+      "normal_strength": 1.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_strength": 0.0
+    }
+  ],
+  "source_unchanged": true,
+  "visual_qa": "PASS_LOCAL_BLENDER_FULL_AND_HEAD_VISUAL_REVIEW; detailed conclusion in LAMP_BAKE_VISUAL_QA.json; UE not checked"
+}
