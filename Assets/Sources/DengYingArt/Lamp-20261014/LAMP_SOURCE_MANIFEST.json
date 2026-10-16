@@ -1,0 +1,1403 @@
+{
+  "name": "DY Spotlight Exterior / 木铜舞台主灯",
+  "blender_version": "4.5.14 LTS",
+  "source_root": "Root_Back_Source",
+  "units": "Blender meter, UE centimeter; FBX_UNIT_SCALE export",
+  "authority": [
+    "D:/灯影山海/Docs/SCENE_ART_QUALITY_SPEC.md",
+    "D:/灯影山海/Source/DengYingShanHai/Private/Interaction/DYLightRigActor.cpp",
+    "D:/灯影山海/Saved/Audit-2026-10-12-FramePostPlacementDev/verify-Run1/Result.json scene_contract"
+  ],
+  "runtime_light_unchanged": {
+    "type": "Movable SpotLight",
+    "relative_cm": [
+      45,
+      0,
+      0
+    ],
+    "forward": "+X",
+    "outer_cone_deg": 38,
+    "source_radius_cm": 4
+  },
+  "design_status": "Contemporary creative adaptation; no historical reconstruction claim",
+  "bounds_actor_local": {
+    "min_cm": [
+      -45.7,
+      -49.5,
+      -310.0
+    ],
+    "max_cm": [
+      42.0,
+      49.5,
+      27.2
+    ],
+    "size_cm": [
+      87.7,
+      99.0,
+      337.2
+    ]
+  },
+  "groups": {
+    "BODY": {
+      "min_cm": [
+        -45.7,
+        -34.75,
+        -27.2
+      ],
+      "max_cm": [
+        42.0,
+        34.75,
+        27.2
+      ],
+      "size_cm": [
+        87.7,
+        69.5,
+        54.4
+      ]
+    },
+    "STAND": {
+      "min_cm": [
+        -42.7,
+        -49.5,
+        -310.0
+      ],
+      "max_cm": [
+        35.7,
+        49.5,
+        -0.9
+      ],
+      "size_cm": [
+        78.4,
+        99.0,
+        309.1
+      ]
+    }
+  },
+  "part_count": 57,
+  "triangles_source": 93712,
+  "material_provenance": {
+    "wood": "Poly Haven Wood Table / Dimitrios Savva / CC0 / original 2K images unchanged",
+    "metal": "Original procedural shader, not downloaded PBR texture, not baked",
+    "optics": "Original local shader; optical window stays behind actual KeyLight"
+  },
+  "parts": [
+    {
+      "name": "Lamp_Copper_HollowShell",
+      "role": "6mm closed shell wall; empty front aperture",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -33.5,
+          -26.4,
+          -26.4
+        ],
+        "max_cm": [
+          41.3,
+          26.4,
+          26.4
+        ],
+        "size_cm": [
+          74.8,
+          52.8,
+          52.8
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_RolledFrontRim",
+      "role": "10mm rolled front rim; tip X42cm",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          40.0,
+          -27.2,
+          -27.2
+        ],
+        "max_cm": [
+          42.0,
+          27.2,
+          27.2
+        ],
+        "size_cm": [
+          2.0,
+          54.4,
+          54.4
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_UpperBodySeam",
+      "role": "Rear casing seam",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -16.4,
+          -21.5,
+          -21.5
+        ],
+        "max_cm": [
+          -15.6,
+          21.5,
+          21.5
+        ],
+        "size_cm": [
+          0.8,
+          43.0,
+          43.0
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_RearServiceRing",
+      "role": "Service cap rim",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -30.7,
+          -13.9,
+          -13.9
+        ],
+        "max_cm": [
+          -29.3,
+          13.9,
+          13.9
+        ],
+        "size_cm": [
+          1.4,
+          27.8,
+          27.8
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_InnerReflector",
+      "role": "Open recessed reflector, 6mm real thickness",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -6.2,
+          -25.1,
+          -25.1
+        ],
+        "max_cm": [
+          38.0,
+          25.1,
+          25.1
+        ],
+        "size_cm": [
+          44.2,
+          50.2,
+          50.2
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_RecessedOpticalWindow",
+      "role": "Decorative optical window behind KeyLight, not runtime light",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          26.4,
+          -20.1,
+          -20.1
+        ],
+        "max_cm": [
+          27.6,
+          20.1,
+          20.1
+        ],
+        "size_cm": [
+          1.2,
+          40.2,
+          40.2
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_OpticalWindowRetainer",
+      "role": "Recessed optics retainer",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          27.3,
+          -20.8,
+          -20.8
+        ],
+        "max_cm": [
+          28.7,
+          20.8,
+          20.8
+        ],
+        "size_cm": [
+          1.4,
+          41.6,
+          41.6
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_HandleSocket_-1",
+      "role": "Rear grip mounting socket",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -31.25,
+          -8.75,
+          9.0
+        ],
+        "max_cm": [
+          -26.75,
+          -6.25,
+          12.0
+        ],
+        "size_cm": [
+          4.5,
+          2.5,
+          3.0
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_HandleArm_-1",
+      "role": "Rear handle bracket",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -44.5,
+          -8.4,
+          9.6
+        ],
+        "max_cm": [
+          -28.5,
+          -6.6,
+          11.4
+        ],
+        "size_cm": [
+          16.0,
+          1.8,
+          1.8
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_HandleSocket_1",
+      "role": "Rear grip mounting socket",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -31.25,
+          6.25,
+          9.0
+        ],
+        "max_cm": [
+          -26.75,
+          8.75,
+          12.0
+        ],
+        "size_cm": [
+          4.5,
+          2.5,
+          3.0
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_HandleArm_1",
+      "role": "Rear handle bracket",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -44.5,
+          6.6,
+          9.6
+        ],
+        "max_cm": [
+          -28.5,
+          8.4,
+          11.4
+        ],
+        "size_cm": [
+          16.0,
+          1.8,
+          1.8
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_RearWoodGrip",
+      "role": "Rear tactile wood handle",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -45.4,
+          -8.35,
+          8.6
+        ],
+        "max_cm": [
+          -41.6,
+          8.35,
+          12.4
+        ],
+        "size_cm": [
+          3.8,
+          16.7,
+          3.8
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_GripEnd_-1",
+      "role": "Wood grip retaining cap",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -45.7,
+          -9.4,
+          8.3
+        ],
+        "max_cm": [
+          -41.3,
+          -8.0,
+          12.7
+        ],
+        "size_cm": [
+          4.4,
+          1.4,
+          4.4
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_TiltTrunnion_-1",
+      "role": "Mechanical tilt axis across Y",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -8.0,
+          -29.55,
+          -7.0
+        ],
+        "max_cm": [
+          1.0,
+          -21.85,
+          2.0
+        ],
+        "size_cm": [
+          9.0,
+          7.7,
+          9.0
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_TiltClampWheel_-1",
+      "role": "Friction clamp wheel, functional circular grip",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -9.7,
+          -33.75,
+          -8.7
+        ],
+        "max_cm": [
+          2.7,
+          -30.25,
+          3.7
+        ],
+        "size_cm": [
+          12.4,
+          3.5,
+          12.4
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_TiltClampRim_-1",
+      "role": "Clamp gripping edge",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -9.3,
+          -34.4,
+          -8.3
+        ],
+        "max_cm": [
+          2.3,
+          -33.0,
+          3.3
+        ],
+        "size_cm": [
+          11.6,
+          1.4,
+          11.6
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_ClampPin_-1",
+      "role": "Visible clamp fastening pin",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -5.0,
+          -34.75,
+          -4.0
+        ],
+        "max_cm": [
+          -2.0,
+          -33.85,
+          -1.0
+        ],
+        "size_cm": [
+          3.0,
+          0.9,
+          3.0
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_GripEnd_1",
+      "role": "Wood grip retaining cap",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -45.7,
+          8.0,
+          8.3
+        ],
+        "max_cm": [
+          -41.3,
+          9.4,
+          12.7
+        ],
+        "size_cm": [
+          4.4,
+          1.4,
+          4.4
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_TiltTrunnion_1",
+      "role": "Mechanical tilt axis across Y",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -8.0,
+          21.85,
+          -7.0
+        ],
+        "max_cm": [
+          1.0,
+          29.55,
+          2.0
+        ],
+        "size_cm": [
+          9.0,
+          7.7,
+          9.0
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_TiltClampWheel_1",
+      "role": "Friction clamp wheel, functional circular grip",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -9.7,
+          30.25,
+          -8.7
+        ],
+        "max_cm": [
+          2.7,
+          33.75,
+          3.7
+        ],
+        "size_cm": [
+          12.4,
+          3.5,
+          12.4
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_TiltClampRim_1",
+      "role": "Clamp gripping edge",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -9.3,
+          33.0,
+          -8.3
+        ],
+        "max_cm": [
+          2.3,
+          34.4,
+          3.3
+        ],
+        "size_cm": [
+          11.6,
+          1.4,
+          11.6
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_ClampPin_1",
+      "role": "Visible clamp fastening pin",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          -5.0,
+          33.85,
+          -4.0
+        ],
+        "max_cm": [
+          -2.0,
+          34.75,
+          -1.0
+        ],
+        "size_cm": [
+          3.0,
+          0.9,
+          3.0
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_RimScrew_0",
+      "role": "Recessed rim screw behind emitter",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          37.95,
+          24.1,
+          -0.9
+        ],
+        "max_cm": [
+          39.05,
+          25.9,
+          0.9
+        ],
+        "size_cm": [
+          1.1,
+          1.8,
+          1.8
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_RimScrew_60",
+      "role": "Recessed rim screw behind emitter",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          37.95,
+          11.6,
+          20.7506
+        ],
+        "max_cm": [
+          39.05,
+          13.4,
+          22.5506
+        ],
+        "size_cm": [
+          1.1,
+          1.8,
+          1.8
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_RimScrew_120",
+      "role": "Recessed rim screw behind emitter",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          37.95,
+          -13.4,
+          20.7506
+        ],
+        "max_cm": [
+          39.05,
+          -11.6,
+          22.5506
+        ],
+        "size_cm": [
+          1.1,
+          1.8,
+          1.8
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_RimScrew_180",
+      "role": "Recessed rim screw behind emitter",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          37.95,
+          -25.9,
+          -0.9
+        ],
+        "max_cm": [
+          39.05,
+          -24.1,
+          0.9
+        ],
+        "size_cm": [
+          1.1,
+          1.8,
+          1.8
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_RimScrew_240",
+      "role": "Recessed rim screw behind emitter",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          37.95,
+          -13.4,
+          -22.5506
+        ],
+        "max_cm": [
+          39.05,
+          -11.6,
+          -20.7506
+        ],
+        "size_cm": [
+          1.1,
+          1.8,
+          1.8
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Lamp_RimScrew_300",
+      "role": "Recessed rim screw behind emitter",
+      "group": "BODY",
+      "bounds": {
+        "min_cm": [
+          37.95,
+          11.6,
+          -22.5506
+        ],
+        "max_cm": [
+          39.05,
+          13.4,
+          -20.7506
+        ],
+        "size_cm": [
+          1.1,
+          1.8,
+          1.8
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_YokeArm_-1",
+      "role": "Continuous yoke side arm supports tilt pin",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -5.85,
+          -29.6,
+          -49.7
+        ],
+        "max_cm": [
+          -1.15,
+          -26.8,
+          -0.9
+        ],
+        "size_cm": [
+          4.7,
+          2.8,
+          48.8
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_YokeArm_1",
+      "role": "Continuous yoke side arm supports tilt pin",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -5.85,
+          26.8,
+          -49.7
+        ],
+        "max_cm": [
+          -1.15,
+          29.6,
+          -0.9
+        ],
+        "size_cm": [
+          4.7,
+          2.8,
+          48.8
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_YokeBridge",
+      "role": "Lower yoke connects both arms",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -6.75,
+          -29.25,
+          -51.85
+        ],
+        "max_cm": [
+          -0.25,
+          29.25,
+          -47.35
+        ],
+        "size_cm": [
+          6.5,
+          58.5,
+          4.5
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_YokeStem",
+      "role": "Stem under yoke",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -7.4,
+          -3.9,
+          -60.85
+        ],
+        "max_cm": [
+          0.4,
+          3.9,
+          -50.35
+        ],
+        "size_cm": [
+          7.8,
+          7.8,
+          10.5
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_YokeStemCollar",
+      "role": "Upper support collar",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -8.3,
+          -4.8,
+          -60.2
+        ],
+        "max_cm": [
+          1.3,
+          4.8,
+          -58.4
+        ],
+        "size_cm": [
+          9.6,
+          9.6,
+          1.8
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_WoodMast",
+      "role": "Continuous tapered wood mast from Z-61cm to -295cm",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -9.7973,
+          -6.2973,
+          -295.0
+        ],
+        "max_cm": [
+          2.7973,
+          6.2973,
+          -61.0
+        ],
+        "size_cm": [
+          12.5945,
+          12.5945,
+          234.0
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_BronzeSleeve_0",
+      "role": "Protective mast sleeve",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -8.8,
+          -5.3,
+          -66.25
+        ],
+        "max_cm": [
+          1.8,
+          5.3,
+          -59.75
+        ],
+        "size_cm": [
+          10.6,
+          10.6,
+          6.5
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_SleeveEdge_0",
+      "role": "Rolled sleeve edge",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -9.15,
+          -5.65,
+          -60.35
+        ],
+        "max_cm": [
+          2.15,
+          5.65,
+          -59.65
+        ],
+        "size_cm": [
+          11.3,
+          11.3,
+          0.7
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_BronzeSleeve_1",
+      "role": "Protective mast sleeve",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -8.8,
+          -5.3,
+          -89.25
+        ],
+        "max_cm": [
+          1.8,
+          5.3,
+          -82.75
+        ],
+        "size_cm": [
+          10.6,
+          10.6,
+          6.5
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_SleeveEdge_1",
+      "role": "Rolled sleeve edge",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -9.15,
+          -5.65,
+          -83.35
+        ],
+        "max_cm": [
+          2.15,
+          5.65,
+          -82.65
+        ],
+        "size_cm": [
+          11.3,
+          11.3,
+          0.7
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_BronzeSleeve_2",
+      "role": "Protective mast sleeve",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -10.2,
+          -6.7,
+          -281.25
+        ],
+        "max_cm": [
+          3.2,
+          6.7,
+          -274.75
+        ],
+        "size_cm": [
+          13.4,
+          13.4,
+          6.5
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_SleeveEdge_2",
+      "role": "Rolled sleeve edge",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -10.55,
+          -7.05,
+          -275.35
+        ],
+        "max_cm": [
+          3.55,
+          7.05,
+          -274.65
+        ],
+        "size_cm": [
+          14.1,
+          14.1,
+          0.7
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_BronzeSleeve_3",
+      "role": "Protective mast sleeve",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -10.2,
+          -6.7,
+          -294.25
+        ],
+        "max_cm": [
+          3.2,
+          6.7,
+          -287.75
+        ],
+        "size_cm": [
+          13.4,
+          13.4,
+          6.5
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_SleeveEdge_3",
+      "role": "Rolled sleeve edge",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -10.55,
+          -7.05,
+          -288.35
+        ],
+        "max_cm": [
+          3.55,
+          7.05,
+          -287.65
+        ],
+        "size_cm": [
+          14.1,
+          14.1,
+          0.7
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_AdjustmentLock",
+      "role": "Friction locking knob on clamp sleeve",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -6.3,
+          -8.4,
+          -87.8
+        ],
+        "max_cm": [
+          -0.7,
+          -5.6,
+          -82.2
+        ],
+        "size_cm": [
+          5.6,
+          2.8,
+          5.6
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_AdjustmentBolt",
+      "role": "Lock bolt",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -4.4,
+          -7.0,
+          -85.9
+        ],
+        "max_cm": [
+          -2.6,
+          -2.0,
+          -84.1
+        ],
+        "size_cm": [
+          1.8,
+          5.0,
+          1.8
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_BaseCrossTie",
+      "role": "Wood cross tie distributing mast load",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -40.0,
+          -7.25,
+          -304.8
+        ],
+        "max_cm": [
+          33.0,
+          7.25,
+          -292.8
+        ],
+        "size_cm": [
+          73.0,
+          14.5,
+          12.0
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_Runner_-1",
+      "role": "Longitudinal sled foot; stable movable rail-compatible support",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -42.0,
+          -49.5,
+          -309.6
+        ],
+        "max_cm": [
+          -29.0,
+          49.5,
+          -296.6
+        ],
+        "size_cm": [
+          13.0,
+          99.0,
+          13.0
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_RunnerEndCap_-1_-1",
+      "role": "Runner end protector",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -42.7,
+          -48.4,
+          -309.9
+        ],
+        "max_cm": [
+          -28.3,
+          -42.6,
+          -295.9
+        ],
+        "size_cm": [
+          14.4,
+          5.8,
+          14.0
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_FootFastener_-1_-1",
+      "role": "Foot through-fastener head",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -37.0,
+          -41.5,
+          -296.15
+        ],
+        "max_cm": [
+          -34.0,
+          -38.5,
+          -295.25
+        ],
+        "size_cm": [
+          3.0,
+          3.0,
+          0.9
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_RunnerEndCap_-1_1",
+      "role": "Runner end protector",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -42.7,
+          42.6,
+          -309.9
+        ],
+        "max_cm": [
+          -28.3,
+          48.4,
+          -295.9
+        ],
+        "size_cm": [
+          14.4,
+          5.8,
+          14.0
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_FootFastener_-1_1",
+      "role": "Foot through-fastener head",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -37.0,
+          38.5,
+          -296.15
+        ],
+        "max_cm": [
+          -34.0,
+          41.5,
+          -295.25
+        ],
+        "size_cm": [
+          3.0,
+          3.0,
+          0.9
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_RunnerSole_-1",
+      "role": "Thin protective sole, bottom exactly Z-310cm",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          -41.85,
+          -44.5,
+          -310.0
+        ],
+        "max_cm": [
+          -29.15,
+          44.5,
+          -309.2
+        ],
+        "size_cm": [
+          12.7,
+          89.0,
+          0.8
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_Runner_1",
+      "role": "Longitudinal sled foot; stable movable rail-compatible support",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          22.0,
+          -49.5,
+          -309.6
+        ],
+        "max_cm": [
+          35.0,
+          49.5,
+          -296.6
+        ],
+        "size_cm": [
+          13.0,
+          99.0,
+          13.0
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_RunnerEndCap_1_-1",
+      "role": "Runner end protector",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          21.3,
+          -48.4,
+          -309.9
+        ],
+        "max_cm": [
+          35.7,
+          -42.6,
+          -295.9
+        ],
+        "size_cm": [
+          14.4,
+          5.8,
+          14.0
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_FootFastener_1_-1",
+      "role": "Foot through-fastener head",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          27.0,
+          -41.5,
+          -296.15
+        ],
+        "max_cm": [
+          30.0,
+          -38.5,
+          -295.25
+        ],
+        "size_cm": [
+          3.0,
+          3.0,
+          0.9
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_RunnerEndCap_1_1",
+      "role": "Runner end protector",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          21.3,
+          42.6,
+          -309.9
+        ],
+        "max_cm": [
+          35.7,
+          48.4,
+          -295.9
+        ],
+        "size_cm": [
+          14.4,
+          5.8,
+          14.0
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_FootFastener_1_1",
+      "role": "Foot through-fastener head",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          27.0,
+          38.5,
+          -296.15
+        ],
+        "max_cm": [
+          30.0,
+          41.5,
+          -295.25
+        ],
+        "size_cm": [
+          3.0,
+          3.0,
+          0.9
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    },
+    {
+      "name": "Stand_RunnerSole_1",
+      "role": "Thin protective sole, bottom exactly Z-310cm",
+      "group": "STAND",
+      "bounds": {
+        "min_cm": [
+          22.15,
+          -44.5,
+          -310.0
+        ],
+        "max_cm": [
+          34.85,
+          44.5,
+          -309.2
+        ],
+        "size_cm": [
+          12.7,
+          89.0,
+          0.8
+        ]
+      },
+      "uv0": "physical planar or analytical cylindrical UV"
+    }
+  ],
+  "checks": {
+    "all_mesh_geometry_behind_emitter_x45cm": true,
+    "frontmost_geometry_cm": 42.0,
+    "minimum_forward_clearance_cm": 3.0,
+    "ground_contact_local_z_cm": -310,
+    "uv0_all_source_meshes": true
+  }
+}

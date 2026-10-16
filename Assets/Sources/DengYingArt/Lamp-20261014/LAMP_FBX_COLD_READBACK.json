@@ -1,0 +1,97 @@
+{
+  "status": "PASS_SOURCE_GEOMETRY_FBX_UV_UNITS",
+  "not_verified": "UE import, engine material rebuild, in-map visual shadows, actor rail extremes, packaged rendering",
+  "meshes": [
+    {
+      "file": "SM_DY_LampBody_Source.fbx",
+      "mesh_objects": 1,
+      "vertices": 27040,
+      "triangles": 53680,
+      "uv_layers": [
+        "UVMap",
+        "UVLightmap"
+      ],
+      "uv1_in_0_1": true,
+      "bounds_local_cm": {
+        "min": [
+          -45.7,
+          -34.75,
+          -27.2
+        ],
+        "max": [
+          42.0,
+          34.75,
+          27.2
+        ]
+      },
+      "bounds_actor_local_cm": {
+        "min": [
+          -45.7,
+          -34.75,
+          -27.2
+        ],
+        "max": [
+          42.0,
+          34.75,
+          27.2
+        ]
+      },
+      "exported_material_slots": [
+        "M_DY_Bronze_Procedural_SOURCE",
+        "M_DY_Bronze_Edge_SOURCE",
+        "M_DY_BlackMetal_SOURCE",
+        "M_DY_Reflector_SOURCE",
+        "M_DY_OpticalWindow_SOURCE",
+        "M_DY_Wood_CC0_SOURCE"
+      ],
+      "all_faces_nonzero_area": true,
+      "unit_normals": true,
+      "forward_halfspace_clearance_cm": 3.0
+    },
+    {
+      "file": "SM_DY_LampStand_Source.fbx",
+      "mesh_objects": 1,
+      "vertices": 20064,
+      "triangles": 40032,
+      "uv_layers": [
+        "UVMap",
+        "UVLightmap"
+      ],
+      "uv1_in_0_1": true,
+      "bounds_local_cm": {
+        "min": [
+          -42.7,
+          -49.5,
+          -215.0
+        ],
+        "max": [
+          35.7,
+          49.5,
+          94.1
+        ]
+      },
+      "bounds_actor_local_cm": {
+        "min": [
+          -42.7,
+          -49.5,
+          -310.0
+        ],
+        "max": [
+          35.7,
+          49.5,
+          -0.9
+        ]
+      },
+      "exported_material_slots": [
+        "M_DY_Bronze_Procedural_SOURCE",
+        "M_DY_BlackMetal_SOURCE",
+        "M_DY_Bronze_Edge_SOURCE",
+        "M_DY_Wood_CC0_SOURCE",
+        "M_DY_Rubber_SOURCE"
+      ],
+      "all_faces_nonzero_area": true,
+      "unit_normals": true,
+      "forward_halfspace_clearance_cm": 9.3
+    }
+  ]
+}

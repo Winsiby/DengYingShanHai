@@ -1,0 +1,15 @@
+{
+  "status": "PASS_ORIGINAL_PNG_BYTES_UNCHANGED",
+  "source": "D:/灯影山海/Saved/Audit-2026-10-12-FramePostAsset/Sources",
+  "license": "CC0-1.0",
+  "author": "Dimitrios Savva",
+  "asset_page": "https://polyhaven.com/a/wood_table",
+  "license_page": "https://polyhaven.com/license",
+  "files": [
+    {"file":"wood_table_diff_2k.png","sha256":"DE99E3D8D7AFE58FEDC3AE9CAAF441D516547570643CFF5A0259E547A6B0C00A","same_as_original":true},
+    {"file":"wood_table_nor_dx_2k.png","sha256":"C214D164C26B59CC0962728F640FD143DD28F9039AE856F888B486E0CA4F4DA7","same_as_original":true},
+    {"file":"wood_table_arm_2k.png","sha256":"4C211965FFDD72F2A1D9358A14022A8F54AB5E6B18759E5D22C3998C1D70FF63","same_as_original":true}
+  ],
+  "pixel_processing": "None; tint and DirectX green-channel conversion occur only in editable shader nodes",
+  "bronze": "Original local procedural shader, no external bronze texture"
+}
