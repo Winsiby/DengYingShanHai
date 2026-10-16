@@ -1,0 +1,60 @@
+{
+  "Status": "PASS",
+  "Source": "https://polyhaven.com/a/chinese_screen_panels",
+  "License": "CC0-1.0",
+  "LicenseURL": "https://polyhaven.com/license",
+  "LegalURL": "https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt",
+  "Author": "Kirill Sannikov",
+  "RetrievedUTC": "2026-10-11T05:00:33.1332541Z",
+  "UserAgent": "DengYingShanHai-StageWingSample-20261011",
+  "MetadataReserialized": true,
+  "Files": [
+    {
+      "Kind": "fbx",
+      "Name": "chinese_screen_panels_2k.fbx",
+      "URL": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/chinese_screen_panels/chinese_screen_panels_2k.fbx",
+      "Bytes": 55212,
+      "MD5": "61a5108edaa2fadd03abe6fd94ab965b",
+      "SHA256": "FF84163E810A87CCD6AC9C08242FF366F0F0CC803A4D1DBF22CCF7FE6BC58CEF",
+      "Dimensions": null
+    },
+    {
+      "Kind": "Diffuse",
+      "Name": "chinese_screen_panels_diff_2k.png",
+      "URL": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/chinese_screen_panels/chinese_screen_panels_diff_2k.png",
+      "Bytes": 16016213,
+      "MD5": "89ffe8a283b96e252ad6dd508e64af56",
+      "SHA256": "AEC2B65FC1021F971C448C6493C4511B75468A2E7BE54C956D69401A55A29769",
+      "Dimensions": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "Kind": "nor_dx",
+      "Name": "chinese_screen_panels_nor_dx_2k.png",
+      "URL": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/chinese_screen_panels/chinese_screen_panels_nor_dx_2k.png",
+      "Bytes": 12984763,
+      "MD5": "2ef7db9fc2098d8ccf16fbcfddbfd3ef",
+      "SHA256": "10A850D22A15011185C840C8E3B04506B328DFF2C2E30FC66AAD004DF91CF146",
+      "Dimensions": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "Kind": "arm",
+      "Name": "chinese_screen_panels_arm_2k.png",
+      "URL": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/chinese_screen_panels/chinese_screen_panels_arm_2k.png",
+      "Bytes": 10669166,
+      "MD5": "71b1fed3490342a84d0699d5275cb7e8",
+      "SHA256": "B03AA44728E30BB0B591E66C9EC82D18BB302D1C6E90AD4D3E039C793BCC2939",
+      "Dimensions": [
+        2048,
+        2048
+      ]
+    }
+  ],
+  "Imported": false,
+  "PreviewRendersUsed": false
+}
