@@ -1,0 +1,196 @@
+{
+  "status": "PASS_COLD_SOURCE_AND_12_REAL_RAY_RENDERED_AB_PENDING_VISUAL_REVIEW",
+  "assertions": [
+    "Cold-read: exact original rest matrices, hierarchy and 20 StaffGrip-inclusive bones",
+    "Cold-read: all 20 matrices remain exact, StrideMid, frame 1",
+    "Cold-read: all 20 matrices remain exact, StrideMid, frame 16",
+    "Cold-read: all 20 matrices remain exact, StrideMid, frame 31",
+    "Cold-read: all 20 matrices remain exact, StrideBack, frame 1",
+    "Cold-read: all 20 matrices remain exact, StrideBack, frame 16",
+    "Cold-read: all 20 matrices remain exact, StrideBack, frame 31",
+    "Cold-read: all 20 matrices remain exact, Reach, frame 1",
+    "Cold-read: all 20 matrices remain exact, Reach, frame 16",
+    "Cold-read: all 20 matrices remain exact, Reach, frame 31",
+    "Cold-read: 17,902 actual triangles and 10,636 vertices",
+    "Cold-read: six original materials and one source UV",
+    "Cold-read: every derived vertex has exactly one rigid original weight",
+    "SM_DY_Kuafu_SnakeEar_R: cold-read every actual edge has exactly two faces",
+    "SM_DY_Kuafu_SnakeEar_L: cold-read every actual edge has exactly two faces",
+    "SM_DY_Kuafu_SnakeArm_R: cold-read every actual edge has exactly two faces",
+    "SM_DY_Kuafu_SnakeArm_L: cold-read every actual edge has exactly two faces",
+    "Cold-read: complete 266-part ledger accounts for every derived vertex",
+    "StrideBack_Original_Appearance.png: real source render written",
+    "StrideBack_Refined_Appearance.png: real source render written",
+    "StrideMid_Original_Appearance.png: real source render written",
+    "StrideMid_Refined_Appearance.png: real source render written",
+    "Reach_Original_Appearance.png: real source render written",
+    "Reach_Refined_Appearance.png: real source render written",
+    "StrideBack_Original_Shadow.png: real source render written",
+    "StrideBack_Refined_Shadow.png: real source render written",
+    "StrideMid_Original_Shadow.png: real source render written",
+    "StrideMid_Refined_Shadow.png: real source render written",
+    "Reach_Original_Shadow.png: real source render written",
+    "Reach_Refined_Shadow.png: real source render written",
+    "Cold QA/render does not resave blend or FBX",
+    "Original five source/evidence/author files remain hash unchanged"
+  ],
+  "captures": [
+    {
+      "file": "StrideBack_Original_Appearance.png",
+      "variant": "Original",
+      "pose": "StrideBack",
+      "bytes": 2098761,
+      "sha256": "4CE08FA3D103CFEC73E218A3A4270E04BED9D277D5D9B256E546AD2E76C1DD85",
+      "all_geometry_casts_shadow": true
+    },
+    {
+      "file": "StrideBack_Refined_Appearance.png",
+      "variant": "Refined",
+      "pose": "StrideBack",
+      "bytes": 2099051,
+      "sha256": "0FAEC1EC719C5F4C1CD1980A8E3173749E88E5F9481BBDBBEA9881FA270E2AD1",
+      "all_geometry_casts_shadow": true
+    },
+    {
+      "file": "StrideMid_Original_Appearance.png",
+      "variant": "Original",
+      "pose": "StrideMid",
+      "bytes": 2096208,
+      "sha256": "B66E0C4AC20D259387B26445136E5CB247091B7340C9A068CE846A2A5D5AF4BE",
+      "all_geometry_casts_shadow": true
+    },
+    {
+      "file": "StrideMid_Refined_Appearance.png",
+      "variant": "Refined",
+      "pose": "StrideMid",
+      "bytes": 2096181,
+      "sha256": "498E4D5A0751D7BF631C9AD3B2A414FDF2DFA76E7CF1A8557447379A006448C3",
+      "all_geometry_casts_shadow": true
+    },
+    {
+      "file": "Reach_Original_Appearance.png",
+      "variant": "Original",
+      "pose": "Reach",
+      "bytes": 2095429,
+      "sha256": "41FAF04D0C58EEC28A2A4C9BAFA8CD7174C5D4DD25034B771973C09BD77E38ED",
+      "all_geometry_casts_shadow": true
+    },
+    {
+      "file": "Reach_Refined_Appearance.png",
+      "variant": "Refined",
+      "pose": "Reach",
+      "bytes": 2095092,
+      "sha256": "2F861128E30B68BEFEFBE29AB41759E444B2F13FA6FEA8741BFE1BD0FF9A2104",
+      "all_geometry_casts_shadow": true
+    },
+    {
+      "file": "StrideBack_Original_Shadow.png",
+      "variant": "Original",
+      "pose": "StrideBack",
+      "bytes": 2205301,
+      "sha256": "1AE39E26C9B95EE8B4486897C7965BAD98B043D5DA170B4FD085750E80D09A13",
+      "all_geometry_casts_shadow": true
+    },
+    {
+      "file": "StrideBack_Refined_Shadow.png",
+      "variant": "Refined",
+      "pose": "StrideBack",
+      "bytes": 2207038,
+      "sha256": "35DAA74C2E4051CC3F4AF491DB2FDF281C7A7A087B6A0B06882BAA9D4746BA26",
+      "all_geometry_casts_shadow": true
+    },
+    {
+      "file": "StrideMid_Original_Shadow.png",
+      "variant": "Original",
+      "pose": "StrideMid",
+      "bytes": 2199749,
+      "sha256": "EBE885BB9A008910A57DF8C71228612AA418F6C9B6FF923E3B88B74A4BE932B5",
+      "all_geometry_casts_shadow": true
+    },
+    {
+      "file": "StrideMid_Refined_Shadow.png",
+      "variant": "Refined",
+      "pose": "StrideMid",
+      "bytes": 2201433,
+      "sha256": "72E96F174221DDC9975684D3D3EB84B99BEFC89333CE854AE4D9B9105B882D92",
+      "all_geometry_casts_shadow": true
+    },
+    {
+      "file": "Reach_Original_Shadow.png",
+      "variant": "Original",
+      "pose": "Reach",
+      "bytes": 2200095,
+      "sha256": "69C9C0F85BE38AE7D3B6AD58F163000FE8D9EED7D54F9516667C41F4C6299278",
+      "all_geometry_casts_shadow": true
+    },
+    {
+      "file": "Reach_Refined_Shadow.png",
+      "variant": "Refined",
+      "pose": "Reach",
+      "bytes": 2201261,
+      "sha256": "B27F2C10268D3B860696BB62C7571F62C8BF383A066E54F1CC48DF7EC70BFF4D",
+      "all_geometry_casts_shadow": true
+    }
+  ],
+  "closed_ribbons": [
+    {
+      "name": "SM_DY_Kuafu_SnakeEar_R",
+      "triangles": 1048,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "SM_DY_Kuafu_SnakeEar_L",
+      "triangles": 960,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "SM_DY_Kuafu_SnakeArm_R",
+      "triangles": 452,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "SM_DY_Kuafu_SnakeArm_L",
+      "triangles": 452,
+      "nonmanifold_edges": 0
+    }
+  ],
+  "context": "Blender 4.5.14 actual source geometry rays, not native UE or formal game acceptance",
+  "appearance_framing": {
+    "all_pose_y_bounds_cm": [
+      -119.18930053710938,
+      101.21385955810547
+    ],
+    "all_pose_z_bounds_cm": [
+      -0.3630712032318115,
+      242.4022674560547
+    ],
+    "camera_orthographic_height_cm": 292.5647873263889,
+    "center_yz_cm": [
+      -8.987720489501953,
+      121.01959812641144
+    ],
+    "margin_ratio": 1.12
+  },
+  "shadow_geometry": {
+    "light_source_cm": [
+      -800.0,
+      -7.297460079193115,
+      120.93388366699219
+    ],
+    "screen_cm": [
+      200.0,
+      -7.297460079193115,
+      120.93388366699219
+    ],
+    "camera_cm": [
+      60.0,
+      -7.297460079193115,
+      120.93388366699219
+    ],
+    "projection": "real opaque point-light ray cast, all material sections enabled",
+    "UE_lab_coordinate_transport": "Source Y mirrored relative to UE FBX geometry; same relative -800/0/200 X arrangement",
+    "no_shadow_disable": true,
+    "no_transparent_materials": true,
+    "no_texture_mask_or_emissive_fake": true
+  }
+}
