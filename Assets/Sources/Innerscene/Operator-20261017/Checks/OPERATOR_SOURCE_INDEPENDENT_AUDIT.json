@@ -1,0 +1,112 @@
+{
+  "schema": "DYOperatorIndependentGLBAudit.v1",
+  "audit_time": "2026-10-17T00:25:40.603414+08:00",
+  "status": "PASS_SOURCE_EQUIVALENCE_ONLY",
+  "method": "Independent Python 3.12 standard-library GLB JSON/BIN parsing and assert-based byte comparisons; did not run or import prepare_operator_source.py; no Blender, UE, network or D-drive access used.",
+  "actual_final_native_exit": 0,
+  "explicit_checks_passed": 57,
+  "files": {
+    "Sam-Original/sam-idle.glb": {
+      "bytes": 21109796,
+      "sha256": "83FD621C92EB284585CD7D4F807697D59DCE723FCCA3910A48D0016D9F028AA6"
+    },
+    "Sam-Run-Original/sam-run.glb": {
+      "bytes": 21006116,
+      "sha256": "15BFD5C7E566A74447C246ABB24B60856AAC80CA1C4C661FBA3599380BB058C6"
+    },
+    "Operator-Prepared-Run1/SK_DY_Operator_Source.glb": {
+      "bytes": 21194100,
+      "sha256": "2670E4094E71570E9E38E86FCC20C5F4BA8FA9CEE63B91E5D3A8A02B00BC9871"
+    }
+  },
+  "checks": {
+    "all_three_GLB_headers_lengths_chunk_types_alignment_and_bounds_valid": true,
+    "all_three_use_one_embedded_buffer_with_no_URI_fields": true,
+    "all_original_Idle_BIN_bytes_preserved_as_output_prefix": true,
+    "original_Idle_mesh_material_texture_image_skin_sampler_JSON_unchanged": true,
+    "original_asset_extensions_scene_and_scenes_unchanged": true,
+    "original_391_accessors_and_401_bufferViews_preserved_as_exact_prefixes": true,
+    "all_nodes_exact_except_Phone_mesh_and_skin_keys_removed": true,
+    "Idle_animation_JSON_identical": true,
+    "Run_and_Idle_skeleton_node_transforms_and_hierarchy_identical_excluding_nonfunctional_extras": true,
+    "Run_and_Idle_skin_mesh_material_texture_image_sampler_JSON_identical": true,
+    "all_original_and_prepared_accessors_and_bufferViews_in_bounds_no_sparse": true,
+    "Run_all_168_samplers_and_168_channels_preserved_except_accessor_indices": true,
+    "all_336_Run_input_output_accessor_references_have_identical_payload_bytes": true,
+    "Run_accessor_metadata_unchanged_except_bufferView_remapping": true,
+    "Run_bufferView_metadata_and_full_bytes_unchanged_except_byteOffset": true,
+    "all_170_appended_accessors_and_170_appended_bufferViews_referenced_by_Run": true,
+    "Run_target_indices_names_paths_and_channel_mapping_identical": true,
+    "clip_timestamps_finite_strictly_increasing_and_CUBICSPLINE_output_counts_correct": true,
+    "all_14_primitive_attribute_index_joint_weight_bytes_identical_to_both_sources": true,
+    "joint_indices_in_56_joint_range_weights_finite_and_nonnegative": true,
+    "inverse_bind_matrix_accessor_bytes_identical_in_all_three_GLBs": true,
+    "SOURCE_json_Idle_Run_output_GLB_SHA256_and_output_size_match": true,
+    "SOURCE_json_11_active_meshes_and_56_joints_match_GLB": true
+  },
+  "counts": {
+    "nodes": 70,
+    "skins": 1,
+    "joints": 56,
+    "mesh_resources_including_unreferenced_phone": 12,
+    "active_mesh_nodes": 11,
+    "primitive_resources_including_phone": 14,
+    "primitive_vertex_sum_including_phone": 65056,
+    "triangles_including_phone": 91610,
+    "materials": 13,
+    "textures": 11,
+    "images": 10,
+    "Idle_accessors": 391,
+    "output_accessors": 561,
+    "appended_Run_accessors": 170,
+    "Idle_bufferViews": 401,
+    "output_bufferViews": 571,
+    "Idle_BIN_bytes": 21015736,
+    "output_BIN_bytes": 21061640,
+    "appended_BIN_bytes": 45904,
+    "maximum_weight_sum_absolute_error": 1.341104507446289e-7
+  },
+  "clips": [
+    {
+      "name": "Idle_Standing",
+      "samplers": 168,
+      "channels": 168,
+      "unique_time_accessors": 2,
+      "minimum_time_seconds": 0.0,
+      "maximum_time_seconds": 6.0,
+      "duration_seconds": 6.0,
+      "interpolation": "CUBICSPLINE"
+    },
+    {
+      "name": "Run",
+      "samplers": 168,
+      "channels": 168,
+      "unique_time_accessors": 2,
+      "minimum_time_seconds": 0.0,
+      "maximum_time_seconds": 1.3333333730697632,
+      "duration_seconds": 1.3333333730697632,
+      "interpolation": "CUBICSPLINE"
+    }
+  ],
+  "node_change": {
+    "index": 63,
+    "name": "Phone",
+    "removed_keys": {
+      "mesh": 7,
+      "skin": 0
+    },
+    "all_other_nodes_and_fields_unchanged": true,
+    "source_phone_mesh_material_and_BIN_data_remain_unmodified_and_unreferenced": true
+  },
+  "limitations": [
+    "This is structural and byte-equivalence validation, not a full glTF conformance certification or visual-quality acceptance.",
+    "SOURCE.json authorship and CC0 provenance were not independently checked; no network used.",
+    "The .blend file was not inspected, hashed or launched; Blender action frame ranges were not independently evaluated.",
+    "No Blender rendering, UE native import, packaged runtime, root-motion suitability, move-speed matching or footstep synchronization was tested.",
+    "The preserved second clip is named Run, not Walk; matching the game's desired motion still requires runtime verification.",
+    "Phone display binding was removed, not its source mesh or bytes; unused source data are intentionally retained."
+  ],
+  "formal_art_accepted": false,
+  "original_or_prepared_asset_files_modified": false,
+  "only_new_audit_artifact": "OPERATOR_SOURCE_INDEPENDENT_AUDIT.json"
+}

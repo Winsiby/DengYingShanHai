@@ -1,0 +1,39 @@
+{
+  "Schema": "DYPlayerSourceDownload.v1",
+  "Files": [
+    {
+      "File": "sam-idle.glb",
+      "Page": "https://www.innerscene.com/tools/library/3d-parts/idle-standing-sam-3d-person-animated-1f9f1217",
+      "Download": "https://www.innerscene.com/api/library/idle-standing-sam-3d-person-animated-1f9f1217/download",
+      "Bytes": 21109796,
+      "SHA256": "83FD621C92EB284585CD7D4F807697D59DCE723FCCA3910A48D0016D9F028AA6",
+      "License": "CC0-1.0",
+      "Author": "Innerscene, adapted from MakeHuman/MPFB CC0 assets",
+      "ClipClaim": "Idle",
+      "DurationSecondsClaim": 6.0,
+      "InPlaceSpeedMpsClaim": 0.0,
+      "ClaimsAreNotMeasured": true,
+      "RetrievedAt": "2026-10-16T23:59:19.1398759+08:00"
+    },
+    {
+      "File": "sam-walk.glb",
+      "Page": "https://www.innerscene.com/tools/library/3d-parts/brisk-walk-sam-3d-person-animated-bed03fa4",
+      "Download": "https://www.innerscene.com/api/library/brisk-walk-sam-3d-person-animated-bed03fa4/download",
+      "Bytes": 21013304,
+      "SHA256": "289DFE56F8D1A51582C681D31A796B0E9CDF6F3684AF1461D0FEB2C33C648BA8",
+      "License": "CC0-1.0",
+      "Author": "Innerscene, adapted from MakeHuman/MPFB CC0 assets",
+      "ClipClaim": "Walk",
+      "DurationSecondsClaim": 1.733,
+      "InPlaceSpeedMpsClaim": 1.7,
+      "ClaimsAreNotMeasured": true,
+      "RetrievedAt": "2026-10-16T23:59:46.0574060+08:00"
+    }
+  ],
+  "Terms": "https://www.innerscene.com/tools/library/terms",
+  "MakeHumanLicense": "https://static.makehumancommunity.org/about/license.html",
+  "PaidAssets": false,
+  "NativeImported": false,
+  "ArtAccepted": false,
+  "OriginalGameChanged": false
+}

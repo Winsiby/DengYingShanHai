@@ -1,0 +1,1530 @@
+{
+  "schema": "DYOperatorSourceRoundTrip.v1",
+  "prepared_files_rehashed": true,
+  "cold_blend_open_succeeded": true,
+  "both_clips_actually_rendered": true,
+  "source_records": [
+    {
+      "file": "SK_DY_Operator_Source.glb",
+      "bytes": 21194100,
+      "sha256": "2670E4094E71570E9E38E86FCC20C5F4BA8FA9CEE63B91E5D3A8A02B00BC9871",
+      "generator": "Khronos glTF Blender I/O v5.2.40",
+      "primitives": [
+        {
+          "mesh": "eyebrow001",
+          "vertices": 124,
+          "triangles": 192,
+          "material": "Sam | anatomical body.eyebrow001",
+          "position_sha": "1115C159A3C0470468D9C48C723E69F6ED0CC6AFFF064218ACAB7517476809FD",
+          "skinned": true
+        },
+        {
+          "mesh": "eyelashes01",
+          "vertices": 250,
+          "triangles": 368,
+          "material": "Sam | anatomical body.eyelashes01",
+          "position_sha": "177700B6F45F8098A7A6E9470256050AD920CB9EFA45C59AAB9500A1306A8934",
+          "skinned": true
+        },
+        {
+          "mesh": "Hairline | fine scalp roots",
+          "vertices": 9592,
+          "triangles": 8880,
+          "material": "Sam | fine hair roots",
+          "position_sha": "DD3E8F6EB87203B28A15A65E445FCB15D0E7236E00038FA0C019C237AC63839F",
+          "skinned": true
+        },
+        {
+          "mesh": "low-poly",
+          "vertices": 96,
+          "triangles": 172,
+          "material": "Sam | anatomical body.low-poly",
+          "position_sha": "F1025939CDD72BB02E483F5D2E9FE4622CFB467CE5DB1E2798BD94AF0E26027E",
+          "skinned": true
+        },
+        {
+          "mesh": "male_casualsuit02",
+          "vertices": 1364,
+          "triangles": 2408,
+          "material": "Sam | original top",
+          "position_sha": "B60B3433E41540133ED60F8BD0A41D25B03D2F40A9207216C2C3DE84477DC46B",
+          "skinned": true
+        },
+        {
+          "mesh": "male_casualsuit02",
+          "vertices": 950,
+          "triangles": 1712,
+          "material": "Sam | original bottom",
+          "position_sha": "1EFBA5A79F125265B5EFCF077522338E4CA951D4A00100A931D9B39AF78B05B5",
+          "skinned": true
+        },
+        {
+          "mesh": "Ankle lining l",
+          "vertices": 160,
+          "triangles": 280,
+          "material": "Original dark ankle lining",
+          "position_sha": "7769C007AE75820F76F5685D3FCABC40961A611CF5F02975A03433D34A1FCD13",
+          "skinned": true
+        },
+        {
+          "mesh": "Ankle lining r",
+          "vertices": 160,
+          "triangles": 280,
+          "material": "Original dark ankle lining",
+          "position_sha": "27A0343D288AE6A4CCB08564EE281C453D69EE7E0B4D9E6699CF4BF52387AE96",
+          "skinned": true
+        },
+        {
+          "mesh": "Original held accessory",
+          "vertices": 384,
+          "triangles": 188,
+          "material": "Original accessory body",
+          "position_sha": "0B4D547601D5CD8651C5D9FE0FEC1E4B3334D2C678F9226340AD18C53AB326FA",
+          "skinned": true
+        },
+        {
+          "mesh": "Original held accessory",
+          "vertices": 384,
+          "triangles": 188,
+          "material": "Accessory detail",
+          "position_sha": "DB65427C6EF3ED3349A721075993FFE9790FE17264211DD211D089F2BEED9401",
+          "skinned": true
+        },
+        {
+          "mesh": "base",
+          "vertices": 42378,
+          "triangles": 63264,
+          "material": "Sam | anatomical body.body",
+          "position_sha": "5B4784DBDEE24C7DB842E3DCA65A708669820AC586F16E3D0DD76FD8DCB419B4",
+          "skinned": true
+        },
+        {
+          "mesh": "shoes01",
+          "vertices": 1670,
+          "triangles": 2880,
+          "material": "Sam | anatomical body.shoes01",
+          "position_sha": "E2CDF885D5B91FC1B3E6F6542EA371CD2CF9554D057BFE4243C114B8CB0B8FD5",
+          "skinned": true
+        },
+        {
+          "mesh": "short01",
+          "vertices": 3050,
+          "triangles": 3678,
+          "material": "Sam | anatomical body.short01",
+          "position_sha": "8B51F91E013A991BECD0A89F407E29C626BA35E40A9CB86AE0FEC807FAAC7370",
+          "skinned": true
+        },
+        {
+          "mesh": "teeth_base",
+          "vertices": 4494,
+          "triangles": 7120,
+          "material": "Sam | anatomical body.teeth_base",
+          "position_sha": "B96B5A7122C6829994FD375D59030697439B07000ACDD69C6EEFA12CFFE7A980",
+          "skinned": true
+        }
+      ],
+      "skins": [
+        {
+          "joints": [
+            "foot_l",
+            "ball_l",
+            "foot_r",
+            "ball_r",
+            "Root",
+            "pelvis",
+            "spine_01",
+            "spine_02",
+            "spine_03",
+            "clavicle_l",
+            "upperarm_l",
+            "lowerarm_l",
+            "hand_l",
+            "index_01_l",
+            "index_02_l",
+            "index_03_l",
+            "middle_01_l",
+            "middle_02_l",
+            "middle_03_l",
+            "pinky_01_l",
+            "pinky_02_l",
+            "pinky_03_l",
+            "ring_01_l",
+            "ring_02_l",
+            "ring_03_l",
+            "thumb_01_l",
+            "thumb_02_l",
+            "thumb_03_l",
+            "lowerarm_prox_l",
+            "clavicle_r",
+            "upperarm_r",
+            "lowerarm_r",
+            "hand_r",
+            "held_accessory",
+            "index_01_r",
+            "index_02_r",
+            "index_03_r",
+            "middle_01_r",
+            "middle_02_r",
+            "middle_03_r",
+            "pinky_01_r",
+            "pinky_02_r",
+            "pinky_03_r",
+            "ring_01_r",
+            "ring_02_r",
+            "ring_03_r",
+            "thumb_01_r",
+            "thumb_02_r",
+            "thumb_03_r",
+            "lowerarm_prox_r",
+            "neck_01",
+            "head",
+            "thigh_l",
+            "calf_l",
+            "thigh_r",
+            "calf_r"
+          ],
+          "inverse_bind_sha": "9B9DECC7D1BCE236FCD242FBF4505A31A7D002FA85E36DBEB8C092126510D9D6"
+        }
+      ],
+      "clips": [
+        {
+          "name": "Idle_Standing",
+          "channels": 168,
+          "varying_channels": [
+            {
+              "node": "pelvis",
+              "path": "translation",
+              "max_component_delta": 0.017010733485221863
+            },
+            {
+              "node": "spine_01",
+              "path": "rotation",
+              "max_component_delta": 0.004859998822212219
+            },
+            {
+              "node": "spine_02",
+              "path": "rotation",
+              "max_component_delta": 0.004952386021614075
+            },
+            {
+              "node": "spine_03",
+              "path": "rotation",
+              "max_component_delta": 0.004999968688935041
+            },
+            {
+              "node": "upperarm_l",
+              "path": "rotation",
+              "max_component_delta": 0.014624834060668945
+            },
+            {
+              "node": "lowerarm_l",
+              "path": "rotation",
+              "max_component_delta": 0.015554547309875488
+            },
+            {
+              "node": "upperarm_r",
+              "path": "rotation",
+              "max_component_delta": 0.01462465524673462
+            },
+            {
+              "node": "lowerarm_r",
+              "path": "rotation",
+              "max_component_delta": 0.0155545175075531
+            },
+            {
+              "node": "head",
+              "path": "rotation",
+              "max_component_delta": 0.008747518062591553
+            },
+            {
+              "node": "thigh_l",
+              "path": "rotation",
+              "max_component_delta": 0.012065798044204712
+            },
+            {
+              "node": "calf_l",
+              "path": "rotation",
+              "max_component_delta": 0.01347719132900238
+            },
+            {
+              "node": "thigh_r",
+              "path": "rotation",
+              "max_component_delta": 0.00871964916586876
+            },
+            {
+              "node": "calf_r",
+              "path": "rotation",
+              "max_component_delta": 0.011805117130279541
+            }
+          ],
+          "start": 0.0,
+          "end": 6.0,
+          "duration": 6.0,
+          "interpolations": [
+            "CUBICSPLINE"
+          ]
+        },
+        {
+          "name": "Run",
+          "channels": 168,
+          "varying_channels": [
+            {
+              "node": "foot_l",
+              "path": "translation",
+              "max_component_delta": 1.1034657955169678
+            },
+            {
+              "node": "foot_l",
+              "path": "rotation",
+              "max_component_delta": 0.8100244179368019
+            },
+            {
+              "node": "foot_r",
+              "path": "translation",
+              "max_component_delta": 1.103465735912323
+            },
+            {
+              "node": "foot_r",
+              "path": "rotation",
+              "max_component_delta": 0.8099418506026268
+            },
+            {
+              "node": "pelvis",
+              "path": "translation",
+              "max_component_delta": 0.1798098087310791
+            },
+            {
+              "node": "pelvis",
+              "path": "rotation",
+              "max_component_delta": 0.02866562083363533
+            },
+            {
+              "node": "spine_01",
+              "path": "rotation",
+              "max_component_delta": 0.020550386980175972
+            },
+            {
+              "node": "spine_02",
+              "path": "rotation",
+              "max_component_delta": 0.02072949707508087
+            },
+            {
+              "node": "spine_03",
+              "path": "rotation",
+              "max_component_delta": 0.02099260687828064
+            },
+            {
+              "node": "upperarm_l",
+              "path": "rotation",
+              "max_component_delta": 0.7057054489850998
+            },
+            {
+              "node": "lowerarm_l",
+              "path": "rotation",
+              "max_component_delta": 0.2738804817199707
+            },
+            {
+              "node": "upperarm_r",
+              "path": "rotation",
+              "max_component_delta": 0.7057055681943893
+            },
+            {
+              "node": "lowerarm_r",
+              "path": "rotation",
+              "max_component_delta": 0.27388083934783936
+            },
+            {
+              "node": "head",
+              "path": "rotation",
+              "max_component_delta": 0.008820735849440098
+            },
+            {
+              "node": "thigh_l",
+              "path": "rotation",
+              "max_component_delta": 0.8185081779956818
+            },
+            {
+              "node": "calf_l",
+              "path": "rotation",
+              "max_component_delta": 0.6799830868840218
+            },
+            {
+              "node": "thigh_r",
+              "path": "rotation",
+              "max_component_delta": 0.8184227347373962
+            },
+            {
+              "node": "calf_r",
+              "path": "rotation",
+              "max_component_delta": 0.6797036156058311
+            }
+          ],
+          "start": 0.0,
+          "end": 1.3333333730697632,
+          "duration": 1.3333333730697632,
+          "interpolations": [
+            "CUBICSPLINE"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "name": "eyebrow001",
+          "mime": "image/png",
+          "bytes": 89619,
+          "sha256": "9940F7D0B1B223709A19B05156BA6F6E9E4DBDBCED02D7574F4D51D72C58967B"
+        },
+        {
+          "name": "eyelashes01",
+          "mime": "image/png",
+          "bytes": 91600,
+          "sha256": "4B69C0FFF2648874460E9CAF80C31413C444218A5C50AFEBC425AEAA65484A35"
+        },
+        {
+          "name": "7db66ef3d95d1557",
+          "mime": "image/png",
+          "bytes": 1056,
+          "sha256": "4AEB75AECE572D539B77E6C3982EC33EC4AFAC2C47DB1B9C7EDC95B6F8B21E2F"
+        },
+        {
+          "name": "brown_eye",
+          "mime": "image/png",
+          "bytes": 610817,
+          "sha256": "4659691C7295AD6206C78B003E5FD0E5F91DCD53032FA914A229BB48CABE424B"
+        },
+        {
+          "name": "male_casualsuit02_normal",
+          "mime": "image/png",
+          "bytes": 6036834,
+          "sha256": "1C31A7A5FBBEF1EE40176114295038703F370D163A3CF040F55B60C85369D12C"
+        },
+        {
+          "name": "middleage_lightskinned_male_diffuse2",
+          "mime": "image/png",
+          "bytes": 3730636,
+          "sha256": "E897C4CC1B6AD5D10A7D2B2BE92402FEDA4E772E6582DFAF0A1E8FC4621D8097"
+        },
+        {
+          "name": "shoes01_normal",
+          "mime": "image/png",
+          "bytes": 875473,
+          "sha256": "A9BFD7223E98B8F93100E89596135E3A94E6044F9DB11B4D23CEC625C37A4599"
+        },
+        {
+          "name": "shoes01_diffuse",
+          "mime": "image/png",
+          "bytes": 1335772,
+          "sha256": "50C9A406A7F1CB6AA7B42912348E78F09D0252AA3963C8229CF18DFE8353CDBF"
+        },
+        {
+          "name": "short01_diffuse",
+          "mime": "image/png",
+          "bytes": 2354146,
+          "sha256": "F34A0957184E3D1E911ED59245F874F8D4843F61EE44FF49F43EDB4BE0196949"
+        },
+        {
+          "name": "teeth",
+          "mime": "image/png",
+          "bytes": 1799930,
+          "sha256": "D0AFB57869C6FBB56B98F5EFC4AEC629EE7593E70D8DD2BFB9DE923ACFB65F43"
+        }
+      ],
+      "materials": [
+        {
+          "name": "Sam | anatomical body.eyebrow001",
+          "alpha": "MASK",
+          "two_sided": true,
+          "pbr": {
+            "baseColorTexture": {
+              "index": 0
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        },
+        {
+          "name": "Sam | anatomical body.eyelashes01",
+          "alpha": "MASK",
+          "two_sided": true,
+          "pbr": {
+            "baseColorTexture": {
+              "index": 1
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        },
+        {
+          "name": "Sam | fine hair roots",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorTexture": {
+              "index": 2
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        },
+        {
+          "name": "Sam | anatomical body.low-poly",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorTexture": {
+              "index": 3
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        },
+        {
+          "name": "Sam | original top",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorFactor": [
+              0.10499999672174454,
+              0.17000000178813934,
+              0.12999999523162842,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.6800000071525574
+          }
+        },
+        {
+          "name": "Sam | original bottom",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorFactor": [
+              0.02500000037252903,
+              0.039000000804662704,
+              0.06499999761581421,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.6800000071525574
+          }
+        },
+        {
+          "name": "Original dark ankle lining",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorFactor": [
+              0.017999999225139618,
+              0.01600000075995922,
+              0.020999999716877937,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.800000011920929
+          }
+        },
+        {
+          "name": "Original accessory body",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorFactor": [
+              0.02500000037252903,
+              0.019999999552965164,
+              0.017999999225139618,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.47999998927116394
+          }
+        },
+        {
+          "name": "Accessory detail",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorFactor": [
+              0.054999999701976776,
+              0.0949999988079071,
+              0.11999999731779099,
+              1
+            ],
+            "metallicFactor": 0.30000001192092896,
+            "roughnessFactor": 0.23999999463558197
+          }
+        },
+        {
+          "name": "Sam | anatomical body.body",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorTexture": {
+              "index": 6
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.5400000214576721
+          }
+        },
+        {
+          "name": "Sam | anatomical body.shoes01",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorTexture": {
+              "index": 8
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        },
+        {
+          "name": "Sam | anatomical body.short01",
+          "alpha": "MASK",
+          "two_sided": true,
+          "pbr": {
+            "baseColorTexture": {
+              "index": 9
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        },
+        {
+          "name": "Sam | anatomical body.teeth_base",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorTexture": {
+              "index": 10
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        }
+      ],
+      "clip_to_preview": "Idle_Standing",
+      "blender": {
+        "meshes": [
+          {
+            "name": "eyebrow001",
+            "vertices": 124,
+            "polygons": 192
+          },
+          {
+            "name": "eyelashes01",
+            "vertices": 250,
+            "polygons": 368
+          },
+          {
+            "name": "Hairline | fine scalp roots",
+            "vertices": 9592,
+            "polygons": 8880
+          },
+          {
+            "name": "low-poly",
+            "vertices": 96,
+            "polygons": 172
+          },
+          {
+            "name": "male_casualsuit02",
+            "vertices": 2314,
+            "polygons": 4120
+          },
+          {
+            "name": "Original skinned ankle lining l",
+            "vertices": 160,
+            "polygons": 280
+          },
+          {
+            "name": "Original skinned ankle lining r",
+            "vertices": 160,
+            "polygons": 280
+          },
+          {
+            "name": "Sam | anatomical body",
+            "vertices": 42378,
+            "polygons": 63264
+          },
+          {
+            "name": "shoes01",
+            "vertices": 1670,
+            "polygons": 2880
+          },
+          {
+            "name": "short01",
+            "vertices": 3050,
+            "polygons": 3678
+          },
+          {
+            "name": "teeth_base",
+            "vertices": 4494,
+            "polygons": 7120
+          }
+        ],
+        "rigs": [
+          {
+            "name": "Sam | anatomical body.rig",
+            "bones": 56
+          }
+        ],
+        "actions": [
+          {
+            "name": "Idle_Standing",
+            "frames": [
+              0.0,
+              180.0
+            ]
+          },
+          {
+            "name": "Run",
+            "frames": [
+              0.0,
+              40.0
+            ]
+          }
+        ],
+        "bounds_m": [
+          [
+            -0.3589091897010803,
+            -0.21134032309055328,
+            0.001999986357986927
+          ],
+          [
+            0.3595667779445648,
+            0.13187089562416077,
+            1.7769336700439453
+          ]
+        ],
+        "bone_matrices_actually_animated": true,
+        "excluded_custom_shapes": [
+          "Icosphere"
+        ],
+        "captures": [
+          {
+            "file": "SK_DY_Operator_Source-front.png",
+            "frame": 1,
+            "seconds": 0.03333333333333333,
+            "bytes": 961447,
+            "sha256": "A8D569B79939123001F724D9D1A3592E3291822CB6AC8C5FA44A0DCEE5E5B39E",
+            "camera": [
+              0.00032879412174224854,
+              -7.139469623565674,
+              1.1557068824768066
+            ],
+            "target": [
+              0.00032879412174224854,
+              -0.03973471373319626,
+              0.8894668221473694
+            ]
+          },
+          {
+            "file": "SK_DY_Operator_Source-rear.png",
+            "frame": 1,
+            "seconds": 0.03333333333333333,
+            "bytes": 953678,
+            "sha256": "6219C654EE1E013046DBBEE937EAD741EEAC590025667348D7A2E58FCBD1BB73",
+            "camera": [
+              0.00032879412174224854,
+              7.059999942779541,
+              1.1557068824768066
+            ],
+            "target": [
+              0.00032879412174224854,
+              -0.03973471373319626,
+              0.8894668221473694
+            ]
+          },
+          {
+            "file": "SK_DY_Operator_Source-side.png",
+            "frame": 1,
+            "seconds": 0.03333333333333333,
+            "bytes": 907436,
+            "sha256": "7C7ABDE84225F5EFAA6AEB793D9C8CA3B3030188F0627F40D3325E68877259E1",
+            "camera": [
+              7.100063800811768,
+              -0.03973471373319626,
+              1.1557068824768066
+            ],
+            "target": [
+              0.00032879412174224854,
+              -0.03973471373319626,
+              0.8894668221473694
+            ]
+          }
+        ],
+        "renderer": "Blender Cycles CPU,16 samples,denoising,AgX; no post-editing"
+      }
+    },
+    {
+      "file": "SK_DY_Operator_Source.glb",
+      "bytes": 21194100,
+      "sha256": "2670E4094E71570E9E38E86FCC20C5F4BA8FA9CEE63B91E5D3A8A02B00BC9871",
+      "generator": "Khronos glTF Blender I/O v5.2.40",
+      "primitives": [
+        {
+          "mesh": "eyebrow001",
+          "vertices": 124,
+          "triangles": 192,
+          "material": "Sam | anatomical body.eyebrow001",
+          "position_sha": "1115C159A3C0470468D9C48C723E69F6ED0CC6AFFF064218ACAB7517476809FD",
+          "skinned": true
+        },
+        {
+          "mesh": "eyelashes01",
+          "vertices": 250,
+          "triangles": 368,
+          "material": "Sam | anatomical body.eyelashes01",
+          "position_sha": "177700B6F45F8098A7A6E9470256050AD920CB9EFA45C59AAB9500A1306A8934",
+          "skinned": true
+        },
+        {
+          "mesh": "Hairline | fine scalp roots",
+          "vertices": 9592,
+          "triangles": 8880,
+          "material": "Sam | fine hair roots",
+          "position_sha": "DD3E8F6EB87203B28A15A65E445FCB15D0E7236E00038FA0C019C237AC63839F",
+          "skinned": true
+        },
+        {
+          "mesh": "low-poly",
+          "vertices": 96,
+          "triangles": 172,
+          "material": "Sam | anatomical body.low-poly",
+          "position_sha": "F1025939CDD72BB02E483F5D2E9FE4622CFB467CE5DB1E2798BD94AF0E26027E",
+          "skinned": true
+        },
+        {
+          "mesh": "male_casualsuit02",
+          "vertices": 1364,
+          "triangles": 2408,
+          "material": "Sam | original top",
+          "position_sha": "B60B3433E41540133ED60F8BD0A41D25B03D2F40A9207216C2C3DE84477DC46B",
+          "skinned": true
+        },
+        {
+          "mesh": "male_casualsuit02",
+          "vertices": 950,
+          "triangles": 1712,
+          "material": "Sam | original bottom",
+          "position_sha": "1EFBA5A79F125265B5EFCF077522338E4CA951D4A00100A931D9B39AF78B05B5",
+          "skinned": true
+        },
+        {
+          "mesh": "Ankle lining l",
+          "vertices": 160,
+          "triangles": 280,
+          "material": "Original dark ankle lining",
+          "position_sha": "7769C007AE75820F76F5685D3FCABC40961A611CF5F02975A03433D34A1FCD13",
+          "skinned": true
+        },
+        {
+          "mesh": "Ankle lining r",
+          "vertices": 160,
+          "triangles": 280,
+          "material": "Original dark ankle lining",
+          "position_sha": "27A0343D288AE6A4CCB08564EE281C453D69EE7E0B4D9E6699CF4BF52387AE96",
+          "skinned": true
+        },
+        {
+          "mesh": "Original held accessory",
+          "vertices": 384,
+          "triangles": 188,
+          "material": "Original accessory body",
+          "position_sha": "0B4D547601D5CD8651C5D9FE0FEC1E4B3334D2C678F9226340AD18C53AB326FA",
+          "skinned": true
+        },
+        {
+          "mesh": "Original held accessory",
+          "vertices": 384,
+          "triangles": 188,
+          "material": "Accessory detail",
+          "position_sha": "DB65427C6EF3ED3349A721075993FFE9790FE17264211DD211D089F2BEED9401",
+          "skinned": true
+        },
+        {
+          "mesh": "base",
+          "vertices": 42378,
+          "triangles": 63264,
+          "material": "Sam | anatomical body.body",
+          "position_sha": "5B4784DBDEE24C7DB842E3DCA65A708669820AC586F16E3D0DD76FD8DCB419B4",
+          "skinned": true
+        },
+        {
+          "mesh": "shoes01",
+          "vertices": 1670,
+          "triangles": 2880,
+          "material": "Sam | anatomical body.shoes01",
+          "position_sha": "E2CDF885D5B91FC1B3E6F6542EA371CD2CF9554D057BFE4243C114B8CB0B8FD5",
+          "skinned": true
+        },
+        {
+          "mesh": "short01",
+          "vertices": 3050,
+          "triangles": 3678,
+          "material": "Sam | anatomical body.short01",
+          "position_sha": "8B51F91E013A991BECD0A89F407E29C626BA35E40A9CB86AE0FEC807FAAC7370",
+          "skinned": true
+        },
+        {
+          "mesh": "teeth_base",
+          "vertices": 4494,
+          "triangles": 7120,
+          "material": "Sam | anatomical body.teeth_base",
+          "position_sha": "B96B5A7122C6829994FD375D59030697439B07000ACDD69C6EEFA12CFFE7A980",
+          "skinned": true
+        }
+      ],
+      "skins": [
+        {
+          "joints": [
+            "foot_l",
+            "ball_l",
+            "foot_r",
+            "ball_r",
+            "Root",
+            "pelvis",
+            "spine_01",
+            "spine_02",
+            "spine_03",
+            "clavicle_l",
+            "upperarm_l",
+            "lowerarm_l",
+            "hand_l",
+            "index_01_l",
+            "index_02_l",
+            "index_03_l",
+            "middle_01_l",
+            "middle_02_l",
+            "middle_03_l",
+            "pinky_01_l",
+            "pinky_02_l",
+            "pinky_03_l",
+            "ring_01_l",
+            "ring_02_l",
+            "ring_03_l",
+            "thumb_01_l",
+            "thumb_02_l",
+            "thumb_03_l",
+            "lowerarm_prox_l",
+            "clavicle_r",
+            "upperarm_r",
+            "lowerarm_r",
+            "hand_r",
+            "held_accessory",
+            "index_01_r",
+            "index_02_r",
+            "index_03_r",
+            "middle_01_r",
+            "middle_02_r",
+            "middle_03_r",
+            "pinky_01_r",
+            "pinky_02_r",
+            "pinky_03_r",
+            "ring_01_r",
+            "ring_02_r",
+            "ring_03_r",
+            "thumb_01_r",
+            "thumb_02_r",
+            "thumb_03_r",
+            "lowerarm_prox_r",
+            "neck_01",
+            "head",
+            "thigh_l",
+            "calf_l",
+            "thigh_r",
+            "calf_r"
+          ],
+          "inverse_bind_sha": "9B9DECC7D1BCE236FCD242FBF4505A31A7D002FA85E36DBEB8C092126510D9D6"
+        }
+      ],
+      "clips": [
+        {
+          "name": "Idle_Standing",
+          "channels": 168,
+          "varying_channels": [
+            {
+              "node": "pelvis",
+              "path": "translation",
+              "max_component_delta": 0.017010733485221863
+            },
+            {
+              "node": "spine_01",
+              "path": "rotation",
+              "max_component_delta": 0.004859998822212219
+            },
+            {
+              "node": "spine_02",
+              "path": "rotation",
+              "max_component_delta": 0.004952386021614075
+            },
+            {
+              "node": "spine_03",
+              "path": "rotation",
+              "max_component_delta": 0.004999968688935041
+            },
+            {
+              "node": "upperarm_l",
+              "path": "rotation",
+              "max_component_delta": 0.014624834060668945
+            },
+            {
+              "node": "lowerarm_l",
+              "path": "rotation",
+              "max_component_delta": 0.015554547309875488
+            },
+            {
+              "node": "upperarm_r",
+              "path": "rotation",
+              "max_component_delta": 0.01462465524673462
+            },
+            {
+              "node": "lowerarm_r",
+              "path": "rotation",
+              "max_component_delta": 0.0155545175075531
+            },
+            {
+              "node": "head",
+              "path": "rotation",
+              "max_component_delta": 0.008747518062591553
+            },
+            {
+              "node": "thigh_l",
+              "path": "rotation",
+              "max_component_delta": 0.012065798044204712
+            },
+            {
+              "node": "calf_l",
+              "path": "rotation",
+              "max_component_delta": 0.01347719132900238
+            },
+            {
+              "node": "thigh_r",
+              "path": "rotation",
+              "max_component_delta": 0.00871964916586876
+            },
+            {
+              "node": "calf_r",
+              "path": "rotation",
+              "max_component_delta": 0.011805117130279541
+            }
+          ],
+          "start": 0.0,
+          "end": 6.0,
+          "duration": 6.0,
+          "interpolations": [
+            "CUBICSPLINE"
+          ]
+        },
+        {
+          "name": "Run",
+          "channels": 168,
+          "varying_channels": [
+            {
+              "node": "foot_l",
+              "path": "translation",
+              "max_component_delta": 1.1034657955169678
+            },
+            {
+              "node": "foot_l",
+              "path": "rotation",
+              "max_component_delta": 0.8100244179368019
+            },
+            {
+              "node": "foot_r",
+              "path": "translation",
+              "max_component_delta": 1.103465735912323
+            },
+            {
+              "node": "foot_r",
+              "path": "rotation",
+              "max_component_delta": 0.8099418506026268
+            },
+            {
+              "node": "pelvis",
+              "path": "translation",
+              "max_component_delta": 0.1798098087310791
+            },
+            {
+              "node": "pelvis",
+              "path": "rotation",
+              "max_component_delta": 0.02866562083363533
+            },
+            {
+              "node": "spine_01",
+              "path": "rotation",
+              "max_component_delta": 0.020550386980175972
+            },
+            {
+              "node": "spine_02",
+              "path": "rotation",
+              "max_component_delta": 0.02072949707508087
+            },
+            {
+              "node": "spine_03",
+              "path": "rotation",
+              "max_component_delta": 0.02099260687828064
+            },
+            {
+              "node": "upperarm_l",
+              "path": "rotation",
+              "max_component_delta": 0.7057054489850998
+            },
+            {
+              "node": "lowerarm_l",
+              "path": "rotation",
+              "max_component_delta": 0.2738804817199707
+            },
+            {
+              "node": "upperarm_r",
+              "path": "rotation",
+              "max_component_delta": 0.7057055681943893
+            },
+            {
+              "node": "lowerarm_r",
+              "path": "rotation",
+              "max_component_delta": 0.27388083934783936
+            },
+            {
+              "node": "head",
+              "path": "rotation",
+              "max_component_delta": 0.008820735849440098
+            },
+            {
+              "node": "thigh_l",
+              "path": "rotation",
+              "max_component_delta": 0.8185081779956818
+            },
+            {
+              "node": "calf_l",
+              "path": "rotation",
+              "max_component_delta": 0.6799830868840218
+            },
+            {
+              "node": "thigh_r",
+              "path": "rotation",
+              "max_component_delta": 0.8184227347373962
+            },
+            {
+              "node": "calf_r",
+              "path": "rotation",
+              "max_component_delta": 0.6797036156058311
+            }
+          ],
+          "start": 0.0,
+          "end": 1.3333333730697632,
+          "duration": 1.3333333730697632,
+          "interpolations": [
+            "CUBICSPLINE"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "name": "eyebrow001",
+          "mime": "image/png",
+          "bytes": 89619,
+          "sha256": "9940F7D0B1B223709A19B05156BA6F6E9E4DBDBCED02D7574F4D51D72C58967B"
+        },
+        {
+          "name": "eyelashes01",
+          "mime": "image/png",
+          "bytes": 91600,
+          "sha256": "4B69C0FFF2648874460E9CAF80C31413C444218A5C50AFEBC425AEAA65484A35"
+        },
+        {
+          "name": "7db66ef3d95d1557",
+          "mime": "image/png",
+          "bytes": 1056,
+          "sha256": "4AEB75AECE572D539B77E6C3982EC33EC4AFAC2C47DB1B9C7EDC95B6F8B21E2F"
+        },
+        {
+          "name": "brown_eye",
+          "mime": "image/png",
+          "bytes": 610817,
+          "sha256": "4659691C7295AD6206C78B003E5FD0E5F91DCD53032FA914A229BB48CABE424B"
+        },
+        {
+          "name": "male_casualsuit02_normal",
+          "mime": "image/png",
+          "bytes": 6036834,
+          "sha256": "1C31A7A5FBBEF1EE40176114295038703F370D163A3CF040F55B60C85369D12C"
+        },
+        {
+          "name": "middleage_lightskinned_male_diffuse2",
+          "mime": "image/png",
+          "bytes": 3730636,
+          "sha256": "E897C4CC1B6AD5D10A7D2B2BE92402FEDA4E772E6582DFAF0A1E8FC4621D8097"
+        },
+        {
+          "name": "shoes01_normal",
+          "mime": "image/png",
+          "bytes": 875473,
+          "sha256": "A9BFD7223E98B8F93100E89596135E3A94E6044F9DB11B4D23CEC625C37A4599"
+        },
+        {
+          "name": "shoes01_diffuse",
+          "mime": "image/png",
+          "bytes": 1335772,
+          "sha256": "50C9A406A7F1CB6AA7B42912348E78F09D0252AA3963C8229CF18DFE8353CDBF"
+        },
+        {
+          "name": "short01_diffuse",
+          "mime": "image/png",
+          "bytes": 2354146,
+          "sha256": "F34A0957184E3D1E911ED59245F874F8D4843F61EE44FF49F43EDB4BE0196949"
+        },
+        {
+          "name": "teeth",
+          "mime": "image/png",
+          "bytes": 1799930,
+          "sha256": "D0AFB57869C6FBB56B98F5EFC4AEC629EE7593E70D8DD2BFB9DE923ACFB65F43"
+        }
+      ],
+      "materials": [
+        {
+          "name": "Sam | anatomical body.eyebrow001",
+          "alpha": "MASK",
+          "two_sided": true,
+          "pbr": {
+            "baseColorTexture": {
+              "index": 0
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        },
+        {
+          "name": "Sam | anatomical body.eyelashes01",
+          "alpha": "MASK",
+          "two_sided": true,
+          "pbr": {
+            "baseColorTexture": {
+              "index": 1
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        },
+        {
+          "name": "Sam | fine hair roots",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorTexture": {
+              "index": 2
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        },
+        {
+          "name": "Sam | anatomical body.low-poly",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorTexture": {
+              "index": 3
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        },
+        {
+          "name": "Sam | original top",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorFactor": [
+              0.10499999672174454,
+              0.17000000178813934,
+              0.12999999523162842,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.6800000071525574
+          }
+        },
+        {
+          "name": "Sam | original bottom",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorFactor": [
+              0.02500000037252903,
+              0.039000000804662704,
+              0.06499999761581421,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.6800000071525574
+          }
+        },
+        {
+          "name": "Original dark ankle lining",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorFactor": [
+              0.017999999225139618,
+              0.01600000075995922,
+              0.020999999716877937,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.800000011920929
+          }
+        },
+        {
+          "name": "Original accessory body",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorFactor": [
+              0.02500000037252903,
+              0.019999999552965164,
+              0.017999999225139618,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.47999998927116394
+          }
+        },
+        {
+          "name": "Accessory detail",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorFactor": [
+              0.054999999701976776,
+              0.0949999988079071,
+              0.11999999731779099,
+              1
+            ],
+            "metallicFactor": 0.30000001192092896,
+            "roughnessFactor": 0.23999999463558197
+          }
+        },
+        {
+          "name": "Sam | anatomical body.body",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorTexture": {
+              "index": 6
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.5400000214576721
+          }
+        },
+        {
+          "name": "Sam | anatomical body.shoes01",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorTexture": {
+              "index": 8
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        },
+        {
+          "name": "Sam | anatomical body.short01",
+          "alpha": "MASK",
+          "two_sided": true,
+          "pbr": {
+            "baseColorTexture": {
+              "index": 9
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        },
+        {
+          "name": "Sam | anatomical body.teeth_base",
+          "alpha": "OPAQUE",
+          "two_sided": true,
+          "pbr": {
+            "baseColorTexture": {
+              "index": 10
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        }
+      ],
+      "clip_to_preview": "Run",
+      "blender": {
+        "meshes": [
+          {
+            "name": "eyebrow001",
+            "vertices": 124,
+            "polygons": 192
+          },
+          {
+            "name": "eyelashes01",
+            "vertices": 250,
+            "polygons": 368
+          },
+          {
+            "name": "Hairline | fine scalp roots",
+            "vertices": 9592,
+            "polygons": 8880
+          },
+          {
+            "name": "low-poly",
+            "vertices": 96,
+            "polygons": 172
+          },
+          {
+            "name": "male_casualsuit02",
+            "vertices": 2314,
+            "polygons": 4120
+          },
+          {
+            "name": "Original skinned ankle lining l",
+            "vertices": 160,
+            "polygons": 280
+          },
+          {
+            "name": "Original skinned ankle lining r",
+            "vertices": 160,
+            "polygons": 280
+          },
+          {
+            "name": "Sam | anatomical body",
+            "vertices": 42378,
+            "polygons": 63264
+          },
+          {
+            "name": "shoes01",
+            "vertices": 1670,
+            "polygons": 2880
+          },
+          {
+            "name": "short01",
+            "vertices": 3050,
+            "polygons": 3678
+          },
+          {
+            "name": "teeth_base",
+            "vertices": 4494,
+            "polygons": 7120
+          }
+        ],
+        "rigs": [
+          {
+            "name": "Sam | anatomical body.rig",
+            "bones": 56
+          }
+        ],
+        "actions": [
+          {
+            "name": "Idle_Standing",
+            "frames": [
+              0.0,
+              180.0
+            ]
+          },
+          {
+            "name": "Run",
+            "frames": [
+              0.0,
+              40.0
+            ]
+          }
+        ],
+        "bounds_m": [
+          [
+            -0.31002143025398254,
+            -0.5113402605056763,
+            0.001999875996261835
+          ],
+          [
+            0.30749762058258057,
+            0.39844903349876404,
+            1.7005990743637085
+          ]
+        ],
+        "bone_matrices_actually_animated": true,
+        "excluded_custom_shapes": [
+          "Icosphere"
+        ],
+        "captures": [
+          {
+            "file": "SK_DY_Operator_Source-move-00.png",
+            "frame": 0,
+            "seconds": 0.0,
+            "bytes": 987524,
+            "sha256": "6C71117997D27A13383D69C616F22EAFAE3A2F2BFB51640E2DD319366B4E6B96",
+            "camera": [
+              5.094535827636719,
+              -3.453644037246704,
+              1.1060893535614014
+            ],
+            "target": [
+              -0.0012619048357009888,
+              -0.056445613503456116,
+              0.8512994647026062
+            ]
+          },
+          {
+            "file": "SK_DY_Operator_Source-move-05.png",
+            "frame": 5,
+            "seconds": 0.16666666666666666,
+            "bytes": 967599,
+            "sha256": "85FA619E7D755E194957DEECD4937B86081B63DD2FB650091302AC578464F8E2",
+            "camera": [
+              5.094535827636719,
+              -3.453644037246704,
+              1.1060893535614014
+            ],
+            "target": [
+              -0.0012619048357009888,
+              -0.056445613503456116,
+              0.8512994647026062
+            ]
+          },
+          {
+            "file": "SK_DY_Operator_Source-move-10.png",
+            "frame": 10,
+            "seconds": 0.3333333333333333,
+            "bytes": 974042,
+            "sha256": "242A81D2CC668F7337AF29569712EFCF19E61A1223085658298BA5883FDA5D36",
+            "camera": [
+              5.094535827636719,
+              -3.453644037246704,
+              1.1060893535614014
+            ],
+            "target": [
+              -0.0012619048357009888,
+              -0.056445613503456116,
+              0.8512994647026062
+            ]
+          },
+          {
+            "file": "SK_DY_Operator_Source-move-15.png",
+            "frame": 15,
+            "seconds": 0.5,
+            "bytes": 987617,
+            "sha256": "85962179B367B7C20A39B1BA5299AFEBBDDC1144DC12F3FECDBD280C44505AA9",
+            "camera": [
+              5.094535827636719,
+              -3.453644037246704,
+              1.1060893535614014
+            ],
+            "target": [
+              -0.0012619048357009888,
+              -0.056445613503456116,
+              0.8512994647026062
+            ]
+          }
+        ],
+        "renderer": "Blender Cycles CPU,16 samples,denoising,AgX; no post-editing"
+      }
+    }
+  ],
+  "UE_imported": false,
+  "game_changed": false,
+  "final_art_accepted": false
+}

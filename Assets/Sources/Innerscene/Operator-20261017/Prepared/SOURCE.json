@@ -1,0 +1,52 @@
+{
+  "schema": "DYOperatorPreparedSource.v1",
+  "author": "Innerscene / MakeHuman-CC0 upstream; Codex-assisted curation for solo author",
+  "license": "CC0-1.0",
+  "input_idle_sha256": "83FD621C92EB284585CD7D4F807697D59DCE723FCCA3910A48D0016D9F028AA6",
+  "input_run_sha256": "15BFD5C7E566A74447C246ABB24B60856AAC80CA1C4C661FBA3599380BB058C6",
+  "files": [
+    {
+      "file": "SK_DY_Operator_Source.glb",
+      "bytes": 21194100,
+      "sha256": "2670E4094E71570E9E38E86FCC20C5F4BA8FA9CEE63B91E5D3A8A02B00BC9871"
+    },
+    {
+      "file": "DY_Operator_Source.blend",
+      "bytes": 31197924,
+      "sha256": "1EEAC26A2C062E1513A9506344CB92B562E1B67616F466E9E926C376687E12BB"
+    }
+  ],
+  "changes": [
+    "Preserve original body/clothing/hair/shoes geometry, materials, textures, bone hierarchy, weights and scale",
+    "Append only same-rig original Run animation buffer views and accessors to Idle GLB; no duplicate textures",
+    "Remove collapsed phone mesh assignment only; keep original nodes, skin and animation hierarchy",
+    "Import curated GLB in Blender 4.5.14 with auto-execution disabled; save packed editable blend"
+  ],
+  "removed_phone_display": {
+    "node": "Phone",
+    "mesh": 7,
+    "skin": 0
+  },
+  "body_mesh_objects": 11,
+  "bones": 56,
+  "actions": [
+    {
+      "name": "Idle_Standing",
+      "frames": [
+        0.0,
+        180.0
+      ]
+    },
+    {
+      "name": "Run",
+      "frames": [
+        0.0,
+        40.0
+      ]
+    }
+  ],
+  "native_UE_import": false,
+  "animations_applied_to_game": false,
+  "art_accepted": false,
+  "gameplay_changed": false
+}

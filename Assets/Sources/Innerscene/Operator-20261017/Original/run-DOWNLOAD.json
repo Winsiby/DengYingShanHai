@@ -1,0 +1,25 @@
+{
+  "Schema": "DYPlayerSourceDownload.v1",
+  "Files": [
+    {
+      "File": "sam-run.glb",
+      "Page": "https://www.innerscene.com/tools/library/3d-parts/run-sam-3d-person-animated-fa008c06",
+      "Download": "https://www.innerscene.com/api/library/run-sam-3d-person-animated-fa008c06/download",
+      "Bytes": 21006116,
+      "SHA256": "15BFD5C7E566A74447C246ABB24B60856AAC80CA1C4C661FBA3599380BB058C6",
+      "License": "CC0-1.0",
+      "Author": "Innerscene, adapted from MakeHuman/MPFB CC0 assets",
+      "ClipClaim": "Run",
+      "DurationSecondsClaim": 1.333,
+      "InPlaceSpeedMpsClaim": 4.5,
+      "ClaimsAreNotMeasured": true,
+      "RetrievedAt": "2026-10-17T00:13:08.3114238+08:00"
+    }
+  ],
+  "Terms": "https://www.innerscene.com/tools/library/terms",
+  "MakeHumanLicense": "https://static.makehumancommunity.org/about/license.html",
+  "PaidAssets": false,
+  "NativeImported": false,
+  "ArtAccepted": false,
+  "OriginalGameChanged": false
+}
