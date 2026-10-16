@@ -1,0 +1,11 @@
+# Byte-preserving initial private backup. No LFS upload/billing dependency.
+# Original working-project attributes are retained in Docs/GitHubBackup.
+* -text -filter
+*.uasset binary
+*.umap binary
+*.fbx binary
+*.blend binary
+*.png binary
+*.jpg binary
+*.wav binary
+*.zip binary

@@ -1,0 +1,4006 @@
+{
+  "Schema": "DengYingPrivateSourceSnapshot.v1",
+  "Created": "2026-10-16T17:48:28.8538079+08:00",
+  "FileCount": 663,
+  "Bytes": 970423709.0,
+  "TextFilesScanned": 398,
+  "CredentialScan": "Limited known credential patterns; not proof of absence",
+  "GitInitialized": false,
+  "RemoteCreated": false,
+  "Uploaded": false,
+  "OriginalRepositoryModified": false,
+  "Excluded": [
+    "Original .git and its history",
+    "Docs/LICENSES.md",
+    "Binaries",
+    "Builds",
+    "DerivedDataCache",
+    "Intermediate",
+    "Saved except explicit 15-image evidence selection",
+    "IDE state",
+    "Generated solutions",
+    "Local agents/plugins and unrelated Tools/LenovoComputerUse"
+  ],
+  "Storage": "Ordinary Git, no LFS; every file checked below 100 MiB; original attributes retained separately",
+  "ArtAccepted": false,
+  "Files": [
+    {
+      "Relative": "Source/DengYingShanHai.Target.cs",
+      "Category": "Project",
+      "Bytes": 361,
+      "SHA256": "EF2A4A1A4C078B879B29FFFF2B09740A5B33AD46BFEB7411B3B790B1F583BDC5"
+    },
+    {
+      "Relative": "Source/DengYingShanHaiEditor.Target.cs",
+      "Category": "Project",
+      "Bytes": 375,
+      "SHA256": "D29C925ECDD13F57EF0DBE951D5E5CEDD3A511F794C1F81B7EC25CFF5E4E3426"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/DengYingShanHai.Build.cs",
+      "Category": "Project",
+      "Bytes": 576,
+      "SHA256": "F4157A71C3C4FA5B4EE39B3C1BBB2B0A7893DD4418B5DD1C90C676BF034B8978"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/DengYingShanHai.cpp",
+      "Category": "Project",
+      "Bytes": 199,
+      "SHA256": "2C7A4FBBDCB2079329229BAB8E9C745789150E9AF255651A024D8F8D700F9DF8"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Core/DYDevEntryPlayerController.cpp",
+      "Category": "Project",
+      "Bytes": 11790,
+      "SHA256": "680050A276470AB5697A0690DCDB20745D1556CF024DEBA2C828DF6251A00A19"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Core/DYReleaseEntryPlayerController.cpp",
+      "Category": "Project",
+      "Bytes": 781,
+      "SHA256": "19C6A6EA2C18E3171FDD0B6FECBC5872629FABB4FB43B31F497CA5FAE4798C77"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Core/DYStageGameMode.cpp",
+      "Category": "Project",
+      "Bytes": 2315,
+      "SHA256": "57265DE559755981CF33BEEB458EEF4725AAB246E90818F7AA9B412F79A8F6E3"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Core/DYStagePlayerController.cpp",
+      "Category": "Project",
+      "Bytes": 4301,
+      "SHA256": "C8B152F11C4F9D2194181AECA0B9BE82E061DC699EAE811C84D1B844F47F3420"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Interaction/DYInteractionComponent.cpp",
+      "Category": "Project",
+      "Bytes": 12214,
+      "SHA256": "1984E7CD2AF383DE959681365F4F38BAB69C818D05D882886C2092237576FC87"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Interaction/DYLightControlComponent.cpp",
+      "Category": "Project",
+      "Bytes": 2862,
+      "SHA256": "299CCEF2E5B7016D92843BA4591ED08519E9181F28C7EC798FA498BEDFD86F28"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Interaction/DYLightRigActor.cpp",
+      "Category": "Project",
+      "Bytes": 4146,
+      "SHA256": "AEF54A700990348193A3E8D16E2C15B90A4D96AC05ADA5F80649A7CE448EDA8A"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Interaction/DYPuppetActor.cpp",
+      "Category": "Project",
+      "Bytes": 5663,
+      "SHA256": "CDC7B7D69990687415C5E7765D7ABC63EC7F604C9829E3FB235A90EAF6631FCD"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Interaction/DYPuppetControlComponent.cpp",
+      "Category": "Project",
+      "Bytes": 3607,
+      "SHA256": "4C60E7B1928CE54DE54916E21F714342960249058ED66C7CC44DB0E972CE6DAD"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Player/DYFootstepAudioComponent.cpp",
+      "Category": "Project",
+      "Bytes": 10243,
+      "SHA256": "BD9AB305FC49D02CA18C339CD31335B872FF6B044E7545FB340EF8172254A8E6"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Player/DYStageOperatorPawn.cpp",
+      "Category": "Project",
+      "Bytes": 11941,
+      "SHA256": "8877D20695A8A4B51498A91CC9CE5AE537ED5F9A73E6BD317D73F72E4FCD3483"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Player/DYTheatreOperatorPawn.cpp",
+      "Category": "Project",
+      "Bytes": 232,
+      "SHA256": "A7F23ACC78181BC68C74363A14334E04372FDD1D4D0FFB2F858822B9692D3B03"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Puzzles/DYPuzzleDirector.cpp",
+      "Category": "Project",
+      "Bytes": 20815,
+      "SHA256": "CC774399D14513E121D33EE9D804DEA710641308D24228B7F569091094F28E37"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Puzzles/DYPuzzleEvaluatorComponent.cpp",
+      "Category": "Project",
+      "Bytes": 5473,
+      "SHA256": "D9027417E601211CFC5DB51B424AC094442925EC580B8CACC1F9C4B76F7A369D"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Stage/DYForestGeometryLibrary.cpp",
+      "Category": "Project",
+      "Bytes": 8546,
+      "SHA256": "61484EB915FE73BF7C0B4752679B557815A8FB1781F32B6D8480E8F4C1082A0E"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Stage/DYForestPreflightLibrary.cpp",
+      "Category": "Project",
+      "Bytes": 4586,
+      "SHA256": "B8A228673CD5F771A73D5B33EA9679CAD5E74F97707A7ACCE1FB91557A9E83F1"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Stage/DYForestPresentationActor.cpp",
+      "Category": "Project",
+      "Bytes": 6634,
+      "SHA256": "F97CF1595C338591960BAC7F4445697DB450F65BC16F4868288CD57EAB1CDA28"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Stage/DYStaffContactLibrary.cpp",
+      "Category": "Project",
+      "Bytes": 2700,
+      "SHA256": "294256009BB76BB1EE9836794F609DFA09009E8B28851E4B96AC656E39096933"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Stage/DYStaffDropLibrary.cpp",
+      "Category": "Project",
+      "Bytes": 5780,
+      "SHA256": "9E255DCB8700657E798900CEFB84C4AF89D374936D066DE7DA2590B841005122"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Stage/DYStaffProjectionLibrary.cpp",
+      "Category": "Project",
+      "Bytes": 3961,
+      "SHA256": "9BCBB313B12E750BC9C66EA2C691D0647CE1BD2584A8561323EE6A90CD848235"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Stage/DYStaffProjectionProbe.cpp",
+      "Category": "Project",
+      "Bytes": 4740,
+      "SHA256": "CC327AB83AF00C92E1A936C374EC151A0B6C4D4EAAB218D835E031FA87A50392"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Stage/DYStageAudioPresentationActor.cpp",
+      "Category": "Project",
+      "Bytes": 13499,
+      "SHA256": "86977EA739F5CBC8DBCC4A54C7621178AE47EBCAB2D5C317B7F0836A52A90133"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Stage/DYStageEnvironment.cpp",
+      "Category": "Project",
+      "Bytes": 3868,
+      "SHA256": "45FF3A88671CD9279EC25246D93CF6127F82350A2E78042FB988CC6A53BCADB9"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Stage/DYStagePresentation.cpp",
+      "Category": "Project",
+      "Bytes": 35347,
+      "SHA256": "4FD15E9F70550DDD84E5A9E25422CD2211D94B0EDAF90D35709548DA7899C9C1"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYActSequenceAutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 64043,
+      "SHA256": "B43A3B84AE5A401D105EC313AF2027953CFAB5B5A6950AA4516C6CE086428FC8"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYAlignmentFeedbackAutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 27366,
+      "SHA256": "6821B60E26DC7448294C0DDCD19E835A4C80E5D8091CC8CF7848C35F80A0E9A7"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYEntryLoopAutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 37600,
+      "SHA256": "082096B880CE20F65E6846B7599EEEABFA574753B27B4B760EDE46F209C0CD6E"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYFeedbackAutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 20380,
+      "SHA256": "A9180730BD125ED349CED845A7CAC5BAA8B6FBA80BFD1D1C83EE4745755E98B8"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYFocusAutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 20223,
+      "SHA256": "A89B33EED67A4BA7C2B02136484F18DA9F3BF5915A3623C1345960EA2E5F7C6E"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYFootstepAudioAutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 17667,
+      "SHA256": "19224ECEEDB3066543D72CFA3EB29AEEB1F45796EA2A1A3368A00AFF5D782EA7"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYForestGeometryAutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 20571,
+      "SHA256": "DA7A085FE53B72F502D9EA691DFC99AE00B806BD4840712B3FCE644AF4E30230"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYForestPreflightAutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 17886,
+      "SHA256": "E210F6AC02F2F3870FB68D7D340F186966B80E9DC6BE3AE8AA4B9828C9F7ED03"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYForestPresentationAutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 43891,
+      "SHA256": "03A404B2810EFC309A4058FC18B61AA9DA5EA9E135BCAB2DAF6BA536430C8833"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYM1AutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 6730,
+      "SHA256": "E7D1D64356D1F7911FF7A692D9351D29898945B18B102CB1BD6E98892F696E0D"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYM2AutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 6759,
+      "SHA256": "7B5F21E75743A668CDC57A53DEE1A5FB406CF866363AF84F517C8B9448A19D1B"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYP03RuntimeAutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 20684,
+      "SHA256": "CD66912217465FF75102CB9DCE2EC460CF09F7580D8482EABBDED01483C2F3E6"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYPhase1AutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 12215,
+      "SHA256": "FF12493975F54E3DE4603F6C86964B103B0C1C22652660A3191B62B476DE324D"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYReleaseEntryAutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 8313,
+      "SHA256": "24D1BF5309C9480FAF0FFDAD803239D4DBCE72D4C88A1204A51EDBBD6761657F"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYResolvedSnapshotAutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 10287,
+      "SHA256": "1A2F4B9719BE5090CE57EC7D2C55C61229574595E4E88D70B5465E0C932D8EB2"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYStaffContactAutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 21861,
+      "SHA256": "9094F7773F63EDA022E774A2EF629D054EFA3CCBB69188761DDF6E6548A20C4E"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYStaffDropAutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 15962,
+      "SHA256": "8C64DBBF9B92A955EE7AEEE423C21F1FC42902B1DC42DBCFA855A9C77C9671DE"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYStaffProjectionAutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 12380,
+      "SHA256": "F90D85D3CF05452A3026FAAEE5D892997F2800579E1E994E08B31D9E1914AC9C"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYStageAudioAutomationTests.cpp",
+      "Category": "Project",
+      "Bytes": 10849,
+      "SHA256": "773EA56928CD231EE7AC801A57F2B09EF4346C2D3413D700F4C8B03854826F33"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/UI/DYDevEntryWidget.cpp",
+      "Category": "Project",
+      "Bytes": 6529,
+      "SHA256": "DBF1561B0633155A3C67FCB440318E0EEEDB63CAEB0A5A6EA428181FC4CB3C0D"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/UI/DYDevInteractionHUD.cpp",
+      "Category": "Project",
+      "Bytes": 9037,
+      "SHA256": "6BFC76993F4AEA611F273CE323BE59D7C480387ED685BDDEF06581F522925784"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/UI/DYInteractionHUD.cpp",
+      "Category": "Project",
+      "Bytes": 6390,
+      "SHA256": "CF261B45E69BEFECA5F032EC733EDA09D4FF8060FE99421674FE12BAD6237535"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/UI/DYInteractionHUDWidget.cpp",
+      "Category": "Project",
+      "Bytes": 11105,
+      "SHA256": "CA07DF0796E7C62C8B797183671372406694FBE32F704383C4CBC1FDA12A42D5"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/DengYingShanHai.h",
+      "Category": "Project",
+      "Bytes": 99,
+      "SHA256": "9E41EAAEC3421E27C37F788E962484142115ED0504C4B6A6F458D4A0F151AEE9"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Core/DYDevEntryPlayerController.h",
+      "Category": "Project",
+      "Bytes": 2568,
+      "SHA256": "B6AF9E35802A69EDD7521635A45CA4FE64F508522271FE4BE34BA53031CDEA86"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Core/DYReleaseEntryPlayerController.h",
+      "Category": "Project",
+      "Bytes": 616,
+      "SHA256": "6244F029C411CE7399D41AB3A41D5F870DFF05D367D40D5CC6E4F572B88618F1"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Core/DYStageGameMode.h",
+      "Category": "Project",
+      "Bytes": 2249,
+      "SHA256": "76A7B2CD4E01B59580ED6918375C1865B6E38AB58CD7D744C0D2A89A825534B1"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Core/DYStagePlayerController.h",
+      "Category": "Project",
+      "Bytes": 2389,
+      "SHA256": "E27678F69918FC7C7E36E52DE84E51086F26E494F09B3E763D9861B9315FF658"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Interaction/DYControllable.h",
+      "Category": "Project",
+      "Bytes": 1354,
+      "SHA256": "603BB44996D54B34DA602E2911DF0439619CD817AC9F7D3F490A97FAB20BF955"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Interaction/DYControlTypes.h",
+      "Category": "Project",
+      "Bytes": 1579,
+      "SHA256": "CCD20317F478948C128A85C9EBB46BDC65C5F334CDA2C642FCAA1C27CEFE1763"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Interaction/DYInteractionComponent.h",
+      "Category": "Project",
+      "Bytes": 6301,
+      "SHA256": "5170F19729DD27587C1996961BF86C21C08A25E94EE1B60330DFA8686D701DE3"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Interaction/DYLightControlComponent.h",
+      "Category": "Project",
+      "Bytes": 2873,
+      "SHA256": "894F4EA725EFC202F9513B5483D068D607A03C31CF88DA11C7026C3B6CA152C7"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Interaction/DYLightRigActor.h",
+      "Category": "Project",
+      "Bytes": 2361,
+      "SHA256": "72D7B2376A8C20222A6F38884B475A1ACE2DBD4EAD15AE51BD3976C3A5A40C08"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Interaction/DYPuppetActor.h",
+      "Category": "Project",
+      "Bytes": 2580,
+      "SHA256": "7BDBEBF61A4027735E1ED505D7F8E41D64A553DCC8B584746E49A82B99D8D46A"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Interaction/DYPuppetControlComponent.h",
+      "Category": "Project",
+      "Bytes": 3492,
+      "SHA256": "4B341E0C62193776A14C97F7074105E9DCECBC2D646D57682F84DAA0DAE65928"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Interaction/DYStaffGeometryTypes.h",
+      "Category": "Project",
+      "Bytes": 847,
+      "SHA256": "0144A8C6539326A97108CFDAB4BE84AE1E1C86D220A07A0B94B44F48CD087798"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Player/DYFootstepAudioComponent.h",
+      "Category": "Project",
+      "Bytes": 5671,
+      "SHA256": "95AE9F91409CFFD774009B1F8C9FAC13BED6AF70E566DFC336640F32CCA7712A"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Player/DYStageOperatorPawn.h",
+      "Category": "Project",
+      "Bytes": 5718,
+      "SHA256": "C208430A7A62576FF290B8FB2318840A300782503258ED60B00D20BB00BA06A1"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Player/DYTheatreOperatorPawn.h",
+      "Category": "Project",
+      "Bytes": 533,
+      "SHA256": "18CA1BC26B044F9C63111C60A544E9A7FF7F494033E29A47FBFE9D48EB9B40D4"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Puzzles/DYActSequenceTypes.h",
+      "Category": "Project",
+      "Bytes": 1375,
+      "SHA256": "4F6CAF9E2FD906F996DAD885FF3A1C56D195A1BAC149041176FA9D93D875CB9F"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Puzzles/DYPuzzleDefinition.h",
+      "Category": "Project",
+      "Bytes": 1090,
+      "SHA256": "899801CF6DE0BFD8D896340D49FBCF771783522E05BDF8A81A8DA65DE682E83F"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Puzzles/DYPuzzleDirector.h",
+      "Category": "Project",
+      "Bytes": 8728,
+      "SHA256": "120239F9F4C2F49998D482E39FA919E7992E44195EF4040E6EB84E2EA61AE80E"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Puzzles/DYPuzzleEvaluatorComponent.h",
+      "Category": "Project",
+      "Bytes": 1069,
+      "SHA256": "A35DAE72EA1459220E13A4CD3F4E05E159462F1AC1AA6016245DF563CF708726"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Puzzles/DYPuzzleTypes.h",
+      "Category": "Project",
+      "Bytes": 3754,
+      "SHA256": "0CB807B9882C4085522DF9334D0FE503EA28D228DF83A446AA1E7ABFE04257C7"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Puzzles/DYResolvedPuzzleSnapshot.h",
+      "Category": "Project",
+      "Bytes": 1267,
+      "SHA256": "8BDD20B8D3A0CAB11FEE7556A8C608D88A565A0A9956238239EE957BAB1247DD"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Stage/DYForestGeometryLibrary.h",
+      "Category": "Project",
+      "Bytes": 4228,
+      "SHA256": "40A1DC34D096835B3447FD07C430ADBB4547E68783E3B333EECD10C804B19B6C"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Stage/DYForestPreflightLibrary.h",
+      "Category": "Project",
+      "Bytes": 1847,
+      "SHA256": "190F20897E889492FA1EB5872E948F0D1B19001D7979AF3605C65891772481AC"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Stage/DYForestPresentationActor.h",
+      "Category": "Project",
+      "Bytes": 2614,
+      "SHA256": "9BAD7DCF08C42DC733C02E374222B6912C5EEC147F9A57D84EDBA7F8BA361C9A"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Stage/DYStaffContactLibrary.h",
+      "Category": "Project",
+      "Bytes": 875,
+      "SHA256": "621503F8342AFFA405DF765DF151AF7568089E3BF5879E0D9180CD240FAC04D5"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Stage/DYStaffDropLibrary.h",
+      "Category": "Project",
+      "Bytes": 2357,
+      "SHA256": "A166507838BA0F2B6ED359696CAD7EF00D9E0DCEDECC97075C5E0B1E6194DC89"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Stage/DYStaffPresentationTypes.h",
+      "Category": "Project",
+      "Bytes": 2212,
+      "SHA256": "00AF9DD4964442D0E1EC9323B23F1B951455B226099B0A7C4B734A98B3796749"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Stage/DYStaffProjectionLibrary.h",
+      "Category": "Project",
+      "Bytes": 2872,
+      "SHA256": "42DB9FE74BC6F10B876F3304EB3E29F0300433E7414945C72B702BE1DA2D1DC2"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Stage/DYStaffProjectionProbe.h",
+      "Category": "Project",
+      "Bytes": 1832,
+      "SHA256": "8F5C1BD22E698884CE253EC7B05E4802BBB579F4845B0692D4350ABA01A5C009"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Stage/DYStageAudioPresentationActor.h",
+      "Category": "Project",
+      "Bytes": 6255,
+      "SHA256": "C961A12CA69F515C899384C57CD601E9A8DACBFB5AC4A48AD5510D2DCA7472CA"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Stage/DYStageEnvironment.h",
+      "Category": "Project",
+      "Bytes": 2494,
+      "SHA256": "DF79535333C42033160543C6F7F3A0891481B51B29B88AC18F541A25D6970282"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Stage/DYStageFeedbackTypes.h",
+      "Category": "Project",
+      "Bytes": 3249,
+      "SHA256": "1F3F73762435D4752A8EC36DE2156C6A3BFA426CDEE2DC7FAF41AAEB308CCF5A"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Stage/DYStagePresentation.h",
+      "Category": "Project",
+      "Bytes": 14636,
+      "SHA256": "AFEB9E6B0CAA94F9BCF78DC92BC5EAA6B2535C76C268F112FC6F7E010352BE37"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/UI/DYDevEntryWidget.h",
+      "Category": "Project",
+      "Bytes": 1798,
+      "SHA256": "ABDAA274D29BA9FE670ED120A42F4C8365DBCB12A5ABCEBD22B9EBB7C8BD4EA4"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/UI/DYDevInteractionHUD.h",
+      "Category": "Project",
+      "Bytes": 3714,
+      "SHA256": "8951DA004FBA3C4E614BB310A58E8628A21467F7453B9C6265C63C8B5505E25B"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/UI/DYInteractionHUD.h",
+      "Category": "Project",
+      "Bytes": 2245,
+      "SHA256": "458143E5F23829B37BB7D3688169DC599CE29A0289717774B84C91A0527C7054"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/UI/DYInteractionHUDWidget.h",
+      "Category": "Project",
+      "Bytes": 2779,
+      "SHA256": "539F7AB9686D5EBF085BA077D99D55355E66621B658DA0670493AE620A05FCC0"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Core/BP_DYReleaseGameMode.uasset",
+      "Category": "Project",
+      "Bytes": 20796,
+      "SHA256": "EC376ABDB66137D338F1901C8512DDAB6322628BEA9CC681AA5BB7E9825044EB"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Core/Input/IA_DY_Look.uasset",
+      "Category": "Project",
+      "Bytes": 1411,
+      "SHA256": "F7742E4A05C1D15CB07E18D0B2B0968F7EC2DBA755F52E22E944C2672E352C60"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Core/Input/IA_DY_Move.uasset",
+      "Category": "Project",
+      "Bytes": 1411,
+      "SHA256": "4EE68397B604ECCC93ECE728BAABD7B1DAEEEE4CAAC59780D69AF02258BAC5D4"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Core/Input/IA_DY_ResetOperator.uasset",
+      "Category": "Project",
+      "Bytes": 1260,
+      "SHA256": "74CC84634A43C6908D14D88F9DF6C989449EAFB8C0DCDD0D86D42CDF7F26D213"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Core/Input/IMC_DY_Explore.uasset",
+      "Category": "Project",
+      "Bytes": 5392,
+      "SHA256": "655DB2C9CF83C0A0028CEAE9B1AA99135AC2146D79B1C758D2C4E2942C9D797C"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/AlignmentFeedback/Guides/MI_DY_P02BodyFit.uasset",
+      "Category": "Project",
+      "Bytes": 9175,
+      "SHA256": "539D98EE0A3846A09CF96F1E8D79A0E29CCAC47A10BE8EF40CB2293452428AF2"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/AlignmentFeedback/Maps/LV_AlignmentFeedbackLab.umap",
+      "Category": "Project",
+      "Bytes": 87568,
+      "SHA256": "7BBCB9C9FD7E7F7399C85C278276E47FF4C51695CBE9797F1DDBE39FB6666FB1"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/Audio/Sounds/SFX_DevForestLeaves.uasset",
+      "Category": "Project",
+      "Bytes": 55464,
+      "SHA256": "BA52C1CFA2082A0F3C0EB13194006ABB69254A608A73E4796DB2B5B0647D1726"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/Audio/Sounds/SFX_DevHoldingPulse.uasset",
+      "Category": "Project",
+      "Bytes": 4603,
+      "SHA256": "4B1200A47116897BEEE508F246DFA192CD695FAE07441E95ED166C003B6A0ADB"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/Audio/Sounds/SFX_DevResolve.uasset",
+      "Category": "Project",
+      "Bytes": 5593,
+      "SHA256": "7D50A785BF5809361D72A4D688AAA8B3F6C2BEF5F205FDBB6850D816C225A77D"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/Audio/Sounds/SFX_DevStaffContact.uasset",
+      "Category": "Project",
+      "Bytes": 5576,
+      "SHA256": "943618C29949AFCD767F7DA280267FAA344DA984AACA0F77E71B4F1850F0D2C1"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/Audio/Sounds/SFX_DevWind.uasset",
+      "Category": "Project",
+      "Bytes": 284816,
+      "SHA256": "8DE78E41226381576C4FAF3EF1C1EC210A242D87863FE908CF01DCF8CC105FEB"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/EntryLoop/Core/BP_DYEntryLoopGameMode.uasset",
+      "Category": "Project",
+      "Bytes": 20538,
+      "SHA256": "DDDD1C75CD547A6D1B2FAD9C692678E3EB122262B558B6DFF7723ED121F8A8B2"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/EntryLoop/Maps/LV_EntryLoopDev.umap",
+      "Category": "Project",
+      "Bytes": 74468,
+      "SHA256": "11F493A3A36AF3CEA8ED4650A266C44CD5E8B994DC5714E4AD9FAB02B3F15743"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/EnvironmentStates/Maps/LV_EnvironmentStatesLab.umap",
+      "Category": "Project",
+      "Bytes": 97717,
+      "SHA256": "C90066554CADE991CC449F320E908AE619A1DB2B2BE3B3298653AA87BCFAFE0F"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ForestArt/Meshes/SM_DY_ForestBranch_Tapered.uasset",
+      "Category": "Project",
+      "Bytes": 22915,
+      "SHA256": "F3399CDE8D2B4423233DB673EDEFECD5E68985B39F844F14EC9B4E30AE83461A"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ForestArt/Presentation/BP_DYForestArt_Tapered.uasset",
+      "Category": "Project",
+      "Bytes": 29015,
+      "SHA256": "20347B4B424FA5593F2F90DA65C24D1B46CBDF2E09C60A2A007351CC6D6D8923"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ForestCanopy/Maps/LV_ForestCanopyLab.umap",
+      "Category": "Project",
+      "Bytes": 141713,
+      "SHA256": "28C92B049D46F431ADC1F7FA8227967AA790D2CC204FEF8A24684F303986E53F"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ForestCanopy/Materials/M_DY_ForestLeaf.uasset",
+      "Category": "Project",
+      "Bytes": 9305,
+      "SHA256": "D386B0B968B63B65643EFC201E13C9AEFBA180DEBD90065FEDFBEDB8679F02E5"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ForestCanopy/Meshes/SM_DY_ForestBranch_Leafed.uasset",
+      "Category": "Project",
+      "Bytes": 37299,
+      "SHA256": "CAD95E9B564FEBFEC10A7B30688C1365BF29ACF745B08E7893106112C0E56593"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ForestCanopy/Presentation/BP_DYForestCanopy_Leafed.uasset",
+      "Category": "Project",
+      "Bytes": 29076,
+      "SHA256": "05A93FEE51FC8191AC0A80C9F457CF8378E32172DC74C2EB694FC2BB2A953E31"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ForestCanopyWide/Maps/LV_ForestCanopyWideLab.umap",
+      "Category": "Project",
+      "Bytes": 142213,
+      "SHA256": "FE49571ED7EB5F0E36C8BD5D55B149651B94901D22572D36FACEA0829727336A"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ForestCanopyWide/Meshes/SM_DY_ForestBranch_WideLeaf.uasset",
+      "Category": "Project",
+      "Bytes": 37835,
+      "SHA256": "65F5941D3C2F6E1FD51224502FE69781A714ED0A048C8D71B8E8B322134E80B7"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ForestCanopyWide/Presentation/BP_DYForestCanopy_WideLeaf.uasset",
+      "Category": "Project",
+      "Bytes": 29156,
+      "SHA256": "91422004CE3FF6102DF07E906C17992228FD302D950EB33E055F43AAC16841E8"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/FrameBeamAsset/Meshes/SM_DY_FrameBeam_Source.uasset",
+      "Category": "Project",
+      "Bytes": 13131,
+      "SHA256": "6C33E897B23FA45DEB8FA699C0AAAC2455A896C7E7FBF08E3592F5E0DA7FC9A3"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/FrameBeamCandidate/Maps/LV_FrameBeamCandidateLab.umap",
+      "Category": "Project",
+      "Bytes": 114857,
+      "SHA256": "DEEB60AF1782C1A4CF9023E465113CF2A49FEE76E83D0B1E3BFA0382C638C705"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/FrameBeamPlacement/Maps/LV_FrameBeamPlacementLab.umap",
+      "Category": "Project",
+      "Bytes": 114857,
+      "SHA256": "BE91598D430822479A06BF5A7374AE6472863E702006F0E1BCD0D8F78AA6E953"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/FrameBeamTopUV/Maps/LV_FrameBeamTopUVLab.umap",
+      "Category": "Project",
+      "Bytes": 114399,
+      "SHA256": "932D961A623DF9674D08D9F960A7632B4F73F72C59BF3BE27244E53D4C9F74DA"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/FrameBeamTopUV/Meshes/SM_DY_FrameBeam_TopUV.uasset",
+      "Category": "Project",
+      "Bytes": 16278,
+      "SHA256": "4358F7B0572960212ED926E2A879770720133E2913FFE3D1D44B6BE820A62FD7"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/FramePostAsset/Materials/M_DY_FramePost_Master.uasset",
+      "Category": "Project",
+      "Bytes": 14796,
+      "SHA256": "EB5403E9DCF085DD565B60455537D14640C46759286AD6BAC086862DEA9F6F15"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/FramePostAsset/Materials/MI_DY_FramePost_Base.uasset",
+      "Category": "Project",
+      "Bytes": 3742,
+      "SHA256": "625BA2BF780A070133389CD3B75EAFCD0B113DE5D76D8C4A2866C546C89AE17B"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/FramePostAsset/Materials/MI_DY_FramePost_Wood.uasset",
+      "Category": "Project",
+      "Bytes": 3742,
+      "SHA256": "83EC40059109744EBD55CE43852D47A86D232255288CD956F4A2E9B64AADCEEB"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/FramePostAsset/Meshes/SM_DY_FramePost_Source.uasset",
+      "Category": "Project",
+      "Bytes": 20650,
+      "SHA256": "28797EBC14F473945A4C2A5B1831B4C9B97EB9CB41892A34A55F4BAB5A4AD540"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/FramePostAsset/Textures/T_DY_FramePost_ARM.uasset",
+      "Category": "Project",
+      "Bytes": 15823204,
+      "SHA256": "94DFF4E5825C0AA260924F845CE69E78003DAB1C95AD55B16045D124A86C3A24"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/FramePostAsset/Textures/T_DY_FramePost_BaseColor.uasset",
+      "Category": "Project",
+      "Bytes": 22901432,
+      "SHA256": "BF68BD2C642C8C24D20FE39ED9B4A273E6C1659AEBBD7732E3AD8786A4A1623C"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/FramePostAsset/Textures/T_DY_FramePost_NormalDX.uasset",
+      "Category": "Project",
+      "Bytes": 18113123,
+      "SHA256": "46E6553089FD92623C70A57619BC7F4E3B8223F2D5A9C078689E67FFA08BFC94"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/FramePostPlacement/Maps/LV_FramePostPlacementLab.umap",
+      "Category": "Project",
+      "Bytes": 106491,
+      "SHA256": "AF04A382216DB4DBA0E182646A072C275331C4BF2CB54F7AF4EA49397520967D"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/HeroLampArt/Materials/M_DY_LampOptic.uasset",
+      "Category": "Project",
+      "Bytes": 17818,
+      "SHA256": "5F591A941E458B735AF21BD5188EB73A25EF04C121A21D3B12B246AB0EA23781"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/HeroLampArt/Materials/M_DY_LampPBR.uasset",
+      "Category": "Project",
+      "Bytes": 15175,
+      "SHA256": "2CF94123A3E2758462982D3FB2C1AF80D7810D780DBDFBCE1FE52AF824F4C641"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/HeroLampArt/Materials/MI_DY_LampBody.uasset",
+      "Category": "Project",
+      "Bytes": 10406,
+      "SHA256": "F87FC8F984743D2D4495F0ABDD794504EF8C351EB7E50E46495D19D232B51794"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/HeroLampArt/Materials/MI_DY_LampOptic.uasset",
+      "Category": "Project",
+      "Bytes": 8913,
+      "SHA256": "59579961D984F7FCA9031F3B36972D309DA77B370FD658403875786B5D1CEA94"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/HeroLampArt/Materials/MI_DY_LampStand.uasset",
+      "Category": "Project",
+      "Bytes": 9960,
+      "SHA256": "EEE64277D357CD78AF0E9C1AEC3AAAB5C7611C1B3FC928850CB4DBF1F3BCAF4B"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/HeroLampArt/Meshes/SM_DY_LampBody.uasset",
+      "Category": "Project",
+      "Bytes": 896581,
+      "SHA256": "B86B1B08A0FC5E0B8A48B3B2DF7798B60517D2EDF656AF33EC9ED69A6DEAEB95"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/HeroLampArt/Meshes/SM_DY_LampStand.uasset",
+      "Category": "Project",
+      "Bytes": 616391,
+      "SHA256": "BAB0869FF83756CC215219C401786F2C8436D18F95DFAF6F22C5EAA12E651ABD"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/HeroLampArt/Textures/T_DY_LampBody_BaseColor.uasset",
+      "Category": "Project",
+      "Bytes": 1192928,
+      "SHA256": "54015237F7F14DF889B7C6172472A7F90507D71566AFB5F22D827FF2327F06C6"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/HeroLampArt/Textures/T_DY_LampBody_NormalDX.uasset",
+      "Category": "Project",
+      "Bytes": 593135,
+      "SHA256": "557C3E9BD88C9D0386738634D2E8595B470D7906F9DD7F9757BE6294A7533315"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/HeroLampArt/Textures/T_DY_LampBody_ORM.uasset",
+      "Category": "Project",
+      "Bytes": 1042393,
+      "SHA256": "FD391CCD8A258460A06A98AFABAEE7CEB47081027D569BCADC05DCCD35E5A524"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/HeroLampArt/Textures/T_DY_LampStand_BaseColor.uasset",
+      "Category": "Project",
+      "Bytes": 3382240,
+      "SHA256": "1A5164DD604FD5F04C993874095ED46230877243FA273C347066ADA66258279C"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/HeroLampArt/Textures/T_DY_LampStand_NormalDX.uasset",
+      "Category": "Project",
+      "Bytes": 1584519,
+      "SHA256": "98CA601B6EEC334746D775ABA990AD4C7E865FE2EA9B3031B3B08DDC09313C4A"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/HeroLampArt/Textures/T_DY_LampStand_ORM.uasset",
+      "Category": "Project",
+      "Bytes": 1824894,
+      "SHA256": "4E56B601F15E1B70200FEBABF1097D043F0E7B07FBA7B918D80789D7FCDA6D8B"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/Interaction/LV_InteractionLab.umap",
+      "Category": "Project",
+      "Bytes": 64211,
+      "SHA256": "AAA236F8E631599BCDF39DD536A49404D0BCAF5A0F2F4E569C645D46E3C778AC"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuAppearance/Materials/M_DY_PuppetSurface.uasset",
+      "Category": "Project",
+      "Bytes": 21305,
+      "SHA256": "184143ECDB300A1D7EE45C32D380B4B62E69DC5534E30AF80A41C754C0BC71CB"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuAppearance/Materials/MI_DY_AgedBrass.uasset",
+      "Category": "Project",
+      "Bytes": 11181,
+      "SHA256": "86605BA8997FEB9C7310DE2B67493A051049EA3256E05AFDDADC6102EB5D72D5"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuAppearance/Materials/MI_DY_HairInk.uasset",
+      "Category": "Project",
+      "Bytes": 10474,
+      "SHA256": "6F402AD297EBADEC834B62666B6A14B8E17ABC8AA9F0E17E2EF67F08D23F4C4A"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuAppearance/Materials/MI_DY_Ink.uasset",
+      "Category": "Project",
+      "Bytes": 10306,
+      "SHA256": "4B84DC417DC783DC01AECD0A97C9BD535CF54AA357B7C83021AB7E9CB00FDED7"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuAppearance/Materials/MI_DY_LacquerOxBlood.uasset",
+      "Category": "Project",
+      "Bytes": 11100,
+      "SHA256": "512F689024D06CA23E5D6A9B4ADC7D08BD2E64D05204B1DAD2291933CD05FFEC"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuAppearance/Materials/MI_DY_LeatherOchre.uasset",
+      "Category": "Project",
+      "Bytes": 10332,
+      "SHA256": "19264CCB51CF035F0C464B75563C8325D0650CD8810CE15CFA43C08681EB7CCA"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuAppearance/Materials/MI_DY_SnakeYellow.uasset",
+      "Category": "Project",
+      "Bytes": 10611,
+      "SHA256": "1C4320B075781E2524839076C055830BCAABBB1F6BFE9EEF6BD7B48F4DC0D1FA"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuAppearance/Presentation/BP_DYKuafuPuppet_Fitted.uasset",
+      "Category": "Project",
+      "Bytes": 162265,
+      "SHA256": "DC0CDD27B5CFB663CAFBFD0FB0C8C0FD55B57878A1334DB64F2E2E3EF06C5FEA"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuAppearance/Presentation/BP_DYKuafuPuppet.uasset",
+      "Category": "Project",
+      "Bytes": 162528,
+      "SHA256": "8867027F84F46315A950D009090E814104623C77DA888AB8C09D95779519F4A5"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuAppearance/Preview/Maps/LV_KuafuMaterialLab.umap",
+      "Category": "Project",
+      "Bytes": 29926,
+      "SHA256": "91DC3864611CFF3594A33FFA52E9B149C5C168EEF0F1B1B588250B28B5FA8586"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuAppearance/Preview/Materials/M_DY_LabScreen.uasset",
+      "Category": "Project",
+      "Bytes": 9666,
+      "SHA256": "70E3F7F9A5282B21EA4CF2C4D56058A2857347B1E815E78058F156AEEB19B1EF"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuAppearance/Puppet/SK_DY_Kuafu_Painted.uasset",
+      "Category": "Project",
+      "Bytes": 7024186,
+      "SHA256": "CAA95FAD25F1301EDDAC9B0595AD44732B840A5772FDA9FD30BA71921194447F"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuAppearance/Puppet/SK_DY_Kuafu_Refined.uasset",
+      "Category": "Project",
+      "Bytes": 7296668,
+      "SHA256": "31BB677B2DEB40F2513010DB96366B4A66ED47D723155D375559750A5C905295"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuAppearance/Textures/T_DY_Puppet_BaseColor.uasset",
+      "Category": "Project",
+      "Bytes": 4062648,
+      "SHA256": "630891829FFB1BB51BE88F79B077FA906C247619DDDC30A94C5AF61D98C0309A"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuAppearance/Textures/T_DY_Puppet_NormalDX.uasset",
+      "Category": "Project",
+      "Bytes": 22390813,
+      "SHA256": "96852E4E1AE219D2036DF519D10721585031082E274C91E2AB5302DD512022F7"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuAppearance/Textures/T_DY_Puppet_Roughness.uasset",
+      "Category": "Project",
+      "Bytes": 2735520,
+      "SHA256": "A83C974A99F99EE9D363E252C2F2B449640297C90A4B0B1F77A2A4BA8ED8FA36"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuArt/Materials/MI_DY_Kuafu_Staff_Wood.uasset",
+      "Category": "Project",
+      "Bytes": 4170,
+      "SHA256": "23EC4C6EC8C5477914A2FFB09B9198FFF705FC3ECE3E272CA46638032E88BDD9"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuArt/Meshes/SM_DY_Kuafu_Staff.uasset",
+      "Category": "Project",
+      "Bytes": 93165,
+      "SHA256": "E5D2E2B406AD261A93271CBEE3289114BD0ECF51547AE9C9E6B7DAE5739E6DAD"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuArt/Puppet/A_DY_Kuafu_Poses_Armature_A_DY_Kuafu_Reach.uasset",
+      "Category": "Project",
+      "Bytes": 28019,
+      "SHA256": "EC02D0483C448B6D9B545A7EF9FEEB40F8E2A20CF17BC921F8EAA04A0BDC7CE4"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuArt/Puppet/A_DY_Kuafu_Poses_Armature_A_DY_Kuafu_StrideBack.uasset",
+      "Category": "Project",
+      "Bytes": 28049,
+      "SHA256": "1A10241321DCA57800060B5B3EC90C416BCC1600A868B7692DA535722D3DD8C2"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuArt/Puppet/A_DY_Kuafu_Poses_Armature_A_DY_Kuafu_StrideMid.uasset",
+      "Category": "Project",
+      "Bytes": 28043,
+      "SHA256": "24BEA88F61BB2F80649E7F5461C642ABCD18B0CC46322CFF18C8447C6DBF2797"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuArt/Puppet/SK_DY_Kuafu_Puppet_Skeleton.uasset",
+      "Category": "Project",
+      "Bytes": 6001,
+      "SHA256": "9D76D4568DBAF0A22719698F14C110CA8B8F07F17082D0C6946D1342C6CE5FC4"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/KuafuArt/Puppet/SK_DY_Kuafu_Puppet.uasset",
+      "Category": "Project",
+      "Bytes": 7017269,
+      "SHA256": "31B3D6FA09E09DA2F9EF8939C253CC01FEB0F97C7857C15C631B6FF8500BBAFA"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M1/Data/DA_DY_P01_SunAwakening.uasset",
+      "Category": "Project",
+      "Bytes": 2076,
+      "SHA256": "699F4A1B74D1A90DFA3787ED560C47C3B3F2521D3BB710A4BE7E9BA05F3E8A14"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M1/Input/IA_DY_Interact.uasset",
+      "Category": "Project",
+      "Bytes": 1184,
+      "SHA256": "A6307E19963AB5B7C1C3E9F9BF3697704C859CFDBE5F76CFFADF26014BBEFFDD"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M1/Input/IA_DY_Manipulate.uasset",
+      "Category": "Project",
+      "Bytes": 1388,
+      "SHA256": "9B9152C2A353AE11E8A3856C4F432ED245E614712A95306E5BEF77560A760CD6"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M1/Input/IA_DY_ResetControlled.uasset",
+      "Category": "Project",
+      "Bytes": 1212,
+      "SHA256": "617D3C45C18A0CC61C09866D0445C719D0777DDBC313CBBCB8FAB515D8CDC2A6"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M1/Input/IMC_DY_Manipulate.uasset",
+      "Category": "Project",
+      "Bytes": 3848,
+      "SHA256": "D36B666E248D346D9B09015F2840133C24FBE7A245556B8FB815D7BFCD83CC96"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M2/Data/DA_DY_P02_ChaseForm.uasset",
+      "Category": "Project",
+      "Bytes": 2263,
+      "SHA256": "AC88A48DBAC5AAA98400FDAF0BD30F62AD280A4B796D688DEED9691C1B5F7415"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M2/Maps/LV_M2PuzzleLab.umap",
+      "Category": "Project",
+      "Bytes": 65619,
+      "SHA256": "DE93E1F4C3E02F6F50DC3717A3CE60FAC46DE419CAC3A43289D604049868D46F"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M2/UI/BP_DYInteractionHUD.uasset",
+      "Category": "Project",
+      "Bytes": 24866,
+      "SHA256": "A571FB97621DD35F9755EE0C3FE8FAA57EC9F7A7406BF2FF6FB95A523AE5CDF3"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M2/UI/BP_DYM2UIGameMode.uasset",
+      "Category": "Project",
+      "Bytes": 21494,
+      "SHA256": "2CFC134A77EB081CF66D232812D1DAF71899C3405BC56EB4378A9647025F94E6"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M2/UI/FF_DYSourceHanSansSC_Font.uasset",
+      "Category": "Project",
+      "Bytes": 6691,
+      "SHA256": "B4D4927939E17E2B20F9B05EC2304A7FE8C19B998DC034861EFA3B8B8B52191A"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M2/UI/FF_DYSourceHanSansSC.uasset",
+      "Category": "Project",
+      "Bytes": 16531612,
+      "SHA256": "D3CD049F111ABADF86B29027C8A864811A904992708C47813F523235C1314627"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M2/UI/WBP_DYInteractionHUD.uasset",
+      "Category": "Project",
+      "Bytes": 23815,
+      "SHA256": "97108254654F0094970C89208E1E30FCF8B20B8D6CB85C73A761F8F6B3B65082"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M3/Forest/BP_DYForestPresentation_Dev.uasset",
+      "Category": "Project",
+      "Bytes": 28558,
+      "SHA256": "B8E2703E8C4BED33890991DFA88A0591F9F9F5C3E7AC3B0B8DD796178EE02C98"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M3/Maps/LV_M3GeometryProbe.umap",
+      "Category": "Project",
+      "Bytes": 75189,
+      "SHA256": "BCE0511A42CE7307E9451113ED769408739F3E8C02D7A7849D70B8A18A57C645"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M3/Maps/LV_M3RuntimeCandidate.umap",
+      "Category": "Project",
+      "Bytes": 77276,
+      "SHA256": "42247A5E24DDC4EE036178C51A3CA8C9D55FAD09522D4F09BEEF6D07A3001109"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M3/Runtime/BP_DYP03RuntimeGameMode.uasset",
+      "Category": "Project",
+      "Bytes": 21644,
+      "SHA256": "03660CDC9F58C53ECD2F3F28E236A358CAA13C1546B7907F9AE94F51D4775DDD"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M3/Runtime/BP_DYP03RuntimeHUD.uasset",
+      "Category": "Project",
+      "Bytes": 24881,
+      "SHA256": "691EACD6D70FCB8B949717FDFEDFB4891F7E4D8EADDC7893A01A431C58C974DB"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M3/Runtime/BP_DYP03RuntimePresentation.uasset",
+      "Category": "Project",
+      "Bytes": 855124,
+      "SHA256": "6C2F5E3DF52FEF9C4C79CB955047C76DD3169E22A0FC136E0CA5B8F8292C70C9"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M3/Runtime/DA_P03RuntimeCandidate.uasset",
+      "Category": "Project",
+      "Bytes": 2247,
+      "SHA256": "E45B8ABBD8A6AFB784C65DE28B97FA9BE82963AC085CC280D07DDC7484E9C3E7"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M3/Runtime/WBP_DYP03RuntimeCue.uasset",
+      "Category": "Project",
+      "Bytes": 46420,
+      "SHA256": "2DE799BF794FC959ABD50CC546F54E710BD7F1B44429E3E29683D3BDE1C425D0"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/M3/Runtime/WBP_DYP03RuntimeHUD.uasset",
+      "Category": "Project",
+      "Bytes": 21854,
+      "SHA256": "84DE43D1B05084FB79544875AAD0DFAD6E5EE097D5712FDCD80B24C211C36B0B"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/Readability/Core/BP_DYReadabilityGameMode.uasset",
+      "Category": "Project",
+      "Bytes": 20584,
+      "SHA256": "DDFEA20B60733ACCAEBC13D7205B8B28C7C1AD6E750364DBCADCD5AC79675B4F"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/Readability/Guides/M_DYReadabilityGuide.uasset",
+      "Category": "Project",
+      "Bytes": 49774,
+      "SHA256": "16B58827AF44A8A4D88001F837CC25FD010B81D4E6A03F6B90768F4EBB2084FA"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/Readability/Guides/MI_DYReadability_P01.uasset",
+      "Category": "Project",
+      "Bytes": 9183,
+      "SHA256": "EC6182768EA414038B0B3E7326481653817C953BD040AC1BA3E7CE848DA22CC5"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/Readability/Guides/MI_DYReadability_P02.uasset",
+      "Category": "Project",
+      "Bytes": 9183,
+      "SHA256": "FD0842DB29B56C58EA5053A79C1BE16332ED568FB9E8994912A0224F9465E3D7"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/Readability/Guides/MI_DYReadability_P03.uasset",
+      "Category": "Project",
+      "Bytes": 9183,
+      "SHA256": "955FBF789CB8B814ED5787A8FFFA1EF7F63896F2B8D2C864232382B1B6BE6262"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/Readability/Maps/LV_ReadabilityLab.umap",
+      "Category": "Project",
+      "Bytes": 82344,
+      "SHA256": "44394DDF61A80800A2B4C2DFD5CACF54C4A4DA91405D2CE7625FD44C09A92C53"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/Readability/Stage/BP_DYReadabilityPresentation.uasset",
+      "Category": "Project",
+      "Bytes": 957110,
+      "SHA256": "1DBFD1610EC682434F1BD4557461F8AC81EDED11A9554DE5E1A4104F97FC1CB2"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/StageArtComposition/Frame/SM_DY_FrameBeam_FullSpan.uasset",
+      "Category": "Project",
+      "Bytes": 16324,
+      "SHA256": "5B7B3C371E57A4EF8559E17BED552E690D519A90A7EB48A915A8CED4B4CA502E"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/StageArtComposition/Maps/LV_StageArtCompositionLab.umap",
+      "Category": "Project",
+      "Bytes": 142654,
+      "SHA256": "0C132AB19B106843D53FF4EFAC58D83AC920643F452C37BBDD76D82EA2B883F6"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/StageArtComposition/Presentation/BP_DYHeroLampRig.uasset",
+      "Category": "Project",
+      "Bytes": 34261,
+      "SHA256": "3DF44BC03FB52777CA25D6AB1C2BC6943D603C7B4450AEF0DA613156B11E9EA2"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/StageProps/Meshes/SM_DY_BackstageBench.uasset",
+      "Category": "Project",
+      "Bytes": 87591,
+      "SHA256": "101BC7F5B651FDB76A4AD4150A852EF35BDB676CCFD8B129413B09C73442C05A"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/StageProps/Meshes/SM_DY_OperatorRodRack.uasset",
+      "Category": "Project",
+      "Bytes": 105363,
+      "SHA256": "B0C7C14D6D599554C2EDE031A428B5CB2AB797A37E181805E2527A4A227ADAED"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/StageWingArt/Materials/M_DY_StageWingCloth.uasset",
+      "Category": "Project",
+      "Bytes": 15797,
+      "SHA256": "DF4CEB27780410D9A0D51580D7D75464337D4A2D24F33B88EC78DE20EC413A7A"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/StageWingArt/Materials/MI_DY_StageWingDeepCrimson.uasset",
+      "Category": "Project",
+      "Bytes": 10192,
+      "SHA256": "ADCD79B06DDC95CAA4A292BB85F01E161FBD68120FB722BBAD29F7055D466D78"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/StageWingArt/Meshes/SM_DY_StageWingCurtain.uasset",
+      "Category": "Project",
+      "Bytes": 1271641,
+      "SHA256": "C867D96FDF0B69A51F179455C35A981561D334216E2E6677EE39071308A8C3A9"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/StageWingArt/Textures/T_DY_StageWing_BaseColor_2K.uasset",
+      "Category": "Project",
+      "Bytes": 80193,
+      "SHA256": "3D0C0631D080D0E56192356AA259869175E590F1C62816B7294987C256DF4A78"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/StageWingArt/Textures/T_DY_StageWing_Normal_DX_2K.uasset",
+      "Category": "Project",
+      "Bytes": 1821038,
+      "SHA256": "0AEBDD92512B0291E5EAC0B263EF8C713E12A7F90F70DFAE1AF6E846B88B5294"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/StageWingArt/Textures/T_DY_StageWing_Roughness_2K.uasset",
+      "Category": "Project",
+      "Bytes": 854989,
+      "SHA256": "05841B8E3D28B519E3524B0746BFAEB2095DB07B3E6D3780C85A6FEB54D338BF"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/StageWings/Materials/M_DY_WingScreen_Master.uasset",
+      "Category": "Project",
+      "Bytes": 10526,
+      "SHA256": "81C8E29380733CA1595D5AB2D75F0F0F6011F0428584521BB9867FFEA4328CB2"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/StageWings/Materials/MI_DY_WingScreen_Dev.uasset",
+      "Category": "Project",
+      "Bytes": 4084,
+      "SHA256": "A2E05825EA299DDB07B4B50C67537C39155B62B3490729577278D535BC95D550"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/StageWings/Meshes/SM_DY_WingScreen.uasset",
+      "Category": "Project",
+      "Bytes": 46767,
+      "SHA256": "6002ADC20E34A35BE5AC0878D28FA5F15DB09902687E2E4D09B0EF2EF53E2CAF"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/StageWings/Textures/T_DY_WingScreen_ARM.uasset",
+      "Category": "Project",
+      "Bytes": 8578263,
+      "SHA256": "A2C6A9477BB9B74BE38AE85516DE99EF3F568A65A094911AD87453D4122B237C"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/StageWings/Textures/T_DY_WingScreen_BaseColor.uasset",
+      "Category": "Project",
+      "Bytes": 16670261,
+      "SHA256": "8A478FE16FA1061B61CCD841F82B5F83610571FF1A1A89DAC30A1185F2856214"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/StageWings/Textures/T_DY_WingScreen_NormalDX.uasset",
+      "Category": "Project",
+      "Bytes": 12523770,
+      "SHA256": "55D93F77660385774D08111AD95DC9247211D411D65C08F31F4CFE2C4DD4BD6E"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/TheatreAudio/Core/BP_DYTheatreGameMode.uasset",
+      "Category": "Project",
+      "Bytes": 20753,
+      "SHA256": "08CEE30440BBCF060072F99FA698A2759947F70C345A0B98AA073653E1D20045"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/TheatreAudio/Core/BP_DYTheatreOperator.uasset",
+      "Category": "Project",
+      "Bytes": 27557,
+      "SHA256": "9C1337B58BA01DD7DA5DC4057599FA5C7E216FC5EE7C4E81E35D3760BB69B55D"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/TheatreAudio/Sounds/SFX_DevFootstepA.uasset",
+      "Category": "Project",
+      "Bytes": 13255,
+      "SHA256": "C83F70D811099C11FFD6C2CB6ED828B33BED83038282D1CF9481214EF659CDE8"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/TheatreAudio/Sounds/SFX_DevFootstepB.uasset",
+      "Category": "Project",
+      "Bytes": 13817,
+      "SHA256": "CFAE3B45A82DA57C054D8A4E46FD80D9CAE093F8C82AB63966F4AF3008AFA1CF"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/TheatreAudio/Sounds/SFX_DevForestLeaves.uasset",
+      "Category": "Project",
+      "Bytes": 68201,
+      "SHA256": "8134BD08675484970C3AF869CFCF08C5DFDD51D28A3E911F1B62B7439B7194D3"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/TheatreAudio/Sounds/SFX_DevHoldingPulse.uasset",
+      "Category": "Project",
+      "Bytes": 5030,
+      "SHA256": "DD62556D166469700C99A8918D361AEBA9D4B976FC9151DE52479343F1EA760F"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/TheatreAudio/Sounds/SFX_DevResolve.uasset",
+      "Category": "Project",
+      "Bytes": 6316,
+      "SHA256": "577BDD9D2591AB5F193D97A42A7FFAEC10F41B6FE57C33A959283A4B6F79D3D5"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/TheatreAudio/Sounds/SFX_DevStaffContact.uasset",
+      "Category": "Project",
+      "Bytes": 5604,
+      "SHA256": "F0072176584A3FAA4B26B40A8E0646D6555F8AD6F245DFD6A88DB4C47055FF9A"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/TheatreAudio/Sounds/SFX_DevWind.uasset",
+      "Category": "Project",
+      "Bytes": 333846,
+      "SHA256": "CF379B40CEE0C5D802AC532E2C35F01348418F88E4A14E71E67DE75E34817864"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ThreeAct/Core/BP_DYThreeActGameMode.uasset",
+      "Category": "Project",
+      "Bytes": 20381,
+      "SHA256": "36A8F80821A84F5851509A00516DE27DFC2F2B296C5B5A0EABB8A22909DF2D0F"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ThreeAct/Maps/LV_ThreeActDev.umap",
+      "Category": "Project",
+      "Bytes": 74318,
+      "SHA256": "86D54A0A2EEF1C1D2491E36B35C6B1D7121B2E4C862E57FB9BBFD06C2E4BB433"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ThreeAct/Stage/BP_DYThreeActPresentation.uasset",
+      "Category": "Project",
+      "Bytes": 898785,
+      "SHA256": "0D7311DB7E617C7C6F1F9D7B8EC331F3E38134AFCC9A3EB3454048E4A04737E6"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ThreeAct/UI/BP_DYThreeActHUD.uasset",
+      "Category": "Project",
+      "Bytes": 23541,
+      "SHA256": "B0F98EE2A46E320F93992D7FCD00DEF667109C2AB4F180301847CFFE07C1D040"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ThreeAct/UI/WBP_DYThreeActCue.uasset",
+      "Category": "Project",
+      "Bytes": 45472,
+      "SHA256": "BCF3B1359D502AA4174C7FB5DA5DAC438F58AFACAAB754724F16C417B3A30B37"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ThreeAct/UI/WBP_DYThreeActHUD.uasset",
+      "Category": "Project",
+      "Bytes": 21080,
+      "SHA256": "9675AFDA0BB9F4EE775CC1519F86387DC0BB81CB4D769A1070D369930F778015"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/WoodFloor/Materials/M_DY_WoodFloor_Master.uasset",
+      "Category": "Project",
+      "Bytes": 10687,
+      "SHA256": "3A6AAB551C0B18D913C4D0F60B0099FBDC1FB0F4E8E6751B0DCBB35DE69F6DD2"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/WoodFloor/Materials/MI_DY_WoodFloor_Dev.uasset",
+      "Category": "Project",
+      "Bytes": 4071,
+      "SHA256": "87A7FC08AFB6981773ECD25FDBE97AA3061A472C9D959BB59A0DF19314FB5361"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/WoodFloor/Textures/T_DY_WoodFloor_ARM.uasset",
+      "Category": "Project",
+      "Bytes": 14019736,
+      "SHA256": "45213B24ED2262DF520529DF2CD980E25C0E016BAC4BCE624BE3BCE86C871AEF"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/WoodFloor/Textures/T_DY_WoodFloor_BaseColor.uasset",
+      "Category": "Project",
+      "Bytes": 24051039,
+      "SHA256": "E07E2FEC20294E020853A07136E083DAC31ED4316E2FEEB6899D1FE85B8F9405"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/WoodFloor/Textures/T_DY_WoodFloor_NormalDX.uasset",
+      "Category": "Project",
+      "Bytes": 21136431,
+      "SHA256": "D0EAB9023A448298490A2D917517FF2DAE81ED3FDB2FAF0D03EF964352A046CC"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Maps/L_DY_Main.umap",
+      "Category": "Project",
+      "Bytes": 112824,
+      "SHA256": "8FF01EF99F6F4DC10C1A37A6078A238DAD0904DA7027176C17041D5B26134B0D"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Stage/BP_DYStageEnvironment.uasset",
+      "Category": "Project",
+      "Bytes": 23301,
+      "SHA256": "3159CD2FE3BE93240DFD46E7CEE065842958E2D9F4ACD685B2B953C1127D7035"
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Stage/BP_DYStagePresentation.uasset",
+      "Category": "Project",
+      "Bytes": 23023,
+      "SHA256": "245FFB0232C265F266A46ACC0F7E3DEE91D2459BB221D5C5392E98F79F7DC69B"
+    },
+    {
+      "Relative": "Config/DefaultEngine.ini",
+      "Category": "Project",
+      "Bytes": 835,
+      "SHA256": "D4D19E8215393F78C5E2CA157378ACBA7B9902C102E114A3796CA0617B75D873"
+    },
+    {
+      "Relative": "Config/DefaultGame.ini",
+      "Category": "Project",
+      "Bytes": 327,
+      "SHA256": "8CC79E02D59C66BCE42D72839953CF03432034DA538448CC3EB7B359ABBAD829"
+    },
+    {
+      "Relative": "Config/DefaultInput.ini",
+      "Category": "Project",
+      "Bytes": 538,
+      "SHA256": "5DF22072ECC11EB55F98454504C9C1A62F9F86EBBB302B34DFEF2D690FF3F4E8"
+    },
+    {
+      "Relative": "Scripts/Check-Environment.ps1",
+      "Category": "Project",
+      "Bytes": 11120,
+      "SHA256": "DB2F2EC83D1B93C1300A8AB42A7B356AB4F778CF29EB16F48DF289A527BC9911"
+    },
+    {
+      "Relative": "Scripts/Configure-M2Readability.py",
+      "Category": "Project",
+      "Bytes": 2132,
+      "SHA256": "7C2584BA89274001328E6A80DD2A3CBC1217FFBE8DE5E6D327D2005EB08BD1C8"
+    },
+    {
+      "Relative": "Scripts/Configure-M2UI.py",
+      "Category": "Project",
+      "Bytes": 5561,
+      "SHA256": "171608F33708EA3C7DDAE651CE2DA031E71ABF3A4388080055AF069D7C6193D5"
+    },
+    {
+      "Relative": "Scripts/Create-AlignmentFeedbackDev.py",
+      "Category": "Project",
+      "Bytes": 4853,
+      "SHA256": "2A211C9C49F6954DF446F4C61E56D3E9FD2A1B77440B32C84961FA140C8F6A14"
+    },
+    {
+      "Relative": "Scripts/Create-EnvironmentStates.py",
+      "Category": "Project",
+      "Bytes": 6164,
+      "SHA256": "EC8938347506B9807F910742E64D4159959B9A74B6A70CDB37E4F798C06BF9A0"
+    },
+    {
+      "Relative": "Scripts/Create-FrameBeamCandidateDev.py",
+      "Category": "Project",
+      "Bytes": 9092,
+      "SHA256": "C8ECCA70C228A9D8A2AD92C4C5A4438831F0059147D96DE9B93E450F22E77594"
+    },
+    {
+      "Relative": "Scripts/Create-FrameBeamPlacementDev.py",
+      "Category": "Project",
+      "Bytes": 12135,
+      "SHA256": "18E96E5E3890A46584E49B85DC218986F044EC01758191AA363E0AB379E9E823"
+    },
+    {
+      "Relative": "Scripts/Create-FrameBeamTopUVAsset.py",
+      "Category": "Project",
+      "Bytes": 28182,
+      "SHA256": "A03B249E8FF0CA051FCC4153906CFEEAB916DAB371675E421FE19AB1AC8A4DD0"
+    },
+    {
+      "Relative": "Scripts/Create-FrameBeamTopUVDev.py",
+      "Category": "Project",
+      "Bytes": 13234,
+      "SHA256": "6CE596AAF8931881B0EDB1B2824B351F46B4C5AD1444914CC7FD6E468D822F25"
+    },
+    {
+      "Relative": "Scripts/Create-FramePostPlacementDev.py",
+      "Category": "Project",
+      "Bytes": 19631,
+      "SHA256": "ED0E257314B0F33C8F6EFFA14A94D19D59AE91AFD82B0BC0519AB017BE2C8A84"
+    },
+    {
+      "Relative": "Scripts/Create-M1DevSlice.py",
+      "Category": "Project",
+      "Bytes": 16933,
+      "SHA256": "C6DD2259ECF70A9EB87AC1B2E6620B702F9120672A2A39BFC64E6D530B0C36A5"
+    },
+    {
+      "Relative": "Scripts/Create-M2DevSlice.py",
+      "Category": "Project",
+      "Bytes": 9028,
+      "SHA256": "2F434ADD735339F89C677C2C2EE6A2C0BB892C023D405C76506EFDBB7BAEBC5F"
+    },
+    {
+      "Relative": "Scripts/Create-P03ForestDevAsset.py",
+      "Category": "Project",
+      "Bytes": 8586,
+      "SHA256": "15F52C9CB8B7BD293BDBFA98EB7445B6F974F10117B4E0747C34C477E0B807C0"
+    },
+    {
+      "Relative": "Scripts/Create-P03GeometryProbe.py",
+      "Category": "Project",
+      "Bytes": 2409,
+      "SHA256": "1A7CE391F067DB760116C38D07079841CA4389DCD9031C2815746185F28A7953"
+    },
+    {
+      "Relative": "Scripts/Create-P03RuntimeDev.py",
+      "Category": "Project",
+      "Bytes": 36591,
+      "SHA256": "5FBC8AE9E1111252BE885E66581AC0E8C0EEE4235B820A7145C9C7C726BED5B4"
+    },
+    {
+      "Relative": "Scripts/Create-Phase1Assets.py",
+      "Category": "Project",
+      "Bytes": 13590,
+      "SHA256": "655347607EBC9C3ABFFF680226A538720F672CD225E202E8CED43B300DBED195"
+    },
+    {
+      "Relative": "Scripts/Create-ReadabilityDev.py",
+      "Category": "Project",
+      "Bytes": 25888,
+      "SHA256": "9FA5F86ED52E70C0F862B62F39FDD171090A877BDC4E102C4F303DBB14256635"
+    },
+    {
+      "Relative": "Scripts/Create-ReleaseEntry.py",
+      "Category": "Project",
+      "Bytes": 16198,
+      "SHA256": "CF1662BF19036D95599C8CC460C45EEE13A658F745AB72CD716E45A345C0D752"
+    },
+    {
+      "Relative": "Scripts/Create-StageWingsDev.py",
+      "Category": "Project",
+      "Bytes": 42631,
+      "SHA256": "8539C32CDBEF250863791A221167C075989E3476D53F804B2CE07DDD0A00AFDD"
+    },
+    {
+      "Relative": "Scripts/Create-ThreeActDev.py",
+      "Category": "Project",
+      "Bytes": 42722,
+      "SHA256": "0ACD8FABA7C72B3F2CDEC964C2EC3F062205396C2E40295467D4EDD048394CDC"
+    },
+    {
+      "Relative": "Scripts/Create-WoodFloorDev.py",
+      "Category": "Project",
+      "Bytes": 17082,
+      "SHA256": "8EEABC03DE8D509D0A1722F48793EC96E7C007725A88CBB82BE154D73441BA98"
+    },
+    {
+      "Relative": "Scripts/Open-FrameBeamAsset.py",
+      "Category": "Project",
+      "Bytes": 2952,
+      "SHA256": "19600213D31C0737E87235F14C68BEC386CD2125BCA8295D4635DD2F1E3B5FB1"
+    },
+    {
+      "Relative": "Scripts/Open-FramePostAsset.py",
+      "Category": "Project",
+      "Bytes": 2822,
+      "SHA256": "AEC50BB1D95014B3E865B989DD6296B6AA10F65D646613ACFC719F840E988D71"
+    },
+    {
+      "Relative": "Scripts/Play-P03DevCandidate.py",
+      "Category": "Project",
+      "Bytes": 23817,
+      "SHA256": "5A367CECA3D36F8AE98E3DA673414FDDFA42E6E791B9C394DEEEA27205687B21"
+    },
+    {
+      "Relative": "Scripts/Preview-P03BranchRefinement.py",
+      "Category": "Project",
+      "Bytes": 5171,
+      "SHA256": "CA4E19ACC2F32E6F492A32F2FE8F355016013E661E26A0872FB67B7B679DA3C1"
+    },
+    {
+      "Relative": "Scripts/Preview-P03Continuous.py",
+      "Category": "Project",
+      "Bytes": 12666,
+      "SHA256": "6BAC016FFD922C8EF5313CB6947D31BDF1DF50C2377BF571E29E6B61008F9CC9"
+    },
+    {
+      "Relative": "Scripts/Preview-P03ForestAsset.py",
+      "Category": "Project",
+      "Bytes": 5486,
+      "SHA256": "7C4D76D8902A73AD2EA9E2389454295BE8E0D662F21F2E1A058F16B8E1292E56"
+    },
+    {
+      "Relative": "Scripts/Preview-P03ForestComposition.py",
+      "Category": "Project",
+      "Bytes": 7780,
+      "SHA256": "0C9E569FCDB8073C0301559002FBA6DB40313887FDC6A00CFFD1A47FF7A269AC"
+    },
+    {
+      "Relative": "Scripts/Preview-P03ForestProjection.py",
+      "Category": "Project",
+      "Bytes": 17425,
+      "SHA256": "6844E5F387AB28A1BE38576FB9ED6AB42B7F85BDFC587F2579439C8B47510483"
+    },
+    {
+      "Relative": "Scripts/Preview-P03NativeForest.py",
+      "Category": "Project",
+      "Bytes": 14370,
+      "SHA256": "C64C4CC18B46F6783BFC445A14AF77DC71996A9BD119E72A013625F37BEBA0D8"
+    },
+    {
+      "Relative": "Scripts/Preview-P03StaffDrop.py",
+      "Category": "Project",
+      "Bytes": 18251,
+      "SHA256": "B7052B0A35E7A7DA1E25B3B3724A73737C07478D6A6A285D5CEF9CC6B4193F59"
+    },
+    {
+      "Relative": "Scripts/Start-AlignmentDev-Run1.ps1",
+      "Category": "Project",
+      "Bytes": 8468,
+      "SHA256": "FCF9FEB3522BD79F262DAAB92F3ADA1F7E95A692CFECD60AFE81519339B2ACB0"
+    },
+    {
+      "Relative": "Scripts/Start-AlignmentDev.ps1",
+      "Category": "Project",
+      "Bytes": 8482,
+      "SHA256": "445A23D8B2709698ABD378D106490E6128EDDC2D0D4BE555FF2FDC3155D43F06"
+    },
+    {
+      "Relative": "Scripts/Start-AudioDev.ps1",
+      "Category": "Project",
+      "Bytes": 8989,
+      "SHA256": "5355911FFDFE8DD9F7CDD77BF53D11E4B8A8427D8A534880F90362BE824E734B"
+    },
+    {
+      "Relative": "Scripts/Start-EntryLoopDev.ps1",
+      "Category": "Project",
+      "Bytes": 8427,
+      "SHA256": "EDAFD0A02C67D7A5CB70E11305FF31CD84770E6AD79F0B5973146F8A496EE359"
+    },
+    {
+      "Relative": "Scripts/Start-EnvironmentDev.ps1",
+      "Category": "Project",
+      "Bytes": 9328,
+      "SHA256": "AC7B505E3A3C2B8EDCD7A38690E990D0BA7732F976F307DECA9E7615AD652E6F"
+    },
+    {
+      "Relative": "Scripts/Start-FrameBeamAssetReview.ps1",
+      "Category": "Project",
+      "Bytes": 5547,
+      "SHA256": "277F8A36142F233EDD3E2E78A23507946967227CF7102A493043EFC9EA58842C"
+    },
+    {
+      "Relative": "Scripts/Start-FrameBeamCandidate.ps1",
+      "Category": "Project",
+      "Bytes": 10302,
+      "SHA256": "2118791870CE2E2A691EC2182A2304E215488F4D238E692F0A74307273D7B018"
+    },
+    {
+      "Relative": "Scripts/Start-FrameBeamDev.ps1",
+      "Category": "Project",
+      "Bytes": 10195,
+      "SHA256": "D24E5E00050F25FCCD68A5945DE7163ADEABAB473DCCC459B9B83EBF93821A6E"
+    },
+    {
+      "Relative": "Scripts/Start-FrameBeamTopUV.ps1",
+      "Category": "Project",
+      "Bytes": 11495,
+      "SHA256": "D1573FF4EF6E697C3D173D2F4E8F3532E4B2FDFC268240493C1A9091BBB56113"
+    },
+    {
+      "Relative": "Scripts/Start-FramePostAssetReview.ps1",
+      "Category": "Project",
+      "Bytes": 5113,
+      "SHA256": "4F6F9BBEB87474912BE074D22F47165191CC675A14B89250AFF282D680FF8D26"
+    },
+    {
+      "Relative": "Scripts/Start-FramePostDev.ps1",
+      "Category": "Project",
+      "Bytes": 6824,
+      "SHA256": "9941D8BBC534C8CDFFD87404091B5E1ADB3C523BCEBA5C46739C437EBEF853F6"
+    },
+    {
+      "Relative": "Scripts/Start-M2Lab.ps1",
+      "Category": "Project",
+      "Bytes": 3658,
+      "SHA256": "0529A3D53091C214C4A15BCD782A21AF8BD7E930790604CD9EA4546B1DA0EA34"
+    },
+    {
+      "Relative": "Scripts/Start-M3AutoTest.ps1",
+      "Category": "Project",
+      "Bytes": 7130,
+      "SHA256": "BB7754395D3F30408DBEDC638D0068D8D442CAA493C76D6A2DB8B76AC4099706"
+    },
+    {
+      "Relative": "Scripts/Start-M3Candidate.ps1",
+      "Category": "Project",
+      "Bytes": 6964,
+      "SHA256": "9BAD04452099E24DABCAE96CD118FA6272FAA5DB3955B75A1A26CED0167F00F3"
+    },
+    {
+      "Relative": "Scripts/Start-M3Continuous.ps1",
+      "Category": "Project",
+      "Bytes": 4127,
+      "SHA256": "2DF3797C7CB8DAF99E2B6337433412A5056EEA2753629B6CF47F392F3BC31EFA"
+    },
+    {
+      "Relative": "Scripts/Start-M3ForestAsset.ps1",
+      "Category": "Project",
+      "Bytes": 4411,
+      "SHA256": "804EB39B9684329860FFEAD88FDD03945334DE0D09FF4160CAAE30EBC4396898"
+    },
+    {
+      "Relative": "Scripts/Start-M3Geometry.ps1",
+      "Category": "Project",
+      "Bytes": 1037,
+      "SHA256": "7187F753FCE857BA896D4D4498776A5670098A051F6752843D4D3A22ED1C39E6"
+    },
+    {
+      "Relative": "Scripts/Start-M3NativeForest.ps1",
+      "Category": "Project",
+      "Bytes": 4263,
+      "SHA256": "D89D7A310F851760B1A6BC43CAAEAEDDBE033C234529E67D720B155D0DC3F3A0"
+    },
+    {
+      "Relative": "Scripts/Start-M3Runtime.ps1",
+      "Category": "Project",
+      "Bytes": 31078,
+      "SHA256": "D1ECCC39DF82041C5E949727517C1B8BF014C95D99C463F62DA209BB604CC3B5"
+    },
+    {
+      "Relative": "Scripts/Start-ReadabilityDev.ps1",
+      "Category": "Project",
+      "Bytes": 8431,
+      "SHA256": "7DEF4DD1DE5A1EC824CA27A07720AC730F90B7FBEB490DF891A455E4004BE605"
+    },
+    {
+      "Relative": "Scripts/Start-ReleaseEntry.ps1",
+      "Category": "Project",
+      "Bytes": 4696,
+      "SHA256": "1DD44FC63A17387D608EBA12AC5D4A28FEE0ABE277A054B1716C55109472749C"
+    },
+    {
+      "Relative": "Scripts/Start-StageWingsDev.ps1",
+      "Category": "Project",
+      "Bytes": 10249,
+      "SHA256": "CB76AA40C1E2087B34622BF5782C3F13AC3A87206754DE55A3A460CAE9FA1203"
+    },
+    {
+      "Relative": "Scripts/Start-ThreeActDev.ps1",
+      "Category": "Project",
+      "Bytes": 9323,
+      "SHA256": "A27B3BDF9E11E96AAB0011E89372724E57AC132685C9FAEE60BF4D9364AD60AB"
+    },
+    {
+      "Relative": "Scripts/Start-WoodFloorDev.ps1",
+      "Category": "Project",
+      "Bytes": 10140,
+      "SHA256": "7D2C7EB18C30E37D24C15622AACE7632E2C99C8BBA01815AE2F6C9B304DE09E1"
+    },
+    {
+      "Relative": "Scripts/Verify-M1DevSlice.py",
+      "Category": "Project",
+      "Bytes": 13047,
+      "SHA256": "546E7FEA1B1DDB1B39FA4BF62D0DACCF5B9C4EAFB0DC6A61DC3DD871AF4B307B"
+    },
+    {
+      "Relative": "Scripts/Verify-M2DevSlice.py",
+      "Category": "Project",
+      "Bytes": 6334,
+      "SHA256": "E7A0B4CCF21E5918D914CFEF6C5984542E04AE535F7E7A56FF3DE7FC4B4DDEC1"
+    },
+    {
+      "Relative": "Scripts/Verify-M2UI.py",
+      "Category": "Project",
+      "Bytes": 3386,
+      "SHA256": "2E25422079646F784A2962E1DD7011DEF2CF2DF9B07FD28F78F2036D31C7DF4A"
+    },
+    {
+      "Relative": "Scripts/Verify-P03DevCandidate.py",
+      "Category": "Project",
+      "Bytes": 8912,
+      "SHA256": "E86B5A59A08FDACB91760E52436F083E786C3DB4656694FFEEAF36B7DCBA97AF"
+    },
+    {
+      "Relative": "Scripts/Verify-P03GeometryProbe.py",
+      "Category": "Project",
+      "Bytes": 3413,
+      "SHA256": "8A36EE8857A22EEF5D30B2FE7885FD6DAA589B8219DED56EC57654F19B18BE15"
+    },
+    {
+      "Relative": "Scripts/Verify-P03RuntimeDev.py",
+      "Category": "Project",
+      "Bytes": 12780,
+      "SHA256": "DC07E465DADF7B73D5F14ADDEBB84F56616C5ED61C19A7758A6E152099938A79"
+    },
+    {
+      "Relative": "Scripts/Verify-Phase1Assets.py",
+      "Category": "Project",
+      "Bytes": 9513,
+      "SHA256": "72685159E6C83374F7C5FC5B83996B29F4DF06FF69F385A1F896128B91F52D01"
+    },
+    {
+      "Relative": "Scripts/Watch-P03RuntimeTest.py",
+      "Category": "Project",
+      "Bytes": 20171,
+      "SHA256": "91EDC06BF60038125F4DF0FA6DEFC4A3947DC5BE81C298C5F793E8F7D65CD23F"
+    },
+    {
+      "Relative": "Docs/ACT_ENTRY_CONTROL_RESET_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 8550,
+      "SHA256": "6E0430EE66C9B6288917482C6CFDB5DAB305F20DAA6C9DA8451F8EAE1C22A812"
+    },
+    {
+      "Relative": "Docs/ALIGNMENT_FEEDBACK_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 6441,
+      "SHA256": "946B31B7CECFA09F9046FB7257AC193C178BDE5267219A7CA84A99C986C2D038"
+    },
+    {
+      "Relative": "Docs/ALPHA_VISUAL_GUIDANCE_PLAN.md",
+      "Category": "Project",
+      "Bytes": 11996,
+      "SHA256": "08F763E7E09842998A2093DC81DFE2A5177E4653A0DDBF635F7B06EF511F373E"
+    },
+    {
+      "Relative": "Docs/ARCHITECTURE_DECISIONS.md",
+      "Category": "Project",
+      "Bytes": 15514,
+      "SHA256": "092B16102B19E6B47EBDA89506608AFAB33115FAF5066D22A94728F01B0269B9"
+    },
+    {
+      "Relative": "Docs/ARCHITECTURE_DESIGN.md",
+      "Category": "Project",
+      "Bytes": 23674,
+      "SHA256": "BE3AF216C719F1011D617A911798B833E89CBB6D1A941A4654A7D637A8B63EE6"
+    },
+    {
+      "Relative": "Docs/ART_APPEARANCE_20261014.md",
+      "Category": "Project",
+      "Bytes": 6379,
+      "SHA256": "B204954A26B0B1DFD2844B75C087C608CCDFA547377088FF971188D344C7FBC7"
+    },
+    {
+      "Relative": "Docs/ART_INTEGRATION_20261015.md",
+      "Category": "Project",
+      "Bytes": 18630,
+      "SHA256": "8434DBD017467D80CD09876D3BC7E307CA890F29B2562367A69FD40AE5D2AD0F"
+    },
+    {
+      "Relative": "Docs/ART_MODEL_BATCH_20261014.md",
+      "Category": "Project",
+      "Bytes": 8608,
+      "SHA256": "A77AB48664E5CE91FE12C70DDD60DAB867242FFA6ECC4259EC178B04BD9E526A"
+    },
+    {
+      "Relative": "Docs/ASSET_ACQUISITION_PLAN.md",
+      "Category": "Project",
+      "Bytes": 17942,
+      "SHA256": "D5F56C7D1BEC8384B67894878632037C84E5F51B70649BFCDA8641BE2E4E79EE"
+    },
+    {
+      "Relative": "Docs/ASSET_LIST.md",
+      "Category": "Project",
+      "Bytes": 14380,
+      "SHA256": "8D722C137435D04AB5266A4709F2AA402ECDEED318FE9B1976814FF94345372E"
+    },
+    {
+      "Relative": "Docs/ASSET_SOURCES.md",
+      "Category": "Project",
+      "Bytes": 14775,
+      "SHA256": "05E44EE3F34971AA3B97415A574033B66BC8BF7EF9043E7661CDC027A4E853CB"
+    },
+    {
+      "Relative": "Docs/AUDIO_DEV_PLAN.md",
+      "Category": "Project",
+      "Bytes": 3670,
+      "SHA256": "44B91EDB8FA5BEA09838C9C3D09ACCA24F43EF344FA4ACFF92FFBE369E17065F"
+    },
+    {
+      "Relative": "Docs/AUDIO_DEV_SOURCES.md",
+      "Category": "Project",
+      "Bytes": 4749,
+      "SHA256": "CBA9B0AFE35FF8D96353DE7F98FD2896D22DDF41236D213F5ECEA741493E2401"
+    },
+    {
+      "Relative": "Docs/AUDIO_DEV_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 11221,
+      "SHA256": "26CBE3ED6DE7B9866E4A5A2A9DB5F33416956F420CE31CE3B9CBEC52EE277564"
+    },
+    {
+      "Relative": "Docs/COLLABORATION_MODE.md",
+      "Category": "Project",
+      "Bytes": 2735,
+      "SHA256": "0655C9CE34096C3510B79B3A4B544EBF71BCF4A812B28E9C412A4F504F5E10D7"
+    },
+    {
+      "Relative": "Docs/COMPETITION_BENCHMARK.md",
+      "Category": "Project",
+      "Bytes": 24040,
+      "SHA256": "858062CC6C885C2C472923E7820E65DECD4D4CA5A4818C99D70096B07C9B3EBC"
+    },
+    {
+      "Relative": "Docs/CURTAIN_ASSET_REVIEW.md",
+      "Category": "Project",
+      "Bytes": 3816,
+      "SHA256": "D4B8B2C29A95C2BCEFD80160ACB67BC8F183523456C7756E20EC3C6D16A7B238"
+    },
+    {
+      "Relative": "Docs/DEV_ENTRY_LOOP_PLAN.md",
+      "Category": "Project",
+      "Bytes": 6691,
+      "SHA256": "FA8245E3B40117C989367B8A4DB428743E555FB2AABC6DFBCDF909BE06A8869E"
+    },
+    {
+      "Relative": "Docs/DEV_ENTRY_LOOP_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 11566,
+      "SHA256": "D8A43A4A19D277A75D57A6B35C39BAF968A7B469A6E38A7EDD729C7CA20C8DCB"
+    },
+    {
+      "Relative": "Docs/DEV_EXPERIMENT_PLAN.md",
+      "Category": "Project",
+      "Bytes": 11929,
+      "SHA256": "1AB50B186079D30C309DCDFB5E89512517ECE52CFC23354B463699BC77E9FF84"
+    },
+    {
+      "Relative": "Docs/DEVELOPMENT_PLAN.md",
+      "Category": "Project",
+      "Bytes": 58966,
+      "SHA256": "4C7C1E1744ED2FA2AAB47A0B9C3E76C14184C809F27F5B2296DC3DD8AD3C7F5A"
+    },
+    {
+      "Relative": "Docs/ENVIRONMENT_NARRATIVE_SPEC.md",
+      "Category": "Project",
+      "Bytes": 18885,
+      "SHA256": "12C30B30FCFC187953DA375A59D691722BB3DA62C89D40ADCE248B7A812976C3"
+    },
+    {
+      "Relative": "Docs/ENVIRONMENT_SETUP.md",
+      "Category": "Project",
+      "Bytes": 8315,
+      "SHA256": "D95A56F984E2AFFCBDC0DADA33CF6B1D166A2C3FF7AA458CF47683C88EE237A0"
+    },
+    {
+      "Relative": "Docs/ENVIRONMENT_STATES_DEV_PLAN.md",
+      "Category": "Project",
+      "Bytes": 5474,
+      "SHA256": "87108E4945B5D9465560030381C104FDE2FC11585290F51A10977F4CD887E51B"
+    },
+    {
+      "Relative": "Docs/ENVIRONMENT_STATES_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 8419,
+      "SHA256": "B87F79F7F50B7B4A5517FD50E3A53CD0400EB9CAB0CF76CAECD3B1AC1BEE6503"
+    },
+    {
+      "Relative": "Docs/ENVIRONMENT_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 6105,
+      "SHA256": "D3D4F021E8FCFB2E35C199A274F3EFAF1C42E0C728D878A303CE089FD34F9880"
+    },
+    {
+      "Relative": "Docs/FOOTSTEP_SYNC_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 6185,
+      "SHA256": "1417E12A6046B7DB0B68731EF9FC6D9EFB4E2AD4C8FB632F52F7786776B16231"
+    },
+    {
+      "Relative": "Docs/FOREST_CANOPY_20261016.md",
+      "Category": "Project",
+      "Bytes": 11190,
+      "SHA256": "87456187A77FFD161F050760EC4FB1B67B645A99A86DE4B18A26B6F6FF3898B4"
+    },
+    {
+      "Relative": "Docs/FRAME_BEAM_ASSET_SOURCES.md",
+      "Category": "Project",
+      "Bytes": 3434,
+      "SHA256": "A8E288F8F7C63341208B3304E41E4B5B49D153715A83FD3C6898E240BB6F7E6B"
+    },
+    {
+      "Relative": "Docs/FRAME_BEAM_ASSET_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 6647,
+      "SHA256": "343EC4B78C41B7E2EC6D54EABD952C4BB04FC155C2872602C8676BA6FFA5451D"
+    },
+    {
+      "Relative": "Docs/FRAME_BEAM_CANDIDATE_DEV.html",
+      "Category": "Project",
+      "Bytes": 14272,
+      "SHA256": "F8A1D722322D877A7E401DA53B9130D8D60FA253687DCA402673DA45E6980433"
+    },
+    {
+      "Relative": "Docs/FRAME_BEAM_CANDIDATE_DEV.md",
+      "Category": "Project",
+      "Bytes": 13432,
+      "SHA256": "C0EC9D7A622CB09298795BF7245D76EFC099543877DBBD5BC5DF8126E87D5F43"
+    },
+    {
+      "Relative": "Docs/FRAME_BEAM_DEV_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 19474,
+      "SHA256": "F41E9A68ECC7CB57B2E6B1F966DB41025B8BD4D1F0332F215E7284E61343BF17"
+    },
+    {
+      "Relative": "Docs/FRAME_BEAM_JOINT_AB.html",
+      "Category": "Project",
+      "Bytes": 7790,
+      "SHA256": "6E68AAEEEBDAE0D0A3AAC8C8F2B1554A6F2F317BDC15A3213C5A866E1B0E8EE3"
+    },
+    {
+      "Relative": "Docs/FRAME_BEAM_JOINT_AB.md",
+      "Category": "Project",
+      "Bytes": 9578,
+      "SHA256": "22FB5137F5CF0755ABDB31037EA324262E383272C2799BD6D9B82604E01DC9EE"
+    },
+    {
+      "Relative": "Docs/FRAME_BEAM_JOINT_REVIEW.html",
+      "Category": "Project",
+      "Bytes": 8017,
+      "SHA256": "EBB1303E15C2EDB6F2B5D051CFCC279DF704624D33888B7533A60329F87A4FA6"
+    },
+    {
+      "Relative": "Docs/FRAME_BEAM_JOINT_REVIEW.md",
+      "Category": "Project",
+      "Bytes": 8882,
+      "SHA256": "EF547A724C9D7F8A3C807894A01ED8372B351C14DA40DED1E20CCCB7CE2E2894"
+    },
+    {
+      "Relative": "Docs/FRAME_BEAM_MATERIAL_REVIEW.html",
+      "Category": "Project",
+      "Bytes": 6929,
+      "SHA256": "4470BAB7BC6FD73E689CE247F52C880909A7F73497F41F91B4C8378B3A0BDF3B"
+    },
+    {
+      "Relative": "Docs/FRAME_BEAM_MATERIAL_REVIEW.md",
+      "Category": "Project",
+      "Bytes": 10493,
+      "SHA256": "A55D77CA089655EB1F1859EF51A1BC09CCEAFD5ADBE75DDA969F7F415A3BDD6E"
+    },
+    {
+      "Relative": "Docs/FRAME_BEAM_PLACEMENT_PLAN.md",
+      "Category": "Project",
+      "Bytes": 11037,
+      "SHA256": "5A21A4B39C06A6225D3B1651E67712ED33C18FA240E79B97BECD364E4F9EC711"
+    },
+    {
+      "Relative": "Docs/FRAME_BEAM_TOP_UV_DEV.html",
+      "Category": "Project",
+      "Bytes": 12119,
+      "SHA256": "E7D094FC75BDEAD4CBC1A1A76E51FA1BD319561464C1E457F07C16964D126C44"
+    },
+    {
+      "Relative": "Docs/FRAME_BEAM_TOP_UV_DEV.md",
+      "Category": "Project",
+      "Bytes": 8446,
+      "SHA256": "F7C7AE0500FA78AD2679654D3713672B03CF59270EC96510E4B5FABACB3D3423"
+    },
+    {
+      "Relative": "Docs/FRAME_BEAM_TOP_UV.html",
+      "Category": "Project",
+      "Bytes": 12929,
+      "SHA256": "12ADEE1D0693871F226833C39F6D1A1B1ED54C053389D5000FE0E7D550716B41"
+    },
+    {
+      "Relative": "Docs/FRAME_BEAM_TOP_UV.md",
+      "Category": "Project",
+      "Bytes": 11620,
+      "SHA256": "A97F15726596E5606FE3822A9A8A5715A91D37586F8CF9C9FA613C137B59793D"
+    },
+    {
+      "Relative": "Docs/FRAME_POST_ASSET_SOURCES.md",
+      "Category": "Project",
+      "Bytes": 4697,
+      "SHA256": "0AA0B44496FEC23124AC6630D61FE4F452FDECC06E7A2D9C6561C74727887ADC"
+    },
+    {
+      "Relative": "Docs/FRAME_POST_ASSET_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 10550,
+      "SHA256": "C6EEF2842DFF72AB59C39AAF6C79B2BA4F6F1A19BF3CBC2599152450CC6CFFB5"
+    },
+    {
+      "Relative": "Docs/FRAME_POST_DEV_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 9379,
+      "SHA256": "CBA3C27B79D41F1F43E9894BDD0CE1A45CDC4B829045DA2639BC402CCBFDB36E"
+    },
+    {
+      "Relative": "Docs/FRAME_POST_PLACEMENT_PLAN.md",
+      "Category": "Project",
+      "Bytes": 12511,
+      "SHA256": "3E988EE18F7D1F9371FD79C217882420EDCE414221C055F2004B6B535FD9FB04"
+    },
+    {
+      "Relative": "Docs/FREE_ASSET_POLICY.md",
+      "Category": "Project",
+      "Bytes": 6925,
+      "SHA256": "9927D50F234603B661CFABD7BFC979F6BB7AC4ED7EF0F91605769B4B787238D6"
+    },
+    {
+      "Relative": "Docs/GDD.md",
+      "Category": "Project",
+      "Bytes": 22776,
+      "SHA256": "55C3D83AE0E4BF3FCC0B3DFBAECCAEB5393521B9B0CF49294E058D3E68E850FA"
+    },
+    {
+      "Relative": "Docs/GITHUB_OPEN_ASSET_AUDIT.md",
+      "Category": "Project",
+      "Bytes": 19353,
+      "SHA256": "7BF63F02D35D64F3293536A50ED6CE5B00216BA02AC30D98299A798CCB6C1299"
+    },
+    {
+      "Relative": "Docs/INTERACTION_PRESENTATION_SPEC.md",
+      "Category": "Project",
+      "Bytes": 20059,
+      "SHA256": "F7506D01AEFAF10580DC24E4D4DCCAF2E300A966989BFF20A1CB375CBB865F95"
+    },
+    {
+      "Relative": "Docs/KUAFU_VISUAL_RESEARCH.md",
+      "Category": "Project",
+      "Bytes": 13046,
+      "SHA256": "FE2E857A9B5063695BCF68A6D9BCD271BDF9BBC6A2F1F57867A72BC0CE01B0C6"
+    },
+    {
+      "Relative": "Docs/M1_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 18690,
+      "SHA256": "0E490C49C1E5060F9830F47014C2CA1BB7D73F886ECCE00B3B650EC10247E70B"
+    },
+    {
+      "Relative": "Docs/M2_UI_IMPLEMENTATION_PLAN.md",
+      "Category": "Project",
+      "Bytes": 15568,
+      "SHA256": "D2E49DBFB2BAC621F9E3409B775B94EE486CE17337A20B5208EAE57FD8BAA512"
+    },
+    {
+      "Relative": "Docs/M2_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 49285,
+      "SHA256": "96B7BBEBD5E4E3FA92C260F3113994270D76B9DCF02EA0D5F614AE6B69E523CC"
+    },
+    {
+      "Relative": "Docs/M3_RUNTIME_LAUNCHER_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 5375,
+      "SHA256": "311D3C3DACA60D33B2A501A2756267F369EA4E2303C8FCE88D0A470A110C340F"
+    },
+    {
+      "Relative": "Docs/M3_VISIBLE_AUTOTEST.md",
+      "Category": "Project",
+      "Bytes": 6386,
+      "SHA256": "C770AA4A47EBEAD2ECE4F3D325F5B18610BAE421776B1756863A90772515F336"
+    },
+    {
+      "Relative": "Docs/P02_GUIDE_FIT_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 9713,
+      "SHA256": "00755696F22480CEE2880F36DECDB099761AD04C1AD04CAF38C7A84706F3512D"
+    },
+    {
+      "Relative": "Docs/P03_BRANCH_REFINEMENT_PREVIEW.md",
+      "Category": "Project",
+      "Bytes": 14297,
+      "SHA256": "19C7CB22B907C12CD5AADB7C41E7EF68F1291688173F95852328C4999A3A8E14"
+    },
+    {
+      "Relative": "Docs/P03_CONTINUOUS_PREVIEW.md",
+      "Category": "Project",
+      "Bytes": 12709,
+      "SHA256": "DD417D704B37BCC385FE9FAB21E2785368B8B5FA8A794E4CCAD6393FD0C3D27C"
+    },
+    {
+      "Relative": "Docs/P03_DEV_IMPLEMENTATION_PLAN.md",
+      "Category": "Project",
+      "Bytes": 88772,
+      "SHA256": "09B8663A26589FE4BB522A370CB70AC0471041CB1448F8047681C79FE3822D6C"
+    },
+    {
+      "Relative": "Docs/P03_DEV_PLAYABLE_CANDIDATE.md",
+      "Category": "Project",
+      "Bytes": 12197,
+      "SHA256": "B558F0664BF7A569B1CA28EA0E7EB93DC5A4ADE57143E2470173BDB145ED5BD9"
+    },
+    {
+      "Relative": "Docs/P03_DROP_COMPOSITION_PREVIEW.md",
+      "Category": "Project",
+      "Bytes": 8217,
+      "SHA256": "C8EA266D2D611E3F0A2D2A765B689E69EC519449CFCA2ED7961970DF80BE6717"
+    },
+    {
+      "Relative": "Docs/P03_FOREST_COMPOSITION_COMPARISON.md",
+      "Category": "Project",
+      "Bytes": 17384,
+      "SHA256": "D4BEF46942C11621C5430BA3C804E909F28B2400F67DB3947C7E6192BABCCE7D"
+    },
+    {
+      "Relative": "Docs/P03_FOREST_DEV_ASSET.md",
+      "Category": "Project",
+      "Bytes": 10767,
+      "SHA256": "8217D3681CF453BEACBC7A2BFAD4A42A271D40178397AA1FB8DFFC2302AE089C"
+    },
+    {
+      "Relative": "Docs/P03_FOREST_PROJECTION_PREVIEW.md",
+      "Category": "Project",
+      "Bytes": 16111,
+      "SHA256": "1E78BD4E061C94F1ED95C60F75E3527AB7FBFB326C8DED06416FB914DC61077F"
+    },
+    {
+      "Relative": "Docs/P03_GEOMETRY_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 22280,
+      "SHA256": "927561C4FF1ACB6D72FB4DBCAFF052499848A8C0D2045F3E1B1F26F34F7D72D4"
+    },
+    {
+      "Relative": "Docs/P03_INTERACTION_CALIBRATION.md",
+      "Category": "Project",
+      "Bytes": 9452,
+      "SHA256": "EF96E68A01532626A843B9D44D2E8F3E17F65EA466CA0C056EDEA14A6C71B50C"
+    },
+    {
+      "Relative": "Docs/P03_NATIVE_FOREST_ACTOR.md",
+      "Category": "Project",
+      "Bytes": 13005,
+      "SHA256": "87770CC9DB3DDF1847D89672AEEEE0AAD429BC1264F4A40F68F22B3B5A84031C"
+    },
+    {
+      "Relative": "Docs/P03_NATIVE_FOREST_GEOMETRY.md",
+      "Category": "Project",
+      "Bytes": 12758,
+      "SHA256": "40E246C816C494DE296516FBCE51171A125382AABA009A746A2D614C18A05B23"
+    },
+    {
+      "Relative": "Docs/P03_RUNTIME_DEV_MIGRATION.md",
+      "Category": "Project",
+      "Bytes": 23070,
+      "SHA256": "D85028175E0082669038CB29D5B0EEB7B588BAF3673500FA43790B86E61A9B12"
+    },
+    {
+      "Relative": "Docs/P03_STAFF_CONTACT_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 19576,
+      "SHA256": "0BABB365F5256EB24D552BAB0DA5DB7B7607E983B4DE1770338EA1409ABDB5F0"
+    },
+    {
+      "Relative": "Docs/PHASE1_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 8545,
+      "SHA256": "CA50BA890CD16E6C07A0347897A577FAEC5D045490D4E7B47125BBFA0FEB3EEF"
+    },
+    {
+      "Relative": "Docs/PROJECT_BRIEF.md",
+      "Category": "Project",
+      "Bytes": 16419,
+      "SHA256": "ADB90641E78DEDD7DA4DD446104B45F2A503C8731A692B9F6757035DB062C265"
+    },
+    {
+      "Relative": "Docs/READABILITY_DEV_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 10473,
+      "SHA256": "F7112910F4CFCC3E187AAEFD2A5EE81CF3E4169B892DC87D7517B04DFB76DC2D"
+    },
+    {
+      "Relative": "Docs/RELEASE_ENTRY_FOUNDATION.md",
+      "Category": "Project",
+      "Bytes": 7290,
+      "SHA256": "ABA77846B7D9EC6202E3E8DC13B2B8AC3BD8E6EEB0ED21BC3138A2DC7C2413F2"
+    },
+    {
+      "Relative": "Docs/SCENE_ART_QUALITY_SPEC.md",
+      "Category": "Project",
+      "Bytes": 15018,
+      "SHA256": "CFA2635441712DD92FBAE5979BF5D7ADB1D790970601364B6BEB0191053E955F"
+    },
+    {
+      "Relative": "Docs/SHADOW_PUPPET_REFERENCE_ANALYSIS.md",
+      "Category": "Project",
+      "Bytes": 13767,
+      "SHA256": "D3F36349C0180DB9128767E48DF956575799512835105F64B19CDA183BC1728C"
+    },
+    {
+      "Relative": "Docs/SOLO_PRODUCTION.md",
+      "Category": "Project",
+      "Bytes": 3237,
+      "SHA256": "23F27A6207FD3FBFA25840B0E53FD4B18BC7ADCEA72961F1F3CBC417AEF5947A"
+    },
+    {
+      "Relative": "Docs/STAGE_ART_COMPOSITION_20261015.md",
+      "Category": "Project",
+      "Bytes": 8799,
+      "SHA256": "DD11B2D4C94431F7BF0F2470C1B8AF9E1B826D53F5AE4438C26C91A718B2C6FD"
+    },
+    {
+      "Relative": "Docs/STAGE_FRAME_ASSET_REVIEW.md",
+      "Category": "Project",
+      "Bytes": 8807,
+      "SHA256": "647DEC2EB7107CE88B60583E31F8C264E86A07F4F9A0A037616BEE8CA861C92F"
+    },
+    {
+      "Relative": "Docs/STAGE_FRAME_LIGHTING_20261016.md",
+      "Category": "Project",
+      "Bytes": 6563,
+      "SHA256": "C563595B6215729B2C519771FF8E051D9BB6384A0E9D380001FC51B3C2247BFF"
+    },
+    {
+      "Relative": "Docs/STAGE_FRAME_NEXT_PLAN.md",
+      "Category": "Project",
+      "Bytes": 6991,
+      "SHA256": "42C3207953C54870F35061D89EB154A5DC01778AFA51C778494A2699F2F40FB0"
+    },
+    {
+      "Relative": "Docs/STAGE_PROPS_FOREST_20261016.md",
+      "Category": "Project",
+      "Bytes": 10023,
+      "SHA256": "9922232E52CDD4431699F9BD68EF3CB0E086CCA9F753E16C2C6EDFBE67BC1CB5"
+    },
+    {
+      "Relative": "Docs/STAGE_WINGS_DEV_PLAN.md",
+      "Category": "Project",
+      "Bytes": 2627,
+      "SHA256": "498888A8619CC7AD7D329DAAAF4972E1A8626144A0EB8D96C2E738EE281B01F7"
+    },
+    {
+      "Relative": "Docs/STAGE_WINGS_SOURCES.md",
+      "Category": "Project",
+      "Bytes": 8870,
+      "SHA256": "9E94E03C4AE37E30F6D2EF77B6840C9EB590858C98BB50F486F2DD4D1DCD7CED"
+    },
+    {
+      "Relative": "Docs/STAGE_WINGS_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 13699,
+      "SHA256": "1B63AD1006DD2E39FFBD1EE4143A72417E6C49647703EE488E92B266F71C2919"
+    },
+    {
+      "Relative": "Docs/TECH_SPEC.md",
+      "Category": "Project",
+      "Bytes": 108553,
+      "SHA256": "3DA05BE9E975A2F519F9C65461F5151F79E4706C5D1130F90D68093A2A91C66A"
+    },
+    {
+      "Relative": "Docs/THEATRE_AUDIO_PLAN.md",
+      "Category": "Project",
+      "Bytes": 7465,
+      "SHA256": "AD2A1B6A254B3716FA36026C6C1692F60486027CC938D54FA4AE8459F1D12241"
+    },
+    {
+      "Relative": "Docs/THEATRE_AUDIO_SOURCES.md",
+      "Category": "Project",
+      "Bytes": 8155,
+      "SHA256": "26D3532B7BF52FF5206442333DE0B6853E33A21CCC90A2B87FB98BFAC65FF8D9"
+    },
+    {
+      "Relative": "Docs/THEATRE_AUDIO_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 8468,
+      "SHA256": "A052D022B6074B6CC98004C7BD9BFA1033716F806BE79C55716BCDB73EBE5DFA"
+    },
+    {
+      "Relative": "Docs/THREE_ACT_DEV_PLAN.md",
+      "Category": "Project",
+      "Bytes": 11591,
+      "SHA256": "1CB7BFEB745CF3059AEEB13437AB8D4F5524A215B6E694BD3916BF224BDF95A7"
+    },
+    {
+      "Relative": "Docs/THREE_ACT_DEV_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 10540,
+      "SHA256": "A1CB17ED2D68F25C0BB0BD16B99582DE5A5C83F0F8908AC7F4778CB0592C1E46"
+    },
+    {
+      "Relative": "Docs/WOOD_FLOOR_DEV_PLAN.md",
+      "Category": "Project",
+      "Bytes": 3859,
+      "SHA256": "3C38641ACAECD446E5B373DD48697CA059F68C8728B686AE903720636DD4497B"
+    },
+    {
+      "Relative": "Docs/WOOD_FLOOR_SOURCES.md",
+      "Category": "Project",
+      "Bytes": 7163,
+      "SHA256": "510C58F14393D47F7174F3DD278C3726E3013C1C5C473F6192EDE689DC7CAADA"
+    },
+    {
+      "Relative": "Docs/WOOD_FLOOR_VALIDATION.md",
+      "Category": "Project",
+      "Bytes": 18421,
+      "SHA256": "F137AB7F921876B9F81CD6DBCF16A5151037B822BED69DDB5AE10B6CDC995697"
+    },
+    {
+      "Relative": "Docs/LicenseArchive/README.md",
+      "Category": "Project",
+      "Bytes": 328,
+      "SHA256": "8876EC59353C32C25AF24A75439D44D095690C87F655BA72B2DFCAA7A67FDDBD"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Authoring/Curtain/bake_curtain_pbr.py",
+      "Category": "Project",
+      "Bytes": 12373,
+      "SHA256": "F22114468E0D1AEDD79BAABCC13532B3DAD848C7BC06BCF004368473FA6B120F"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Authoring/Curtain/build_curtain.py",
+      "Category": "Project",
+      "Bytes": 16227,
+      "SHA256": "11F2A1328B7DCC90A3360EB30A9320B97282D56B73D41E8AF21D96A49426006C"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Authoring/Curtain/render_baked_preview.py",
+      "Category": "Project",
+      "Bytes": 3223,
+      "SHA256": "3E1C65226AC774E277BBDA6F8CAE1D6D2EC63AA94FDDF0AAB8E13145B1B4E415"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Authoring/Curtain/verify_curtain_bake.py",
+      "Category": "Project",
+      "Bytes": 8645,
+      "SHA256": "2CF46A83487003E841ECF266449B1CF74BC033BA046F987B90DFCA55ECDFE988"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Authoring/Curtain/verify_curtain_fbx.py",
+      "Category": "Project",
+      "Bytes": 6185,
+      "SHA256": "A8D0F581CDCB75C26FA3F5527A24D02BF452B2D802F931A9EF098FDE89F505FE"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Authoring/KuafuHero/build_kuafu_puppet.py",
+      "Category": "Project",
+      "Bytes": 30543,
+      "SHA256": "34A3ED546B31152EBE661A07A8E724004A82B878A43C99AD1E0343D3C0B3E403"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Authoring/KuafuHero/kuafu_outline_data.py",
+      "Category": "Project",
+      "Bytes": 10636,
+      "SHA256": "9A0287FA1AF583454529C83039D23B7529C559183F3AC501B39F67D93F2123BA"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Authoring/VectorEvidence/analyze_kuafu_svg.py",
+      "Category": "Project",
+      "Bytes": 12982,
+      "SHA256": "9E808F38950CF94CF4EDE77E6329C0CA9517C97FF75330759310D71FC49325BF"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Curtain/BAKE.json",
+      "Category": "Project",
+      "Bytes": 5531,
+      "SHA256": "C8F47956BAB28D2409A89E46465DEBF134CCC651C5E320E6445BC9948DDACFB7"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Curtain/COLD-PBR-VERIFY.json",
+      "Category": "Project",
+      "Bytes": 4132,
+      "SHA256": "135C1C9ABBE575841B17367A12555987023F2C53BE5A59C4F0E18734EF6F3B1A"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Curtain/Curtain-Baked-DeepCrimson.png",
+      "Category": "Project",
+      "Bytes": 1032173,
+      "SHA256": "A5BDAE2BC5E3EBA79A4E70CC4B77C35E47D76E54D062EC22B1451EF75110DC03"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Curtain/Curtain-Baked-HemWeaveCloseup.png",
+      "Category": "Project",
+      "Bytes": 1066902,
+      "SHA256": "E67142654BA1C5573374F309FDB46EC7130627D811DA45D1D9B3EA5145B36198"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Curtain/DY_StageWingCurtain_BakedEditable.blend",
+      "Category": "Project",
+      "Bytes": 2135420,
+      "SHA256": "6AEF99E40E2F981D8D1B39846C2FCB6740E2D9EC158FB90EE761E9E804960CC7"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Curtain/PREVIEW.json",
+      "Category": "Project",
+      "Bytes": 1869,
+      "SHA256": "83F607789BF8AD6833237F5DD1047DF461F54D54A27642B870A3B01195F6CF32"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Curtain/SM_DY_StageWingCurtain_BakedUV.fbx",
+      "Category": "Project",
+      "Bytes": 715260,
+      "SHA256": "FB6B092D197213778C2DF4BD2D3BE7D94B5B6BDC0189D318AEFBB85D7EE16818"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Curtain/T_DY_StageWing_BaseColor_2K.png",
+      "Category": "Project",
+      "Bytes": 146342,
+      "SHA256": "DCED3FAABD1E729E67A68900E3E6096CB07BCC4381A17A3DA4CB7DFB998667CF"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Curtain/T_DY_StageWing_Normal_DX_2K.png",
+      "Category": "Project",
+      "Bytes": 2341488,
+      "SHA256": "CECA2CFA63838BA65D11EE16506D66C37C101826C64796A8B711A4C105F56E94"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Curtain/T_DY_StageWing_Roughness_2K.png",
+      "Category": "Project",
+      "Bytes": 1250205,
+      "SHA256": "185D36B9FCCFEBE54E653EC8C2F79261735F40045268323331084317754AE2BA"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Kuafu/COMPARE_Reach.png",
+      "Category": "Project",
+      "Bytes": 2353577,
+      "SHA256": "FAC94BCFB38FB6B735C39B2FA355EFCED69B87D6425D363BEBD8FF18AEA7A703"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Kuafu/COMPARE_StrideBack.png",
+      "Category": "Project",
+      "Bytes": 2355462,
+      "SHA256": "5C024D6C131D8BA8478CE8B184C8DCEFA65D3F9D2F38E2573FF5EFAD6185FD17"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Kuafu/COMPARE_StrideMid.png",
+      "Category": "Project",
+      "Bytes": 2355639,
+      "SHA256": "0D1FEEEED492FCF48E5727F71556DE7381191A825036FFFC44DBB51E1A22F3C1"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Kuafu/DY_Kuafu_Puppet_Source.blend",
+      "Category": "Project",
+      "Bytes": 3090133,
+      "SHA256": "6AA58F2302F6EC302EE57EBDC02D5E6D6C319A7416618C737D7534593FC3CA96"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Kuafu/MODEL_EVIDENCE.json",
+      "Category": "Project",
+      "Bytes": 1354192,
+      "SHA256": "E03CE04C365A7B04C284FEA8705B37D87DEDC7F15B5AF3FB85161F9E35D1A476"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Kuafu/PART_LEDGER_PREJOIN.json",
+      "Category": "Project",
+      "Bytes": 214813,
+      "SHA256": "ED8AB059752AEB2DA81932EDC10845FFE30E69B9C346FA2C5F927F6F6C5833CB"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/Kuafu/SK_DY_Kuafu_Puppet.fbx",
+      "Category": "Project",
+      "Bytes": 925260,
+      "SHA256": "4841B0E08A9FAFD2A8EAAC541D3E15CD8C227BE5C4D7078154E0EC6E72054562"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/MaterialCandidate/ambientCG-leather-catalog.json",
+      "Category": "Project",
+      "Bytes": 61309,
+      "SHA256": "0AC4912DD26AF74ECF886C8F90F1006E72943ABD2CB68F7B68309B054AB32A25"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/MaterialCandidate/ambientCG-license.html",
+      "Category": "Project",
+      "Bytes": 34106,
+      "SHA256": "60138E09B277C89977841462634B36E99D7BAE5B77174777813502069C59461C"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/MaterialCandidate/Leather037-2K/ACQUISITION.json",
+      "Category": "Project",
+      "Bytes": 2269,
+      "SHA256": "9ABBCD21905C976C909C40CD3B1E354F8A3D59BC6715A892395A1353918CBD84"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/MaterialCandidate/Leather037-2K/Leather037_2K-PNG.zip",
+      "Category": "Project",
+      "Bytes": 57088064,
+      "SHA256": "055968FEF7B4F1B401F30E9FA952E1B0ADE2DFB27C82F297CEF8E75EB67E3DC7"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/MaterialCandidate/Leather037-2K/Original/Leather037_2K-PNG_Color.png",
+      "Category": "Project",
+      "Bytes": 3214622,
+      "SHA256": "A7E4D626C598D14774E668E7541960DD4B3CD98BBE02B3F03921E7344A7A0BA4"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/MaterialCandidate/Leather037-2K/Original/Leather037_2K-PNG_Displacement.png",
+      "Category": "Project",
+      "Bytes": 7656681,
+      "SHA256": "4313A3CED1EC150F7EABCF13D6E78B6B119D7DB73C2CA2150410BDEA159BA21B"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/MaterialCandidate/Leather037-2K/Original/Leather037_2K-PNG_NormalDX.png",
+      "Category": "Project",
+      "Bytes": 21185960,
+      "SHA256": "A9E3ABE211BB3D03D4DB523E54272129736587211CF913388443B8B4991858BE"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/MaterialCandidate/Leather037-2K/Original/Leather037_2K-PNG_NormalGL.png",
+      "Category": "Project",
+      "Bytes": 21186035,
+      "SHA256": "29D9EC22003D090AEB09764AC4F9770973B04459B9C369B4545E18663BFC9072"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/MaterialCandidate/Leather037-2K/Original/Leather037_2K-PNG_Roughness.png",
+      "Category": "Project",
+      "Bytes": 2356926,
+      "SHA256": "704F08A62971C433AA0EE009B897C45E14BA51EC590AF014DDC3DDF69CD7B278"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/MaterialCandidate/Leather037-2K/Original/Leather037_2K-PNG.blend",
+      "Category": "Project",
+      "Bytes": 1098996,
+      "SHA256": "D248D3F6307B5A5113734706D59536895C9FF470C21C3ADC94E08D1A9B58A767"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/MaterialCandidate/Leather037-2K/Original/Leather037_2K-PNG.mtlx",
+      "Category": "Project",
+      "Bytes": 2287,
+      "SHA256": "187EE565A0E3053FBE4A593D607F80AC0714805217FB08A2C5A2FB25B8D9812D"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/MaterialCandidate/Leather037-2K/Original/Leather037_2K-PNG.tres",
+      "Category": "Project",
+      "Bytes": 812,
+      "SHA256": "67DA70C8F14DA130FC999E28BB67BA8280E55668B61C913F4C5AFCF240A4BA0A"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/MaterialCandidate/Leather037-2K/Original/Leather037_2K-PNG.usdc",
+      "Category": "Project",
+      "Bytes": 2878,
+      "SHA256": "5D257E136219523F2C487CE65D925616766E1591885C44B9A5FBFBD2D49B331F"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ArtBatch-20261014/MaterialCandidate/Leather037-2K/Original/Leather037.png",
+      "Category": "Project",
+      "Bytes": 381111,
+      "SHA256": "23380E2E942F1F4FD5D001B5C62E45E7D9C31CFA2F4167BCFE6679586FE690E8"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/CurtainFrozenTBN-20261015/FROZEN_TRIANGLE_REFERENCE.npz",
+      "Category": "Project",
+      "Bytes": 1816195,
+      "SHA256": "330FC4EE49106DEF2CD1D09318108EB4079A6BBBECF5526A6AE23AB597B6F00A"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/CurtainFrozenTBN-20261015/FROZEN_TRIANGLE_TBN_AUDIT.json",
+      "Category": "Project",
+      "Bytes": 28835874,
+      "SHA256": "90422B375620A8C39DFEFDE18950A137F1553EEEDA4FC9BF61C87A72FD931EFC"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/CurtainFrozenTBN-20261015/SM_DY_StageWingCurtain_BakeTopologyFrozenTBN.fbx",
+      "Category": "Project",
+      "Bytes": 2149612,
+      "SHA256": "72F3EFB9CED5E0CABCAFA8D80D711C7FE71B26D6D20DE32834EEA55591B9C0CD"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ForestBranch-20261016/build_branch.py",
+      "Category": "Project",
+      "Bytes": 15261,
+      "SHA256": "699E66FB50E00A236F68E04BB09EC848AA66F4819FFFB754F703D0DB1224B4D5"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ForestBranch-20261016/forest-branch-tapered.fbx",
+      "Category": "Project",
+      "Bytes": 21500,
+      "SHA256": "7B722B42346A81EEA4872D7EA137300192E45FB8E8088926CCF54826CFD952D6"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ForestBranch-20261016/README.md",
+      "Category": "Project",
+      "Bytes": 761,
+      "SHA256": "23935D30F101AD1D41B75B3235E4E80C54092C4BF46D11BFE90E55812FB300F7"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ForestBranch-20261016/SOURCE.json",
+      "Category": "Project",
+      "Bytes": 48862,
+      "SHA256": "1FB3382D7D03DD07AEA5719ECD9BDF71E1D47D1DA7E332A77B056AE67F9339ED"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ForestCanopy-20261016/01_FullContour.png",
+      "Category": "Project",
+      "Bytes": 918751,
+      "SHA256": "C1DDB1C1DFDB12A4AA46EFA4251742CC1F7C2D64CB17A36EFF780E64AF503680"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ForestCanopy-20261016/02_SolidLeaves_Oblique.png",
+      "Category": "Project",
+      "Bytes": 922161,
+      "SHA256": "994C42E5C3EE78AEBA7CEC37FCA82B552771A358AE21734A651C8F825CC3BFE0"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ForestCanopy-20261016/build_canopy.py",
+      "Category": "Project",
+      "Bytes": 31194,
+      "SHA256": "B9536E1210354EFF6CB2D6B9D29F28DF4836E11EA4AB9BD35A7913C782D3D0BE"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ForestCanopy-20261016/forest-branch-leafed.fbx",
+      "Category": "Project",
+      "Bytes": 35756,
+      "SHA256": "15CC92CB61462F99D02F1EE7C445B026B24CC838EE1875F0D87A087D09432606"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ForestCanopy-20261016/README.md",
+      "Category": "Project",
+      "Bytes": 1562,
+      "SHA256": "798203198F69D2BD215267F5FAE1B61C093C6AC9204AAB060D7271424BB39E9D"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ForestCanopy-20261016/SOURCE.json",
+      "Category": "Project",
+      "Bytes": 2834173,
+      "SHA256": "07D77D6522F0146FEAAC7AF2BD8DC7520883999D11F7F27E2707665D6F056253"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ForestCanopyWide-20261016/01_FullContour.png",
+      "Category": "Project",
+      "Bytes": 938319,
+      "SHA256": "4AF6597D64727D88277EDE96011B155ABC22618D50FDCA1CB08E8B5A494861E3"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ForestCanopyWide-20261016/02_SolidLeaves_Oblique.png",
+      "Category": "Project",
+      "Bytes": 937719,
+      "SHA256": "C923F71FB68D497B33872C7B6666D57C075584E37284ACCF759BEC61C7CD0A6C"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ForestCanopyWide-20261016/build_canopy_wide.py",
+      "Category": "Project",
+      "Bytes": 32605,
+      "SHA256": "990B3005FB826FAD6997FDAC850160A8EF0F06EA758FFCEDE8E5F1D80C2A8624"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ForestCanopyWide-20261016/forest-branch-leafed.fbx",
+      "Category": "Project",
+      "Bytes": 35676,
+      "SHA256": "5B3943D0AEC0A1AB6642A107F8CE983FBB9B479FF0B459134AFCABF8E0242C20"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ForestCanopyWide-20261016/README.md",
+      "Category": "Project",
+      "Bytes": 1906,
+      "SHA256": "9548EE37D43F2AE02F0B82F5BB3E147AC36B732F120A1A0C606F5FAA9C7E45F1"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ForestCanopyWide-20261016/SOURCE.json",
+      "Category": "Project",
+      "Bytes": 2836281,
+      "SHA256": "82940D94342D245BE34172EC5F59B3E7E7DEE41942724CE4AA2008E61356E04A"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/FrameFullSpan-20261015/DERIVATION.json",
+      "Category": "Project",
+      "Bytes": 159266,
+      "SHA256": "8895DFE39EE2CD4AD99CAF48371F163DBD085CB03FD48D350C970CE7E226E5C8"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/FrameFullSpan-20261015/derive_fullspan.py",
+      "Category": "Project",
+      "Bytes": 17261,
+      "SHA256": "972FD22548CEE23385B4F01C59FF1DA2BE604B875F846513CF8CCFF162F44BF6"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/FrameFullSpan-20261015/frame-beam-fullspan.fbx",
+      "Category": "Project",
+      "Bytes": 15305,
+      "SHA256": "90420DDD092B156C21EEE3DE4AD886E6AA9576F292062095CAB4A18F4DCBBB0E"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/FrameFullSpan-20261015/README.md",
+      "Category": "Project",
+      "Bytes": 1032,
+      "SHA256": "E0489255B2A695CBD55555B65C07F3DF75E853EE668E85F2042DC3861AF27EC8"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuClean-20261015/clean_puppet.py",
+      "Category": "Project",
+      "Bytes": 19940,
+      "SHA256": "2F6F9F5AF9FD09ADD45E3E61264C5A7CB407B77FCF72269B26185AFD4873C8C1"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuClean-20261015/CleanAfter_Ears.png",
+      "Category": "Project",
+      "Bytes": 971825,
+      "SHA256": "8180CE139B22BB72047353C3FAFD4E989B90A5EC94A5C53A090E5A4E47B26C50"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuClean-20261015/CLEANUP_REVIEW.md",
+      "Category": "Project",
+      "Bytes": 4976,
+      "SHA256": "06DAEA1F754C3D7C86941867F7ACC62FBF140064B721641E64A0EC290C579D9B"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuClean-20261015/DY_Kuafu_PuppetClean.blend",
+      "Category": "Project",
+      "Bytes": 7444527,
+      "SHA256": "8CF3D14492D29A4B5CF48B3423799DC3104FB337F0FB2631176EF0B7B390A4A4"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuClean-20261015/PUPPET_CLEAN_COLD.json",
+      "Category": "Project",
+      "Bytes": 1256776,
+      "SHA256": "3E0AA5A1D91D724C14B8D62D01CB6BE34F7AFC7322DECADBBCB7410102EFB502"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuClean-20261015/PUPPET_CLEAN.json",
+      "Category": "Project",
+      "Bytes": 4895527,
+      "SHA256": "B0EDF168163139A6609CE3BA9236650198EFE9AC34D1A47196DD2557EE8F0161"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuClean-20261015/RefinedBefore_Ears.png",
+      "Category": "Project",
+      "Bytes": 971825,
+      "SHA256": "DCA453E6BCA52B5E3BAF99B9650E8250D257CE1A50A58BE97B91F8ADD456A71C"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuClean-20261015/SK_DY_Kuafu_PuppetClean.fbx",
+      "Category": "Project",
+      "Bytes": 915052,
+      "SHA256": "225D993EB8E3F781E030B8D3150EF00CB902FF099A5EB80068E1D556D9C71CC4"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuClean-20261015/verify_clean.py",
+      "Category": "Project",
+      "Bytes": 15052,
+      "SHA256": "C56573C7DCCC91D6F634AC2EEAD72760C48FD3448A40CD3784391F9A620F9389"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/DY_Kuafu_PuppetRefined.blend",
+      "Category": "Project",
+      "Bytes": 5253976,
+      "SHA256": "7D57BE20D4F1B2808CD30965AD553B879F3A1EBF4D896DE898405912E561A70C"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/fit_measured_grip.py",
+      "Category": "Project",
+      "Bytes": 2143,
+      "SHA256": "191A4C2DC16E4132470F20F6B5A683C9B12DE6C3A222ECD915E988B0BA467D11"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/MEASURED_GRIP_FIT.json",
+      "Category": "Project",
+      "Bytes": 856,
+      "SHA256": "15B2FC4C74762DE310874C59C25D67304CEB6663983A084DA23DE846C1F9B272"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/PUPPET_REFINED_REVIEW.md",
+      "Category": "Project",
+      "Bytes": 2026,
+      "SHA256": "9F35CAB54654D2E0D7D6C9DC37E35F4E3962D3421F46E596011CE9D660B9CC34"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/PUPPET_REFINED.json",
+      "Category": "Project",
+      "Bytes": 1265648,
+      "SHA256": "F5A1A6FAE575A93A82996CD17CB4F4479A254FDDB5F1A57F96C1D3872A64E4EA"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/refine_puppet.py",
+      "Category": "Project",
+      "Bytes": 25074,
+      "SHA256": "083B1B7BED2417359F6FC34328455738ED304FF8275E695227AEEFF694B7CBDF"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/SK_DY_Kuafu_PuppetRefined.fbx",
+      "Category": "Project",
+      "Bytes": 910972,
+      "SHA256": "1C9617CF97884BFD2FBD4255ED228E21D929C1E5831113FCC371AD9CD136137F"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/verify_and_render_puppet.py",
+      "Category": "Project",
+      "Bytes": 9762,
+      "SHA256": "157DB6391065DDB6791CB344C154C290A9C0FA1FB06E4B40379901524A5DCB88"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/QA/PUPPET_REFINED_COLD_VISUAL.json",
+      "Category": "Project",
+      "Bytes": 7223,
+      "SHA256": "A4BF22D4F7C35C508CA6A93E2FF4BAFB961FBF76518FE5809ABF4F80A5DA8481"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/QA/Reach_Original_Appearance.png",
+      "Category": "Project",
+      "Bytes": 2095429,
+      "SHA256": "41FAF04D0C58EEC28A2A4C9BAFA8CD7174C5D4DD25034B771973C09BD77E38ED"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/QA/Reach_Original_Shadow.png",
+      "Category": "Project",
+      "Bytes": 2200095,
+      "SHA256": "69C9C0F85BE38AE7D3B6AD58F163000FE8D9EED7D54F9516667C41F4C6299278"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/QA/Reach_Refined_Appearance.png",
+      "Category": "Project",
+      "Bytes": 2095092,
+      "SHA256": "2F861128E30B68BEFEFBE29AB41759E444B2F13FA6FEA8741BFE1BD0FF9A2104"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/QA/Reach_Refined_Shadow.png",
+      "Category": "Project",
+      "Bytes": 2201261,
+      "SHA256": "B27F2C10268D3B860696BB62C7571F62C8BF383A066E54F1CC48DF7EC70BFF4D"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/QA/StrideBack_Original_Appearance.png",
+      "Category": "Project",
+      "Bytes": 2098761,
+      "SHA256": "4CE08FA3D103CFEC73E218A3A4270E04BED9D277D5D9B256E546AD2E76C1DD85"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/QA/StrideBack_Original_Shadow.png",
+      "Category": "Project",
+      "Bytes": 2205301,
+      "SHA256": "1AE39E26C9B95EE8B4486897C7965BAD98B043D5DA170B4FD085750E80D09A13"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/QA/StrideBack_Refined_Appearance.png",
+      "Category": "Project",
+      "Bytes": 2099051,
+      "SHA256": "0FAEC1EC719C5F4C1CD1980A8E3173749E88E5F9481BBDBBEA9881FA270E2AD1"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/QA/StrideBack_Refined_Shadow.png",
+      "Category": "Project",
+      "Bytes": 2207038,
+      "SHA256": "35DAA74C2E4051CC3F4AF491DB2FDF281C7A7A087B6A0B06882BAA9D4746BA26"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/QA/StrideMid_Original_Appearance.png",
+      "Category": "Project",
+      "Bytes": 2096208,
+      "SHA256": "B66E0C4AC20D259387B26445136E5CB247091B7340C9A068CE846A2A5D5AF4BE"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/QA/StrideMid_Original_Shadow.png",
+      "Category": "Project",
+      "Bytes": 2199749,
+      "SHA256": "EBE885BB9A008910A57DF8C71228612AA418F6C9B6FF923E3B88B74A4BE932B5"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/QA/StrideMid_Refined_Appearance.png",
+      "Category": "Project",
+      "Bytes": 2096181,
+      "SHA256": "498E4D5A0751D7BF631C9AD3B2A414FDF2DFA76E7CF1A8557447379A006448C3"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/KuafuRefined-20261015/QA/StrideMid_Refined_Shadow.png",
+      "Category": "Project",
+      "Bytes": 2201433,
+      "SHA256": "72E96F174221DDC9975684D3D3EB84B99BEFC89333CE854AE4D9B9105B882D92"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/build_lamp.py",
+      "Category": "Project",
+      "Bytes": 21308,
+      "SHA256": "050417D4B31559F754F09FF436769377FD0B2E24C6DA5DBF86832AC8E52ED2BB"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/DY_HeroSpotlight_Source.blend",
+      "Category": "Project",
+      "Bytes": 65964610,
+      "SHA256": "5425D5DAAD920CB4331E8E81FEE80ED8DDBF9F2E95A8CA43D2058A8C74243582"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/LAMP_BLEND_COLD_READBACK.json",
+      "Category": "Project",
+      "Bytes": 8534,
+      "SHA256": "661A7358C10E42E6C852FE2AD7F8C8F869FFB414CE4EC79E208DC47D20B61A3F"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/LAMP_EXPORT_CONTRACT.json",
+      "Category": "Project",
+      "Bytes": 2167,
+      "SHA256": "849EE7EB9E0C163E0AFDBC95C43D951D0622DEFB0E1D711EAECDBA8DA3438B17"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/LAMP_FBX_COLD_READBACK.json",
+      "Category": "Project",
+      "Bytes": 2198,
+      "SHA256": "9F6422BFF370AE387AC4265979D7E6FEE17B4E199255386588AADD4A1F5DF9E1"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/Lamp_Full_Review.png",
+      "Category": "Project",
+      "Bytes": 2892600,
+      "SHA256": "9D938415FF017E0EFC4C04DCC7DB08AD064B55B3CB0B5E885ABD9C6CBAAA371B"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/LAMP_HANDOFF.md",
+      "Category": "Project",
+      "Bytes": 7651,
+      "SHA256": "E14540A334D4B2269B1F89F451C3DDD4AB334CC2BDD74AD3138426CC309E5610"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/Lamp_Head_Review.png",
+      "Category": "Project",
+      "Bytes": 3067135,
+      "SHA256": "05894F024DA8179D899B276148C273D2F545F0B11EC95E9B1E79C2EED8D4B79C"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/LAMP_ORIGINAL_TEXTURE_CHECK.json",
+      "Category": "Project",
+      "Bytes": 909,
+      "SHA256": "B75AED9D631A97AE4CED8DDB61A625C9249B5AF3189E6D04D4E10023D35B0B01"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/Lamp_Side_Review.png",
+      "Category": "Project",
+      "Bytes": 2818335,
+      "SHA256": "133E598777D6ABBB5D96E96FDB59D78E770C8E6813B04CC8A07BD5D3B4BEDFDB"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/LAMP_SOURCE_MANIFEST.json",
+      "Category": "Project",
+      "Bytes": 28749,
+      "SHA256": "C98953FAE5ADF3C4C9434C049752F89D27EB72AF2AB6B342893B64C34F8008EF"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/LAMP_VISUAL_QA.json",
+      "Category": "Project",
+      "Bytes": 1652,
+      "SHA256": "FE1C1E08B3C86697F44776A38410015F514BC9E04B3F47BB470EBEF806906A81"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/SM_DY_LampBody_Source.fbx",
+      "Category": "Project",
+      "Bytes": 1451740,
+      "SHA256": "2C87DF23501E71DB960E8E0AFD7CC107DB6BF615A55F0E2D0E76745C7F67C662"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/SM_DY_LampStand_Source.fbx",
+      "Category": "Project",
+      "Bytes": 1077436,
+      "SHA256": "72DFC48283EBAA46A1E11C9C97D3911CE1F7F17823FCF792B9A1AE246F731D1F"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/verify_lamp_fbx.py",
+      "Category": "Project",
+      "Bytes": 2269,
+      "SHA256": "3DFB4636374A809CA9F8AA6A53F98CDF584C6B714F46CAAE8DA8A0A284959102"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/verify_lamp_source.py",
+      "Category": "Project",
+      "Bytes": 1803,
+      "SHA256": "1E1FD420675F26DF5324F78EB6B7EB2D6DC2A5AEB93F4C68EF4D84CE7733E256"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/build_lamp_runtime.py",
+      "Category": "Project",
+      "Bytes": 3172,
+      "SHA256": "24C524A099BB6BD3A2A8935BE0C67DF691420071E101C0916C6C08F8FAF76CEA"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/DY_HeroSpotlight_RuntimeVariant.blend",
+      "Category": "Project",
+      "Bytes": 62979066,
+      "SHA256": "B6EF06E1D5B116D6D4D9EF44432A306245BEC68C87984EE7F2AEAD61AE4BF8FF"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/LAMP_BLEND_COLD_READBACK.json",
+      "Category": "Project",
+      "Bytes": 8512,
+      "SHA256": "9D300E871B779670E726B0B22F853C8F1207C28862AE39A7A92605726DAED584"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/LAMP_EXPORT_CONTRACT.json",
+      "Category": "Project",
+      "Bytes": 2167,
+      "SHA256": "849EE7EB9E0C163E0AFDBC95C43D951D0622DEFB0E1D711EAECDBA8DA3438B17"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/LAMP_FBX_COLD_READBACK.json",
+      "Category": "Project",
+      "Bytes": 2197,
+      "SHA256": "9CB7ADE974D321478EB9A58F4DEC8C283B2EA03C8458262693BE989237A94B41"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/Lamp_Full_Review.png",
+      "Category": "Project",
+      "Bytes": 2893557,
+      "SHA256": "9DA1A7B46760D6E0212FECDCE492B00BFC7AF3C5B64B7BBE61693BCAFA2982C3"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/Lamp_Head_A_Source.png",
+      "Category": "Project",
+      "Bytes": 3067135,
+      "SHA256": "05894F024DA8179D899B276148C273D2F545F0B11EC95E9B1E79C2EED8D4B79C"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/Lamp_Head_AB.html",
+      "Category": "Project",
+      "Bytes": 1623,
+      "SHA256": "7F0C6B43AFEC3A5858366B3D53084F01BDD3A4CA909AA0FDB4327097849E57B8"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/Lamp_Head_B_Runtime.png",
+      "Category": "Project",
+      "Bytes": 3065470,
+      "SHA256": "F6E726F6BAB1800B1D79F831BE3858157B55C6EC5A0E95E391161DEA9FC927C6"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/Lamp_Head_Review.png",
+      "Category": "Project",
+      "Bytes": 3065470,
+      "SHA256": "F6E726F6BAB1800B1D79F831BE3858157B55C6EC5A0E95E391161DEA9FC927C6"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/LAMP_RUNTIME_HANDOFF.md",
+      "Category": "Project",
+      "Bytes": 1981,
+      "SHA256": "597DF5DBE35627CE559C7C9AF401CF6D1ACB857343F91568B872E0FDE4C29DDC"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/LAMP_RUNTIME_VISUAL_QA.json",
+      "Category": "Project",
+      "Bytes": 1927,
+      "SHA256": "9B3B9DBDE8A0A98735CFD276396D0ABE0B9FED013105D86F2663F4639AA1D061"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/Lamp_Side_Review.png",
+      "Category": "Project",
+      "Bytes": 2819314,
+      "SHA256": "DB3F0514F171821C9CC114B73E1FF4EE775E1BF3A3E1F7084FF044E3B3E7FEFA"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/LAMP_SOURCE_MANIFEST.json",
+      "Category": "Project",
+      "Bytes": 28749,
+      "SHA256": "6B135C10160CE9069EACE1167DF59673F12374D28A39CE26BD7F9126AACF16EE"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/RUNTIME_PARAMETER_DIFF.json",
+      "Category": "Project",
+      "Bytes": 2464,
+      "SHA256": "E8496E32C3D1256596751EAA657A847F338D07B8F18ADCD8B76473AE9BF05EC7"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/SM_DY_LampBody_Source.fbx",
+      "Category": "Project",
+      "Bytes": 560780,
+      "SHA256": "01A72E8B0690599CA39C73F471A2AE4481918CAE75935E3ED16960A9C8B9C553"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/SM_DY_LampStand_Source.fbx",
+      "Category": "Project",
+      "Bytes": 375692,
+      "SHA256": "C37AE8D34DBAA7970E8B184AFF308957D0A5D5F2772D1E613B9A9B1ACB18C301"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/RuntimeVariant/verify_lamp_runtime.py",
+      "Category": "Project",
+      "Bytes": 568,
+      "SHA256": "E1EBAA6A01347F16AEB70328FB82325272CA7D2755D8D2DFF768ADA7C11D194C"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/Sources/CC0-1.0-legalcode.txt",
+      "Category": "Project",
+      "Bytes": 7048,
+      "SHA256": "A2010F343487D3F7618AFFE54F789F5487602331C0A8D03F49E9A7C547CF0499"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/Sources/POST-TEXTURES.json",
+      "Category": "Project",
+      "Bytes": 1591,
+      "SHA256": "71343E478F85B231B41F288C13009AB6FB5B82F0120104B51A4B38D116F7FAF9"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/Sources/wood_table_arm_2k.png",
+      "Category": "Project",
+      "Bytes": 17221313,
+      "SHA256": "4C211965FFDD72F2A1D9358A14022A8F54AB5E6B18759E5D22C3998C1D70FF63"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/Sources/wood_table_diff_2k.png",
+      "Category": "Project",
+      "Bytes": 22848819,
+      "SHA256": "DE99E3D8D7AFE58FEDC3AE9CAAF441D516547570643CFF5A0259E547A6B0C00A"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Lamp-20261014/Sources/wood_table_nor_dx_2k.png",
+      "Category": "Project",
+      "Bytes": 20348021,
+      "SHA256": "C214D164C26B59CC0962728F640FD143DD28F9039AE856F888B486E0CA4F4DA7"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/bake_lamp.py",
+      "Category": "Project",
+      "Bytes": 18748,
+      "SHA256": "363032A3E78C063D8867AC1250E44F7BADCF9B595F7E36CAFA2BB98BB4F9402B"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/DY_HeroSpotlight_Baked.blend",
+      "Category": "Project",
+      "Bytes": 65293767,
+      "SHA256": "0C3DA5E0D8A9980369BB9C6AA91D525EE1BB68724BFB970A7E4E7DEE3951612F"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/finalize_bake.py",
+      "Category": "Project",
+      "Bytes": 10752,
+      "SHA256": "7B160546551D32813A4B57D298F974C38B1CACBD337AF03D37A044050229CD49"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/LAMP_BAKE_COLD_READ.json",
+      "Category": "Project",
+      "Bytes": 14839,
+      "SHA256": "19829626FF82DD0F416599B0DC7F6C062B5B768D57C539536823230128A4C357"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/LAMP_BAKE_FINALIZE.json",
+      "Category": "Project",
+      "Bytes": 17917,
+      "SHA256": "248F247D6E7547EBB02EBD34151790B214DA247577FDCE61E0EC13B9D00D60FB"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/LAMP_BAKE_HANDOFF.md",
+      "Category": "Project",
+      "Bytes": 4227,
+      "SHA256": "F8AF4571053208A3D86606FCC151F4227390646AE883AF0ED8113BF67D914925"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/LAMP_BAKE_VISUAL_QA.json",
+      "Category": "Project",
+      "Bytes": 2527,
+      "SHA256": "6BEE26F722676DC5716D519CD8F280DE1A6DC4369E6AA698B253AEA6172A205C"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/LAMP_BAKE.json",
+      "Category": "Project",
+      "Bytes": 14024,
+      "SHA256": "44287A7E8152741887C285140336301CD64741CAAAA41EDE522285B9262D14DC"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/Lamp_Baked_Full.png",
+      "Category": "Project",
+      "Bytes": 2890212,
+      "SHA256": "0E72FD644361822B0C68A8CD031EB0505E965053683F4FB8139CB38AE2BFF278"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/Lamp_Baked_Head.png",
+      "Category": "Project",
+      "Bytes": 3014190,
+      "SHA256": "6088A3103902215066FEF72FABEDA87AD3474E94E22C60944FFA618794603B05"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/SM_DY_LampBody_Baked.fbx",
+      "Category": "Project",
+      "Bytes": 1807164,
+      "SHA256": "BD901C1505517318ECD25D202A17CBDDF4B5A1126598D7F4E4ABA170F80F6F94"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/SM_DY_LampStand_Baked.fbx",
+      "Category": "Project",
+      "Bytes": 1235500,
+      "SHA256": "3E8D0EC0DECDD037CCAD99D6F1BCA732277F5A1FB4A7EBEA3095817A1F3EE5F1"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/T_DY_LampBody_BaseColor.png",
+      "Category": "Project",
+      "Bytes": 1369418,
+      "SHA256": "932FE04C73C8CD7F9321CC5B99513C7C88AA07AFE947DFF716219466B4234033"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/T_DY_LampBody_NormalDX.png",
+      "Category": "Project",
+      "Bytes": 797322,
+      "SHA256": "2FE5DFC95852BC604EA88B65A8CD45E9D05DD8522772224D7AE20F98FB506862"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/T_DY_LampBody_ORM.png",
+      "Category": "Project",
+      "Bytes": 1321568,
+      "SHA256": "F11E5E6E85EAFD65E9026B686D44A84B95387494E87BE213ABF8038740428C73"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/T_DY_LampStand_BaseColor.png",
+      "Category": "Project",
+      "Bytes": 3454131,
+      "SHA256": "AA72D165D53BB34451A02347C5241D72007109D522139664E2E3991DE4B79AB2"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/T_DY_LampStand_NormalDX.png",
+      "Category": "Project",
+      "Bytes": 1826993,
+      "SHA256": "54092BEF2CDFDE2F7E16F0605C981A57AB669C1A9EB2200F6449BC9CAD8568E8"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/T_DY_LampStand_ORM.png",
+      "Category": "Project",
+      "Bytes": 2288313,
+      "SHA256": "D4E2386F88482213E9AE7500AF605BBBC7A99EECC44CDA3D025EF3528AF9B465"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/LampBaked-20261014/verify_bake.py",
+      "Category": "Project",
+      "Bytes": 10401,
+      "SHA256": "A7122370CD60CC16A3628521E37BE740DF46AA1790B6EF86716A8294D991B3AA"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Staff-20261014/Build-Staff.py",
+      "Category": "Project",
+      "Bytes": 8925,
+      "SHA256": "C6ACA7FF5ADD10370F8AFB892682C7674BEEB7E50783288BC1BA989EEDF447E2"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Staff-20261014/DY_Kuafu_Staff.blend",
+      "Category": "Project",
+      "Bytes": 66714160,
+      "SHA256": "E8AAB597B7DB4B3A6482C645FD22BC3DE931B30AFCB91AEE017F9D1421F6AB0F"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Staff-20261014/SM_DY_Kuafu_Staff.fbx",
+      "Category": "Project",
+      "Bytes": 70588,
+      "SHA256": "E9B9FF7C5259057267BA3E995F48E5288FAD0A46D51427740687A290EE532DBB"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Staff-20261014/Staff-ActualScale.png",
+      "Category": "Project",
+      "Bytes": 502483,
+      "SHA256": "C56710D676F9CCC76F98693ABCC5DB7A4414638B18F999910E8534C9656E7737"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/Staff-20261014/STAFF-RESULT.json",
+      "Category": "Project",
+      "Bytes": 1237,
+      "SHA256": "03204F89660364E2193982306EBCF7AF9A5E32024DCF6104C7BF38E6486DD71B"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/StageProps-20261016/build_stage_props.py",
+      "Category": "Project",
+      "Bytes": 25671,
+      "SHA256": "D6628964E33AB16BB5ECE68B389E55013FB211DB8E9343F24412D3EBA84F4175"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/StageProps-20261016/README.md",
+      "Category": "Project",
+      "Bytes": 1279,
+      "SHA256": "3D10BA520A6484A6B03D74B7990742B6EAF8CB837F2D9AE41A9389947DE84C87"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/StageProps-20261016/SM_DY_BackstageBench.fbx",
+      "Category": "Project",
+      "Bytes": 102668,
+      "SHA256": "E175A1D8C685510D1BC14253E7FA535F5C55D7E0CE8FD9F45E9D1A7E211FF0CC"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/StageProps-20261016/SM_DY_OperatorRodRack.fbx",
+      "Category": "Project",
+      "Bytes": 122860,
+      "SHA256": "E5766F35AA3C166D36F26883DDE9B7A5762F87841C5FC6B2BA42D7C108939243"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/StageProps-20261016/SOURCE.json",
+      "Category": "Project",
+      "Bytes": 1157074,
+      "SHA256": "4CBB47F3E3567187204AF2C64D4B7BDE886EF62FD3215A3A0AAC82A4AF68C2BE"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/StageProps-20261016-R2/build_stage_props.py",
+      "Category": "Project",
+      "Bytes": 31594,
+      "SHA256": "D20B5422607CCFD2357A9BF056451E0A1A5BF74CC613F8E1DA73A1577B36A2DC"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/StageProps-20261016-R2/README.md",
+      "Category": "Project",
+      "Bytes": 1533,
+      "SHA256": "B42238B900B9174E3DEDFE96B4C12D3187A435E8D125D5B1E9AB463525150A44"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/StageProps-20261016-R2/SM_DY_BackstageBench.fbx",
+      "Category": "Project",
+      "Bytes": 102460,
+      "SHA256": "DDC5A83DE6CA0893E243CC203F854908CE740FC63F4C005D4E55FD4B906B82FA"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/StageProps-20261016-R2/SM_DY_OperatorRodRack.fbx",
+      "Category": "Project",
+      "Bytes": 122652,
+      "SHA256": "183EFE69F441105B3AC1AE4F6F586A15D8972E8603E2D7CBDC2184F909DAB455"
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/StageProps-20261016-R2/SOURCE.json",
+      "Category": "Project",
+      "Bytes": 1511544,
+      "SHA256": "080C39FDCE9C63784D37F8D4640D2FD106CF5020A09F3C6F10C5A6E95F19560F"
+    },
+    {
+      "Relative": "Assets/Sources/PolyHaven/chinese_screen_panels/ACQUISITION.json",
+      "Category": "Project",
+      "Bytes": 2207,
+      "SHA256": "D53D2A3F9BEAEAD3DD26EB419476AE80E6047F19657558B1BCED6438007DAF4F"
+    },
+    {
+      "Relative": "Assets/Sources/PolyHaven/chinese_screen_panels/CC0-1.0-legalcode.txt",
+      "Category": "Project",
+      "Bytes": 7048,
+      "SHA256": "A2010F343487D3F7618AFFE54F789F5487602331C0A8D03F49E9A7C547CF0499"
+    },
+    {
+      "Relative": "Assets/Sources/PolyHaven/chinese_screen_panels/chinese_screen_panels_2k.fbx",
+      "Category": "Project",
+      "Bytes": 55212,
+      "SHA256": "FF84163E810A87CCD6AC9C08242FF366F0F0CC803A4D1DBF22CCF7FE6BC58CEF"
+    },
+    {
+      "Relative": "Assets/Sources/PolyHaven/chinese_screen_panels/chinese_screen_panels_arm_2k.png",
+      "Category": "Project",
+      "Bytes": 10669166,
+      "SHA256": "B03AA44728E30BB0B591E66C9EC82D18BB302D1C6E90AD4D3E039C793BCC2939"
+    },
+    {
+      "Relative": "Assets/Sources/PolyHaven/chinese_screen_panels/chinese_screen_panels_diff_2k.png",
+      "Category": "Project",
+      "Bytes": 16016213,
+      "SHA256": "AEC2B65FC1021F971C448C6493C4511B75468A2E7BE54C956D69401A55A29769"
+    },
+    {
+      "Relative": "Assets/Sources/PolyHaven/chinese_screen_panels/chinese_screen_panels_nor_dx_2k.png",
+      "Category": "Project",
+      "Bytes": 12984763,
+      "SHA256": "10A850D22A15011185C840C8E3B04506B328DFF2C2E30FC66AAD004DF91CF146"
+    },
+    {
+      "Relative": "Assets/Sources/PolyHaven/chinese_screen_panels/chinese-screen-files.json",
+      "Category": "Project",
+      "Bytes": 43397,
+      "SHA256": "28CD10732B451097FA2451197D9826C7102D5EA58053CDF5B469A788E5923AE4"
+    },
+    {
+      "Relative": "Assets/Sources/PolyHaven/chinese_screen_panels/chinese-screen-info.json",
+      "Category": "Project",
+      "Bytes": 1179,
+      "SHA256": "510022F0137ABF46FF5C1C594F152784AAEC52214D724F03DDB2C55171A53B10"
+    },
+    {
+      "Relative": "Assets/Sources/PolyHaven/old_wooden_floor_02/ACQUISITION.json",
+      "Category": "Project",
+      "Bytes": 2347,
+      "SHA256": "5811AFAAC7AA94D0FE17476A2233458455E97A9AB161764126FE0E0C505C64DC"
+    },
+    {
+      "Relative": "Assets/Sources/PolyHaven/old_wooden_floor_02/CC0-1.0-legalcode.txt",
+      "Category": "Project",
+      "Bytes": 7048,
+      "SHA256": "A2010F343487D3F7618AFFE54F789F5487602331C0A8D03F49E9A7C547CF0499"
+    },
+    {
+      "Relative": "Assets/Sources/PolyHaven/old_wooden_floor_02/floor-files.json",
+      "Category": "Project",
+      "Bytes": 37528,
+      "SHA256": "4A242C33891699C597D9DC8B13C9161A252ED2F423E4DF6F697F1EEA56226C8A"
+    },
+    {
+      "Relative": "Assets/Sources/PolyHaven/old_wooden_floor_02/floor-info.json",
+      "Category": "Project",
+      "Bytes": 1031,
+      "SHA256": "DAB58638036CABA8E239A572F1788F74E5367E7CCD37FCBA7E655ED382EA2FB1"
+    },
+    {
+      "Relative": "Assets/Sources/PolyHaven/old_wooden_floor_02/old_wooden_floor_02_arm_2k.png",
+      "Category": "Project",
+      "Bytes": 15409800,
+      "SHA256": "CCCFC53F964CC55754A9FC78F6300F3CDFB0829990D113AEFCF40FD5398E512C"
+    },
+    {
+      "Relative": "Assets/Sources/PolyHaven/old_wooden_floor_02/old_wooden_floor_02_diff_2k.png",
+      "Category": "Project",
+      "Bytes": 21992097,
+      "SHA256": "D60C5E6193A08536F9D51FF70A2CAD79BC16AB216D6F28F18C61A6BDBA619029"
+    },
+    {
+      "Relative": "Assets/Sources/PolyHaven/old_wooden_floor_02/old_wooden_floor_02_nor_dx_2k.png",
+      "Category": "Project",
+      "Bytes": 20722136,
+      "SHA256": "E6534B04F22ED2154C431ACD63C4D841D6DE69236494CBFDF58FA6FAC0ACA1D2"
+    },
+    {
+      "Relative": "LICENSES/SourceHanSans/LICENSE.txt",
+      "Category": "Project",
+      "Bytes": 4463,
+      "SHA256": "FCAC737E761EC63DBFBDCE11030A1780161920D80315EDBA9C8BEFF1C2BAC5A2"
+    },
+    {
+      "Relative": "LICENSES/SourceHanSans/SOURCE.md",
+      "Category": "Project",
+      "Bytes": 1750,
+      "SHA256": "E11E8283633E5DA0A242A0F3A16D102C5E2F1E4561B53BF08DCDDB9AD891BC46"
+    },
+    {
+      "Relative": ".editorconfig",
+      "Category": "Project",
+      "Bytes": 287,
+      "SHA256": "9CCE0BEB8FB1F3BDDBA74447C55AF4BA944C09EE6BA72BAA5792FEEB0EE1D7E1"
+    },
+    {
+      "Relative": ".vsconfig",
+      "Category": "Project",
+      "Bytes": 671,
+      "SHA256": "995980D402DB4AF14A1B9503B9D2BC42EAC16B447E4852E2C0607E4FC74D0775"
+    },
+    {
+      "Relative": "AGENTS.md",
+      "Category": "Project",
+      "Bytes": 11566,
+      "SHA256": "960523A279DFF246B71A648E92BB682064E995DBFA0CEC2DC3519A5B4CD2DDEB"
+    },
+    {
+      "Relative": "DengYingShanHai.uproject",
+      "Category": "Project",
+      "Bytes": 505,
+      "SHA256": "93F103BDA3C02E4AD8A6A7FC72715BC177AC664969CB12704F79CD682F3916CC"
+    },
+    {
+      "Relative": "Start-AlignmentDev-Run1.cmd",
+      "Category": "Project",
+      "Bytes": 563,
+      "SHA256": "0CD5B7C65D3D98C193B760ED0F05BB239DB318DE016DC04AA80E43512ADE0C0B"
+    },
+    {
+      "Relative": "Start-AlignmentDev.cmd",
+      "Category": "Project",
+      "Bytes": 558,
+      "SHA256": "2A04CFEC47B82A6994F25578CDEB0810CB326CA4F819B4DDB10A266D600AB739"
+    },
+    {
+      "Relative": "Start-AudioDev.cmd",
+      "Category": "Project",
+      "Bytes": 522,
+      "SHA256": "49D1ED09F70026ED92CDC82BF5724E9E80C4BE68A24B3D23B3E08D23153F4985"
+    },
+    {
+      "Relative": "Start-EntryLoopDev.cmd",
+      "Category": "Project",
+      "Bytes": 566,
+      "SHA256": "3AB2C56959FDCCD9E04AB16E7479202264702015819CF385C4DCFF9975FA3A07"
+    },
+    {
+      "Relative": "Start-EnvironmentDev.cmd",
+      "Category": "Project",
+      "Bytes": 528,
+      "SHA256": "DDCFEE9EC6305E7D78FC06F489CFF3FC9AE538DB1BFEE8FAA6F4FB66398F869B"
+    },
+    {
+      "Relative": "Start-FrameBeamAssetReview.cmd",
+      "Category": "Project",
+      "Bytes": 336,
+      "SHA256": "EB638E1709CB0825BE86C83976AE2E560D4691C305376CC0B73F8724801C30CD"
+    },
+    {
+      "Relative": "Start-FrameBeamCandidate.cmd",
+      "Category": "Project",
+      "Bytes": 388,
+      "SHA256": "846123D77546A58B48B680D520D9126F456BDE429C330C6FF8623FD14D867E77"
+    },
+    {
+      "Relative": "Start-FrameBeamDev.cmd",
+      "Category": "Project",
+      "Bytes": 355,
+      "SHA256": "F7CC3CAEBC47A5B1B1BEA07CFC59C59913F228E867B873AC3F7E8ADDF91AF49C"
+    },
+    {
+      "Relative": "Start-FrameBeamTopUV.cmd",
+      "Category": "Project",
+      "Bytes": 372,
+      "SHA256": "4B6D2FAA60FC0295CFE1A6F58F2A1EA56D64684B8E4513B7C15D17DD6DA9DEC1"
+    },
+    {
+      "Relative": "Start-FramePostAssetReview.cmd",
+      "Category": "Project",
+      "Bytes": 226,
+      "SHA256": "53C4012C512C13C969F58B9BC4A8E32D558F37505F0CB9E70582F5B9EB23EF9E"
+    },
+    {
+      "Relative": "Start-FramePostDev.cmd",
+      "Category": "Project",
+      "Bytes": 355,
+      "SHA256": "6E925F89AECB777D6D7B9CF05066A1C80C44C1985225E5CEB834CE8FF5AF7B0A"
+    },
+    {
+      "Relative": "Start-M2Lab.cmd",
+      "Category": "Project",
+      "Bytes": 805,
+      "SHA256": "C18A8DE333713F50946BD02ED274822ACA32FA75F6625309730C5BBE4851B079"
+    },
+    {
+      "Relative": "Start-M3AutoTest.cmd",
+      "Category": "Project",
+      "Bytes": 420,
+      "SHA256": "E0096E6A065E71E34ADB55797D450E1CA078334E134CC7AD83A59DA2D36CBD3B"
+    },
+    {
+      "Relative": "Start-M3Candidate.cmd",
+      "Category": "Project",
+      "Bytes": 738,
+      "SHA256": "AD0894938F029DFF45A29CA610BB5A11C3C84DAABEA41B23D817636A53B5ADB7"
+    },
+    {
+      "Relative": "Start-M3Continuous.cmd",
+      "Category": "Project",
+      "Bytes": 449,
+      "SHA256": "3900D0355D75F7E379C198B44FEE26134DCBA27253E9FD55127183168FF00F61"
+    },
+    {
+      "Relative": "Start-M3ForestAsset.cmd",
+      "Category": "Project",
+      "Bytes": 468,
+      "SHA256": "2635186742E80C63294DE7537B78F2214D1A74317D009FAEDB697AEB409ADCDE"
+    },
+    {
+      "Relative": "Start-M3Geometry.cmd",
+      "Category": "Project",
+      "Bytes": 395,
+      "SHA256": "738341FEB0B0954A049C0A71CE161CCAB865059A89B1736993F70259FFBAD637"
+    },
+    {
+      "Relative": "Start-M3NativeForest.cmd",
+      "Category": "Project",
+      "Bytes": 464,
+      "SHA256": "2DC2F32A3F0C3F387F4F1FEA1A1A5D7A1FB60B3311FA9B5E597031DB36F61E8A"
+    },
+    {
+      "Relative": "Start-M3Runtime.cmd",
+      "Category": "Project",
+      "Bytes": 2031,
+      "SHA256": "842C857437A01D101883E7F4D78E46A58717B810D723AD44C1B5A0EB697777E6"
+    },
+    {
+      "Relative": "Start-ReadabilityDev.cmd",
+      "Category": "Project",
+      "Bytes": 576,
+      "SHA256": "0AF137DA504BB4F32505BE9EB88F76469E9256A310B56A3BFDF097C1D1D6868A"
+    },
+    {
+      "Relative": "Start-ReleaseEntry-Shipping.cmd",
+      "Category": "Project",
+      "Bytes": 349,
+      "SHA256": "2E08FF3070FDE5CE64007E9B0C4CCFC4C5A5C9E1B52EBE02BD7EB959DE044A86"
+    },
+    {
+      "Relative": "Start-ReleaseEntry.cmd",
+      "Category": "Project",
+      "Bytes": 352,
+      "SHA256": "2097573AEE62195472BF39B3634D532A5BC1ABD14497F9CB5082253B1086A639"
+    },
+    {
+      "Relative": "Start-StageWingsDev.cmd",
+      "Category": "Project",
+      "Bytes": 592,
+      "SHA256": "618510285441954AAFF8488573F89FDDD2E07FB7028E36EAE9F83F078C7F3F48"
+    },
+    {
+      "Relative": "Start-ThreeActDev.cmd",
+      "Category": "Project",
+      "Bytes": 557,
+      "SHA256": "2F0DC7D3CCB62481B2134A60D6D7D0ED0BC92F7353F45E4F4EC5C24099119E46"
+    },
+    {
+      "Relative": "Start-WoodFloorDev.cmd",
+      "Category": "Project",
+      "Bytes": 547,
+      "SHA256": "618BD468AAF3B67B67199AF76985B0ADFB7290F900651623A1CD287A71CB63E5"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/ORIGINAL_README.md",
+      "Category": "OriginalMetadata",
+      "Bytes": 9030,
+      "SHA256": "6B5310809C3834B8C24B344B4C0AE8F7FA43E84F3381FA81DCB7513926DB0013"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/ORIGINAL.gitattributes",
+      "Category": "OriginalMetadata",
+      "Bytes": 699,
+      "SHA256": "6617B7F469DE16228338D78D68A65C3C43321EC301B1917AD06203F1E25B1F20"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/ORIGINAL.gitignore",
+      "Category": "OriginalMetadata",
+      "Bytes": 592,
+      "SHA256": "12781AA848D725F7CF9CE9527827DC8570CBA10454D8A82F247D6956E51B205B"
+    },
+    {
+      "Relative": "README.md",
+      "Category": "SnapshotMetadata",
+      "Bytes": 7006,
+      "SHA256": "61DE990866810C716246411159D24DF7BC6E9EC50382C0E0315765657381F3CD"
+    },
+    {
+      "Relative": ".gitattributes",
+      "Category": "SnapshotMetadata",
+      "Bytes": 275,
+      "SHA256": "7BF30D751678E9B0596B16F2BBCD8DF24F057A5E36FC986E7E4C2EB371FB5FBB"
+    },
+    {
+      "Relative": ".gitignore",
+      "Category": "SnapshotMetadata",
+      "Bytes": 455,
+      "SHA256": "BBBA917F4A527F7B67148F2DAD3F887364BF6F4C27B4BAB66B1B1C3EAE2862B3"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/build_canopy_wide.py",
+      "Category": "CanopyProcessTools",
+      "Bytes": 32605,
+      "SHA256": "990B3005FB826FAD6997FDAC850160A8EF0F06EA758FFCEDE8E5F1D80C2A8624"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/build_canopy.py",
+      "Category": "CanopyProcessTools",
+      "Bytes": 31194,
+      "SHA256": "B9536E1210354EFF6CB2D6B9D29F28DF4836E11EA4AB9BD35A7913C782D3D0BE"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/candidate_map_wide.py",
+      "Category": "CanopyProcessTools",
+      "Bytes": 21497,
+      "SHA256": "CA91F448C69993104D4DAC0C7ECBFCFDA6FD31B2E523E100857996C4E60CA970"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/candidate_map.py",
+      "Category": "CanopyProcessTools",
+      "Bytes": 22833,
+      "SHA256": "DE5A29E047F5C0A27CF4F98DA7ED8375E2D0FECAB3A0F312E9D480AE9DCB14F2"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/capture_canopy_wide.py",
+      "Category": "CanopyProcessTools",
+      "Bytes": 32703,
+      "SHA256": "5BEB0E8C5C84A84B131375A75151089FAC2EF3B36B3183FE3CD299DE443FD321"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/capture_canopy.py",
+      "Category": "CanopyProcessTools",
+      "Bytes": 34911,
+      "SHA256": "51103CD9FCC0610134E0DD3DEFBB87C013378EE59B21B95B40DC10B4B2008C9D"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/Correct-CanopyRecord.ps1",
+      "Category": "CanopyProcessTools",
+      "Bytes": 1949,
+      "SHA256": "947F9AD89914CF5E52966B5F3B60FCB7D11C0FCFCF4A7AEE5D91FD30CD7754A1"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/FOREST_CANOPY_20261016.md",
+      "Category": "CanopyProcessTools",
+      "Bytes": 11190,
+      "SHA256": "87456187A77FFD161F050760EC4FB1B67B645A99A86DE4B18A26B6F6FF3898B4"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/GITHUB_UPLOAD_PREFLIGHT.md",
+      "Category": "CanopyProcessTools",
+      "Bytes": 13240,
+      "SHA256": "82C5CB4A7035999F5089CFE4CA4B14B086C38733EA1A727D8CB1A1DC1AC24455"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/native_canopy_wide.py",
+      "Category": "CanopyProcessTools",
+      "Bytes": 41103,
+      "SHA256": "755D2246F8DAE0C363699FB210A00E58B4B597B4A68B0BEC0B83041B03D16C75"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/native_canopy.py",
+      "Category": "CanopyProcessTools",
+      "Bytes": 42445,
+      "SHA256": "85E48E83FA86931AC2D102A8CBF5F739100B475F8D96096E7FB24AFCFA1143D3"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/NEXT_ART_REVIEW.md",
+      "Category": "CanopyProcessTools",
+      "Bytes": 8914,
+      "SHA256": "5F45FAD577A85D937FD18FBB37238A1BB15B45150ADDDDA26CF97C29C304A7F3"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/PLAN.md",
+      "Category": "CanopyProcessTools",
+      "Bytes": 3216,
+      "SHA256": "BDED45EA2774161561602085224DC6AF93D65588F8A068CC51C3A86EEE6F2F93"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/Publish-CanopyRecord.ps1",
+      "Category": "CanopyProcessTools",
+      "Bytes": 1754,
+      "SHA256": "6B4CB638043B1C354B031ACEC2CD43BE43500FDB00A3BEE7368859233E4BF7EB"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/RECOVERY-REVIEWED.json",
+      "Category": "CanopyProcessTools",
+      "Bytes": 101,
+      "SHA256": "E8A6C1D74286E4A123F53AC2EDF591A58304567C179C8744B0047CB9AB3528DD"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/REVIEW.md",
+      "Category": "CanopyProcessTools",
+      "Bytes": 9974,
+      "SHA256": "350C7B28D732A54AA740D99FAE78A8D1CB8E2769843FEC0C995DC9B39CE4E5E4"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/REVIEWED-Run1.json",
+      "Category": "CanopyProcessTools",
+      "Bytes": 2936,
+      "SHA256": "68E824ACB2C46659A2D5C2148EA734ADDFE86FB38D115746B76189773A356716"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/REVIEWED-Run2.json",
+      "Category": "CanopyProcessTools",
+      "Bytes": 2936,
+      "SHA256": "D736DAD5A6F699FFF481726F00008CF42D4B6371012CF4FA1FFC707067CA8450"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/REVIEWED-Run3.json",
+      "Category": "CanopyProcessTools",
+      "Bytes": 2936,
+      "SHA256": "0BDF6928F3CC4CA760ED816F1697E26CE78415F9BE4FABC81EF66D4FF83678AB"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/REVIEWED-Run4.json",
+      "Category": "CanopyProcessTools",
+      "Bytes": 2936,
+      "SHA256": "77460B257F41F1BE3B6CC9E9F7DE522CDCFF73E8894CB635CA2271D6CA218503"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/REVIEWED-Run5.json",
+      "Category": "CanopyProcessTools",
+      "Bytes": 2936,
+      "SHA256": "7D9EBEA5703A804F5EB9E86D5D32EED36A0C47F5013063FC86E0F0F40539599C"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/REVIEWED-Run6.json",
+      "Category": "CanopyProcessTools",
+      "Bytes": 2936,
+      "SHA256": "5510484344111A57F42AA8E9AE8AAE7A2D4B5852BAB28A47BFB0A02614AB5352"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/REVIEWED-Wide1.json",
+      "Category": "CanopyProcessTools",
+      "Bytes": 2963,
+      "SHA256": "52BB1948FAD65E21648BFF7094BF85552D36202C3BED325EC7E94F09EFF5625D"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/REVIEWED-Wide2.json",
+      "Category": "CanopyProcessTools",
+      "Bytes": 2963,
+      "SHA256": "A58F825E9475EE279C11FE8C70B59550B1ECFD2FB14AE4C09876D3B62FFBF24E"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/Run-Canopy.ps1",
+      "Category": "CanopyProcessTools",
+      "Bytes": 7639,
+      "SHA256": "D18096128F979B25F08164E18794714D27B04E2DF7FC6950CA1B56DBE239A5B0"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/Run-Source.ps1",
+      "Category": "CanopyProcessTools",
+      "Bytes": 2280,
+      "SHA256": "D4ADDC409EEB6FBEE8113043595625053C4DDCA6892F2DD8DA5C86318E97A061"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/Run-Wide.ps1",
+      "Category": "CanopyProcessTools",
+      "Bytes": 6054,
+      "SHA256": "FCF4665F40097B5C33B2349EDEBB1C4B3F1F7397FBFAF5BC23B554B41B2F3633"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/Run-WideColdRecovery.ps1",
+      "Category": "CanopyProcessTools",
+      "Bytes": 3529,
+      "SHA256": "A9567665B5340313427053A38C855404EEFBD687B7D90ABE6D6442478D06186C"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/Run-WideValidation.ps1",
+      "Category": "CanopyProcessTools",
+      "Bytes": 1175,
+      "SHA256": "B98C0ECAE0DE84205966059C15DD12DAFC5D63E197526F41358C5DA5279B05E3"
+    },
+    {
+      "Relative": "Tools/Art/ForestCanopy/verify_saved_wide_map.py",
+      "Category": "CanopyProcessTools",
+      "Bytes": 12793,
+      "SHA256": "A589E7C7E380395B27C51F18104882250DFFD5327261E515434457A51951C2EB"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyCapture-Run3/RESULT.json",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 258211,
+      "SHA256": "E885E8FF98F0BC2EFC94A0838F9EEF9D068FBEB27FFCCB7C1FC0EE45370B6ACD"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyCapture-Run3/DISK-DELTA.json",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 93,
+      "SHA256": "EE26BB1691C7D484272E9F5BBA68C69955271BB58EBF5F1271DAAFB1D1BAF3D2"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyCapture-Run3/Editor-EXIT.json",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 102,
+      "SHA256": "3778DD5B20DC5FD82B23F777B00DC6957434851C815C86DEF65F5536909C6FC0"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyCapture-Run3/01_ActualResolve_BeforeContact.png",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 1717057,
+      "SHA256": "9722BAF82729A274EB6FCF8A1A47CF29B32BD466E5E3A47C67747EFFCA88B812"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyCapture-Run3/02_ActualContact_Growing.png",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 1714823,
+      "SHA256": "E9BD1D2A381F8E84E4D383B5D54B57C1F5E7AFB8978E4F595A5A245D06AD9525"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyCapture-Run3/02_Early_ActualNonRootGrowth.png",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 1714746,
+      "SHA256": "8BF5AB95135B81EF908C89B66E529906A44A302A90C57DCF824D50785F584E59"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyCapture-Run3/02_Middle_ActualNonRootGrowth.png",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 1714822,
+      "SHA256": "EB4F7A8EEB6A7A41BC1B4EB41ED5D048D0CA4138DAD9E83A015EC8680E62B739"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyCapture-Run3/03_ActualForestComplete_MainOn.png",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 1808104,
+      "SHA256": "E38D2B8FEAAE60D0E4F89B0AB5EF876A2DBBB103427782E185548244BF0F8BD5"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyCapture-Run3/04_ActualForestComplete_MainOff.png",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 1037918,
+      "SHA256": "A15F19B772CA2EF2A92C7371FFA6A504843E6C251E8D96C52547FCA2F9AC4E07"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyCapture-Run3/05_ActualForestComplete_Oblique.png",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 1882177,
+      "SHA256": "B79BBC4F16A3F5986EDFDF1D3911D68CE6A576BE8B4A75502CC5F878A8AAEDE9"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyWideCapture-Run1/RESULT.json",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 315094,
+      "SHA256": "2D8B22375539D0545F959CA632892E7D6282972C80596A5A6B19C08F6126F799"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyWideCapture-Run1/DISK-DELTA.json",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 93,
+      "SHA256": "5DC7D3B2A9653D553EC82EADE333C9FE774FC9FBEFA92B6A9ACDB712C3BB05E5"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyWideCapture-Run1/Editor-EXIT.json",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 101,
+      "SHA256": "48A791A6A0E4ACB71973494DB6D33EACDC11513DF19DCB7B400599036977F2A6"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyWideCapture-Run1/01_ActualResolve_BeforeContact.png",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 1717474,
+      "SHA256": "857F8F5E603D1915758D09269866C520A211A82E8A16986D537FD0206ACBB607"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyWideCapture-Run1/02_ActualContact_Growing.png",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 1714760,
+      "SHA256": "FD307A3DCCD2AF44942B3EE8224DBA9A9D643570D88F4D60C474F934AC22A6DC"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyWideCapture-Run1/02_Early_ActualNonRootGrowth.png",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 1713271,
+      "SHA256": "9E1A4C71ECC2BEC1FAFEDACEC382A6626F8D8CEFE9DD4BA92B34E8C70E06A788"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyWideCapture-Run1/02_Middle_ActualNonRootGrowth.png",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 1717130,
+      "SHA256": "4DDA50DAFC71C81A29DE985D9D58FF252A4711EB24BAF4425645376E8DB261DC"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyWideCapture-Run1/03_ActualForestComplete_MainOn.png",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 1811402,
+      "SHA256": "965B7801A1F42C1F3E124418184C8992FF1826FB244465BC9CF6F565D299FC2E"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyWideCapture-Run1/04_ActualForestComplete_MainOff.png",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 1036959,
+      "SHA256": "9F32E4D55DA75B658C369A198BC3534D53C0BD376A910629120A151AB08850F9"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyWideCapture-Run1/05_ActualForestComplete_Oblique.png",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 1882029,
+      "SHA256": "AF1230CF092EEE34D6AAD7FB38E0D81709040958146AA1D9E952B3912E1EFF66"
+    },
+    {
+      "Relative": "Docs/GitHubBackup/VisualEvidence/ForestCanopyWideCapture-Run1/02_UpperForest_ActualGrowth.png",
+      "Category": "SelectedCanopyEvidence",
+      "Bytes": 1719176,
+      "SHA256": "857F3E6CF016F113CE69C33138A3D1D5585B900DF03B063BDD0A397EA716EA8B"
+    }
+  ]
+}

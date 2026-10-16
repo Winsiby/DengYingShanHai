@@ -1,0 +1,60 @@
+# 灯影山海 · DengYingShanHai
+
+UE5 实时光影交互叙事 Demo 的独立源码备份。用户本人是唯一人类作者与项目负责人，Codex 辅助实现、资产适配、建模和验证；不是多人团队项目。
+
+创意母题来自《山海经》的“夸父逐日／弃杖化林”，以“灯为日、影为夸父”串联“引日启幕 → 逐光成形 → 杖落成林”。玩家协调灯与偶，UE 实时光影负责画面，参数区间负责稳定判定。它是创意改编，不宣称历史戏台或特定皮影流派的复原。
+
+**这是可继续开发的源码与资产快照，不是下载后可直接双击运行的比赛成品。** 本文件不证明远端仓库已经创建、上传或验证；这些操作的实际结果需另行记录。
+
+## 当前状态与边界
+
+- 已有开始、三幕、成林、结束与重演的开发流程及相应阶段验证记录；具体历史结果见 `Docs/`，不能将某轮自动化成功等同于当前整份快照完成最终回归。
+- 当前默认游戏地图来自 `Config/DefaultEngine.ini` 的 `GameDefaultMap`：`/Game/DengYingShanHai/Maps/L_DY_Main.L_DY_Main`。
+- 编辑器启动地图是 `/Game/DengYingShanHai/Dev/Interaction/LV_InteractionLab.LV_InteractionLab`。打开工程不代表自动进入最新美术样本。
+- 最新窄叶与宽叶森林分别位于 `/Game/DengYingShanHai/Dev/ForestCanopy/Maps/LV_ForestCanopyLab`、`/Game/DengYingShanHai/Dev/ForestCanopyWide/Maps/LV_ForestCanopyWideLab`。它们是独立 Dev 对照：技术链路已取得实际验证，但运行画面仍偏细线分叉，**美术未通过，不是最终林冠，未接入正式菜单／重演入口或正式游戏包**。
+- 最新美术候选不自动替换默认地图、旧启动脚本或既有打包版本。`Docs/FOREST_CANOPY_20261016.md` 保留双候选通过与未通过的真实边界。
+- 本版本仍限定一个连续小型剧场、三次核心互动和一个高潮结尾，不包含开放世界、战斗、联机或付费资产。
+
+## 快照内容
+
+主要保留：
+
+| 路径 | 内容 |
+| --- | --- |
+| `DengYingShanHai.uproject` | UE 工程描述，模块与插件声明 |
+| `Source/` | C++ 游戏模块、Editor / Game Target 与测试 |
+| `Content/` | UE 地图、Blueprint、材质、音效等工程资产；含独立 Dev 样本 |
+| `Config/` | 现有项目、默认地图、渲染与输入配置 |
+| `Assets/` | 保留的原始来源、原创程序化资产源与相关记录 |
+| `Scripts/` | 开发、检查与构建辅助脚本；使用前核对当前机器的路径和前置条件 |
+| `Docs/` | 设计、环境、阶段验证与过程记录，受限文件除外 |
+| `LICENSES/` | 根目录已有第三方许可文件目录，不等同于为整个工程授予统一开源许可 |
+| `Tools/Art/ForestCanopy/` | 本轮建模／导入／冷读／截图工具的过程归档；其中有本机路径，使用前须核对，不是新电脑即用工具包 |
+| `Docs/GitHubBackup/VisualEvidence/` | 从 Saved 明确挑选的两轮15张成林对照图和少量结果JSON；不是整个审计目录或完整玩家验收 |
+
+这是独立干净备份，不携带原工程的旧 `.git` 历史。使用普通 Git，不启用 Git LFS；本次纳入的源文件均小于 100 MiB。原工程的 `README.md` 与 `.gitattributes` 作为历史快照保存在 `Docs/GitHubBackup/`，不能把旧 LFS 属性当作本次备份的实际传输配置。
+
+不包含可再生成缓存与机器产物，例如 `Binaries/`、`Intermediate/`、`DerivedDataCache/`、`.vs/`、生成的解决方案、游戏包／`Builds/`、测试日志；`Saved/` 仅有上表明确挑选的15张图和少量结果JSON另存到文档，其余不上传。也不包含旧 `.git`、原工程中与游戏源码无关的 `Tools/LenovoComputerUse/` 和受限的 `Docs/LICENSES.md`。受限登记未读取、未上传；**根目录 `LICENSES/` 与 `Assets/` 内保留的来源资料是另一类内容，不因名称相近而一并删除。** 缺少该受限登记也意味着这份快照不能冒充全量许可终审材料。
+
+## 克隆后首次打开
+
+工程基线为 **Unreal Engine 5.8.3**、Windows x64、C++ + Blueprint。精确工具链、组件、已知告警和本机历史结果以 `Docs/ENVIRONMENT_SETUP.md` 为准；文档中作者电脑的安装路径不适用于其他机器。
+
+1. 安装 UE 5.8.3 正式版和 Visual Studio 2026 的 C++ 游戏开发组件。可在 Visual Studio Installer 中导入根目录 `.vsconfig`，并按环境文档核对 MSVC 与 Windows SDK。首选 MSVC 14.50.35717、Windows SDK 10.0.26100.x；历史机器使用更新 MSVC 时存在非首选版本告警，不应改写为推荐组合。
+2. 将工程克隆到本机可写目录，优先使用简短英文路径。历史记录中中文／空格路径曾触发构建转码问题；仓库不携带作者机器的目录联接或全局环境变量。
+3. 对 `DengYingShanHai.uproject` 生成 Visual Studio 项目文件。若系统未提供该右键项，先确认 UE 安装与工程文件关联；不要依赖仓库中不存在的预生成 `.sln`。
+4. 打开生成的解决方案，选择 `Development Editor`、`Win64`，构建 `DengYingShanHaiEditor`。完整编译成功后，再用 UE 5.8.3 打开 `DengYingShanHai.uproject`；不要把编译了未 Cook 的 Game Target 当作可分发游戏包。
+5. 等待首次资源／着色器处理，按本轮要复核的文档打开对应地图。默认编辑器地图和最新美术候选不同；Dev 图的自动化过程证据不代表新机器已经具备可玩菜单入口。
+6. 若要生成供另一台电脑独立运行的版本，需另行进行 Build / Cook / Package，并在目标电脑实际验收。此源码快照没有附带 Development / Shipping 游戏包。
+
+根目录历史 `Start-*.cmd` 及部分辅助脚本可能依赖作者电脑的绝对路径、引擎安装位置、环境变量、`Saved/` 日志或 `Builds/` 内旧包。保留脚本是为了保留工程过程，**不承诺它们在克隆后的新电脑上直接有效**；先阅读并核对前置条件。本次备份没有新增跨机器启动器，也没有提供“一键启动成品”的承诺。
+
+## 尚未完成的交付
+
+- 最终林冠与叶簇的视觉可读性；两版候选当前仅技术可用。
+- 新夸父皮影对应的目标轮廓、握杖表现，以及仍可见的玩家／环境占位外观。
+- 同一剧场的空间层次、边界收束和表现一致性；不通过增加房间或功能替代现有美术收尾。
+- 最终美术接入后的真实开始—三幕—成林—重演完整回归、目标分辨率与声音检查、性能验证、Development / Shipping 目标机多轮通关及录屏。
+- 最终参赛来源／授权与 AI 辅助使用记录汇总；独立仓库备份不是参赛成品或授权终审。
+
+使用任何第三方内容前应分别核对其保留的许可、来源和适配记录。私有备份不改变第三方授权条件，也不能将本项目全部内容概括为可随意再分发的统一开源资产。

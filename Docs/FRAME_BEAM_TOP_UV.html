@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>灯影山海｜横梁顶面 UV 对照</title>
+<style>body{margin:0;background:#f5f1e9;color:#27241e;font:17px/1.8 "Microsoft YaHei",sans-serif}main{max-width:1400px;margin:auto;padding:30px 24px 60px}h1{font-size:32px;line-height:1.4}h2{margin-top:30px;font-size:24px}a{color:#845520}p{margin:12px 0}.note{padding:16px 20px;border-left:5px solid #947142;background:#fff9ef}.pending{border-color:#a16e21;background:#fff5d9}.meta{font-size:14px;color:#60584c}.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 26px}figure{margin:0;background:#fff;border:1px solid #d7ccbc;padding:9px;border-radius:7px}img{display:block;width:100%;height:auto;background:#111;min-height:120px}figcaption{padding:8px 4px;font-size:15px}table{width:100%;border-collapse:collapse;background:#fff}th,td{padding:10px;border:1px solid #d7ccbc;text-align:left;vertical-align:top}.scroll{overflow:auto}code{overflow-wrap:anywhere;font-size:14px}li{margin:6px 0}@media(max-width:760px){.pair{grid-template-columns:1fr}main{padding:22px 14px}h1{font-size:27px}}</style></head>
+<body><main>
+<p class="meta">2026-10-13 · 唯一人类作者：用户本人 · Codex 辅助 · 独立 Dev 资产，不是正式美术采用</p>
+<h1>只校准梁顶：原梁与 TopUV 对照</h1>
+<div class="note"><strong>独立资产阶段已完成。</strong>源派生、新网格导入、独立冷验及十二张原生对照图均有实际结果。通过的是数据、原生接口和摄影合同；UV 候选未自动采用到 B 地图或旧游戏包，也不等于正式美术、通关或打包验收。</div>
+<p>上一轮梁顶长向 UV 比横向低约 29.3%，本次仅校准它，复用原木材。这里比较的是<strong>同一 B 位姿下的 UV</strong>，不是重新比较 A／B 横梁位置；不改灯、不补光、不挪幕、不新增柱或支撑。</p>
+<p><a href="file:///D:/灯影山海/Docs/FRAME_BEAM_TOP_UV.md">完整说明</a> · <a href="file:///D:/灯影山海/Docs/FRAME_BEAM_MATERIAL_REVIEW.html">上一轮木构诊断</a> · <a href="file:///D:/灯影山海/Docs/FRAME_BEAM_CANDIDATE_DEV.html">现有可玩 B 样本</a></p>
+<div class="scroll"><table><thead><tr><th>改变</th><th>原梁</th><th>TopUV 候选</th></tr></thead><tbody>
+<tr><td>顶面长向离线 source2K traversal</td><td>约 140.114444 texel/m</td><td>约 198.151686 texel/m，横向不变</td></tr>
+<tr><td>数据范围</td><td>原顶面 UV</td><td>仅 direct UV 23／25 的 V（数组 doubles 47／51），其他九面、全部 U、UVIndex、拓扑、法线不变</td></tr>
+<tr><td>倍率／锚点</td><td>1／原 chart</td><td>1.4142131281943933；固定源 minV 0.030432701110839844，新 maxV 约 0.999912420356238</td></tr>
+</tbody></table></div>
+<p class="meta">数值由实际 UV／几何计算，仅为局部候选；不是正式木纹尺寸、运行 mip、GPU 或与柱一致的标准。minV 两角共享源 indices 33／35，固定它们只需要改两个非共享顶角，不追加 UV。</p>
+<h2>先看 Unlit：木纹比例与 BaseColor</h2>
+<div class="note"><strong>Unlit 只用于 UV／BaseColor 的对照。</strong>它不是最终灯光，也不验收 NormalDX／TBN、接触阴影或玩家游戏画面。六组图片是 1920×1080 原生 PNG 原图，未经提亮、裁切或改色，点击可打开磁盘原图。</div>
+<h3>近景 · 3.516513 m，同一顶面目标、方向与 FOV90°</h3>
+<div class="pair">
+<figure><a href="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/Original-Unlit-Near.png"><img src="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/Original-Unlit-Near.png" alt="原梁 Unlit 近景实际原图"></a><figcaption>原梁 · Unlit 近景。观察顶面长向木纹的比例。</figcaption></figure>
+<figure><a href="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/TopUV-Unlit-Near.png"><img src="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/TopUV-Unlit-Near.png" alt="TopUV Unlit 近景实际原图"></a><figcaption>TopUV · Unlit 近景。仅顶面两角 V 校准，不改其他面。</figcaption></figure>
+</div>
+<h3>中景 · 9 m，同目标、方向和 FOV</h3>
+<div class="pair">
+<figure><a href="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/Original-Unlit-Mid.png"><img src="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/Original-Unlit-Mid.png" alt="原梁 Unlit 中景实际原图"></a><figcaption>原梁 · Unlit 中景。看木纹在较常见距离的可读性。</figcaption></figure>
+<figure><a href="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/TopUV-Unlit-Mid.png"><img src="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/TopUV-Unlit-Mid.png" alt="TopUV Unlit 中景实际原图"></a><figcaption>TopUV · Unlit 中景。不能因细节不显著就自动采用。</figcaption></figure>
+</div>
+<h3>远景 · 22 m，同目标、方向和 FOV</h3>
+<div class="pair">
+<figure><a href="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/Original-Unlit-Far.png"><img src="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/Original-Unlit-Far.png" alt="原梁 Unlit 远景实际原图"></a><figcaption>原梁 · Unlit 远景。整体轮廓未作几何改动。</figcaption></figure>
+<figure><a href="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/TopUV-Unlit-Far.png"><img src="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/TopUV-Unlit-Far.png" alt="TopUV Unlit 远景实际原图"></a><figcaption>TopUV · Unlit 远景。此图不证明远距 streaming 或正式剧场质量。</figcaption></figure>
+</div>
+<h2>再看 Lit：既有场景中的表面观感</h2>
+<p>Codex 已逐张用 original-detail 查看十二张原图：近景顶面木纹更密，局部拉伸度量已校准；侧面与背景保持，轮廓不变。中远景和当前暗光中的差别有限，本轮不称为全面消除“廉价感”。独立 PNG 核验实际退出 0、115 项通过，两 variant 各三张 Unlit 与各自独立复拍字节一致；不代美术采用或游戏测试。</p>
+<div class="note"><strong>Lit 不认证实际 EV 完全锁定，也不认证纯像素因果。</strong>实际保持 B 位姿、灯、材质及每对目标、方向、距离、实读水平 FOV90°；没有曝光属性写入，但不同时间截图仍可能受实际曝光／渲染状态影响。暗接缝不能凭此被认作已修复的几何缝、法线或榫卯问题。</div>
+<h3>近景</h3>
+<div class="pair">
+<figure><a href="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/Original-Lit-Near.png"><img src="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/Original-Lit-Near.png" alt="原梁 Lit 近景实际原图"></a><figcaption>原梁 · Lit 近景。保留当前真实表面响应。</figcaption></figure>
+<figure><a href="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/TopUV-Lit-Near.png"><img src="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/TopUV-Lit-Near.png" alt="TopUV Lit 近景实际原图"></a><figcaption>TopUV · Lit 近景。观察顶／侧木纹关系，不把暗接缝代勾通过。</figcaption></figure>
+</div>
+<h3>中景 · 9 m</h3>
+<div class="pair">
+<figure><a href="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/Original-Lit-Mid.png"><img src="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/Original-Lit-Mid.png" alt="原梁 Lit 中景实际原图"></a><figcaption>原梁 · Lit 中景。同一诊断顶面目标。</figcaption></figure>
+<figure><a href="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/TopUV-Lit-Mid.png"><img src="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/TopUV-Lit-Mid.png" alt="TopUV Lit 中景实际原图"></a><figcaption>TopUV · Lit 中景。图像不是玩家正式 POV。</figcaption></figure>
+</div>
+<h3>远景 · 22 m</h3>
+<div class="pair">
+<figure><a href="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/Original-Lit-Far.png"><img src="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/Original-Lit-Far.png" alt="原梁 Lit 远景实际原图"></a><figcaption>原梁 · Lit 远景。舞台仍有灰盒内容。</figcaption></figure>
+<figure><a href="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/TopUV-Lit-Far.png"><img src="file:///D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Render-Run1/TopUV-Lit-Far.png" alt="TopUV Lit 远景实际原图"></a><figcaption>TopUV · Lit 远景。未新增世界空间、左支撑或新玩法。</figcaption></figure>
+</div>
+<h2>验证了什么，哪些仍不是通过项</h2>
+<p>离线独立 Run2 实际退出 0，256 个完整节点仅 UV 数组两个 V doubles 改变，8,568 项为数据断言；离线比较器 Run2 有 10 个实际 case。原生 probe-Run3／create-Run1／verify-Run1 均实际退出 0，分别 5,766／6,284／6,280 项检查；create 只保存一个新 Dev 网格，probe／冷 verify 零保存。原／新网格实读均为 48 render vertices／28 triangles／1 UV，84 MeshDescription 角实例来自三角化，不是新增面。位置轴转换实匹配为 (sourceX, sourceZ, sourceY)，signs +++，V flip=true。以上均不是 UE 游戏自动化测试数。</p>
+<p>继续复用现有 Surface／Opaque／DefaultLit／SingleSided 木材 Parent + MI、UVQuarterTurn=1、sRGB BaseColor、非 sRGB NormalDX／ARM，无新 shader 图或纹理。完成原生异步编译后 BaseColor 从实读 32×32 到 2048×2048，另两张保持 2048×2048；没有属性更改或升采样，也不认证运行常驻 2K mip。独立冷验确认 bounds／拓扑／槽／导入／Build／collision flags 保持，native normals 与非顶面 UV／tangent 不变，顶面 tangent 方向在实际量化界内、handedness 不变；只有两个 render V 及对应三个三角形角实例按实测 V flip 和 float／half 精度变化。这是数据与切线合同，不是最终 NormalDX 或暗接缝视觉采纳。</p>
+<p>Render-Run1 实际退出 0，十二图、35 Actor 冷合同、零保存、原网格与原视口完全恢复均通过；Render-Run2-Original／TopUV 是两个独立 process，各实际退出 0、各六图，合同与恢复通过。本页仍链接 Run1 原图。摄影仅操纵 Editor 诊断视口和同梁 Actor 的内存 mesh reference，原玩家 PlayerController／PlayerCameraManager POV 不接管，无位姿、灯、曝光、游戏镜头或材质写入，不保存 B 地图。高分辨率摄影 forced loading／ScreenPercentage off，不能当成运行 mip／GPU 验收。本轮没有新地图、游戏包、Cook、Shipping、实际通关、GPU 测量或人工美术采纳。</p>
+<div class="note"><strong>关于聊天预览的黑背景：</strong>high 内联预览一度误呈现 TopUV Unlit 背景；磁盘 PNG 核对显示 Run1 三张 TopUV Unlit 与独立 Run2 对应图 byte-identical，近景原梁／TopUV 的 y800..1080 背景区像素差为 0，original-detail 展示正常。没有认定摄影失败，没有“UE 缓存修复”，没有改色或重建背景；请直接打开本页的磁盘原图评价，不将预览差异当成产品渲染故障。</div>
+<p>既有 CC0 额枋源和免费木材纹理复用，无新获取或许可登记；源派生首轮 LF／CRLF metadata hash 工具错误与补充澄清保留，不覆盖原 FBX／报告／FAIL。下一步先依据这六组实际对照评价顶面和侧纹关系，再按 UV／BaseColor → NormalDX／TBN 分支诊断；不自动扩至柱、斜端、左支撑、帷幕、灯或正式比例。</p>
+<div class="note">独立网格：<code>D:\灯影山海\Content\DengYingShanHai\Dev\FrameBeamTopUV\Meshes\SM_DY_FrameBeam_TopUV.uasset</code>。现有游戏仍用 <code>D:\灯影山海\Start-FrameBeamCandidate.cmd</code>，在资源管理器双击；它不会自动采用本 UV 候选。回退只需保留／恢复原梁引用，旧 B 地图与旧封存包不改。图册发布地址：<code>D:\灯影山海\Docs\FRAME_BEAM_TOP_UV.html</code>。</div>
+<p class="meta">证据：<code>D:\灯影山海\Saved\Audit-2026-10-13-FrameBeamTopUV</code>。文化创意仍是“灯为日、影为夸父、玩家杖落成林”；本步不作历史建筑、特定影戏流派或承重复原宣称。</p>
+<p class="meta">原生实施脚本按本批次 BEFORE 精确冻结输入并拒绝覆盖候选。它是实施记录，不是玩家启动器；文档发布后直接重跑会拒绝旧基线，后续应新建明确基线，不能跳过保护。用户不需要手工重新导入。</p>
+</main></body></html>

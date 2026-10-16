@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>灯影山海 · 梁顶 UV 独立可玩样本</title>
+<style>
+:root{color-scheme:dark;--bg:#171714;--panel:#22221d;--line:#4c4634;--ink:#e8e2d4;--muted:#bfb7a5;--gold:#dbbc75}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.8 "Microsoft YaHei",system-ui,sans-serif}main{max-width:1120px;margin:auto;padding:38px 24px 70px}h1,h2{line-height:1.35}h1{font-size:32px;margin:0 0 12px}h2{font-size:24px;margin:34px 0 14px}p{margin:12px 0}a{color:var(--gold);text-underline-offset:4px}.meta{color:var(--muted);font-size:14px}.panel{background:var(--panel);border:1px solid var(--line);padding:18px 22px;margin:22px 0;border-radius:8px}.status{border-left:4px solid var(--gold)}code{font:15px/1.8 Consolas,monospace;overflow-wrap:anywhere}.path{display:block;background:#11110f;border:1px solid var(--line);padding:11px 14px;margin:10px 0;user-select:all}.table-scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:15px}th,td{text-align:left;vertical-align:top;border:1px solid var(--line);padding:12px}th{background:#302d24}.state-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}figure{margin:0;background:var(--panel);border:1px solid var(--line);padding:10px;border-radius:7px}figure img{display:block;width:100%;height:auto}figcaption{padding:8px 4px;font-size:14px;color:var(--muted)}.note{font-size:15px;color:var(--muted)}@media(max-width:680px){main{padding:24px 16px}h1{font-size:26px}.state-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body><main>
+<h1>梁顶 UV，放到实际演出中看</h1>
+<p class="meta">《灯影山海》独立 Dev 样本 · 2026-10-14 · 唯一人类作者：用户本人，Codex 辅助实施与验证</p>
+<p>本轮沿用 B 的横梁构图，只换入上一阶段的顶面 UV 候选，再验证“开始—三幕—杖落成林—结束—重演”。这样可以在同一演出中看木纹，而原 B 版本继续作为对照。</p>
+<div class="panel status"><strong>技术样本、包内菜单／开始画面及原生正常退出已核实</strong><p>新图冷验、原生编译与 158 项项目测试、三幕演出、控制回归和 Development 包通过。官方 Computer Use 已看到新包中文菜单、点击开始后的场景；后续只读核实同一轮实际退出。原首帧收集 FAIL 保留，由独立补充记录说明核验结果；未代包内全流程或真人验收。</p></div>
+<h2>打开样本</h2>
+<p>请把下面的位置粘贴到资源管理器地址栏，再双击文件。聊天链接有时会只显示脚本代码。</p>
+<code class="path">D:\灯影山海\Start-FrameBeamTopUV.cmd</code>
+<p class="note">新入口固定绑定 <code>Builds\FrameBeamTopUV-20261013-Run1\Windows</code> 的 Development 包。</p>
+<p>原 B 版本的位置：</p>
+<code class="path">D:\灯影山海\Start-FrameBeamCandidate.cmd</code>
+<p>近中远木纹对比可继续查看 <a href="FRAME_BEAM_TOP_UV.html">上一阶段原梁／TopUV 同条件图册</a>。本报告对应的详细记录是 <a href="FRAME_BEAM_TOP_UV_DEV.md">FRAME_BEAM_TOP_UV_DEV.md</a>。</p>
+<h2>改动很小，比较条件保持</h2>
+<p>新地图 <code>LV_FrameBeamTopUVLab</code> 复制自已保存的 B 地图，35 个 Actor 保持。已有被动横梁 <code>DEV_FrameBeam_RightJoint</code> 换用 <code>SM_DY_FrameBeam_TopUV</code>；B 的位置、等比缩放、木材材质、右柱、灯和幕布沿用。</p>
+<p>两个 C++ 文件只追加新图的精确身份和对应测试，复用菜单与重演。玩家继续使用 E/A/D/R，15 Hz 参数判定与实时阴影各负原有职责。三幕依然从“发现规律”走向“协同控制”和“综合运用”，最后由实际杖尖接触继续成林。</p>
+<p class="note">木构服务“灯为日、影为夸父、玩家杖落成林”。本样本不确定历史建筑尺度、榫卯或特定皮影流派。</p>
+<h2>本轮实际验证</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>层次</th><th>实际结果</th><th>含义</th></tr></thead>
+<tbody>
+<tr><td>构建与项目测试</td><td>原生编译退出 0；158 成功／0 失败／0 未执行</td><td>新身份与旧入口行为通过自动化检查</td></tr>
+<tr><td>只读原图</td><td>probe-Run2 退出 0，8,533 项审计检查</td><td>新图输入来自冻结的实际 B 场景</td></tr>
+<tr><td>独立创建</td><td>create-Run1 退出 0，19,749 项审计检查</td><td>只保存指定新图，35 Actor 与其他场景合同保持</td></tr>
+<tr><td>独立冷读</td><td>verify-Run1 退出 0，13,168 项审计检查</td><td>35 Actor，从磁盘读回，零保存</td></tr>
+<tr><td>三幕演出</td><td>VisiblePlay-Run1 退出 0；65 流程／35 环境检查</td><td>两次真实成林、一次 OpenLevel 重演；固定 POV 五态，旧柱与候选梁各 10 项观察通过</td></tr>
+<tr><td>控制回归</td><td>ControlProbe-Run1 退出 0；41 项检查</td><td>操纵、R 复位、步行、跨幕释放、重演与 EndPlay 清理通过</td></tr>
+<tr><td>Development 包</td><td>UAT-Run1 与三个原生容器操作均退出 0</td><td>42 核心＋2 默认导出，主／global 全 payload 校验通过；50 个文件封存</td></tr>
+<tr><td>启动器与公开入口</td><td>PS5 解析与 33 隔离案例通过；三个实际 CMD DryRun 均退出 0</td><td>默认 Package、显式 Package 与 EditorGame 调用通过；DryRun 没有运行游戏</td></tr>
+<tr><td>已发布入口与包首帧</td><td>中文菜单与开始场景由官方 Computer Use 观察留图；同轮游戏／CMD 实际退出 0</td><td>原生日志证实 ViewportClosed 正常退出；独立补充核验保留原收集 FAIL，未代包内全流程</td></tr>
+</tbody></table></div>
+<p class="note">数千项审计断言检查场景与资产合同，不能计作数千项 UE 游戏测试。本轮原生项目测试为 158 项。首次 probe 的审计计数误把 35 Actor 与另含 _pawn、_flow 的 37 个键要求相等，失败已保留；只修工具计数后重新通过。</p>
+<p class="note">回归前后此阶段 350 个产品文件保持。两轮 UE Master Mix 导出和静音流程通过，人耳听感及 Windows 实际输出尚未验收。ControlProbe 临时调整聚焦视线，独立于固定 POV 演出；它验证控制语义，不代签物理键鼠或人工通关。</p>
+<p class="note">Cook 的实际三图是显式 TopUV、既有项目默认 Interaction 和引擎默认 Entry，入口固定选择 TopUV。原生检查覆盖 2,029 主 chunk＋1 global chunk，读取及哈希验证 299,312,266 B／3,224,104 B；封存 50 文件／1,070,559,651 B。容器通过不代包内完整通关。</p>
+<h2>实际包的菜单与开始场景</h2>
+<div class="state-grid">
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamTopUVDev/PackageFirstFrame-Run1/Menu.png"><img loading="lazy" src="../Saved/Audit-2026-10-13-FrameBeamTopUVDev/PackageFirstFrame-Run1/Menu.png" alt="本轮实际 Development 包的中文菜单"></a><figcaption>官方 Computer Use 观察实际中文菜单；原 JPEG 已保留，PNG 逐像素一致。</figcaption></figure>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamTopUVDev/PackageFirstFrame-Run1/Started.png"><img loading="lazy" src="../Saved/Audit-2026-10-13-FrameBeamTopUVDev/PackageFirstFrame-Run1/Started.png" alt="本轮实际 Development 包点击开始后的场景"></a><figcaption>实际点击开始后的场景；同一轮原生正常退出已只读核实。</figcaption></figure>
+</div>
+<p class="note">随后用户按 Escape 中止 Computer Use，未再重开游戏。同一 GameRun1（PID 26204）的原始日志精确加载 TopUV，ViewportClosed 后记录 RequestExitWithStatus(0,0) 和 Exiting，游戏／CMD 实际退出均为 0。原 RESULT.json 因缺 VISUAL.json 记 FAIL，原样保留；COMPLETION-REVIEW.json 补充图像哈希、退出和产品／构建身份核验。Codex 未发起关窗，不推断关窗者；本结果不代包内全流程、声音或真人验收。</p>
+<h2>演出中的五个状态</h2>
+<p>以下为本轮 VisiblePlay-Run1 第一轮实际取得、已查看的五个固定 POV 原生画面，点击可查看原图。完整流程观察器和实际退出均通过。梁顶的近中远 UV 判断请结合上一阶段同条件图册。</p>
+<div class="state-grid">
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamTopUVDev/VisiblePlay-Run1/02-Environment-Dormant-FixedPOV-Cycle1.png"><img loading="lazy" src="../Saved/Audit-2026-10-13-FrameBeamTopUVDev/VisiblePlay-Run1/02-Environment-Dormant-FixedPOV-Cycle1.png" alt="第一轮 Dormant 固定 POV 原生截图"></a><figcaption>① Dormant · 未开演状态</figcaption></figure>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamTopUVDev/VisiblePlay-Run1/06-Environment-SunAwakened-FixedPOV-Cycle1.png"><img loading="lazy" src="../Saved/Audit-2026-10-13-FrameBeamTopUVDev/VisiblePlay-Run1/06-Environment-SunAwakened-FixedPOV-Cycle1.png" alt="第一轮 SunAwakened 固定 POV 原生截图"></a><figcaption>② SunAwakened · 引日启幕后</figcaption></figure>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamTopUVDev/VisiblePlay-Run1/15-Environment-ChaseAwakened-FixedPOV-Cycle1.png"><img loading="lazy" src="../Saved/Audit-2026-10-13-FrameBeamTopUVDev/VisiblePlay-Run1/15-Environment-ChaseAwakened-FixedPOV-Cycle1.png" alt="第一轮 ChaseAwakened 固定 POV 原生截图"></a><figcaption>③ ChaseAwakened · 逐光成形后</figcaption></figure>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamTopUVDev/VisiblePlay-Run1/21-Environment-FinaleReady-FixedPOV-Cycle1.png"><img loading="lazy" src="../Saved/Audit-2026-10-13-FrameBeamTopUVDev/VisiblePlay-Run1/21-Environment-FinaleReady-FixedPOV-Cycle1.png" alt="第一轮 FinaleReady 固定 POV 原生截图"></a><figcaption>④ FinaleReady · 综合互动完成，落杖过程</figcaption></figure>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamTopUVDev/VisiblePlay-Run1/23-Environment-ForestComplete-FixedPOV-Cycle1.png"><img loading="lazy" src="../Saved/Audit-2026-10-13-FrameBeamTopUVDev/VisiblePlay-Run1/23-Environment-ForestComplete-FixedPOV-Cycle1.png" alt="第一轮 ForestComplete 固定 POV 原生截图"></a><figcaption>⑤ ForestComplete · 真实成林完成</figcaption></figure>
+</div>
+<p class="note">画面仍包含 Editor 开发界面，并非独立打包窗口或正式美术验收；UV 改变局部而有限。本报告引用磁盘原图，没有提亮、裁切或重新绘制。</p>
+<h2>怎么判断它是否更合适</h2>
+<p>先看横梁顶面长向木纹是否减少拉伸，再看右柱接合和整体轮廓。顶面源 2K 局部度量约 140.114→198.152 texel/m，横向保留约 198.152；上一阶段近景差异较明显，中远与暗光下差异有限。</p>
+<p>这是局部 UV 候选。可玩流程通过不会自动证明正式木纹尺寸、运行 mip、GPU 成本或全面消除廉价感；左端完整支撑、正式幕框和侧幕仍需后续设计。</p>
+<div class="panel"><p>唯一负责人仍是用户本人。Codex 辅助实施，本轮复用已有免费／开源资产，没有新付费依赖。完整剧场、5–8 分钟首次玩家盲测、包内三轮完整通关和 Shipping 尚未完成。</p></div>
+<p>10 月 21 日前须提交作品，每天投入 6–8 小时。接下来优先正式入口、可投影夸父皮影与完整戏台，18 日冻结内容、20 日完成提交；暂停梁顶 UV 等局部打磨，保留当前样本和原 B 作为参考。</p>
+<p class="note">原 B 地图与固定旧包保留，可从旧入口回退。完整证据目录为 <code>D:\灯影山海\Saved\Audit-2026-10-13-FrameBeamTopUVDev</code>；目录及包名沿用冻结的 20261013 身份，进展记录采用实际日期 2026-10-14。最终文件保护、旧文档前缀和 Git 状态以 FINAL.json 实际核验为准，本报告不预先宣告最终发布成功。</p>
+<p class="note"><em>永远不要以牺牲架构设计为代价追求功能；永远不要基于猜测进行权衡——必须与我确认。</em></p>
+</main></body></html>
