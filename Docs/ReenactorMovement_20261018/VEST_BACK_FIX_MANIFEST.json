@@ -1,0 +1,106 @@
+{
+  "Status": "DEV-BACK-CLOSURE-READY",
+  "Date": "2026-10-18",
+  "Problem": "Two short vest panels left an 11 cm spinal opening exposing the ivory tunic.",
+  "Fix": "Weighted tunic-back-derived vest closure, 5 mm outside tunic, same 40-bone skeleton, leader-pose garment layer.",
+  "PanelMesh": "/Game/DengYingShanHai/Dev/UserModels_20261018/Reenactor/VestBack/SK_DY_Reenactor_VestBack_Closure",
+  "PanelMaterial": "/Game/DengYingShanHai/Dev/UserModels_20261018/Reenactor/VestBack/MI_DY_Reenactor_VestBack",
+  "Files": [
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Reenactor/VestBack/SK_DY_Reenactor_VestBack_Closure.uasset",
+      "SHA256": "C66BFB7BC1F966217B217A7E6C2D0E3EFAD9AF8C9BE10B4D6DC0F9F06811EA89",
+      "Bytes": 28673
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Reenactor/VestBack/MI_DY_Reenactor_VestBack.uasset",
+      "SHA256": "3B11EE0D9F9AA580D468DE50318EB569290AADBBBDF836B7BFCF54E41C2D2EF0",
+      "Bytes": 4994
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ReenactorBackFix-20261018/DY_Reenactor_Cue_v04_backfix.blend",
+      "SHA256": "B593E7F564806B52C39A200B473F636510DD39E9FA3057C0297671AFEDB34846",
+      "Bytes": 15528067
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ReenactorBackFix-20261018/SK_DY_Reenactor_VestBack_Closure.fbx",
+      "SHA256": "DFF918D9AE841BF5F4F333C21E7AD34B54C4630A232CE7DB59C6FB105CB39F16",
+      "Bytes": 92812
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ReenactorBackFix-20261018/fix_back.py",
+      "SHA256": "02E3A69D7036AA1A4AAE19CA855ED37532D99BC396B4F42CA3E92A93DEF84DC3",
+      "Bytes": 6027
+    },
+    {
+      "Relative": "Assets/Sources/DengYingArt/ReenactorBackFix-20261018/BACK_FIX_RESULT.json",
+      "SHA256": "6E304722CD4AF3C4D831030863F761D3BC8C7DA0FDAD486D65F870E376A6BEAC",
+      "Bytes": 1265
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/back_before.png",
+      "SHA256": "401B252ECA04F0124993A382BFACEE9CDBA59C7A06873E4D996A57CF4CD48B77",
+      "Bytes": 1186391
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/back_after.png",
+      "SHA256": "2C421CE2D856E375D51638326D680E229D30ACBA40A1D336E17A63BF5ECAB3A1",
+      "Bytes": 1186332
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/ue_back_fixed_idle.png",
+      "SHA256": "7C54BDCC3E3F6F33F5EE5ABE182B9195E9B81476E3C07F5ACAE030E289D74DAB",
+      "Bytes": 840271
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/ue_back_fixed_walk.png",
+      "SHA256": "11DE823B8DAF20704354B3391FA3C893C75745E25125A92B67E6BC5D3B07E85D",
+      "Bytes": 918798
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/VestBack-Automation.log",
+      "SHA256": "B78EE35D00A658105D97B24C455AF13B7044736AC4086798A3B3DF3B0073CC4C",
+      "Bytes": 256735
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/PANEL_IMPORT.json",
+      "SHA256": "1EE63E9883045E9BADB69C2420C8576F62DDAC4CC02645AC820E5B4F96F9DE31",
+      "Bytes": 683
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/BACK_MEASUREMENTS.json",
+      "SHA256": "895AC5228723CB8AE4B64230EB4C9F14C7E30C6F3C7806B199E1E60955F20F88",
+      "Bytes": 4430
+    }
+  ],
+  "UpdatedFiles": [
+    {
+      "Relative": "Source/DengYingShanHai/Public/Player/DYReenactorOperatorPawn.h",
+      "BeforeSHA256": "A874689326CEA232368537C73724D746A985A24BE03F1869021045BA4BD90E42",
+      "AfterSHA256": "4242E27BB4B5F1EA4A7DCDD29036B6A09DAF4DD2C61D455D5E766E2225FAB996"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Player/DYReenactorOperatorPawn.cpp",
+      "BeforeSHA256": "772C872F1216A075654328C1726168171B0BD2113DC04F3D06DA7E4E4B2B9DA7",
+      "AfterSHA256": "BCDA6AF2C5056ECD42258BCE9CF88D9A6CCBD80EF865A5013D191F568C0FF985"
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYReenactorMovementAutomationTests.cpp",
+      "BeforeSHA256": "AA0073A02D739FD121C0A04706727977589143761A59F7D8EFC78585832F4D3B",
+      "AfterSHA256": "9ABC0E42D18045B52D87AA59D166F8E7C4184884980300A661482141866A1949"
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/REENACTOR_MOVEMENT_DEV_20261018.md",
+      "BeforeSHA256": "6303421F80C61A1C5CC12FDE2BB2B053E413050E114917FDB36E3DEDB165190D",
+      "AfterSHA256": "85841D33F91FC031AB80D14DBCDCF86B534B77F67F3849676202B265EF1F72E6"
+    },
+    {
+      "Relative": "Binaries/Win64/UnrealEditor-DengYingShanHai.dll",
+      "BeforeSHA256": "998968055651BAB85DFE24899459E272BC896DA591C083B27EB16B98C94FE08E",
+      "AfterSHA256": "DAA2E1A8E715C0FC4287E88416E0E66F0C625ED0E8116D1BA4AE66908A7EE556"
+    }
+  ],
+  "OriginalV03Preserved": true,
+  "MainBodyMeshReplaced": false,
+  "AddedDrawCalls": 1,
+  "Packaged": false
+}

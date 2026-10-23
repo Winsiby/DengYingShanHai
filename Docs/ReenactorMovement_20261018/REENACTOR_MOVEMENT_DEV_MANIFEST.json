@@ -1,0 +1,154 @@
+{
+  "Status": "DEV-MOVEMENT-CANDIDATE",
+  "Date": "2026-10-18",
+  "Launcher": "Start-ReenactorMovementDev.cmd",
+  "Map": "/Game/DengYingShanHai/Dev/ReenactorMovement_20261018/Maps/LV_ReenactorMovementDev",
+  "Movement": {
+    "max_walk_speed_cm_s": 180.0,
+    "step_distance_cm": 75.0,
+    "footstep_sources": [
+      "/Game/DengYingShanHai/Dev/TheatreAudio/Sounds/SFX_DevFootstepA",
+      "/Game/DengYingShanHai/Dev/TheatreAudio/Sounds/SFX_DevFootstepB"
+    ]
+  },
+  "Files": [
+    {
+      "Relative": "Source/DengYingShanHai/Public/Player/DYReenactorOperatorPawn.h",
+      "SHA256": "A874689326CEA232368537C73724D746A985A24BE03F1869021045BA4BD90E42",
+      "Bytes": 922
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Player/DYReenactorOperatorPawn.cpp",
+      "SHA256": "772C872F1216A075654328C1726168171B0BD2113DC04F3D06DA7E4E4B2B9DA7",
+      "Bytes": 2980
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Public/Core/DYReenactorStageGameMode.h",
+      "SHA256": "F4C9B8531D6EC3CBF7968B8F80E0508E580A33A24F3E9C331C74967C92933FD9",
+      "Bytes": 364
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Core/DYReenactorStageGameMode.cpp",
+      "SHA256": "4D08BD564BD44F9E77CD4ED22F9FB206E26DD8738161A66A3242BD4BB73FA958",
+      "Bytes": 230
+    },
+    {
+      "Relative": "Source/DengYingShanHai/Private/Tests/DYReenactorMovementAutomationTests.cpp",
+      "SHA256": "AA0073A02D739FD121C0A04706727977589143761A59F7D8EFC78585832F4D3B",
+      "Bytes": 3074
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ReenactorMovement_20261018/Animation/A_DY_Reenactor_Idle.uasset",
+      "SHA256": "ECC682C5C896A81817FD21095CF96FB92D747125EA114D22228BA88EB9609A8F",
+      "Bytes": 154560
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ReenactorMovement_20261018/Animation/A_DY_Reenactor_Walk.uasset",
+      "SHA256": "23E04E362A603802F033702E34F8521D094D84B3FBD902BF50B1EB26F9B2387C",
+      "Bytes": 93917
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ReenactorMovement_20261018/Animation/ABP_DYReenactorMovement_V2.uasset",
+      "SHA256": "CB16B676C94799F6E8951723AB61542693C82D47E3A57124819A4F77085AB189",
+      "Bytes": 183241
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/ReenactorMovement_20261018/Maps/LV_ReenactorMovementDev.umap",
+      "SHA256": "748899DFC83E10BF78A0E6A01E22CC70D552054047952DC97CDEA0BC7375FFC8",
+      "Bytes": 45191
+    },
+    {
+      "Relative": "Start-ReenactorMovementDev.cmd",
+      "SHA256": "1C33718A53EEF5692854AEBD5405B91A75D628E065FC8426808AA64660DACE82",
+      "Bytes": 1071
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/REENACTOR_MOVEMENT_DEV_20261018.md",
+      "SHA256": "6303421F80C61A1C5CC12FDE2BB2B053E413050E114917FDB36E3DEDB165190D",
+      "Bytes": 4156
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/reenactor_final_idle.png",
+      "SHA256": "1DCCC2D3998148BEE378306B0A0CFA32F9EF825F20D5AF6B64220DA09FDF1AD8",
+      "Bytes": 847485
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/reenactor_final_walk.png",
+      "SHA256": "DEBD9FF7D0656C875E545331A05E908FF5982ABE31B503BE60CCCD3F87862BE1",
+      "Bytes": 925365
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/anim_debug_v2_walk.png",
+      "SHA256": "ADE67496D2585D2CB654B1BFA1A70AD49CEB858740141BA6B707E1D2DE78AEE0",
+      "Bytes": 1042369
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/RUNTIME_PROBE.json",
+      "SHA256": "AF3DD39157712C85ABF20E452456F5C42D191317363F7DA0CB180556D0B78109",
+      "Bytes": 1303
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/ABP_AUTHOR_V2B.json",
+      "SHA256": "B60691EB81CD1C086BE414764145E896F40BB4E4FE5D7C58A997E5355B580A39",
+      "Bytes": 4041673
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/NATIVE_IMPORT_Idle.json",
+      "SHA256": "4FF67FB42ABB3C05FD8E65F808814B1BF00FC82549C15AE8668D35A7375DD53A",
+      "Bytes": 621
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/NATIVE_IMPORT_Walk.json",
+      "SHA256": "A0A0C76873DF521FD89C13E0862F9B31E5E7DCAD37D22934EF1826B135956917",
+      "Bytes": 636
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/ReenactorAutomation.log",
+      "SHA256": "EDCD81409989476FD941C1BF2011F06936893DCA262BBC523762D6FCB314C5E6",
+      "Bytes": 255988
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/MOVEMENT_MAP.json",
+      "SHA256": "B6168DFF4B4811870D68D7C4BBED902D7AA7C2F52CC140220703377F3C06C34D",
+      "Bytes": 870
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/WALK_GENERATION.json",
+      "SHA256": "834253CCB36A362CF21923ADC739E2E78E4FE32029A9A8690848FD503D7CBE59",
+      "Bytes": 101619
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/IDLE_GENERATION.json",
+      "SHA256": "5D257D864594309AC1325D9F631ED7921B0F65B1699BAEC6005A0196C0AE00F3",
+      "Bytes": 958
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/FBX_ROUNDTRIP_VERIFY.json",
+      "SHA256": "83CED3C5BC2600E32A6A20EF5968C3DC48ECFE7F7B5ACC17F4CAF004121B7CF4",
+      "Bytes": 1326
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/main_project_reenactor_idle.png",
+      "SHA256": "09E26CDFA84B5190F8C28AF8971A45507BCF2312B57EF67899A06BB2E34F9A5E",
+      "Bytes": 855899
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/main_project_reenactor_walk.png",
+      "SHA256": "99A253661B7690903A08FF93741C7DBBDE0F2FDB949191F431AF583695F18062",
+      "Bytes": 926183
+    },
+    {
+      "Relative": "Docs/ReenactorMovement_20261018/Evidence/Main-All-Automation.log",
+      "SHA256": "9E7D1C6D4407F6B1B1A8401F85E38EEFEE82F6E55BA0BA3BF717CF810F587FD5",
+      "Bytes": 543050
+    }
+  ],
+  "EditorDll": {
+    "Path": "Binaries/Win64/UnrealEditor-DengYingShanHai.dll",
+    "SHA256": "998968055651BAB85DFE24899459E272BC896DA591C083B27EB16B98C94FE08E",
+    "BackedUpTo": "Saved/ReenactorMovement_20261018/PrePublish/UnrealEditor-DengYingShanHai.dll.2026-10-18.before-reenactor-movement.bak"
+  },
+  "OriginalGameplayChanged": false,
+  "Packaged": false,
+  "UserAcceptance": "PENDING"
+}
