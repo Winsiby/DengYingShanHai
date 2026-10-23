@@ -1,0 +1,17 @@
+{
+  "name": "lenovo-computer-use",
+  "version": "0.1.0",
+  "description": "Independent local Windows desktop control for Lenovo's WorkBuddy and Unreal Engine workflow.",
+  "author": { "name": "Lenovo personal tools" },
+  "license": "MIT",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Lenovo Computer Use",
+    "shortDescription": "你的本地 Windows 桌面操作助手",
+    "longDescription": "独立实现的个人桌面操作插件：窗口识别、截图、UI 控件读取、中文输入、点击、滚动、按键和拖拽。默认服务 WorkBuddy 与 UE 编辑器。使用本机 Windows API，不依赖官方 Computer Use 的账号开关。",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "defaultPrompt": ["使用 Lenovo Computer Use 查看 WorkBuddy 的当前状态", "查看 UE 编辑器中的 Dev 测试关卡"]
+  }
+}

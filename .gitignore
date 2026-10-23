@@ -1,0 +1,91 @@
+# =============================================================================
+# 灯影山海 / DengYingShanHai — 仓库忽略规则
+# 原则：只入库「可重建工程的源文件 + 文档 + 交付证据」；
+#       引擎中间产物、发布包、超大的美术中间件留在本地工作区。
+# =============================================================================
+
+# ---------- Unreal Engine 生成物 ----------
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+LocalBuilds/
+Releases/
+StagedBuilds/
+Engine/
+
+# ---------- IDE / 本机用户状态 ----------
+.vs/
+.vscode/
+.idea/
+*.sln
+*.slnx
+*.VC.db
+*.VC.opendb
+*.suo
+*.user
+*.userprefs
+*.opensdf
+*.sdf
+
+# ---------- 插件编译输出 ----------
+Plugins/**/Binaries/
+Plugins/**/Intermediate/
+
+# ---------- 操作系统噪音 ----------
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ---------- 本地环境与凭据 ----------
+.env
+.env.*
+!.env.example
+
+# ---------- 临时文件 ----------
+__pycache__/
+*.py[cod]
+*.tmp
+*.temp
+*.log
+~$*
+
+# ---------- 发布包与构建产物（单包 500 MB+，不入公共仓库） ----------
+Builds/
+FormalKuafuIntegration-*/
+*.pdb
+*.zip
+
+# ---------- 工具二进制（ffmpeg 约 315 MB，按文档自行下载） ----------
+Tools/ffmpeg/
+
+# ---------- 评审视频：只入库成片、海报与脚本，原始素材留在本地 ----------
+Video/**/01_raw/
+Video/**/02_cut/
+Video/**/05_qa/
+Video/**/06_pilot/
+Video/**/*.otf
+Video/**/*.ttf
+Video/Review-20261023/*.mp4
+
+# ---------- 美术源文件：体积以 GB 计，只入库脚本 / 清单 / 验证记录 ----------
+Assets/Sources/**/*.blend
+Assets/Sources/**/*.blend1
+Assets/Sources/**/*.fbx
+Assets/Sources/**/*.obj
+Assets/Sources/**/*.zip
+Assets/Sources/**/*.psd
+Assets/Sources/**/*.tif
+Assets/Sources/**/*.tiff
+Assets/Sources/**/*.png
+Assets/Sources/**/*.jpg
+Assets/Sources/**/*.jpeg
+Assets/Sources/PolyHaven/
+Assets/Sources/DengYingArt/CurtainFrozenTBN-20261015/FROZEN_TRIANGLE_TBN_AUDIT.json
+Assets/Sources/Innerscene/
+Assets/Sources/ReenactorFinal-20261019/
+Assets/Sources/Audio/
+
+# ---------- 开发实验资产（含影偶核验地图）：约 362 MB，留本地工作区 ----------
+Content/DengYingShanHai/Dev/

@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "lenovo_desktop": {
+      "command": "C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "args": [
+        "-u",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\Tools\\LenovoComputerUse\\plugins\\lenovo-computer-use\\server.py",
+        "--data-dir",
+        "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\Saved\\LenovoComputerUse"
+      ],
+      "startup_timeout_sec": 20,
+      "tool_timeout_sec": 30
+    }
+  }
+}

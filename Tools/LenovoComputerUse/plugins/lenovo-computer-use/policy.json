@@ -1,0 +1,19 @@
+{
+  "allowed_apps": [
+    {
+      "process": "WorkBuddy.exe",
+      "path": "D:\\LenovoSoftstore\\Install\\WorkBuddy\\WorkBuddy.exe"
+    },
+    {
+      "process": "UnrealEditor.exe",
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor.exe"
+    },
+    {
+      "process": "powershell.exe",
+      "title": "Lenovo Computer Use Test"
+    }
+  ],
+  "snapshot_ttl_seconds": 60,
+  "max_text_characters": 4000,
+  "max_image_dimension": 1600
+}
