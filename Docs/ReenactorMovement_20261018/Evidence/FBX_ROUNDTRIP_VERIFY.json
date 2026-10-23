@@ -1,0 +1,36 @@
+{
+  "original": "C:\\Users\\lenovo\\Documents\\ChatGPT\\\u6570\u5a92\u6e38\u620f\u5f00\u53d1 2\\ModelIntake-20261018\\Extracted\\DY_Reenactor_Cue_v03\\DY_Reenactor_Cue_v03\\SK_DY_Reenactor_Cue_v03.fbx",
+  "exports": [
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\\u6570\u5a92\u6e38\u620f\u5f00\u53d1 2\\ReenactorPlayable-20261018\\Animation\\A_DY_Reenactor_Idle_Dev_20261018.fbx",
+      "bone_count": 40,
+      "same_names_and_parents": true,
+      "rest_matrix_max_error": 0.0,
+      "loop_matrix_max_error": 0.0,
+      "root_matrix_max_error": 0.0,
+      "imported_fps": 60,
+      "imported_frame_range": [
+        2.0,
+        242.0
+      ],
+      "action": "Reenactor_Rig|Scene",
+      "duration_seconds": 4.0
+    },
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\\u6570\u5a92\u6e38\u620f\u5f00\u53d1 2\\ReenactorPlayable-20261018\\Animation\\A_DY_Reenactor_Walk_Dev_20261018.fbx",
+      "bone_count": 40,
+      "same_names_and_parents": true,
+      "rest_matrix_max_error": 0.0,
+      "loop_matrix_max_error": 0.0,
+      "root_matrix_max_error": 0.0,
+      "imported_fps": 60,
+      "imported_frame_range": [
+        2.0,
+        52.0
+      ],
+      "action": "Reenactor_Rig|Scene",
+      "duration_seconds": 0.8333333333333334
+    }
+  ],
+  "success": true
+}

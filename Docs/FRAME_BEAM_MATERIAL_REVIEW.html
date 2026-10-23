@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>灯影山海｜B 木构质量诊断</title>
+<style>body{margin:0;background:#f5f1e9;color:#27241e;font:17px/1.8 "Microsoft YaHei",sans-serif}main{max-width:1120px;margin:auto;padding:36px 24px 70px}h1{font-size:32px;line-height:1.4}h2{margin-top:36px;font-size:24px}p{margin:12px 0}a{color:#845520}figure{margin:24px 0;background:#fff;border:1px solid #d7ccbc;padding:12px;border-radius:8px}img{display:block;width:100%;height:auto;background:#111}figcaption{padding:12px 8px 4px}.note{padding:18px 22px;border-left:5px solid #947142;background:#fff9ef}.meta{font-size:14px;color:#60584c}table{width:100%;border-collapse:collapse;background:#fff}th,td{padding:12px;border:1px solid #d7ccbc;text-align:left;vertical-align:top}code{overflow-wrap:anywhere;font-size:14px}.scroll{overflow:auto}li{margin:8px 0}</style></head>
+<body><main>
+<p class="meta">2026-10-13 · 唯一人类作者：用户本人 · Codex辅助 · 只读诊断，不是正式美术采纳</p>
+<h1>B 木构：问题在哪里，下一步先改什么</h1>
+<div class="note">B的右接合关系比A清楚，但暗接缝仍不能认证无缝、无穿模或法线正确。新增数据表明：自动UV的纵横比例和不同面密度不统一。不要用一个全局平铺倍率、补光或帷幕遮挡把问题一起“处理掉”。</div>
+<p>本轮照片来自实际保存的B地图，未移动Actor、改灯或保存资产。五图是1920×1080原生PNG，未经提亮/裁切/改色。专用Editor Lit诊断视口实读FOV90°，不是玩家游戏机位；高分辨率截图不能认证运行mip/GPU。</p>
+<p><a href="FRAME_BEAM_MATERIAL_REVIEW.md">完整诊断与下一候选方案</a> · <a href="FRAME_BEAM_JOINT_AB.html">上一轮A/B对照</a> · <a href="FRAME_BEAM_CANDIDATE_DEV.html">当前可玩B验收</a></p>
+<h2>一、真实B的五个观察位置</h2>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamMaterialReview/Render-Run2/01-B-Near.png"><img src="../Saved/Audit-2026-10-13-FrameBeamMaterialReview/Render-Run2/01-B-Near.png" alt="B接缝近景原图"></a><figcaption>近景 · 2.562m。梁横向纹、柱竖向纹可读，接触暗区仍不能判内部缝隙或法线。此图不是修复后的新美术。</figcaption></figure>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamMaterialReview/Render-Run2/02-B-Mid.png"><img src="../Saved/Audit-2026-10-13-FrameBeamMaterialReview/Render-Run2/02-B-Mid.png" alt="B接缝中景原图"></a><figcaption>中景 · 9m。同目标、方向、FOV，只有观察距离增加；框线可读，但不足以验收细纹与接缝。</figcaption></figure>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamMaterialReview/Render-Run2/03-B-Far.png"><img src="../Saved/Audit-2026-10-13-FrameBeamMaterialReview/Render-Run2/03-B-Far.png" alt="B框线远景原图"></a><figcaption>远景 · 22m。同目标、方向、FOV。一梁一右柱，左端仍无支撑；舞台和角色仍有灰盒资源，不能称完整剧场或“已消除廉价感”。</figcaption></figure>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamMaterialReview/Render-Run2/04-B-Underside.png"><img src="../Saved/Audit-2026-10-13-FrameBeamMaterialReview/Render-Run2/04-B-Underside.png" alt="B梁底原图"></a><figcaption>梁底 · 2.607m，独立方向。底面退进可辨，暗接触不是已证明的空气缝、穿模或法线错误。</figcaption></figure>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamMaterialReview/Render-Run2/05-B-Sloped-End.png"><img src="../Saved/Audit-2026-10-13-FrameBeamMaterialReview/Render-Run2/05-B-Sloped-End.png" alt="B斜端原图"></a><figcaption>斜端 · 2.982m，目标和相机随B端部Y位移。不是固定位置A/B或纯距离比较；能看外轮廓，端面质量仍未通过。</figcaption></figure>
+<p class="meta">游戏POV请另看<a href="../Saved/Audit-2026-10-13-FrameBeamCandidateDev/PackageFirstFrame-Run1/Started.jpg">上一轮真实打包首帧（历史原生JPEG）</a>。本轮没有重跑游戏或重新打包。</p>
+<h2>二、为什么不能只加平铺倍率</h2>
+<p>独立解码真实FBX逐角UV/Normal，按2K纹理和已用灰盒等比尺度计算。数值为源texel/m，不是木纹实际尺寸、运行mip或正式质量标准。</p>
+<div class="scroll"><table><thead><tr><th>面组</th><th>长向</th><th>横向</th><th>当前事实</th></tr></thead><tbody>
+<tr><td>梁侧 / 底</td><td>约198.14–198.15</td><td>约198.15</td><td>近似等密度</td></tr><tr><td>梁顶</td><td>140.114</td><td>198.152</td><td>约1.414倍纵横差</td></tr><tr><td>部分梁斜端</td><td>最低99.013</td><td>约198.152</td><td>约2倍，方向也不一律同轴</td></tr><tr><td>柱身木槽0</td><td>259.602</td><td>546.787–773.274</td><td>约2.106–2.979倍，柱本身也非正确标准</td></tr></tbody></table></div>
+<p>全局倍率同时乘纵横，不能改变拉伸比例。用1.310115把梁侧长向对到柱长向，梁顶仍只有183.566；因此不能称统一木纹。梁与柱源法线最大偏差仅约0.00006782°/0.00003502°、没有反向或退化，但这不能排除UE切线、NormalDX或接触阴影问题。</p>
+<h2>三、建议下一个有界对照</h2>
+<div class="note">优先仅做“横梁顶面UV校准”独立对照资产：保留旧FBX/UE网格与B地图，复用当前MI，不改共享Master，不新增纹理或手工建模。只校准顶面长向UV；当前梁侧约198.152仅作局部实验参照，候选倍率约1.414214，不是正式画质标准。</div>
+<p>这个对照尚未生成或导入。须保持原几何/法线/槽/单位，验证UV索引、导入切线和同条件实际图后再决定。斜端、柱、左支撑和完整幕框不会自动一起改，也不会把B直接定稿。</p>
+<h2>四、范围与证据</h2>
+<p>本轮只新增本报告及MD、追加两处开发文档。实际摄影Run2退出0，5图/35 Actor全冷合同与零dirty、视口恢复；没运行新的UE游戏测试、PIE、Cook、包或GPU测量。157项等为上一轮历史，不计本轮。启动脚本首轮空参数、独立UV脚本首轮材料映射工具错误均保留，不冒称产品故障；日志仍有初始化错误与驱动警告。</p>
+<p>可玩入口仍为 <code>D:\灯影山海\Start-FrameBeamCandidate.cmd</code>，在资源管理器双击。本轮不重建包、不改输入、15Hz、谜题、灯、镜头、声音、UV或共享材质，不删除/提交。只读证据及最终文件保护：<code>D:\灯影山海\Saved\Audit-2026-10-13-FrameBeamMaterialReview</code>。</p>
+<p class="meta">文化创意仍是“灯为日、影为夸父、玩家直接杖落成林”；木构服务演出，不作历史榫卯、建筑承重或流派复原宣称。正式端纹/尺度/左支撑/厚布台翼、GPU、5–8分钟盲测、包内三轮及Shipping仍未关闭。</p>
+</main></body></html>

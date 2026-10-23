@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "phase": "Idle",
+  "saved": [
+    "/Game/DengYingShanHai/Dev/ReenactorMovement_20261018/Animation/A_DY_Reenactor_Idle"
+  ],
+  "original_project_modified": false,
+  "asset": "/Game/DengYingShanHai/Dev/ReenactorMovement_20261018/Animation/A_DY_Reenactor_Idle",
+  "length": 4.0,
+  "skeleton": "/Game/DengYingShanHai/Dev/UserModels_20261018/Reenactor/SK_DY_Reenactor_Cue_v03_Skeleton.SK_DY_Reenactor_Cue_v03_Skeleton",
+  "source_sha256": "c7293381b828111a65256c9db4e1f272115f139f677f4c21599ea178bc2698d1",
+  "skeleton_unchanged": true,
+  "status": "PASS-ANIMATION-IMPORT-RUNTIME-PENDING"
+}

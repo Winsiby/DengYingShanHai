@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "saved": [
+    "/Game/DengYingShanHai/Dev/UserModels_20261018/Reenactor/VestBack/MI_DY_Reenactor_VestBack",
+    "/Game/DengYingShanHai/Dev/UserModels_20261018/Reenactor/VestBack/SK_DY_Reenactor_VestBack_Closure"
+  ],
+  "asset_saves": 0,
+  "mesh": "/Game/DengYingShanHai/Dev/UserModels_20261018/Reenactor/VestBack/SK_DY_Reenactor_VestBack_Closure",
+  "material": "/Game/DengYingShanHai/Dev/UserModels_20261018/Reenactor/VestBack/MI_DY_Reenactor_VestBack",
+  "skeleton": "/Game/DengYingShanHai/Dev/UserModels_20261018/Reenactor/SK_DY_Reenactor_Cue_v03_Skeleton",
+  "vertices": 41,
+  "sections": 1,
+  "status": "PASS-PANEL-IMPORT-COMPONENT-PENDING"
+}

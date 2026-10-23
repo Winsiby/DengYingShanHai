@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "phase": "Walk",
+  "saved": [
+    "/Game/DengYingShanHai/Dev/ReenactorMovement_20261018/Animation/A_DY_Reenactor_Walk"
+  ],
+  "original_project_modified": false,
+  "asset": "/Game/DengYingShanHai/Dev/ReenactorMovement_20261018/Animation/A_DY_Reenactor_Walk",
+  "length": 0.8333333134651184,
+  "skeleton": "/Game/DengYingShanHai/Dev/UserModels_20261018/Reenactor/SK_DY_Reenactor_Cue_v03_Skeleton.SK_DY_Reenactor_Cue_v03_Skeleton",
+  "source_sha256": "5cf04ae1ffb6749017f2e74822a8b699f876b2be3139838aa33accb336eff0c5",
+  "skeleton_unchanged": true,
+  "status": "PASS-ANIMATION-IMPORT-RUNTIME-PENDING"
+}

@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "asset_saves": 0,
+  "gameplay_accepted": false,
+  "game_mode": "/Script/DengYingShanHai.DYReenactorStageGameMode",
+  "pawn_class": "/Script/DengYingShanHai.DYReenactorOperatorPawn",
+  "default_pawn": "/Script/DengYingShanHai.DYReenactorOperatorPawn",
+  "default_pawn_matches": true,
+  "max_walk_speed": 180.0,
+  "step_distance_cm": 75.0,
+  "footstep_enabled": true,
+  "left_sound": "/Game/DengYingShanHai/Dev/TheatreAudio/Sounds/SFX_DevFootstepA.SFX_DevFootstepA",
+  "right_sound": "/Game/DengYingShanHai/Dev/TheatreAudio/Sounds/SFX_DevFootstepB.SFX_DevFootstepB",
+  "skeletal_mesh": "/Game/DengYingShanHai/Dev/UserModels_20261018/Reenactor/SK_DY_Reenactor_Cue_v03.SK_DY_Reenactor_Cue_v03",
+  "anim_class": "/Game/DengYingShanHai/Dev/ReenactorMovement_20261018/Animation/ABP_DYReenactorMovement_V2.ABP_DYReenactorMovement_V2_C",
+  "mesh_relative_location": [
+    0.0,
+    0.0,
+    -96.0
+  ],
+  "mesh_relative_yaw": -89.99999999999999,
+  "mesh_collision": "<CollisionEnabled.NO_COLLISION: 0>",
+  "camera_arm_cm": 460.0,
+  "camera_target_offset": [
+    0.0,
+    0.0,
+    20.0
+  ],
+  "camera_socket_offset": [
+    0.0,
+    55.0,
+    30.0
+  ],
+  "camera_collision_test": true,
+  "hud_class": null,
+  "status": "PASS-COMPILED-DEFAULTS-PIE-PENDING"
+}

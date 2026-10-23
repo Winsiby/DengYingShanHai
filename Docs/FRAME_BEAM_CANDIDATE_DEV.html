@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>灯影山海｜B 摆放独立可玩 Dev</title>
+<style>
+:root{color-scheme:light;--ink:#252b30;--muted:#58636c;--gold:#8b6724;--line:#ddd4c4;--paper:#fffdf8;--wash:#f3eee3}
+*{box-sizing:border-box}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.8 "Microsoft YaHei","Noto Sans SC",sans-serif}main{max-width:1050px;margin:32px auto;padding:32px 40px;background:var(--paper);border:1px solid var(--line);border-radius:8px}h1{font-size:32px;line-height:1.35;margin:0 0 14px}h2{font-size:23px;line-height:1.5;margin:30px 0 12px}p{margin:10px 0}a{color:#28607c;text-underline-offset:3px}code{font:14px/1.6 Consolas,monospace;overflow-wrap:anywhere}table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}th,td{padding:11px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}th{background:var(--wash)}.tag{font-size:14px;color:var(--muted)}.callout{padding:16px 18px;background:#fff3d8;border-left:4px solid var(--gold)}.path{display:block;padding:10px 14px;background:var(--wash);border-radius:4px;margin:8px 0}.pending{color:#815a11}.ok{color:#22634a}.cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}.panel{padding:14px 18px;border:1px solid var(--line);border-radius:5px}footer{margin-top:32px;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}@media(max-width:720px){main{margin:0;padding:22px 18px;border-radius:0}h1{font-size:27px}.cols{grid-template-columns:1fr}table{font-size:13px}th,td{padding:8px 6px}}
+</style>
+<style>.gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}figure{margin:0}figure a{display:block}figure img{display:block;width:100%;height:auto;border:1px solid var(--line)}figcaption{font-size:14px;color:var(--muted);margin-top:6px}@media(max-width:720px){.gallery{grid-template-columns:1fr}}</style>
+</head>
+<body><main>
+<p class="tag">2026-10-13 · 唯一人类作者：用户本人 · Codex 辅助实现与核查 · 独立 Dev，不是正式美术定稿</p>
+<h1>B 摆放：放进三幕演出里再比较</h1>
+<p>横梁向右移动约 43.55 cm，改善右梁柱“只搭一小角”的观感；代价是消耗幕左端余量。这一版只比较摆放，不加左柱、不拉伸截面、不改灯光、玩法或声音。</p>
+<div class="callout"><strong>技术回归与真实 Development 包首帧／正常退出通过。</strong> 本轮157原生测试、两轮完整流程／成林／重演、控制、固定包与入口分别留证；实际中文菜单 → 点击开始 → B梁场景 → 正常退出已检查。B仍是候选，不自动成为正式构图，包内三轮和人工体验另验。</div>
+
+<h2>打开位置</h2>
+<p>新入口已发布，并实际检查过菜单、开始后的场景和正常退出。请在<strong>文件资源管理器</strong>双击；聊天点击若只显示代码，按下面地址打开：</p>
+<code class="path">D:\灯影山海\Start-FrameBeamCandidate.cmd</code>
+<p>新入口固定本次 Development 包，不选择“最新包”，也不默默打开编辑器：</p>
+<code class="path">D:\灯影山海\Builds\FrameBeamCandidate-20261013-Run1\Windows</code>
+<p>A 原样仍可用 <code>D:\灯影山海\Start-FrameBeamDev.cmd</code> 比较，旧地图和旧包保留。此页不运行 UE、不执行脚本、不联网。</p>
+
+<h2>这次只差一个 Y</h2>
+<table><thead><tr><th>条件</th><th>A 原样</th><th>B 候选</th></tr></thead><tbody>
+<tr><td>横梁 Actor Y</td><td>23.22415363604682 cm</td><td>66.77584636395318 cm</td></tr>
+<tr><td>真实柱顶共同平面覆盖</td><td>8.754%</td><td>48.212%</td></tr>
+<tr><td>全梁外轮廓</td><td>幕左端有余量</td><td>左端刚好到幕边</td></tr>
+<tr><td>梁底对幕左缘</td><td>仍有覆盖</td><td>短 27.367484 cm</td></tr>
+<tr><td>新图 Actor 总数</td><td>35</td><td>35，没有增减</td></tr>
+</tbody></table>
+<p>固定 X950／Z816.7876838516025／Yaw90／XYZ 等比 .39290377163557627。旧柱、幕、材质、灯与曝光完全沿用。“保幕宽”只是<strong>全梁外轮廓</strong>，不等于梁底全宽、完整柱顶、承重或榫卯通过。</p>
+<p>上轮同机位近景／底面／整体六张原图请看 <a href="FRAME_BEAM_JOINT_AB.html">梁柱 A/B 图文对照</a>。下面是本轮实际演出原图，不借旧摄影冒充新画面。</p>
+
+<h2>本轮五态：相同实际最终 POV</h2>
+<p>第一轮五态实读同一 PlayerCameraManager：位置 <code>(-1260,-155,178.1500015258789)</code>、旋转0、FOV70。主代理已逐张打开原图；点击图片查看完整文件。它们是<strong>含开发界面的 Editor viewport 原图</strong>，不是 standalone 画面或正式美术验收；控制探针的临时聚焦视线属于另一组测试。</p>
+<div class="gallery">
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamCandidateDev/VisiblePlay-Run1/02-Environment-Dormant-FixedPOV-Cycle1.png"><img loading="lazy" src="../Saved/Audit-2026-10-13-FrameBeamCandidateDev/VisiblePlay-Run1/02-Environment-Dormant-FixedPOV-Cycle1.png" alt="本轮 B 候选沉寂状态，固定最终 POV 原图"></a><figcaption>Dormant：第一幕开始，演出尚未唤醒。</figcaption></figure>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamCandidateDev/VisiblePlay-Run1/06-Environment-SunAwakened-FixedPOV-Cycle1.png"><img loading="lazy" src="../Saved/Audit-2026-10-13-FrameBeamCandidateDev/VisiblePlay-Run1/06-Environment-SunAwakened-FixedPOV-Cycle1.png" alt="本轮 B 候选引日后状态，固定最终 POV 原图"></a><figcaption>SunAwakened：引日成立，第一层环境被唤醒。</figcaption></figure>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamCandidateDev/VisiblePlay-Run1/15-Environment-ChaseAwakened-FixedPOV-Cycle1.png"><img loading="lazy" src="../Saved/Audit-2026-10-13-FrameBeamCandidateDev/VisiblePlay-Run1/15-Environment-ChaseAwakened-FixedPOV-Cycle1.png" alt="本轮 B 候选逐光后状态，固定最终 POV 原图"></a><figcaption>ChaseAwakened：逐光成立，环境层次继续恢复。</figcaption></figure>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamCandidateDev/VisiblePlay-Run1/21-Environment-FinaleReady-FixedPOV-Cycle1.png"><img loading="lazy" src="../Saved/Audit-2026-10-13-FrameBeamCandidateDev/VisiblePlay-Run1/21-Environment-FinaleReady-FixedPOV-Cycle1.png" alt="本轮 B 候选落杖准备状态，固定最终 POV 原图"></a><figcaption>FinaleReady：第三幕事实成立，落杖演出继续。</figcaption></figure>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamCandidateDev/VisiblePlay-Run1/23-Environment-ForestComplete-FixedPOV-Cycle1.png"><img loading="lazy" src="../Saved/Audit-2026-10-13-FrameBeamCandidateDev/VisiblePlay-Run1/23-Environment-ForestComplete-FixedPOV-Cycle1.png" alt="本轮 B 候选真实成林终态，固定最终 POV 原图"></a><figcaption>ForestComplete：真实树形完全展开后，演出才宣告完成。</figcaption></figure>
+</div>
+
+<h2>实际打包窗口：菜单与开始后的 B 场景</h2>
+<p>这是本轮固定 Development 包，不是编辑器、mock 或旧包。官方 Computer Use 沿用同一 PID10892／窗口591026，实际点击“开始复演”后看到 B 梁场景，再正常 Alt+F4；Game和CMD实际退出均0。没有重复启动或重建包，仍不代表包内完整通关或声音验收。</p>
+<div class="gallery">
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamCandidateDev/PackageFirstFrame-Run1/Menu.jpg"><img loading="lazy" src="../Saved/Audit-2026-10-13-FrameBeamCandidateDev/PackageFirstFrame-Run1/Menu.jpg" alt="本轮固定Development包中文开始菜单，官方原生JPEG"></a><figcaption>Menu.jpg：中文开始菜单完整可见，系统许可弹窗已消失。</figcaption></figure>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamCandidateDev/PackageFirstFrame-Run1/Started.jpg"><img loading="lazy" src="../Saved/Audit-2026-10-13-FrameBeamCandidateDev/PackageFirstFrame-Run1/Started.jpg" alt="本轮固定Development包实际点击开始后的B梁场景，官方原生JPEG"></a><figcaption>Started.jpg：实际点击开始后的场景，独立B候选梁摆放。</figcaption></figure>
+</div>
+<p class="tag">这里直接显示官方原生JPEG。审计中的配套PNG仅是解码转封装：完整1922×1248、32bpp逐像素比较一致，没有裁切、提亮或改色，不把PNG说成原生截图或恢复JPEG压缩前画质。</p>
+<p class="tag">实际Session log同时绑定该PID、精确候选图LoadMap（?Name=Player）、Windows RequestExit与Exiting，不只由窗口消失推断退出。最初JPEG包装MIME guard失败在任何文件写入前，后续保留原图再验证PNG；这是工具格式检查，不是游戏FAIL。</p>
+
+<h2>在三幕里观察什么</h2>
+<div class="cols"><div class="panel"><strong>演出保持</strong><p>开始 → 引日启幕 → 逐光成形 → 杖落成林 → 成林结束 → 重新复演。E/A/D/R、15 Hz、灯／偶速度、容差与保持、跨幕取消操纵、脚步同步和大厅尾音不变。</p></div><div class="panel"><strong>构图比较</strong><p>右柱顶接合是否更易理解？幕左端是否显得偏短？五个环境状态下，横梁是否遮挡幕上与幕后原因？暗面不能仅凭黑缝认定空气缝、穿模或法线错误。</p></div></div>
+<p>文化核心仍是“以灯为日、以影为夸父”与玩家落杖直接造成成林；木构服务演出，不作为历史复原或新增环境谜题。</p>
+
+<h2>验证状态</h2>
+<table><thead><tr><th>层次</th><th>本轮结果</th><th>边界</th></tr></thead><tbody>
+<tr><td>Editor Development 编译</td><td class="ok">实际退出 0</td><td>不等于画面／包通过</td></tr>
+<tr><td>项目原生测试</td><td class="ok">157 / 0 / 0</td><td>成功／失败／未执行；新增精确图身份测试</td></tr>
+<tr><td>新图 probe／create／cold</td><td class="ok">3772／9035／6025 审计断言</td><td>35 Actor，7 个精确 Y 差异；只保存新图</td></tr>
+<tr><td>两轮三幕／成林／重演、五态 POV、混音</td><td class="ok">65 流程／35 环境，实际退出0</td><td>旧柱10／B梁10，两次成林／一次重演，两cycle Master Mix；非人工听感</td></tr>
+<tr><td>控制／跨幕／R／行走／销毁</td><td class="ok">41 项，实际退出0</td><td>两次林／一次重演／EndPlay；语义测试不是物理键盘盲测</td></tr>
+<tr><td>UAT／IoStore／固定包</td><td class="ok">实际 UAT0，原生容器三次0</td><td>2029主chunk／1global，50文件／1,070,536,087B封存</td></tr>
+<tr><td>三种 CMD／PS5 DryRun</td><td class="ok">实际退出均0</td><td>默认Package／Package／EditorGame，无UE或游戏启动</td></tr>
+<tr><td>PS5解析／隔离门控</td><td class="ok">原生解析0；31例全匹配</td><td>4正／27负、实际非null退出；fixture不代游戏</td></tr>
+<tr><td>真实包菜单／开始／首帧／退出</td><td class="ok">同一Run1实际PASS，Game0／CMD0</td><td>中文菜单→实际点击→B场景→正常关闭；不是包内全通关</td></tr>
+<tr><td>包内三轮、人工听感、正式美术、Shipping</td><td class="pending">未通过／未执行</td><td>不代用户签收</td></tr>
+</tbody></table>
+
+<h2>架构与回退不动</h2>
+<p>梁是原 World 的被动 StaticMeshActor，没有新 BP、Tick、Timer、Director／Stage 通信、网络或存档；原 Director、Stage、Environment、UI 和 PlayerController 责任链保持。只追加新图精确白名单与对应测试，不宽泛放行 Dev。</p>
+<p>复用旧梁 SM → 旧常量 MI → 旧父材质 → 三张木纹图；不新增付费或生成资源、不修改共享材质。新图只是开发比较副本，不增加竞赛主地图或三次互动数量。</p>
+<p>本次 Cook 精确 B 图及未改 Config 的 Interaction／Entry 默认图，共三图，后两图不提供选择；原生容器全部 payload 哈希、42核心＋2默认 export 已实查，不说“只一张 Cook 图”。包身份生成时首帧／全玩法／包音频／人机／Shipping false 历史字段不覆写，后续独立补充。实际 MSVC14.51.36260／SDK10.0.26100.0 与 UE 非首选工具链警告保留，不声称零警告、不改环境。</p>
+<p>首帧最初因防火墙安全弹窗PENDING，交用户手动处理，官方技能未操作弹窗或改权限。用户反馈已关闭后，只读核查当刻同PID仍在、同窗口为最小化，仅恢复该实例，系统弹窗已消失；不把先前反馈当作已验证退出。随后才实际检查菜单／点击开始／正常关闭。早先PENDING历史保留，不说当时就已成功或另开Run2。</p>
+<p>首轮29个隔离案例及PS5作者编码／Package静态encoding／EOL工具失败原样保留，修正不触产品；最终31例实际重验。详细工具记录、启动器SHA和分层证据见文字稿，不将失败静默改为成功。</p>
+<p>冻结336产品，创建阶段338、入口阶段340，最终发布合同342；旧改限两个C++、两个文档追加，六产品新增。其余332旧产品、976旧归档、15源、24隔离来源与Git身份保护以本轮FINAL为准，不在文档提前声称FINAL已生成。失败／正常记录、旧包保留，不清理／提交／暂存，不读取／哈希受限登记。</p>
+<p>运行回退：正常关闭新样本，双击原 <code>Start-FrameBeamDev.cmd</code>。不需要 Git reset 或删除新样本。</p>
+
+<h2>仍待完成</h2>
+<p>这不是完整幕框或“消除廉价感”验收。右接合暗面、端纹／normal、内部无缝／穿模、左支撑、布质台翼、正式比例与空间叙事、运行时 mip／GPU、5–8 分钟首次玩家盲测、包内三轮与 Shipping 均未关闭。</p>
+<p>完整文字与文件范围见 <a href="FRAME_BEAM_CANDIDATE_DEV.md">本轮开发记录</a>；实际审计目录为 <code>D:\灯影山海\Saved\Audit-2026-10-13-FrameBeamCandidateDev</code>。</p>
+<footer>永远不要以牺牲架构设计为代价追求功能；永远不要基于猜测进行权衡——必须与我确认。<br>本页使用静态HTML，无脚本、外部字体或远程媒体；实测PASS与尚待人工验收分开，发布保护以FINAL为准。</footer>
+</main></body></html>

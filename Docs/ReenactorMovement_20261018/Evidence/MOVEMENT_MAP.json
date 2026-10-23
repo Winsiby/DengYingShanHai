@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "map": "/Game/DengYingShanHai/Dev/ReenactorMovement_20261018/Maps/LV_ReenactorMovementDev",
+  "asset_saves": 1,
+  "gameplay_accepted": false,
+  "actors": [
+    "Movement_Floor",
+    "Movement_Distance_0",
+    "Movement_Distance_1",
+    "Movement_Distance_2",
+    "Movement_Distance_3",
+    "Movement_Distance_4",
+    "Movement_Distance_5",
+    "Movement_Distance_6",
+    "Movement_Distance_7",
+    "Movement_BackWall",
+    "Movement_Key_0",
+    "Movement_Key_1",
+    "Movement_Key_2",
+    "Movement_Key_3",
+    "Movement_Key_4",
+    "Movement_BroadFill",
+    "Movement_FixedExposure",
+    "Movement_PlayerStart"
+  ],
+  "game_mode": "/Script/DengYingShanHai.DYReenactorStageGameMode",
+  "start": [
+    -900,
+    0,
+    96
+  ],
+  "floor_cm": [
+    3000,
+    1400
+  ],
+  "status": "PASS-MAP-AUTHORED-PIE-PENDING"
+}

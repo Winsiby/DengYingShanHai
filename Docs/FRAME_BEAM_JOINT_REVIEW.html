@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>灯影山海｜梁柱接缝实图评审</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#141719;color:#ece4d8;font-family:"Microsoft YaHei",sans-serif;line-height:1.8}main{max-width:1200px;margin:auto;padding:40px 24px 64px}h1,h2{line-height:1.4;color:#f5dfb5}h1{font-size:30px}h2{font-size:21px;margin-top:34px}p{margin:12px 0}.muted{color:#b6b4af;font-size:14px}.verdict{border-left:4px solid #d6a95e;background:#242322;padding:16px 20px;margin:24px 0}.shots{display:grid;grid-template-columns:1fr;gap:28px}figure{margin:0;background:#1d2124;border:1px solid #41413d;border-radius:8px;overflow:hidden}figure>a{display:block}img{display:block;width:100%;height:auto;filter:none}figcaption{padding:16px 20px}figcaption strong{font-size:18px;color:#f2d09a}figcaption p{margin:7px 0}a{color:#e8c992;overflow-wrap:anywhere}code{font-family:Consolas,monospace;overflow-wrap:anywhere;font-size:13px}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:720px;margin:18px 0}th,td{padding:12px;text-align:left;border:1px solid #49483e}th{background:#2a2924}.note{color:#d6cfc3}.path{background:#242829;padding:14px;overflow-wrap:anywhere}nav a{margin-right:20px}@media(max-width:600px){main{padding:24px 14px}h1{font-size:24px}figcaption{padding:12px}.verdict{padding:12px}}
+</style>
+</head>
+<body><main>
+<p class="muted">《灯影山海》· 独立 Dev 诊断 · 2026-10-13 · 用户为唯一人类作者，Codex 辅助</p>
+<h1>梁柱接缝：先看真实画面，再决定如何修</h1>
+<div class="verdict"><strong>五张原生截图完成；接合美术未通过定稿验收。</strong><p>木纹方向可以保留，但当前梁端仍有“局部搭住柱顶”的构造感。柱顶与斜端暗面近黑，不能用这些图判定空气缝、内部穿模、端纹缺失或法线错误。本轮没有修改游戏或资产。</p></div>
+<nav><a href="#shots">五张原图</a><a href="#candidate">未实施候选</a><a href="#boundary">证据边界</a><a href="FRAME_BEAM_JOINT_REVIEW.md">完整文字报告</a></nav>
+<p>点击图片打开原始1920×1080 PNG。没有提亮、裁切或重绘。近／中／远同目标、同朝向、同水平FOV90°，只改变距离；全部是临时Editor诊断取景，<strong>不是游戏镜头或玩家活动距离</strong>。</p>
+<h2 id="shots">五张原始实图</h2>
+<div class="shots">
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamJointReview/Render-Run2/01-Near-Joint.png"><img src="../Saved/Audit-2026-10-13-FrameBeamJointReview/Render-Run2/01-Near-Joint.png" width="1920" height="1080" alt="近景梁端与右柱接缝原生截图"></a><figcaption><strong>01 · 近景接缝 · 2.562 m</strong><p>横梁长向木纹与柱身竖纹可辨；削角梁端、柱顶外露轮廓明显。暗部不能证明内部是否有缝，整体仍像局部搭接。</p><p class="muted">同方向组 A · 目标 (928.171408,510,800) cm · Pitch −13.5415° / Yaw 23.6663° · FOV90°</p></figcaption></figure>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamJointReview/Render-Run2/02-Mid-Joint.png"><img src="../Saved/Audit-2026-10-13-FrameBeamJointReview/Render-Run2/02-Mid-Joint.png" width="1920" height="1080" alt="同方向中距离梁柱与幕布上沿截图"></a><figcaption><strong>02 · 中景同方向 · 9.000 m</strong><p>梁柱／幕上沿关系可读，但细小接触和端面细节减少；不能据此评价内部接合或宣布木纹密度已匹配。</p><p class="muted">同方向组 A · 同目标／朝向／FOV90°／1920×1080，只改变距离</p></figcaption></figure>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamJointReview/Render-Run2/03-Far-Joint.png"><img src="../Saved/Audit-2026-10-13-FrameBeamJointReview/Render-Run2/03-Far-Joint.png" width="1920" height="1080" alt="同方向远距离单梁右柱和灰盒舞台截图"></a><figcaption><strong>03 · 远景同方向 · 22.000 m</strong><p>观察总体框线与幕布关系，不用于评判接缝或木纹细节。左端仍未支撑，当前不是完整幕框；本轮没有擅自补左柱。</p><p class="muted">同方向组 A · 高位诊断取景，不是正式游戏 POV</p></figcaption></figure>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamJointReview/Render-Run2/04-Underside.png"><img src="../Saved/Audit-2026-10-13-FrameBeamJointReview/Render-Run2/04-Underside.png" width="1920" height="1080" alt="梁底与柱顶前缘下方特写"></a><figcaption><strong>04 · 底面特写 · 2.607 m</strong><p>底面与削角端的退进、柱顶外露轮廓可见。独立真实源面计算显示底面比最外尖端缩进27.367484 cm，目前柱顶共面交集只有8.754%。</p><p class="muted">不同方向诊断 · 目标 (928.171408,490,800) cm · 不与前三张作纯距离比较</p></figcaption></figure>
+<figure><a href="../Saved/Audit-2026-10-13-FrameBeamJointReview/Render-Run2/05-Sloped-End.png"><img src="../Saved/Audit-2026-10-13-FrameBeamJointReview/Render-Run2/05-Sloped-End.png" width="1920" height="1080" alt="削角斜端及柱顶上方诊断截图"></a><figcaption><strong>05 · 斜端上方 · 2.982 m</strong><p>端头是斜折轮廓，不是平整竖直端盖。端面和柱顶近黑；没有足够高光判定端纹、法线、切线连续性，暂不接受正式材质质量。</p><p class="muted">不同方向诊断 · 目标 (950,537,840) cm · FOV保持90°</p></figcaption></figure>
+</div>
+<h2 id="candidate">下一步候选：接合面积更大，也有构图代价</h2>
+<p>固定原梁X／Z、XYZ等比、Yaw90，不动柱／幕／灯。只计算Y平移，<strong>尚未摆放任何候选</strong>。建议先比较原样与保幕宽候选，不自动以面积最大者作为答案。</p>
+<div class="table-wrap"><table><thead><tr><th>未实施候选</th><th>ΔY</th><th>柱顶平面覆盖</th><th>幕宽代价</th></tr></thead><tbody><tr><td>原样</td><td>0 cm</td><td>8.754%</td><td>当前局部搭接</td></tr><tr><td>保留整梁外框横跨现幕宽的最大右移</td><td>+43.551693 cm</td><td>48.212%</td><td>整梁最左端刚到幕左缘；底面仍短27.367484 cm</td></tr><tr><td>柱顶Y范围全包的最少右移</td><td>+66.657861 cm</td><td>67.098%</td><td>整梁左端离幕左缘短23.106168 cm；底面短50.473652 cm</td></tr></tbody></table></div>
+<p class="note">梁底X宽43.657184 cm，柱顶X宽78.580754 cm；任意Y平移都不能全包柱顶。材质／UV不能修几何接触；不自动加粗、补托件／左柱或改幕宽。百分比是源面几何交集，不是承重、榫卯、碰撞或美术验收。</p>
+<h2 id="boundary">本轮证据边界</h2>
+<p>Run2原生Editor退出0，五张PNG有Task、尺寸、字节、SHA和读回机位；每图前后35Actor、原柱及梁契约一致，原视口恢复。首次Run1的审计重入FAIL保留，只修审计脚本，不改产品或阈值。</p>
+<p>原生高分辨率截图会强制加载资源并禁用Screen Percentage，不能认证实际游戏mip、渲染分辨率或GPU性能。日志仍含初始化错误行与TSR警告，不能说零错误；没有本轮编译、Cook、项目测试、包内通关或Shipping。暗面、正式尺度、最终木纹密度与完整幕框仍待验。</p>
+<p>材料与镜头技能用于分开核查方向／密度／实图，以及区分诊断视口与游戏POV。旧共享材质、灯光、曝光、游戏镜头、E/A/D/R、谜题、声音与旧包均未变。</p>
+<h2>文件位置</h2>
+<p class="path"><code>D:\灯影山海\Docs\FRAME_BEAM_JOINT_REVIEW.html</code><br>在文件资源管理器双击此文件查看。聊天若显示代码，请使用上述位置打开。</p>
+<p>原可玩版本：<code>D:\灯影山海\Start-FrameBeamDev.cmd</code>（本轮没有新包）。详细文字和数值可点击上方完整报告，审计原图保留在Saved内。只读评审页不执行代码、不联网。</p>
+</main></body></html>
