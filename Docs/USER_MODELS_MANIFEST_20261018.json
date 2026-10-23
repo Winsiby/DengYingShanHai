@@ -1,0 +1,170 @@
+{
+  "Status": "NATIVE-MODEL-REVIEW-ONLY",
+  "Assets": [
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Kuafu/SK_DY_Kuafu_Cue_v04_Anim.uasset",
+      "SHA256": "FDE8F507C42EA1A26E31EC2B405403003D42E800F22F43D492774FF4183AFE17",
+      "Bytes": 126242
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Kuafu/SK_DY_Kuafu_Cue_v04_Skeleton.uasset",
+      "SHA256": "8E4BFFEF11CB3857985E2E67323554E5FB716D43FC8AFA414D16ACCCFAFDE8DE",
+      "Bytes": 11771
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Kuafu/SK_DY_Kuafu_Cue_v04.uasset",
+      "SHA256": "594735D8D72783C1DDF62D7C3CAA67B76F66685B3D6B83100EF4B336EAD17516",
+      "Bytes": 28924238
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/M_UserModelSurface.uasset",
+      "SHA256": "FFFFD6C248E1E43E9EF8AD3484BFCF6D538B2AA5935D198D68B7E58A176CB9AE",
+      "Bytes": 6652
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Kuafu_00.uasset",
+      "SHA256": "473281F4A77EFD51271D50C0B0F42F905E98F0A2B74625F83F2AEA5C8DEBE1DA",
+      "Bytes": 4911
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Kuafu_01.uasset",
+      "SHA256": "205572391778BC1FDECEE08E27A900F912DD7A89818CFE292974ABFF9B42C9D3",
+      "Bytes": 4911
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Kuafu_02.uasset",
+      "SHA256": "C0EF0759E96042633D88AD143E3D56342FA6440D4A9BBC831307F3D9FEA1BF7F",
+      "Bytes": 4911
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Kuafu_03.uasset",
+      "SHA256": "8059C91319239CD3A46D0B320EBF5FB075975174FFD516C6EC03E56D40B7E4B3",
+      "Bytes": 4911
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Kuafu_04.uasset",
+      "SHA256": "A02CB78F6AC91352CD4A678D0963EFF1724C2115F7A68389670A3EC796BAA46D",
+      "Bytes": 4911
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Kuafu_05.uasset",
+      "SHA256": "37972890550572DA247E4BDF8ADF93D2D0BE9FA320A392A5BC4898442A3E5DBF",
+      "Bytes": 4911
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Kuafu_06.uasset",
+      "SHA256": "E35FF80ECC9BAD8263476A024B65334EA8C27EB1E138F57A713B9CC01994FB1F",
+      "Bytes": 4911
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Kuafu_07.uasset",
+      "SHA256": "ECDF428FD9C526A57A04E561829B0E44615C6213486834BB45EAA038058EA816",
+      "Bytes": 4911
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Kuafu_08.uasset",
+      "SHA256": "3888CF8C403B57E4C546C0B9AEE64569E82ECA8333B4AA2814C6437048F6F054",
+      "Bytes": 4911
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Kuafu_09.uasset",
+      "SHA256": "379100A1EB264D92C72F8959593F59887199C1160B0C59615C913E08E9FD973E",
+      "Bytes": 4911
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Kuafu_10.uasset",
+      "SHA256": "C02C3D024CD5AFC06197B59E4BAE062678C8CAC789BC3113E7D1680D9A34B7FF",
+      "Bytes": 4905
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Kuafu_11.uasset",
+      "SHA256": "4B8B42CD08462F6FBA867C1506CC282962CD2F740F26224CF6B7542217349F36",
+      "Bytes": 4905
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Kuafu_12.uasset",
+      "SHA256": "B7927BDAF30BED320A5DD23C0FE8285F2EC4C363C7A5D55A2DE8A7FC40DBAFA3",
+      "Bytes": 4905
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Kuafu_13.uasset",
+      "SHA256": "A575751C1EE5427A5EA503410DACF94C1F52F11451EC3F5D2718705CEECE5F1E",
+      "Bytes": 4905
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Reenactor_00.uasset",
+      "SHA256": "B682C381A2D2F001A902E5D71144ABF2CE46E247717C95ED0A19CC73DEE6194E",
+      "Bytes": 4931
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Reenactor_01.uasset",
+      "SHA256": "7D65C44D5B17313955D5648EF8A122D347D684F7E01174190F96ED966D45CD46",
+      "Bytes": 4931
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Reenactor_02.uasset",
+      "SHA256": "08D5CD92737F370848D919D1A8B04840878F17252CEEBE86F376C355F4162AB8",
+      "Bytes": 4931
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Reenactor_03.uasset",
+      "SHA256": "5BE40F3121463BB4BCA76B39FD3797C1FEFC934973E710C3D121BE1DD9C2F3E8",
+      "Bytes": 4931
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Reenactor_04.uasset",
+      "SHA256": "B27E078C7792BBA5855BE3D2D3DBAC66B74C32AEC0970293B76B6BD0F8CAB66C",
+      "Bytes": 4931
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Reenactor_05.uasset",
+      "SHA256": "15A590B2A69D13DCB6E2D9547D09C690D0AFDC6EB30AAF37F37BA6EAC548B63D",
+      "Bytes": 4931
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Reenactor_06.uasset",
+      "SHA256": "846D2AC753F1732DBA0D89228A07198F3AE2F909F7AD5A50513C598A4E6B527A",
+      "Bytes": 4931
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Reenactor_07.uasset",
+      "SHA256": "615667CFCEC06202ED13350F8525278DDC1DA22CCBAB07C71208B2D01F73D96B",
+      "Bytes": 4931
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Reenactor_08.uasset",
+      "SHA256": "9D06D2B21913601F5962B5E7E6B98F1C7C790D1006AA6E2C134993E0F4367261",
+      "Bytes": 4931
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Reenactor_09.uasset",
+      "SHA256": "6183CD603DBF9F69CE00D251F3CE2A291B36FA2FABB189080E33E4F6B60D602F",
+      "Bytes": 4931
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Materials/MI_Reenactor_10.uasset",
+      "SHA256": "BA86D4580E40026054BD5982CB9349A6171AB811099334B04C388AEFCF79934B",
+      "Bytes": 4925
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Preview/LV_UserModels.umap",
+      "SHA256": "03AC7400806335083EFC07A686ADEA9CC1731DA43AB90DF4E2938A2A8FF978C8",
+      "Bytes": 45842
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Reenactor/SK_DY_Reenactor_Cue_v03_Anim.uasset",
+      "SHA256": "327510FEE67756DE3BAA90477313E1DB7BE4D270CF86A674FCDB564DD0F08088",
+      "Bytes": 174388
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Reenactor/SK_DY_Reenactor_Cue_v03_Skeleton.uasset",
+      "SHA256": "501DBC86855DD613534A731CB39CBA4F820D9AD1508EA9FBB904DF964B171929",
+      "Bytes": 9948
+    },
+    {
+      "Relative": "Content/DengYingShanHai/Dev/UserModels_20261018/Reenactor/SK_DY_Reenactor_Cue_v03.uasset",
+      "SHA256": "2F0968203CC1521AD36EC7FED8136AA57E1DA2B613D23747E4D8D12AC871CEC4",
+      "Bytes": 16342811
+    }
+  ]
+}
