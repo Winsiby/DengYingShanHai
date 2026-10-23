@@ -1,0 +1,44 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.709
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Title,Noto Serif SC,116,&H00E8EFF7,&H00FFFFFF,&H00000000,&H96000000,0,0,0,0,100,100,8,0,1,0,0,5,120,120,0,1
+Style: Subtitle,Noto Serif SC,52,&H00F4EEE4,&H00FFFFFF,&H00120F0D,&H96000000,0,0,0,0,100,100,2,0,1,2,1,2,200,200,104,1
+Style: Chapter,Noto Serif SC,42,&H00C9A25E,&H00FFFFFF,&H00120F0D,&H96000000,0,0,0,0,100,100,14,0,1,0,0,7,132,132,96,1
+Style: Card,Noto Sans SC,40,&H00DCD4C8,&H00FFFFFF,&H00120F0D,&H96000000,0,0,0,0,100,100,6,0,1,0,0,9,132,132,96,1
+Style: Body,Noto Sans SC,46,&H00F2F2F2,&H00FFFFFF,&H0012100E,&H96000000,0,0,0,0,100,100,2,0,1,2,1,2,180,180,78,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:01.80,0:00:07.40,Title,,0,0,0,,{\fad(700,500)}灯影山海
+Dialogue: 0,0:00:06.90,0:00:12.20,Card,,0,0,0,,{\fad(320,320)}以灯为日，以影为夸父
+Dialogue: 0,0:00:22.00,0:00:35.00,Subtitle,,0,0,0,,{\fad(240,240)}这座戏台很久没有开演了。\N最后一出《逐日》，停在夸父还没落杖的那一刻。
+Dialogue: 0,0:00:35.80,0:00:47.00,Subtitle,,0,0,0,,{\fad(240,240)}你回到这里，把灯重新点亮，\N让影子自己把戏演完。
+Dialogue: 0,0:00:48.50,0:00:52.50,Chapter,,0,0,0,,{\fad(320,320)}第一幕 · 夸父逐日
+Dialogue: 0,0:00:49.50,0:01:01.00,Subtitle,,0,0,0,,{\fad(240,240)}灯是唯一的光源。往哪边推，\N幕上的影子就往哪边偏。
+Dialogue: 0,0:01:01.80,0:01:14.00,Subtitle,,0,0,0,,{\fad(240,240)}偶也是光的一部分。它的位置、\N朝向和姿态，和灯一起决定这道影子。
+Dialogue: 0,0:01:15.00,0:01:26.00,Subtitle,,0,0,0,,{\fad(240,240)}第一幕只要看懂一件事：你动灯，\N影子就动。
+Dialogue: 0,0:01:28.00,0:01:32.00,Chapter,,0,0,0,,{\fad(320,320)}第二幕 · 精卫填海
+Dialogue: 0,0:01:29.50,0:01:42.00,Subtitle,,0,0,0,,{\fad(240,240)}第二幕不再只靠一盏灯。\N灯和偶要一起动，影子才会从残缺走向完整。
+Dialogue: 0,0:01:43.00,0:01:54.00,Subtitle,,0,0,0,,{\fad(240,240)}操作没有变，\N变的是要同时照顾两件事。
+Dialogue: 0,0:01:56.00,0:02:00.00,Chapter,,0,0,0,,{\fad(320,320)}第三幕 · 刑天舞干戚
+Dialogue: 0,0:01:57.50,0:02:10.00,Subtitle,,0,0,0,,{\fad(240,240)}第三幕把前面学的合在一起。\N灯在前引，偶在后追，影子才站得起来。
+Dialogue: 0,0:02:11.00,0:02:23.00,Subtitle,,0,0,0,,{\fad(240,240)}到这一刻，你已经不用看提示，\N手知道该怎么动。
+Dialogue: 0,0:02:25.00,0:02:29.00,Chapter,,0,0,0,,{\fad(320,320)}第四幕 · 烛龙昼夜
+Dialogue: 0,0:02:26.50,0:02:39.00,Subtitle,,0,0,0,,{\fad(240,240)}最后一幕换成烛龙。它睁眼是昼，\N闭眼是夜。
+Dialogue: 0,0:02:40.00,0:02:53.00,Subtitle,,0,0,0,,{\fad(240,240)}昼夜不是滤镜。眼睑开合，\N幕上的光孔跟着变，判定也跟着变。
+Dialogue: 0,0:02:55.00,0:03:08.00,Subtitle,,0,0,0,,{\fad(240,240)}四幕，四具影偶。每一具都重新分片、\N开孔、装配，才能在幕上站得住。
+Dialogue: 0,0:03:10.00,0:03:14.00,Chapter,,0,0,0,,{\fad(320,320)}技术与美术
+Dialogue: 0,0:03:11.50,0:03:24.00,Subtitle,,0,0,0,,{\fad(240,240)}阴影怎么落，\N是 UE 实时光照算出来的；判不判定成功，是另一套参数。
+Dialogue: 0,0:03:25.00,0:03:37.00,Subtitle,,0,0,0,,{\fad(240,240)}两者分开，影子再古怪，\N戏也不会卡住。
+Dialogue: 0,0:03:38.00,0:03:51.00,Subtitle,,0,0,0,,{\fad(240,240)}影偶的镂空来自真实的皮革厚度，\N不是画在幕布上的贴图。
+Dialogue: 0,0:03:52.00,0:04:04.00,Subtitle,,0,0,0,,{\fad(240,240)}静音也玩得完，\N声音只是把节奏推得更紧。
+Dialogue: 0,0:04:06.00,0:04:19.00,Subtitle,,0,0,0,,{\fad(240,240)}一出没演完的戏，被重新演了一遍。
+Dialogue: 0,0:04:20.00,0:04:34.00,Subtitle,,0,0,0,,{\fad(240,240)}演它的人，是你。
+Dialogue: 0,0:04:36.00,0:04:49.00,Title,,0,0,0,,{\fad(700,500)}灯影山海

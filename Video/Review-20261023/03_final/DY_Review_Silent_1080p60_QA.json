@@ -1,0 +1,32 @@
+{
+  "file": "03_final\\DY_Review_Silent_1080p60.mp4",
+  "bytes": 33137604,
+  "duration_s": 196.0,
+  "video": {
+    "codec": "h264",
+    "size": "1920x1080",
+    "fps": "60/1",
+    "frames": "11760",
+    "pix_fmt": "yuv420p",
+    "bitrate": "1346800"
+  },
+  "audio": null,
+  "decode_stderr": "",
+  "audio_check": "silent master; no audio stream by design",
+  "storyboard": "03_final\\DY_Review_Silent_1080p60_storyboard.jpg",
+  "checks": [
+    {
+      "name": "1080p60",
+      "pass": true
+    },
+    {
+      "name": "时长 2:30–4:00",
+      "pass": true
+    },
+    {
+      "name": "全片解码无错误",
+      "pass": true
+    }
+  ],
+  "ok": true
+}
