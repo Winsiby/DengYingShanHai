@@ -1,0 +1,16 @@
+Use case: stylized-concept. Flat Chinese shadow theatre production concept sheet for 灯影山海. Warm white background, crisp ink outlines, restrained watercolor material fills, vermilion #A92D20 / gold #D9A441 / parchment #F1DFC0 / ink brown #2D2118 / teal #3F6563. Large legible Chinese typography. Native 3072×2048 PNG landscape; no photographs, no realistic 3D anatomy, no modern props, no unrelated interface buttons.
+Reference image is the NEW Jingwei leather puppet design; use consistent red/gold/teal straight-cut feather vocabulary for every craft stage. Heading EXACT 'C3 · 皮影制作七步'. Subtitle '同一造型 · 七格统一 1:1 · 可拆单图'. Layout exactly SEVEN EQUAL SQUARE PANELS, four across top row and three across lower row, lower remaining space a narrow legend and size key, no eighth illustrated stage. Large panel headings EXACT:
+'01 选皮' show a natural tan hide skin outline and selecting clean area by a simple hand.
+'02 制皮' show same hide stretched/flattened with simple scraper, clean tan leather, no modern machine.
+'03 画稿' show a black ink outline of same Jingwei wing/feathers on the hide, brush tracing.
+'04 雕刻' show small straight blade cutting geometric triangular feather perforations, visible removed cutouts, same wing outline.
+'05 着色' show brush painting same cut feather panels red and gold with teal accents.
+'06 连接关节' show close up two flat wing panels overlapping, round holes + brass rivet + thread knot, no vague glue, label '孔 + 线结 / 铆钉'.
+'07 装杆' show completed small Jingwei flat puppet with central body rod and two wing rods attached, label '身体杆 + 双翼杆'.
+Square panels uniformly framed, same top-to-bottom hand/tool scale and clean white interior, ample safe margins and no camera perspective foreshortening. Outside panels mark '每格 512×512px（版式基准）', '格间距32px（拟定）', '图文距24px（拟定）'. Bottom small material swatches '皮 / 竹 / 黄铜 / 墨 / 颜料'. All seven steps must appear once in correct order, visually distinct. Reference design must remain recognizable across drawing/carving/coloring/joint/rod stages, not switch to different human character. Flat educational illustration, not photo. No extra narratives or tool UI.
+
+REFERENCE IMAGE PATHS:
+C:\Users\lenovo\.codex\generated_images\01a15d52-d960-7af3-9737-926217a064d7\exec-a84f8b48-027d-4786-889a-2ddc5ff5f559.png
+
+TARGETED EDIT:
+Targeted layout correction of this seven-step craft sheet. Keep the exact same seven stage illustrations, labels, palette, order and material legend. Change panel layout so ALL SEVEN panels have IDENTICAL SQUARE OUTER FRAMES and identical internal illustration area. Use a four-column by two-row grid with equal cell width and height: top row panels01/02/03/04; bottom row panels05/06/07 with the fourth equal square bottom-right reserved for the material legend and size notes, not an eighth stage. Scale/fit existing stage illustrations into their square frames without cropping any essential action or rods. Title stays at top. Footer can be reduced. Top row and bottom row square frames must visibly align on shared vertical column edges, same width. Label actual plan '七格统一1:1'. No new content.

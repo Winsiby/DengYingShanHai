@@ -1,0 +1,165 @@
+{
+  "status": "PASS-MODEL-SOURCE-FBX-ROUNDTRIP",
+  "id": "Zhulong",
+  "vertices": 3868,
+  "triangles": 7812,
+  "bone_count": 8,
+  "part_count": 6,
+  "real_cutouts": 32,
+  "source_bounds_cm": [
+    [
+      -1.024999976158142,
+      2.4800000190734863
+    ],
+    [
+      -10.011919021606445,
+      92.0143051147461
+    ],
+    [
+      0.23837900161743164,
+      199.97616577148438
+    ]
+  ],
+  "fresh_fbx_bounds_cm": [
+    [
+      -1.024999976158142,
+      2.4800000190734863
+    ],
+    [
+      -10.0119047164917,
+      92.01431274414062
+    ],
+    [
+      0.238377183675766,
+      199.9761505126953
+    ]
+  ],
+  "skin_thickness_cm": 0.65,
+  "material_slots": [
+    "Skin",
+    "CutEdge",
+    "Brass",
+    "EyelidSkin"
+  ],
+  "poses": [
+    {
+      "pose": "Rest",
+      "bounds_cm": [
+        [
+          -1.024999976158142,
+          2.4800000190734863
+        ],
+        [
+          -10.011919021606445,
+          92.0143051147461
+        ],
+        [
+          0.23837900161743164,
+          199.97616577148438
+        ]
+      ]
+    },
+    {
+      "pose": "Day",
+      "bounds_cm": [
+        [
+          -1.024999976158142,
+          2.4800000190734863
+        ],
+        [
+          -10.011919021606445,
+          92.96542358398438
+        ],
+        [
+          -4.119434833526611,
+          196.81787109375
+        ]
+      ]
+    },
+    {
+      "pose": "Night",
+      "bounds_cm": [
+        [
+          -1.024999976158142,
+          2.4800000190734863
+        ],
+        [
+          -11.467119216918945,
+          92.0143051147461
+        ],
+        [
+          5.009536266326904,
+          203.43621826171875
+        ]
+      ]
+    },
+    {
+      "pose": "Reach",
+      "bounds_cm": [
+        [
+          -1.024999976158142,
+          2.4800000190734863
+        ],
+        [
+          -9.794618606567383,
+          94.53182220458984
+        ],
+        [
+          2.1210789680480957,
+          194.3244171142578
+        ]
+      ]
+    }
+  ],
+  "previews": [
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run1\\Zhulong\\Preview_Rest.png",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run1\\Zhulong\\Preview_Day.png",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run1\\Zhulong\\Preview_Night.png",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run1\\Zhulong\\Preview_Reach.png",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run1\\Zhulong\\Preview_Oblique.png",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run1\\Zhulong\\Preview_RealShadow.png"
+  ],
+  "checks": [
+    "Head closed manifold shells",
+    "Head positive volume",
+    "Neck closed manifold shells",
+    "Neck positive volume",
+    "BodyUpper closed manifold shells",
+    "BodyUpper positive volume",
+    "BodyMiddle closed manifold shells",
+    "BodyMiddle positive volume",
+    "BodyLower closed manifold shells",
+    "BodyLower positive volume",
+    "Tail closed manifold shells",
+    "Tail positive volume",
+    "DayNight_EyeShutter closed manifold shells",
+    "DayNight_EyeShutter positive volume",
+    "Every vertex rigidly bound to exactly one bone",
+    "Hero mesh under 26000 triangles",
+    "Bone present Root",
+    "Bone present BodyUpper",
+    "Bone present Neck",
+    "Bone present Head",
+    "Bone present BodyMiddle",
+    "Bone present BodyLower",
+    "Bone present Tail",
+    "Bone present Eyelid",
+    "Rest finite deformed geometry",
+    "Day finite deformed geometry",
+    "Night finite deformed geometry",
+    "Reach finite deformed geometry",
+    "Cold FBX import has one skeletal mesh and one armature",
+    "Cold FBX bone count matches",
+    "Cold FBX preserves rigid weights",
+    "Cold FBX triangle count matches",
+    "Cold FBX world centimetre bounds match within 0.02 cm"
+  ],
+  "provenance": {
+    "reference_sha256": "37EFDB88A558B75C12CFA0B0BCB652A4762FFCED1301C203C739A5D4DFEFE9A9",
+    "spec_sha256": "0DC7418CDF92187CDF452D052DB72EAFBA8C1E0B76BB25E5C5CA8550F3D04F05",
+    "method": "Contour-modeled extruded leather pieces from existing project concept; real holes, rigid articulation, cleaned artwork UV atlas; no purchased mesh or new image generation.",
+    "texture_note": "Stylized painted artwork, not a scanned physical albedo. Existing design-sheet markings are excluded."
+  },
+  "runtime_integration": false,
+  "human_art_acceptance": false
+}

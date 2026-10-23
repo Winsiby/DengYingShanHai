@@ -1,0 +1,30 @@
+{
+  "status": "PASS_SOURCE_VISUAL_REVIEW_NOT_UE",
+  "scope": "Editable local .blend, two FBX exports, local source review renders only",
+  "reviewed_images": ["Lamp_Head_Review.png", "Lamp_Full_Review.png", "Lamp_Side_Review.png"],
+  "findings": [
+    "Rounded lamp housing and rolled aperture edge preserve continuous silhouette",
+    "Open mouth, recessed reflector and optical window have visible real depth",
+    "Tilt pins, clamp wheels, yoke arms and mast form a connected load path",
+    "Bronze, wood, black metal and optics are visually separable",
+    "Mast grain follows its length after correcting the original transverse board seams",
+    "Floor contact is visible in full and side views",
+    "No visible default BasicShapes cone/cylinder appearance remains in the source review"
+  ],
+  "source_checks": {
+    "cold_editable_blend_read": "PASS",
+    "cold_fbx_units_pivots_normals_uv_read": "PASS",
+    "original_texture_sha256_equal": true,
+    "all_geometry_max_actor_local_x_cm": 42,
+    "existing_ue_emitter_actor_local_x_cm": 45,
+    "front_clearance_cm": 3,
+    "stand_ground_actor_local_z_cm": -310,
+    "source_triangles": 93712
+  },
+  "limitations": [
+    "Neutral render is brighter than the intended night theatre; no UE copper/exposure acceptance is implied",
+    "Original bronze shader is procedural and not baked",
+    "UE import, actual runtime shadows, collision, rail extremes, core camera composition, performance and packaged build are unverified"
+  ],
+  "responsibility": "One human author chooses creative direction and confirms experience; Codex performs this modeling and later authorized technical integration"
+}

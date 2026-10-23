@@ -1,0 +1,285 @@
+{
+  "character": "Kuafu",
+  "fps": 30,
+  "clips": [
+    {
+      "name": "A_DY_Kuafu_Perf_Run",
+      "frames": 31,
+      "loop": true,
+      "bones_keyed": [
+        "ForeArm_L",
+        "ForeArm_R",
+        "Head",
+        "Shin_L",
+        "Shin_R",
+        "SnakeEar_L",
+        "SnakeEar_R",
+        "Spine",
+        "Thigh_L",
+        "Thigh_R",
+        "UpperArm_L",
+        "UpperArm_R"
+      ],
+      "samples": [
+        1,
+        10,
+        20,
+        31
+      ],
+      "bounds": {
+        "1": [
+          -112.72,
+          94.68
+        ],
+        "10": [
+          -112.72,
+          94.68
+        ],
+        "20": [
+          -112.72,
+          94.68
+        ],
+        "31": [
+          -112.72,
+          94.68
+        ]
+      }
+    },
+    {
+      "name": "A_DY_Kuafu_Perf_Reach",
+      "frames": 31,
+      "loop": true,
+      "bones_keyed": [
+        "ForeArm_L",
+        "ForeArm_R",
+        "Head",
+        "SnakeEar_L",
+        "SnakeEar_R",
+        "Spine",
+        "UpperArm_L",
+        "UpperArm_R"
+      ],
+      "samples": [
+        1,
+        10,
+        20,
+        31
+      ],
+      "bounds": {
+        "1": [
+          -112.72,
+          94.68
+        ],
+        "10": [
+          -112.72,
+          94.68
+        ],
+        "20": [
+          -112.72,
+          94.68
+        ],
+        "31": [
+          -112.72,
+          94.68
+        ]
+      }
+    },
+    {
+      "name": "A_DY_Kuafu_Perf_Stagger",
+      "frames": 31,
+      "loop": false,
+      "bones_keyed": [
+        "Head",
+        "Shin_L",
+        "Shin_R",
+        "SnakeEar_L",
+        "SnakeEar_R",
+        "Spine",
+        "Thigh_L",
+        "Thigh_R",
+        "UpperArm_L",
+        "UpperArm_R"
+      ],
+      "samples": [
+        1,
+        10,
+        20,
+        31
+      ],
+      "bounds": {
+        "1": [
+          -112.72,
+          94.68
+        ],
+        "10": [
+          -112.72,
+          94.68
+        ],
+        "20": [
+          -112.72,
+          94.68
+        ],
+        "31": [
+          -112.72,
+          94.68
+        ]
+      }
+    },
+    {
+      "name": "A_DY_Kuafu_Perf_Fall",
+      "frames": 37,
+      "loop": false,
+      "bones_keyed": [
+        "ForeArm_L",
+        "ForeArm_R",
+        "Head",
+        "Shin_L",
+        "Shin_R",
+        "Spine",
+        "Thigh_L",
+        "Thigh_R",
+        "UpperArm_L",
+        "UpperArm_R"
+      ],
+      "samples": [
+        1,
+        12,
+        24,
+        37
+      ],
+      "bounds": {
+        "1": [
+          -112.72,
+          94.68
+        ],
+        "12": [
+          -112.72,
+          94.68
+        ],
+        "24": [
+          -112.72,
+          94.68
+        ],
+        "37": [
+          -112.72,
+          94.68
+        ]
+      }
+    },
+    {
+      "name": "A_DY_Kuafu_Perf_Slump",
+      "frames": 31,
+      "loop": true,
+      "bones_keyed": [
+        "Head",
+        "Shin_L",
+        "Shin_R",
+        "Spine",
+        "Thigh_L",
+        "Thigh_R",
+        "UpperArm_L",
+        "UpperArm_R"
+      ],
+      "samples": [
+        1,
+        10,
+        20,
+        31
+      ],
+      "bounds": {
+        "1": [
+          -112.72,
+          94.68
+        ],
+        "10": [
+          -112.72,
+          94.68
+        ],
+        "20": [
+          -112.72,
+          94.68
+        ],
+        "31": [
+          -112.72,
+          94.68
+        ]
+      }
+    },
+    {
+      "name": "A_DY_Kuafu_Perf_Rise",
+      "frames": 31,
+      "loop": false,
+      "bones_keyed": [
+        "Head",
+        "Shin_L",
+        "Shin_R",
+        "Spine",
+        "Thigh_L",
+        "Thigh_R",
+        "UpperArm_L",
+        "UpperArm_R"
+      ],
+      "samples": [
+        1,
+        10,
+        20,
+        31
+      ],
+      "bounds": {
+        "1": [
+          -112.72,
+          94.68
+        ],
+        "10": [
+          -112.72,
+          94.68
+        ],
+        "20": [
+          -112.72,
+          94.68
+        ],
+        "31": [
+          -112.72,
+          94.68
+        ]
+      }
+    }
+  ],
+  "unknown_bones": [],
+  "bone_count": 20,
+  "exports": [
+    "A_DY_Kuafu_Perf_Run.fbx",
+    "A_DY_Kuafu_Perf_Reach.fbx",
+    "A_DY_Kuafu_Perf_Stagger.fbx",
+    "A_DY_Kuafu_Perf_Fall.fbx",
+    "A_DY_Kuafu_Perf_Slump.fbx",
+    "A_DY_Kuafu_Perf_Rise.fbx"
+  ],
+  "previews": [
+    "Preview\\A_DY_Kuafu_Perf_Run_f001.png",
+    "Preview\\A_DY_Kuafu_Perf_Run_f010.png",
+    "Preview\\A_DY_Kuafu_Perf_Run_f020.png",
+    "Preview\\A_DY_Kuafu_Perf_Run_f031.png",
+    "Preview\\A_DY_Kuafu_Perf_Reach_f001.png",
+    "Preview\\A_DY_Kuafu_Perf_Reach_f010.png",
+    "Preview\\A_DY_Kuafu_Perf_Reach_f020.png",
+    "Preview\\A_DY_Kuafu_Perf_Reach_f031.png",
+    "Preview\\A_DY_Kuafu_Perf_Stagger_f001.png",
+    "Preview\\A_DY_Kuafu_Perf_Stagger_f010.png",
+    "Preview\\A_DY_Kuafu_Perf_Stagger_f020.png",
+    "Preview\\A_DY_Kuafu_Perf_Stagger_f031.png",
+    "Preview\\A_DY_Kuafu_Perf_Fall_f001.png",
+    "Preview\\A_DY_Kuafu_Perf_Fall_f012.png",
+    "Preview\\A_DY_Kuafu_Perf_Fall_f024.png",
+    "Preview\\A_DY_Kuafu_Perf_Fall_f037.png",
+    "Preview\\A_DY_Kuafu_Perf_Slump_f001.png",
+    "Preview\\A_DY_Kuafu_Perf_Slump_f010.png",
+    "Preview\\A_DY_Kuafu_Perf_Slump_f020.png",
+    "Preview\\A_DY_Kuafu_Perf_Slump_f031.png",
+    "Preview\\A_DY_Kuafu_Perf_Rise_f001.png",
+    "Preview\\A_DY_Kuafu_Perf_Rise_f010.png",
+    "Preview\\A_DY_Kuafu_Perf_Rise_f020.png",
+    "Preview\\A_DY_Kuafu_Perf_Rise_f031.png"
+  ],
+  "ok": true
+}

@@ -1,0 +1,96 @@
+{
+  "status": "PASS-LOCAL-OBJ-SOURCE-SELF-CHECK",
+  "units": "centimeter",
+  "axes": "Z up; origin center; +X front",
+  "dimensions": [
+    100,
+    100,
+    100
+  ],
+  "geometry": "Octagonal paper body diameter90 z[-34,34]; eight solid thin bamboo ribs; two solid octagonal wood rings outer radius50; wood caps; small brass loop/finial to z+/-50.",
+  "material_semantics": {
+    "Paper": "Eight planar independent UV0 islands, each U=[i/8,(i+1)/8], V=0..1; total circumference U=0..1.",
+    "Wood": "Dark wooden rings/caps and eight bamboo ribs.",
+    "Brass": "Small hanging loop, seat and lower finial; no fire bead."
+  },
+  "intended_usage": "Replace only the original Sphere static_mesh at unchanged Actor Transform; root agent must check actual UE bounds, material slots and shadows first.",
+  "uv_limit": "UV strip matches the existing eight-rib LanternPaper texture without shared-material changes. Native appearance still requires inspection.",
+  "native_import_status": "NOT_RUN",
+  "runtime_art_status": "NOT_VERIFIED",
+  "source_provenance": "Original procedural geometry by Codex using Python standard library; no external resources or downloads.",
+  "visual_reference": "Project A5 concept; flat paper, sparse opaque bamboo/wood, restrained brass; no invented narrative motif.",
+  "scope": {
+    "UE_changes": false,
+    "map_changes": false,
+    "actor_transform_changes": false,
+    "downloads": false,
+    "paid_services": false,
+    "new_dependencies": false
+  },
+  "checks": {
+    "vertices": 2304,
+    "triangles": 768,
+    "material_slots": [
+      "Paper",
+      "Wood",
+      "Brass"
+    ],
+    "triangles_by_material": {
+      "Paper": 16,
+      "Wood": 432,
+      "Brass": 320
+    },
+    "bounds_min": [
+      -50.0,
+      -50.0,
+      -50.0
+    ],
+    "bounds_max": [
+      50.0,
+      50.0,
+      50.0
+    ],
+    "bounds_size": [
+      100.0,
+      100.0,
+      100.0
+    ],
+    "uv_count": 2304,
+    "normal_count": 2304,
+    "minimum_triangle_area": 0.17324116109999999,
+    "minimum_normal_dot": 0.9999999996936114,
+    "single_object": true,
+    "finite": true,
+    "indices_valid": true,
+    "winding_matches_explicit_normals": true,
+    "paper_uv": "8 independent islands; each spans U=1/8 and V=0..1; total U=0..1",
+    "paper_uv_range_counts": {
+      "(0.0, 0.125)": 2,
+      "(0.125, 0.25)": 2,
+      "(0.25, 0.375)": 2,
+      "(0.375, 0.5)": 2,
+      "(0.5, 0.625)": 2,
+      "(0.625, 0.75)": 2,
+      "(0.75, 0.875)": 2,
+      "(0.875, 1.0)": 2
+    },
+    "internal_coplanar_cap_faces_removed": true
+  },
+  "files": [
+    {
+      "name": "build_lantern_obj.py",
+      "bytes": 12313,
+      "sha256": "3429B78B8F0E880364C21DCB229E3459AA4C60F33AD432161A72C6704C0C612B"
+    },
+    {
+      "name": "SM_DY_LanternFamily_Unit100_v01.obj",
+      "bytes": 291004,
+      "sha256": "B16817CCC97C05036069AD4F0C4D6D0B6F5DE8AEABBAD89B2435A4E5182D44EE"
+    },
+    {
+      "name": "SM_DY_LanternFamily_Unit100_v01.mtl",
+      "bytes": 328,
+      "sha256": "4B9D60611D627B0B8CBAA224F2439F42DC4E8450D55603E520C88A8C3141E004"
+    }
+  ]
+}

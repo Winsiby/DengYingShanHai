@@ -1,0 +1,4180 @@
+{
+  "status": "PASS-LOCAL-B2-CANDIDATES",
+  "date": "2026-10-22",
+  "units": "centimeter; unit source bbox100x100x100",
+  "axes": "Z up; normalized bounds center origin",
+  "candidates": [
+    {
+      "obj": "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\B2-TreePolish-20261022\\SM_DY_B2_BranchCrown_A_Unit100_v01.obj",
+      "mtl": "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\B2-TreePolish-20261022\\SM_DY_B2_BranchCrown_A_Unit100_v01.mtl",
+      "preview": "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\B2-TreePolish-20261022\\SM_DY_B2_BranchCrown_A_Unit100_v01_ortho.png",
+      "checks": {
+        "vertices": 1382,
+        "triangles": 2660,
+        "material_slots": [
+          "MI_DY_TreeTrunk"
+        ],
+        "bounds_min": [
+          -50.0,
+          -50.0,
+          -50.0
+        ],
+        "bounds_max": [
+          50.0,
+          50.0,
+          50.0
+        ],
+        "bounds_size": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "normals": 1542,
+        "uvs": 7980,
+        "finite": true,
+        "indices_valid": true,
+        "minimum_triangle_area": 0.018015650717876315,
+        "minimum_corner_normal_dot": 0.1979178840189697,
+        "every_branch_shell_closed": true,
+        "branch_shells": 26,
+        "object_count": 1
+      },
+      "root_base_center_cm": [
+        -0.12941928814339324,
+        -0.7214185608089928,
+        -49.01832880573533
+      ],
+      "source_normalization": {
+        "center": [
+          0.13275130031723137,
+          0.8201875957245761,
+          2.850159173318172
+        ],
+        "scale": [
+          0.9749003424759249,
+          0.879577507108812,
+          0.9453843457236657
+        ]
+      },
+      "branch_graph": [
+        {
+          "id": 0,
+          "name": "Root_Graft",
+          "parent": null,
+          "attachment_t": null,
+          "radius_start": 7.0,
+          "radius_tip": 4.0,
+          "arc_to_chord": 1.0048818707619294
+        },
+        {
+          "id": 1,
+          "name": "Main_0",
+          "parent": 0,
+          "attachment_t": 0.48,
+          "radius_start": 3.836341538557443,
+          "radius_tip": 0.9,
+          "arc_to_chord": 1.046312249486708
+        },
+        {
+          "id": 2,
+          "name": "Main_1",
+          "parent": 0,
+          "attachment_t": 0.62,
+          "radius_start": 3.5385596535484147,
+          "radius_tip": 1.02,
+          "arc_to_chord": 1.0322674485077847
+        },
+        {
+          "id": 3,
+          "name": "Main_2",
+          "parent": 0,
+          "attachment_t": 0.76,
+          "radius_start": 3.2496218785361997,
+          "radius_tip": 1.1400000000000001,
+          "arc_to_chord": 1.054093009654519
+        },
+        {
+          "id": 4,
+          "name": "Main_3",
+          "parent": 0,
+          "attachment_t": 0.84,
+          "radius_start": 3.0901809351865883,
+          "radius_tip": 0.9,
+          "arc_to_chord": 1.0517189230205841
+        },
+        {
+          "id": 5,
+          "name": "Main_4",
+          "parent": 0,
+          "attachment_t": 0.96,
+          "radius_start": 2.8649298030243306,
+          "radius_tip": 1.02,
+          "arc_to_chord": 1.0125839076098035
+        },
+        {
+          "id": 6,
+          "name": "Secondary_0_-1",
+          "parent": 1,
+          "attachment_t": 0.39,
+          "radius_start": 1.8352047389286874,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.0249479051655297
+        },
+        {
+          "id": 7,
+          "name": "Twig_0_-1",
+          "parent": 6,
+          "attachment_t": 0.52,
+          "radius_start": 0.7922029303364073,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.097153388159854
+        },
+        {
+          "id": 8,
+          "name": "Secondary_0_1",
+          "parent": 1,
+          "attachment_t": 0.725,
+          "radius_start": 1.139781320818443,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.0185753491882092
+        },
+        {
+          "id": 9,
+          "name": "Twig_0_1",
+          "parent": 8,
+          "attachment_t": 0.52,
+          "radius_start": 0.5718656991532246,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.0679981492577877
+        },
+        {
+          "id": 10,
+          "name": "Secondary_1_-1",
+          "parent": 2,
+          "attachment_t": 0.41500000000000004,
+          "radius_start": 1.7020493054635997,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.0393378398412947
+        },
+        {
+          "id": 11,
+          "name": "Twig_1_-1",
+          "parent": 10,
+          "attachment_t": 0.6,
+          "radius_start": 0.6847739545644578,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.0505265644598187
+        },
+        {
+          "id": 12,
+          "name": "Secondary_1_1",
+          "parent": 2,
+          "attachment_t": 0.76,
+          "radius_start": 1.0914665075446393,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.044837297990819
+        },
+        {
+          "id": 13,
+          "name": "Twig_1_1",
+          "parent": 12,
+          "attachment_t": 0.6,
+          "radius_start": 0.5258946261770833,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.0441962727775604
+        },
+        {
+          "id": 14,
+          "name": "Secondary_2_-1",
+          "parent": 3,
+          "attachment_t": 0.44,
+          "radius_start": 1.5874883576595507,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.0269567171946852
+        },
+        {
+          "id": 15,
+          "name": "Twig_2_-1",
+          "parent": 14,
+          "attachment_t": 0.52,
+          "radius_start": 0.7137167302083199,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.0565430814858274
+        },
+        {
+          "id": 16,
+          "name": "Secondary_2_1",
+          "parent": 3,
+          "attachment_t": 0.69,
+          "radius_start": 1.2148437460911001,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.038466078136365
+        },
+        {
+          "id": 17,
+          "name": "Twig_2_1",
+          "parent": 16,
+          "attachment_t": 0.52,
+          "radius_start": 0.595648399763761,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.0497122305056938
+        },
+        {
+          "id": 18,
+          "name": "Secondary_3_-1",
+          "parent": 4,
+          "attachment_t": 0.39,
+          "radius_start": 1.5289473491203351,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.0139229703338846
+        },
+        {
+          "id": 19,
+          "name": "Twig_3_-1",
+          "parent": 18,
+          "attachment_t": 0.6,
+          "radius_start": 0.6397312139892333,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.0893623278694629
+        },
+        {
+          "id": 20,
+          "name": "Secondary_3_1",
+          "parent": 4,
+          "attachment_t": 0.725,
+          "radius_start": 1.0102395992801672,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.0241297958239692
+        },
+        {
+          "id": 21,
+          "name": "Twig_3_1",
+          "parent": 20,
+          "attachment_t": 0.6,
+          "radius_start": 0.504758628445036,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.081305673285075
+        },
+        {
+          "id": 22,
+          "name": "Secondary_4_-1",
+          "parent": 5,
+          "attachment_t": 0.41500000000000004,
+          "radius_start": 1.4377794061931453,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.0708905430539133
+        },
+        {
+          "id": 23,
+          "name": "Twig_4_-1",
+          "parent": 22,
+          "attachment_t": 0.52,
+          "radius_start": 0.666283102018054,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.059270033567749
+        },
+        {
+          "id": 24,
+          "name": "Secondary_4_1",
+          "parent": 5,
+          "attachment_t": 0.76,
+          "radius_start": 0.9905069346010733,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.0812497410986222
+        },
+        {
+          "id": 25,
+          "name": "Twig_4_1",
+          "parent": 24,
+          "attachment_t": 0.52,
+          "radius_start": 0.5245697581636588,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.0596038047890424
+        }
+      ],
+      "logical_attachment_tree_connected": true,
+      "junction_limit": "Each branch is a closed curved sweep with its base inside its parent. Physical union connected; intersection shells are not Boolean-welded.",
+      "files": [
+        {
+          "name": "SM_DY_B2_BranchCrown_A_Unit100_v01.obj",
+          "bytes": 460321,
+          "sha256": "0E35374028FC74FCC0C2C0CED6D322E9915B1E02A1E50971B8CC669F3EFDFAC7"
+        },
+        {
+          "name": "SM_DY_B2_BranchCrown_A_Unit100_v01.mtl",
+          "bytes": 90,
+          "sha256": "70206CD945D6E973587E85B5BA62C6B6A23B75E44948007AC399A338E666E825"
+        },
+        {
+          "name": "SM_DY_B2_BranchCrown_A_Unit100_v01_ortho.png",
+          "bytes": 27436,
+          "sha256": "92EC198615E3E6ACBF5D1DB42929AF98E1E6D51E811EEC141DD32E0735627962"
+        }
+      ]
+    },
+    {
+      "obj": "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\B2-TreePolish-20261022\\SM_DY_B2_BranchCrown_B_Unit100_v01.obj",
+      "mtl": "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\B2-TreePolish-20261022\\SM_DY_B2_BranchCrown_B_Unit100_v01.mtl",
+      "preview": "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\B2-TreePolish-20261022\\SM_DY_B2_BranchCrown_B_Unit100_v01_ortho.png",
+      "checks": {
+        "vertices": 1382,
+        "triangles": 2660,
+        "material_slots": [
+          "MI_DY_TreeTrunk"
+        ],
+        "bounds_min": [
+          -50.0,
+          -50.0,
+          -50.0
+        ],
+        "bounds_max": [
+          50.0,
+          50.0,
+          50.0
+        ],
+        "bounds_size": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "normals": 1542,
+        "uvs": 7980,
+        "finite": true,
+        "indices_valid": true,
+        "minimum_triangle_area": 0.017827649409152616,
+        "minimum_corner_normal_dot": 0.35297441379858735,
+        "every_branch_shell_closed": true,
+        "branch_shells": 26,
+        "object_count": 1
+      },
+      "root_base_center_cm": [
+        -1.851719779116816,
+        -0.2705701205573406,
+        -48.41655633960243
+      ],
+      "source_normalization": {
+        "center": [
+          1.9347375469546115,
+          0.30295813552914197,
+          3.014794578501725
+        ],
+        "scale": [
+          0.9570909408521738,
+          0.8930940906563444,
+          0.9308227924755377
+        ]
+      },
+      "branch_graph": [
+        {
+          "id": 0,
+          "name": "Root_Graft",
+          "parent": null,
+          "attachment_t": null,
+          "radius_start": 7.0,
+          "radius_tip": 4.0,
+          "arc_to_chord": 1.0206745361185292
+        },
+        {
+          "id": 1,
+          "name": "Main_0",
+          "parent": 0,
+          "attachment_t": 0.48,
+          "radius_start": 3.836341538557443,
+          "radius_tip": 0.9,
+          "arc_to_chord": 1.0322899078737178
+        },
+        {
+          "id": 2,
+          "name": "Main_1",
+          "parent": 0,
+          "attachment_t": 0.62,
+          "radius_start": 3.5385596535484147,
+          "radius_tip": 1.02,
+          "arc_to_chord": 1.0502769408846087
+        },
+        {
+          "id": 3,
+          "name": "Main_2",
+          "parent": 0,
+          "attachment_t": 0.76,
+          "radius_start": 3.2496218785361997,
+          "radius_tip": 1.1400000000000001,
+          "arc_to_chord": 1.0276180720862118
+        },
+        {
+          "id": 4,
+          "name": "Main_3",
+          "parent": 0,
+          "attachment_t": 0.84,
+          "radius_start": 3.0901809351865883,
+          "radius_tip": 0.9,
+          "arc_to_chord": 1.0697690419970194
+        },
+        {
+          "id": 5,
+          "name": "Main_4",
+          "parent": 0,
+          "attachment_t": 0.96,
+          "radius_start": 2.8649298030243306,
+          "radius_tip": 1.02,
+          "arc_to_chord": 1.0084585166629474
+        },
+        {
+          "id": 6,
+          "name": "Secondary_0_-1",
+          "parent": 1,
+          "attachment_t": 0.39,
+          "radius_start": 1.8352047389286874,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.0251894040597598
+        },
+        {
+          "id": 7,
+          "name": "Twig_0_-1",
+          "parent": 6,
+          "attachment_t": 0.52,
+          "radius_start": 0.7922029303364073,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.0950335743982624
+        },
+        {
+          "id": 8,
+          "name": "Secondary_0_1",
+          "parent": 1,
+          "attachment_t": 0.725,
+          "radius_start": 1.139781320818443,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.0169810449308867
+        },
+        {
+          "id": 9,
+          "name": "Twig_0_1",
+          "parent": 8,
+          "attachment_t": 0.52,
+          "radius_start": 0.5718656991532246,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.0665578896056065
+        },
+        {
+          "id": 10,
+          "name": "Secondary_1_-1",
+          "parent": 2,
+          "attachment_t": 0.41500000000000004,
+          "radius_start": 1.7020493054635997,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.0463736160290165
+        },
+        {
+          "id": 11,
+          "name": "Twig_1_-1",
+          "parent": 10,
+          "attachment_t": 0.6,
+          "radius_start": 0.6847739545644578,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.0560895977526785
+        },
+        {
+          "id": 12,
+          "name": "Secondary_1_1",
+          "parent": 2,
+          "attachment_t": 0.76,
+          "radius_start": 1.0914665075446393,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.0446164457387803
+        },
+        {
+          "id": 13,
+          "name": "Twig_1_1",
+          "parent": 12,
+          "attachment_t": 0.6,
+          "radius_start": 0.5258946261770833,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.0532892451997438
+        },
+        {
+          "id": 14,
+          "name": "Secondary_2_-1",
+          "parent": 3,
+          "attachment_t": 0.44,
+          "radius_start": 1.5874883576595507,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.0268968412677189
+        },
+        {
+          "id": 15,
+          "name": "Twig_2_-1",
+          "parent": 14,
+          "attachment_t": 0.52,
+          "radius_start": 0.7137167302083199,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.0537312899856843
+        },
+        {
+          "id": 16,
+          "name": "Secondary_2_1",
+          "parent": 3,
+          "attachment_t": 0.69,
+          "radius_start": 1.2148437460911001,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.0438382189850612
+        },
+        {
+          "id": 17,
+          "name": "Twig_2_1",
+          "parent": 16,
+          "attachment_t": 0.52,
+          "radius_start": 0.595648399763761,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.049528612060544
+        },
+        {
+          "id": 18,
+          "name": "Secondary_3_-1",
+          "parent": 4,
+          "attachment_t": 0.39,
+          "radius_start": 1.5289473491203351,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.0151273765072557
+        },
+        {
+          "id": 19,
+          "name": "Twig_3_-1",
+          "parent": 18,
+          "attachment_t": 0.6,
+          "radius_start": 0.6397312139892333,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.086905143764536
+        },
+        {
+          "id": 20,
+          "name": "Secondary_3_1",
+          "parent": 4,
+          "attachment_t": 0.725,
+          "radius_start": 1.0102395992801672,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.0278785613305799
+        },
+        {
+          "id": 21,
+          "name": "Twig_3_1",
+          "parent": 20,
+          "attachment_t": 0.6,
+          "radius_start": 0.504758628445036,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.0852230178798206
+        },
+        {
+          "id": 22,
+          "name": "Secondary_4_-1",
+          "parent": 5,
+          "attachment_t": 0.41500000000000004,
+          "radius_start": 1.4377794061931453,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.0625273235608776
+        },
+        {
+          "id": 23,
+          "name": "Twig_4_-1",
+          "parent": 22,
+          "attachment_t": 0.52,
+          "radius_start": 0.666283102018054,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.0615489153487259
+        },
+        {
+          "id": 24,
+          "name": "Secondary_4_1",
+          "parent": 5,
+          "attachment_t": 0.76,
+          "radius_start": 0.9905069346010733,
+          "radius_tip": 0.55,
+          "arc_to_chord": 1.081036370981078
+        },
+        {
+          "id": 25,
+          "name": "Twig_4_1",
+          "parent": 24,
+          "attachment_t": 0.52,
+          "radius_start": 0.5245697581636588,
+          "radius_tip": 0.3,
+          "arc_to_chord": 1.0602730068389525
+        }
+      ],
+      "logical_attachment_tree_connected": true,
+      "junction_limit": "Each branch is a closed curved sweep with its base inside its parent. Physical union connected; intersection shells are not Boolean-welded.",
+      "files": [
+        {
+          "name": "SM_DY_B2_BranchCrown_B_Unit100_v01.obj",
+          "bytes": 460319,
+          "sha256": "1090424F62071EEA0181744456E9E0F9888597457455B25BB0E4273FA79C2D6F"
+        },
+        {
+          "name": "SM_DY_B2_BranchCrown_B_Unit100_v01.mtl",
+          "bytes": 90,
+          "sha256": "70206CD945D6E973587E85B5BA62C6B6A23B75E44948007AC399A338E666E825"
+        },
+        {
+          "name": "SM_DY_B2_BranchCrown_B_Unit100_v01_ortho.png",
+          "bytes": 26413,
+          "sha256": "73CDC4D43FFD7D27C11A9DD6B6DAE112A4A57D9B043A43B9D1DE1AA1D290CAA9"
+        }
+      ]
+    }
+  ],
+  "placement_recommendations": {
+    "verified_main_crown_pairs": [
+      {
+        "crown": "DYTheater_DeadCanopy_0",
+        "trunk": "DYTheater_DeadTree_0",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 579.2518,
+        "trunk_bbox_top": 620.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYTheater_DeadCanopy_1",
+        "trunk": "DYTheater_DeadTree_1",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 695.6883,
+        "trunk_bbox_top": 710.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYTheater_DeadCanopy_2",
+        "trunk": "DYTheater_DeadTree_2",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 854.3408000000001,
+        "trunk_bbox_top": 890.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYTheater_DeadCanopy_3",
+        "trunk": "DYTheater_DeadTree_3",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 573.3558,
+        "trunk_bbox_top": 620.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYTheater_DeadCanopy_4",
+        "trunk": "DYTheater_DeadTree_4",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 790.0445,
+        "trunk_bbox_top": 800.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYTheater_DeadCanopy_5",
+        "trunk": "DYTheater_DeadTree_5",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 866.6483999999999,
+        "trunk_bbox_top": 890.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYTheater_DeadCanopy_6",
+        "trunk": "DYTheater_DeadTree_6",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 667.3252,
+        "trunk_bbox_top": 710.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYTheater_DeadCanopy_7",
+        "trunk": "DYTheater_DeadTree_7",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 795.8924,
+        "trunk_bbox_top": 800.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYTheater_DeadCanopy_8",
+        "trunk": "DYTheater_DeadTree_8",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 600.2309,
+        "trunk_bbox_top": 620.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYTheater_DeadCanopy_9",
+        "trunk": "DYTheater_DeadTree_9",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 663.7502000000001,
+        "trunk_bbox_top": 710.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYTheater_DeadCanopy_10",
+        "trunk": "DYTheater_DeadTree_10",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 855.7307000000001,
+        "trunk_bbox_top": 890.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYTheater_DeadCanopy_11",
+        "trunk": "DYTheater_DeadTree_11",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 614.52,
+        "trunk_bbox_top": 620.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYTheater_DeadCanopy_12",
+        "trunk": "DYTheater_DeadTree_12",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 773.9567000000001,
+        "trunk_bbox_top": 800.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYTheater_DeadCanopy_13",
+        "trunk": "DYTheater_DeadTree_13",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 851.4032,
+        "trunk_bbox_top": 890.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt12_Crown_0",
+        "trunk": "DYExt12_Trunk_0",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 591.2027,
+        "trunk_bbox_top": 620.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt12_Crown_1",
+        "trunk": "DYExt12_Trunk_1",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 652.3055999999999,
+        "trunk_bbox_top": 620.0,
+        "original_vertical_gap_cm": 32.30559999999991,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt12_Crown_2",
+        "trunk": "DYExt12_Trunk_2",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 872.0783,
+        "trunk_bbox_top": 620.0,
+        "original_vertical_gap_cm": 252.0783,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt12_Crown_3",
+        "trunk": "DYExt12_Trunk_3",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 588.2,
+        "trunk_bbox_top": 620.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt12_Crown_4",
+        "trunk": "DYExt12_Trunk_4",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 746.6617,
+        "trunk_bbox_top": 620.0,
+        "original_vertical_gap_cm": 126.6617,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt12_Crown_5",
+        "trunk": "DYExt12_Trunk_5",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 880.0459,
+        "trunk_bbox_top": 620.0,
+        "original_vertical_gap_cm": 260.04589999999996,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt12_Crown_6",
+        "trunk": "DYExt12_Trunk_6",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 597.594,
+        "trunk_bbox_top": 620.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt12_Crown_7",
+        "trunk": "DYExt12_Trunk_7",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 661.0178999999999,
+        "trunk_bbox_top": 620.0,
+        "original_vertical_gap_cm": 41.01789999999994,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt35_TreeCrown_0",
+        "trunk": "DYExt35_TreeTrunk_0",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 515.6576,
+        "trunk_bbox_top": 600.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt35_TreeCrown_1",
+        "trunk": "DYExt35_TreeTrunk_1",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 603.3638,
+        "trunk_bbox_top": 720.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt35_TreeCrown_2",
+        "trunk": "DYExt35_TreeTrunk_2",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 440.9539,
+        "trunk_bbox_top": 540.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt35_TreeCrown_3",
+        "trunk": "DYExt35_TreeTrunk_3",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 570.5638,
+        "trunk_bbox_top": 660.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt35_TreeCrown_4",
+        "trunk": "DYExt35_TreeTrunk_4",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 480.548,
+        "trunk_bbox_top": 570.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt35_TreeCrown_5",
+        "trunk": "DYExt35_TreeTrunk_5",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 517.6349,
+        "trunk_bbox_top": 630.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt35_TreeCrown_6",
+        "trunk": "DYExt35_TreeTrunk_6",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 599.9909,
+        "trunk_bbox_top": 690.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt35_TreeCrown_7",
+        "trunk": "DYExt35_TreeTrunk_7",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 432.5453,
+        "trunk_bbox_top": 510.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt36_Canopy00",
+        "trunk": "DYExt36_Trunk00",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 772.0898,
+        "trunk_bbox_top": 770.5,
+        "original_vertical_gap_cm": 1.5897999999999683,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt36_Canopy01",
+        "trunk": "DYExt36_Trunk01",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 659.5168,
+        "trunk_bbox_top": 670.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt36_Canopy02",
+        "trunk": "DYExt36_Trunk02",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 823.2614,
+        "trunk_bbox_top": 804.0,
+        "original_vertical_gap_cm": 19.26139999999998,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt36_Canopy03",
+        "trunk": "DYExt36_Trunk03",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 640.4763,
+        "trunk_bbox_top": 636.5,
+        "original_vertical_gap_cm": 3.9763000000000375,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt36_Canopy04",
+        "trunk": "DYExt36_Trunk04",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 695.436,
+        "trunk_bbox_top": 703.5,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt36_Canopy05",
+        "trunk": "DYExt36_Trunk05",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 757.7398000000001,
+        "trunk_bbox_top": 737.0,
+        "original_vertical_gap_cm": 20.73980000000006,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt36_Canopy06",
+        "trunk": "DYExt36_Trunk06",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 643.1394,
+        "trunk_bbox_top": 636.5,
+        "original_vertical_gap_cm": 6.639400000000023,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt36_Canopy07",
+        "trunk": "DYExt36_Trunk07",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 798.1478,
+        "trunk_bbox_top": 804.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt36_Canopy08",
+        "trunk": "DYExt36_Trunk08",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 653.2576,
+        "trunk_bbox_top": 670.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt36_Canopy09",
+        "trunk": "DYExt36_Trunk09",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 747.7712,
+        "trunk_bbox_top": 737.0,
+        "original_vertical_gap_cm": 10.771200000000022,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt36_Canopy10",
+        "trunk": "DYExt36_Trunk10",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 685.6382,
+        "trunk_bbox_top": 703.5,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt36_Canopy11",
+        "trunk": "DYExt36_Trunk11",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 611.5708999999999,
+        "trunk_bbox_top": 603.0,
+        "original_vertical_gap_cm": 8.570899999999938,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt36_Canopy12",
+        "trunk": "DYExt36_Trunk12",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 734.4234,
+        "trunk_bbox_top": 737.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt36_Canopy13",
+        "trunk": "DYExt36_Trunk13",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 655.792,
+        "trunk_bbox_top": 670.0,
+        "original_vertical_gap_cm": 0,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt36_Canopy14",
+        "trunk": "DYExt36_Trunk14",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 750.559,
+        "trunk_bbox_top": 737.0,
+        "original_vertical_gap_cm": 13.558999999999969,
+        "native_graft_review_required": true
+      },
+      {
+        "crown": "DYExt36_Canopy15",
+        "trunk": "DYExt36_Trunk15",
+        "xy_center_difference": 0.0,
+        "crown_bbox_bottom": 670.4608000000001,
+        "trunk_bbox_top": 670.0,
+        "original_vertical_gap_cm": 0.46080000000006294,
+        "native_graft_review_required": true
+      }
+    ],
+    "offset_or_satellite_do_not_replace_blindly": [
+      {
+        "label": "DYExt7_Canopy_0_0",
+        "center": [
+          -2337.5,
+          -1510.0,
+          791.0
+        ],
+        "bbox_bottom": 706.9334,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_0_1",
+        "center": [
+          -2535.1013,
+          -1423.1816,
+          749.2
+        ],
+        "bbox_bottom": 642.8744,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_1_0",
+        "center": [
+          -2329.871,
+          1141.7728,
+          943.1
+        ],
+        "bbox_bottom": 802.5008,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_1_1",
+        "center": [
+          -2608.5957,
+          1186.772,
+          886.12
+        ],
+        "bbox_bottom": 758.6343,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_2_0",
+        "center": [
+          -2906.0554,
+          -1561.0718,
+          1143.8
+        ],
+        "bbox_bottom": 991.5704,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_2_1",
+        "center": [
+          -2817.5945,
+          -1382.2504,
+          1081.76
+        ],
+        "bbox_bottom": 943.9264000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_3_0",
+        "center": [
+          -2987.6221,
+          943.2068,
+          832.4
+        ],
+        "bbox_bottom": 705.7179,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_3_1",
+        "center": [
+          -2736.8731,
+          1108.3624,
+          780.48
+        ],
+        "bbox_bottom": 665.9443,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_4_0",
+        "center": [
+          -3308.0705,
+          -1405.9677,
+          1033.1
+        ],
+        "bbox_bottom": 894.8571999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_4_1",
+        "center": [
+          -3040.9801,
+          -1436.6743,
+          976.12
+        ],
+        "bbox_bottom": 851.3157,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_5_0",
+        "center": [
+          -3205.4843,
+          1032.1613,
+          1081.7
+        ],
+        "bbox_bottom": 968.6560000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_5_1",
+        "center": [
+          -3285.6959,
+          1176.0099,
+          1034.84
+        ],
+        "bbox_bottom": 932.9368,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_6_0",
+        "center": [
+          -3546.9111,
+          -1476.4322,
+          922.4
+        ],
+        "bbox_bottom": 797.865,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_6_1",
+        "center": [
+          -3802.2802,
+          -1394.841,
+          870.48
+        ],
+        "bbox_bottom": 715.5225,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_7_0",
+        "center": [
+          -3598.2599,
+          1107.1803,
+          971.0
+        ],
+        "bbox_bottom": 871.315,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_7_1",
+        "center": [
+          -3785.1232,
+          1188.9488,
+          929.2
+        ],
+        "bbox_bottom": 805.1018,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_8_0",
+        "center": [
+          -4223.5974,
+          -1377.4014,
+          811.7
+        ],
+        "bbox_bottom": 712.5612000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_8_1",
+        "center": [
+          -4130.2103,
+          -1366.7042,
+          764.84
+        ],
+        "bbox_bottom": 640.0724,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_9_0",
+        "center": [
+          -4245.1905,
+          1185.737,
+          963.8
+        ],
+        "bbox_bottom": 833.4010999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_9_1",
+        "center": [
+          -3935.3616,
+          1104.3461,
+          901.76
+        ],
+        "bbox_bottom": 737.548,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_10_0",
+        "center": [
+          -4607.5392,
+          -1609.6229,
+          1061.0
+        ],
+        "bbox_bottom": 954.5521,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_10_1",
+        "center": [
+          -4430.2599,
+          -1421.856,
+          1019.2
+        ],
+        "bbox_bottom": 921.9161,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_11_0",
+        "center": [
+          -4401.7638,
+          1015.5789,
+          853.1
+        ],
+        "bbox_bottom": 708.7802,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_11_1",
+        "center": [
+          -4531.0286,
+          1202.3632,
+          796.12
+        ],
+        "bbox_bottom": 664.4005,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_12_0",
+        "center": [
+          -4856.2893,
+          -1477.7529,
+          1053.8
+        ],
+        "bbox_bottom": 897.5192999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_12_1",
+        "center": [
+          -5169.9532,
+          -1412.6887,
+          991.76
+        ],
+        "bbox_bottom": 849.3166,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_13_0",
+        "center": [
+          -4933.7702,
+          1141.2109,
+          1102.4
+        ],
+        "bbox_bottom": 972.3276000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Canopy_13_1",
+        "center": [
+          -5141.4618,
+          1156.78,
+          1050.48
+        ],
+        "bbox_bottom": 932.0865,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe_00",
+        "center": [
+          -4200.0,
+          -1000.0,
+          560.0
+        ],
+        "bbox_bottom": 424.6856,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe_01",
+        "center": [
+          -3870.0,
+          1220.0,
+          740.0
+        ],
+        "bbox_bottom": 559.2746,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe_02",
+        "center": [
+          -3540.0,
+          -1440.0,
+          650.0
+        ],
+        "bbox_bottom": 478.53999999999996,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe_03",
+        "center": [
+          -3210.0,
+          1110.0,
+          560.0
+        ],
+        "bbox_bottom": 340.9616,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe_04",
+        "center": [
+          -2880.0,
+          -1330.0,
+          740.0
+        ],
+        "bbox_bottom": 594.7773,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe_05",
+        "center": [
+          -2550.0,
+          1000.0,
+          650.0
+        ],
+        "bbox_bottom": 508.36699999999996,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe_06",
+        "center": [
+          -2220.0,
+          -1220.0,
+          560.0
+        ],
+        "bbox_bottom": 374.2969,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe_07",
+        "center": [
+          -4200.0,
+          1440.0,
+          740.0
+        ],
+        "bbox_bottom": 504.5511,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe_08",
+        "center": [
+          -3870.0,
+          -1110.0,
+          650.0
+        ],
+        "bbox_bottom": 536.8531,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe_09",
+        "center": [
+          -3540.0,
+          1330.0,
+          560.0
+        ],
+        "bbox_bottom": 406.2913,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe_10",
+        "center": [
+          -3210.0,
+          -1000.0,
+          740.0
+        ],
+        "bbox_bottom": 555.685,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe_11",
+        "center": [
+          -2880.0,
+          1220.0,
+          650.0
+        ],
+        "bbox_bottom": 416.1504,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe_12",
+        "center": [
+          -2550.0,
+          -1440.0,
+          560.0
+        ],
+        "bbox_bottom": 447.8188,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe_13",
+        "center": [
+          -2220.0,
+          1110.0,
+          740.0
+        ],
+        "bbox_bottom": 587.4682,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe2_00",
+        "center": [
+          -4080.0,
+          -890.0,
+          700.0
+        ],
+        "bbox_bottom": 593.7702,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe2_01",
+        "center": [
+          -3750.0,
+          1110.0,
+          840.0
+        ],
+        "bbox_bottom": 733.7472,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe2_02",
+        "center": [
+          -3420.0,
+          -1330.0,
+          770.0
+        ],
+        "bbox_bottom": 628.2579000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe2_03",
+        "center": [
+          -3090.0,
+          1000.0,
+          700.0
+        ],
+        "bbox_bottom": 518.0224000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe2_04",
+        "center": [
+          -2760.0,
+          -1220.0,
+          840.0
+        ],
+        "bbox_bottom": 757.2403,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe2_05",
+        "center": [
+          -2430.0,
+          890.0,
+          770.0
+        ],
+        "bbox_bottom": 654.6848,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe2_06",
+        "center": [
+          -2100.0,
+          -1110.0,
+          700.0
+        ],
+        "bbox_bottom": 547.383,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe2_07",
+        "center": [
+          -4080.0,
+          1330.0,
+          840.0
+        ],
+        "bbox_bottom": 645.335,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe2_08",
+        "center": [
+          -3750.0,
+          -1000.0,
+          770.0
+        ],
+        "bbox_bottom": 679.9904,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe2_09",
+        "center": [
+          -3420.0,
+          1220.0,
+          700.0
+        ],
+        "bbox_bottom": 575.6224,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe2_10",
+        "center": [
+          -3090.0,
+          -890.0,
+          840.0
+        ],
+        "bbox_bottom": 688.4429,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe2_11",
+        "center": [
+          -2760.0,
+          1110.0,
+          770.0
+        ],
+        "bbox_bottom": 576.5715,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe2_12",
+        "center": [
+          -2430.0,
+          -1330.0,
+          700.0
+        ],
+        "bbox_bottom": 610.697,
+        "hidden": false
+      },
+      {
+        "label": "DYExt30_Lobe2_13",
+        "center": [
+          -2100.0,
+          1000.0,
+          840.0
+        ],
+        "bbox_bottom": 716.5056,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_00_0",
+        "center": [
+          -2214.0,
+          -1373.2,
+          703.6
+        ],
+        "bbox_bottom": 613.5498,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_00_1",
+        "center": [
+          -2639.6,
+          -1662.0,
+          787.2
+        ],
+        "bbox_bottom": 709.8332,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_01_0",
+        "center": [
+          -2103.2,
+          803.52,
+          823.96
+        ],
+        "bbox_bottom": 701.9129,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_01_1",
+        "center": [
+          -2683.36,
+          1197.2,
+          937.92
+        ],
+        "bbox_bottom": 833.0111999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_02_0",
+        "center": [
+          -2449.6,
+          -1286.96,
+          1014.08
+        ],
+        "bbox_bottom": 881.9629,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_02_1",
+        "center": [
+          -3081.28,
+          -1715.6,
+          1138.16
+        ],
+        "bbox_bottom": 1024.5385,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_03_0",
+        "center": [
+          -2574.8,
+          780.08,
+          723.84
+        ],
+        "bbox_bottom": 613.9167,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_03_1",
+        "center": [
+          -3103.44,
+          1138.8,
+          827.68
+        ],
+        "bbox_bottom": 733.0975,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_04_0",
+        "center": [
+          -2921.2,
+          -1323.52,
+          913.96
+        ],
+        "bbox_bottom": 807.0992,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_04_1",
+        "center": [
+          -3501.36,
+          -1717.2,
+          1027.92
+        ],
+        "bbox_bottom": 934.9432,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_05_0",
+        "center": [
+          -3046.4,
+          906.64,
+          983.72
+        ],
+        "bbox_bottom": 896.4185,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_05_1",
+        "center": [
+          -3523.52,
+          1230.4,
+          1077.44
+        ],
+        "bbox_bottom": 1001.4323,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_06_0",
+        "center": [
+          -3392.8,
+          -1320.08,
+          813.84
+        ],
+        "bbox_bottom": 717.7544,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_06_1",
+        "center": [
+          -3921.44,
+          -1678.8,
+          917.68
+        ],
+        "bbox_bottom": 833.9699999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_07_0",
+        "center": [
+          -3420.0,
+          853.2,
+          883.6
+        ],
+        "bbox_bottom": 806.7605,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_07_1",
+        "center": [
+          -3845.6,
+          1142.0,
+          967.2
+        ],
+        "bbox_bottom": 900.2130000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_08_0",
+        "center": [
+          -3864.4,
+          -1356.64,
+          713.72
+        ],
+        "bbox_bottom": 628.159,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_08_1",
+        "center": [
+          -4341.52,
+          -1680.4,
+          807.44
+        ],
+        "bbox_bottom": 732.7999000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_09_0",
+        "center": [
+          -3753.6,
+          746.96,
+          834.08
+        ],
+        "bbox_bottom": 721.5702,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_09_1",
+        "center": [
+          -4385.28,
+          1175.6,
+          958.16
+        ],
+        "bbox_bottom": 859.9441999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_10_0",
+        "center": [
+          -4336.0,
+          -1353.2,
+          973.6
+        ],
+        "bbox_bottom": 897.9590000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_10_1",
+        "center": [
+          -4761.6,
+          -1642.0,
+          1057.2
+        ],
+        "bbox_bottom": 991.1547,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_11_0",
+        "center": [
+          -4225.2,
+          873.52,
+          733.96
+        ],
+        "bbox_bottom": 631.5548,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_11_1",
+        "center": [
+          -4805.36,
+          1267.2,
+          847.92
+        ],
+        "bbox_bottom": 758.4440999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_12_0",
+        "center": [
+          -4669.6,
+          -1306.96,
+          924.08
+        ],
+        "bbox_bottom": 813.349,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_12_1",
+        "center": [
+          -5301.28,
+          -1735.6,
+          1048.16
+        ],
+        "bbox_bottom": 951.3419000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_13_0",
+        "center": [
+          -4696.8,
+          820.08,
+          993.84
+        ],
+        "bbox_bottom": 901.8143,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_13_1",
+        "center": [
+          -5225.44,
+          1178.8,
+          1097.68
+        ],
+        "bbox_bottom": 1017.1600000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_14_0",
+        "center": [
+          -2205.26,
+          -1430.656,
+          773.368
+        ],
+        "bbox_bottom": 730.6969,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_14_1",
+        "center": [
+          -2452.108,
+          -1598.16,
+          821.856
+        ],
+        "bbox_bottom": 784.4931,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_15_0",
+        "center": [
+          -2384.6213,
+          -1513.4696,
+          729.136
+        ],
+        "bbox_bottom": 680.9208,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_15_1",
+        "center": [
+          -2665.5173,
+          -1322.8616,
+          784.312
+        ],
+        "bbox_bottom": 742.064,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_16_0",
+        "center": [
+          -2149.607,
+          1249.9312,
+          919.0648
+        ],
+        "bbox_bottom": 861.7157,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_16_1",
+        "center": [
+          -2486.0998,
+          1021.5968,
+          985.1616
+        ],
+        "bbox_bottom": 934.873,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_17_0",
+        "center": [
+          -2403.4677,
+          1063.6952,
+          858.7696
+        ],
+        "bbox_bottom": 778.096,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_17_1",
+        "center": [
+          -2786.3733,
+          1323.524,
+          933.9832
+        ],
+        "bbox_bottom": 864.6471,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_18_0",
+        "center": [
+          -2709.7834,
+          -1443.3086,
+          1117.6304
+        ],
+        "bbox_bottom": 1040.8852,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_18_1",
+        "center": [
+          -3076.1578,
+          -1691.9198,
+          1189.5968
+        ],
+        "bbox_bottom": 1123.6042,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_19_0",
+        "center": [
+          -2594.2505,
+          -1516.2568,
+          1051.9808
+        ],
+        "bbox_bottom": 965.157,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_19_1",
+        "center": [
+          -3011.1593,
+          -1233.3544,
+          1133.8736
+        ],
+        "bbox_bottom": 1059.1769,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_20_0",
+        "center": [
+          -2823.3661,
+          1041.7604,
+          810.4992
+        ],
+        "bbox_bottom": 739.856,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_20_1",
+        "center": [
+          -3129.9773,
+          833.7028,
+          870.7264
+        ],
+        "bbox_bottom": 825.875,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_21_0",
+        "center": [
+          -2549.9611,
+          996.2152,
+          755.5584
+        ],
+        "bbox_bottom": 675.5956,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_21_1",
+        "center": [
+          -2898.8635,
+          1232.9704,
+          824.0928
+        ],
+        "bbox_bottom": 773.3883,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_22_0",
+        "center": [
+          -3127.8065,
+          -1297.8093,
+          1009.0648
+        ],
+        "bbox_bottom": 939.9357,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_22_1",
+        "center": [
+          -3464.2993,
+          -1526.1437,
+          1075.1616
+        ],
+        "bbox_bottom": 1015.6173999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_23_0",
+        "center": [
+          -2835.8521,
+          -1559.7511,
+          948.7696
+        ],
+        "bbox_bottom": 870.5711,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_23_1",
+        "center": [
+          -3218.7577,
+          -1299.9223,
+          1023.9832
+        ],
+        "bbox_bottom": 956.5918,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_24_0",
+        "center": [
+          -3057.2363,
+          1121.1101,
+          1061.9336
+        ],
+        "bbox_bottom": 1005.7553,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_24_1",
+        "center": [
+          -3333.9659,
+          933.3293,
+          1116.2912
+        ],
+        "bbox_bottom": 1067.8511999999998,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_25_0",
+        "center": [
+          -3116.9999,
+          1074.7923,
+          1012.3472
+        ],
+        "bbox_bottom": 948.8031000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_25_1",
+        "center": [
+          -3431.8991,
+          1288.4739,
+          1074.2024
+        ],
+        "bbox_bottom": 1019.3818999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_26_0",
+        "center": [
+          -3382.6551,
+          -1377.8786,
+          900.4992
+        ],
+        "bbox_bottom": 839.0004,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_26_1",
+        "center": [
+          -3689.2663,
+          -1585.9362,
+          960.7264
+        ],
+        "bbox_bottom": 907.6417,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_27_0",
+        "center": [
+          -3615.3682,
+          -1506.9882,
+          845.5584
+        ],
+        "bbox_bottom": 776.0012,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_27_1",
+        "center": [
+          -3964.2706,
+          -1270.233,
+          914.0928
+        ],
+        "bbox_bottom": 854.0194,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_28_0",
+        "center": [
+          -3466.0199,
+          1186.5243,
+          953.368
+        ],
+        "bbox_bottom": 904.4565,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_28_1",
+        "center": [
+          -3712.8679,
+          1019.0203,
+          1001.856
+        ],
+        "bbox_bottom": 959.59,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_29_0",
+        "center": [
+          -3634.6432,
+          1098.6608,
+          909.136
+        ],
+        "bbox_bottom": 860.1477,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_29_1",
+        "center": [
+          -3915.5392,
+          1289.2688,
+          964.312
+        ],
+        "bbox_bottom": 921.4566,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_30_0",
+        "center": [
+          -4075.3494,
+          -1288.4526,
+          791.9336
+        ],
+        "bbox_bottom": 737.5441,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_30_1",
+        "center": [
+          -4352.079,
+          -1476.2334,
+          846.2912
+        ],
+        "bbox_bottom": 799.2567,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_31_0",
+        "center": [
+          -3961.5143,
+          -1467.9218,
+          742.3472
+        ],
+        "bbox_bottom": 680.8386,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_31_1",
+        "center": [
+          -4276.4135,
+          -1254.2402,
+          804.2024
+        ],
+        "bbox_bottom": 750.9812000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_32_0",
+        "center": [
+          -4048.9185,
+          1303.5002,
+          937.6304
+        ],
+        "bbox_bottom": 866.5127,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_32_1",
+        "center": [
+          -4415.2929,
+          1054.889,
+          1009.5968
+        ],
+        "bbox_bottom": 948.0258,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_33_0",
+        "center": [
+          -3712.0176,
+          970.3397,
+          871.9808
+        ],
+        "bbox_bottom": 791.5608000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_33_1",
+        "center": [
+          -4128.9264,
+          1253.2421,
+          953.8736
+        ],
+        "bbox_bottom": 884.2084,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_34_0",
+        "center": [
+          -4475.2992,
+          -1530.2789,
+          1043.368
+        ],
+        "bbox_bottom": 996.0522,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_34_1",
+        "center": [
+          -4722.1472,
+          -1697.7829,
+          1091.856
+        ],
+        "bbox_bottom": 1050.8437,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_35_0",
+        "center": [
+          -4279.7799,
+          -1512.144,
+          999.136
+        ],
+        "bbox_bottom": 933.9861,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_35_1",
+        "center": [
+          -4560.6759,
+          -1321.536,
+          1054.312
+        ],
+        "bbox_bottom": 1012.8831999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_36_0",
+        "center": [
+          -4221.4998,
+          1123.7373,
+          829.0648
+        ],
+        "bbox_bottom": 751.4292,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_36_1",
+        "center": [
+          -4557.9926,
+          895.4029,
+          895.1616
+        ],
+        "bbox_bottom": 845.8544,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_37_0",
+        "center": [
+          -4325.9006,
+          1079.2864,
+          768.7696
+        ],
+        "bbox_bottom": 680.8912,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_37_1",
+        "center": [
+          -4708.8062,
+          1339.1152,
+          843.9832
+        ],
+        "bbox_bottom": 788.2409,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_38_0",
+        "center": [
+          -4660.0173,
+          -1359.9897,
+          1027.6304
+        ],
+        "bbox_bottom": 943.9915,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_38_1",
+        "center": [
+          -5026.3917,
+          -1608.6009,
+          1099.5968
+        ],
+        "bbox_bottom": 1046.6111,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_39_0",
+        "center": [
+          -4946.6092,
+          -1546.6951,
+          961.9808
+        ],
+        "bbox_bottom": 867.3125,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_39_1",
+        "center": [
+          -5363.518,
+          -1263.7927,
+          1043.8736
+        ],
+        "bbox_bottom": 983.9778999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_40_0",
+        "center": [
+          -4769.5142,
+          1239.7645,
+          1080.4992
+        ],
+        "bbox_bottom": 1010.9941,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_40_1",
+        "center": [
+          -5076.1254,
+          1031.7069,
+          1140.7264
+        ],
+        "bbox_bottom": 1096.7692,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_41_0",
+        "center": [
+          -4954.5498,
+          1044.6328,
+          1025.5584
+        ],
+        "bbox_bottom": 946.8906999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_41_1",
+        "center": [
+          -5303.4522,
+          1281.388,
+          1094.0928
+        ],
+        "bbox_bottom": 1044.4059,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_42_0",
+        "center": [
+          -2146.0,
+          -1267.6,
+          74.8
+        ],
+        "bbox_bottom": -10.596699999999998,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_42_1",
+        "center": [
+          -2526.8,
+          -1526.0,
+          149.6
+        ],
+        "bbox_bottom": 95.7344,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_43_0",
+        "center": [
+          -2113.0,
+          817.8,
+          86.9
+        ],
+        "bbox_bottom": -11.772899999999993,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_43_1",
+        "center": [
+          -2555.4,
+          1118.0,
+          173.8
+        ],
+        "bbox_bottom": 111.64360000000002,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_44_0",
+        "center": [
+          -2500.0,
+          -1348.0,
+          99.0
+        ],
+        "bbox_bottom": -12.799300000000002,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_44_1",
+        "center": [
+          -3004.0,
+          -1690.0,
+          198.0
+        ],
+        "bbox_bottom": 127.6704,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_45_0",
+        "center": [
+          -2467.0,
+          888.2,
+          111.1
+        ],
+        "bbox_bottom": -13.675899999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_45_1",
+        "center": [
+          -3032.6,
+          1272.0,
+          222.2
+        ],
+        "bbox_bottom": 143.815,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_46_0",
+        "center": [
+          -2986.0,
+          -1267.6,
+          74.8
+        ],
+        "bbox_bottom": -8.744500000000002,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_46_1",
+        "center": [
+          -3366.8,
+          -1526.0,
+          149.6
+        ],
+        "bbox_bottom": 97.18969999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_47_0",
+        "center": [
+          -2953.0,
+          1037.8,
+          86.9
+        ],
+        "bbox_bottom": 0.3453000000000088,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_47_1",
+        "center": [
+          -3395.4,
+          1338.0,
+          173.8
+        ],
+        "bbox_bottom": 98.91860000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_48_0",
+        "center": [
+          -3340.0,
+          -1348.0,
+          99.0
+        ],
+        "bbox_bottom": 1.006299999999996,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_48_1",
+        "center": [
+          -3844.0,
+          -1690.0,
+          198.0
+        ],
+        "bbox_bottom": 113.1736,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_49_0",
+        "center": [
+          -3307.0,
+          778.2,
+          111.1
+        ],
+        "bbox_bottom": 1.816999999999993,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_49_1",
+        "center": [
+          -3872.6,
+          1162.0,
+          222.2
+        ],
+        "bbox_bottom": 127.54639999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_50_0",
+        "center": [
+          -3826.0,
+          -1267.6,
+          74.8
+        ],
+        "bbox_bottom": -7.2091000000000065,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_50_1",
+        "center": [
+          -4206.8,
+          -1526.0,
+          149.6
+        ],
+        "bbox_bottom": 98.39609999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_51_0",
+        "center": [
+          -3793.0,
+          927.8,
+          86.9
+        ],
+        "bbox_bottom": -7.837299999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_51_1",
+        "center": [
+          -4235.4,
+          1228.0,
+          173.8
+        ],
+        "bbox_bottom": 114.73580000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_52_0",
+        "center": [
+          -4180.0,
+          -1348.0,
+          99.0
+        ],
+        "bbox_bottom": -8.315700000000007,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_52_1",
+        "center": [
+          -4684.0,
+          -1690.0,
+          198.0
+        ],
+        "bbox_bottom": 131.1932,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_53_0",
+        "center": [
+          -4147.0,
+          998.2,
+          111.1
+        ],
+        "bbox_bottom": 4.097499999999997,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_53_1",
+        "center": [
+          -4712.6,
+          1382.0,
+          222.2
+        ],
+        "bbox_bottom": 129.33819999999997,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_54_0",
+        "center": [
+          -4666.0,
+          -1267.6,
+          74.8
+        ],
+        "bbox_bottom": 3.2218000000000018,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_54_1",
+        "center": [
+          -5046.8,
+          -1526.0,
+          149.6
+        ],
+        "bbox_bottom": 87.443,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_55_0",
+        "center": [
+          -4633.0,
+          817.8,
+          86.9
+        ],
+        "bbox_bottom": 4.280900000000003,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_55_1",
+        "center": [
+          -5075.4,
+          1118.0,
+          173.8
+        ],
+        "bbox_bottom": 102.0109,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_56_0",
+        "center": [
+          -5122.0,
+          1386.8,
+          703.6
+        ],
+        "bbox_bottom": 624.6359,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_56_1",
+        "center": [
+          -5547.6,
+          1098.0,
+          787.2
+        ],
+        "bbox_bottom": 718.5437000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_57_0",
+        "center": [
+          -5039.2,
+          -1836.48,
+          823.96
+        ],
+        "bbox_bottom": 717.0249,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_57_1",
+        "center": [
+          -5619.36,
+          -1442.8,
+          937.92
+        ],
+        "bbox_bottom": 844.8849,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_58_0",
+        "center": [
+          -5511.6,
+          1653.04,
+          1014.08
+        ],
+        "bbox_bottom": 898.4169,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_58_1",
+        "center": [
+          -6143.28,
+          1224.4,
+          1138.16
+        ],
+        "bbox_bottom": 1037.4666000000002,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_59_0",
+        "center": [
+          -5566.8,
+          -1669.92,
+          723.84
+        ],
+        "bbox_bottom": 605.763,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_59_1",
+        "center": [
+          -6095.44,
+          -1311.2,
+          827.68
+        ],
+        "bbox_bottom": 753.2741,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_60_0",
+        "center": [
+          -6039.2,
+          1486.48,
+          913.96
+        ],
+        "bbox_bottom": 808.6586,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_60_1",
+        "center": [
+          -6619.36,
+          1092.8,
+          1027.92
+        ],
+        "bbox_bottom": 936.1685000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_61_0",
+        "center": [
+          -6094.4,
+          -1853.36,
+          983.72
+        ],
+        "bbox_bottom": 897.701,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_61_1",
+        "center": [
+          -6571.52,
+          -1529.6,
+          1077.44
+        ],
+        "bbox_bottom": 1002.44,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_62_0",
+        "center": [
+          -6572.0,
+          1636.8,
+          703.6
+        ],
+        "bbox_bottom": 627.3870000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_62_1",
+        "center": [
+          -6997.6,
+          1348.0,
+          787.2
+        ],
+        "bbox_bottom": 720.7052000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_63_0",
+        "center": [
+          -6489.2,
+          -1736.48,
+          823.96
+        ],
+        "bbox_bottom": 720.7751000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_63_1",
+        "center": [
+          -7069.36,
+          -1342.8,
+          937.92
+        ],
+        "bbox_bottom": 847.8313999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_64_0",
+        "center": [
+          -4008.0,
+          -884.8,
+          534.4
+        ],
+        "bbox_bottom": 471.0922,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_64_1",
+        "center": [
+          -4366.4,
+          -1128.0,
+          604.8
+        ],
+        "bbox_bottom": 549.4893,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_65_0",
+        "center": [
+          -3636.0,
+          1079.6,
+          708.8
+        ],
+        "bbox_bottom": 614.0598,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_65_1",
+        "center": [
+          -4072.8,
+          1376.0,
+          794.6
+        ],
+        "bbox_bottom": 735.339,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_66_0",
+        "center": [
+          -3264.0,
+          -1274.4,
+          613.2
+        ],
+        "bbox_bottom": 502.08170000000007,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_66_1",
+        "center": [
+          -3779.2,
+          -1624.0,
+          714.4
+        ],
+        "bbox_bottom": 644.9946,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_67_0",
+        "center": [
+          -2892.0,
+          919.2,
+          517.6
+        ],
+        "bbox_bottom": 390.29420000000005,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_67_1",
+        "center": [
+          -3485.6,
+          1322.0,
+          634.2
+        ],
+        "bbox_bottom": 554.8001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_68_0",
+        "center": [
+          -2688.0,
+          -1214.8,
+          714.4
+        ],
+        "bbox_bottom": 637.9719,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_68_1",
+        "center": [
+          -3046.4,
+          -1458.0,
+          784.8
+        ],
+        "bbox_bottom": 737.2027999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_69_0",
+        "center": [
+          -2316.0,
+          859.6,
+          618.8
+        ],
+        "bbox_bottom": 526.1844,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_69_1",
+        "center": [
+          -2752.8,
+          1156.0,
+          704.6
+        ],
+        "bbox_bottom": 625.0435,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_70_0",
+        "center": [
+          -1944.0,
+          -1054.4,
+          523.2
+        ],
+        "bbox_bottom": 435.5253,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_70_1",
+        "center": [
+          -2459.2,
+          -1404.0,
+          624.4
+        ],
+        "bbox_bottom": 547.5074,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_71_0",
+        "center": [
+          -3882.0,
+          1249.2,
+          697.6
+        ],
+        "bbox_bottom": 572.6876,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_71_1",
+        "center": [
+          -4475.6,
+          1652.0,
+          814.2
+        ],
+        "bbox_bottom": 706.831,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_72_0",
+        "center": [
+          -3678.0,
+          -994.8,
+          624.4
+        ],
+        "bbox_bottom": 549.4169999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_72_1",
+        "center": [
+          -4036.4,
+          -1238.0,
+          694.8
+        ],
+        "bbox_bottom": 630.3158999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_73_0",
+        "center": [
+          -3306.0,
+          1189.6,
+          528.8
+        ],
+        "bbox_bottom": 437.94559999999996,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_73_1",
+        "center": [
+          -3742.8,
+          1486.0,
+          614.6
+        ],
+        "bbox_bottom": 536.4273000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_74_0",
+        "center": [
+          -2934.0,
+          -834.4,
+          703.2
+        ],
+        "bbox_bottom": 596.6649,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_74_1",
+        "center": [
+          -3449.2,
+          -1184.0,
+          804.4
+        ],
+        "bbox_bottom": 712.6885,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_75_0",
+        "center": [
+          -2562.0,
+          1029.2,
+          607.6
+        ],
+        "bbox_bottom": 485.57480000000004,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_75_1",
+        "center": [
+          -3155.6,
+          1432.0,
+          724.2
+        ],
+        "bbox_bottom": 619.0996,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_76_0",
+        "center": [
+          -2358.0,
+          -1324.8,
+          534.4
+        ],
+        "bbox_bottom": 461.1602,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_76_1",
+        "center": [
+          -2716.4,
+          -1568.0,
+          604.8
+        ],
+        "bbox_bottom": 541.6855999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_77_0",
+        "center": [
+          -1986.0,
+          969.6,
+          708.8
+        ],
+        "bbox_bottom": 620.0702,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_77_1",
+        "center": [
+          -2422.8,
+          1266.0,
+          794.6
+        ],
+        "bbox_bottom": 718.0966000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_78_0",
+        "center": [
+          -3936.0,
+          -803.6,
+          680.8
+        ],
+        "bbox_bottom": 632.5794,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_78_1",
+        "center": [
+          -4204.8,
+          -986.0,
+          733.6
+        ],
+        "bbox_bottom": 691.5357,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_79_0",
+        "center": [
+          -3570.0,
+          1002.0,
+          816.0
+        ],
+        "bbox_bottom": 756.1329,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_79_1",
+        "center": [
+          -3906.0,
+          1230.0,
+          882.0
+        ],
+        "bbox_bottom": 829.7407,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_80_0",
+        "center": [
+          -3204.0,
+          -1200.4,
+          741.2
+        ],
+        "bbox_bottom": 660.431,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_80_1",
+        "center": [
+          -3607.2,
+          -1474.0,
+          820.4
+        ],
+        "bbox_bottom": 750.6736,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_81_0",
+        "center": [
+          -2838.0,
+          848.8,
+          666.4
+        ],
+        "bbox_bottom": 572.7415,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_81_1",
+        "center": [
+          -3308.4,
+          1168.0,
+          758.8
+        ],
+        "bbox_bottom": 677.9019999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_82_0",
+        "center": [
+          -2616.0,
+          -1133.6,
+          820.8
+        ],
+        "bbox_bottom": 767.6076999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_82_1",
+        "center": [
+          -2884.8,
+          -1316.0,
+          873.6
+        ],
+        "bbox_bottom": 827.6294,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_83_0",
+        "center": [
+          -2250.0,
+          782.0,
+          746.0
+        ],
+        "bbox_bottom": 687.4876,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_83_1",
+        "center": [
+          -2586.0,
+          1010.0,
+          812.0
+        ],
+        "bbox_bottom": 760.8051,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_84_0",
+        "center": [
+          -1884.0,
+          -980.4,
+          671.2
+        ],
+        "bbox_bottom": 601.4754,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_84_1",
+        "center": [
+          -2287.2,
+          -1254.0,
+          750.4
+        ],
+        "bbox_bottom": 689.3514,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_85_0",
+        "center": [
+          -3828.0,
+          1178.8,
+          806.4
+        ],
+        "bbox_bottom": 725.6267,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_85_1",
+        "center": [
+          -4298.4,
+          1498.0,
+          898.8
+        ],
+        "bbox_bottom": 828.026,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_86_0",
+        "center": [
+          -3606.0,
+          -913.6,
+          750.8
+        ],
+        "bbox_bottom": 704.9707,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_86_1",
+        "center": [
+          -3874.8,
+          -1096.0,
+          803.6
+        ],
+        "bbox_bottom": 763.4146000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_87_0",
+        "center": [
+          -3240.0,
+          1112.0,
+          676.0
+        ],
+        "bbox_bottom": 619.1219,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_87_1",
+        "center": [
+          -3576.0,
+          1340.0,
+          742.0
+        ],
+        "bbox_bottom": 692.0892,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_88_0",
+        "center": [
+          -2874.0,
+          -760.4,
+          811.2
+        ],
+        "bbox_bottom": 743.4366,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_88_1",
+        "center": [
+          -3277.2,
+          -1034.0,
+          890.4
+        ],
+        "bbox_bottom": 830.8923,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_89_0",
+        "center": [
+          -2508.0,
+          958.8,
+          736.4
+        ],
+        "bbox_bottom": 627.8091,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_89_1",
+        "center": [
+          -2978.4,
+          1278.0,
+          828.8
+        ],
+        "bbox_bottom": 759.8237999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_90_0",
+        "center": [
+          -2286.0,
+          -1243.6,
+          680.8
+        ],
+        "bbox_bottom": 618.8512999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_90_1",
+        "center": [
+          -2554.8,
+          -1426.0,
+          733.6
+        ],
+        "bbox_bottom": 694.2661,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_91_0",
+        "center": [
+          -1920.0,
+          892.0,
+          816.0
+        ],
+        "bbox_bottom": 738.9727,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_91_1",
+        "center": [
+          -2256.0,
+          1120.0,
+          882.0
+        ],
+        "bbox_bottom": 833.1537,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_92_0",
+        "center": [
+          -1824.0,
+          -562.4,
+          86.4
+        ],
+        "bbox_bottom": 45.5367,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_92_1",
+        "center": [
+          -2003.2,
+          -684.0,
+          121.6
+        ],
+        "bbox_bottom": 95.71979999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_93_0",
+        "center": [
+          -1803.0,
+          644.8,
+          105.3
+        ],
+        "bbox_bottom": 55.7634,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_93_1",
+        "center": [
+          -2021.4,
+          793.0,
+          148.2
+        ],
+        "bbox_bottom": 116.8672,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_94_0",
+        "center": [
+          -2002.0,
+          -727.2,
+          124.2
+        ],
+        "bbox_bottom": 66.08539999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_94_1",
+        "center": [
+          -2259.6,
+          -902.0,
+          174.8
+        ],
+        "bbox_bottom": 138.08950000000002,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_95_0",
+        "center": [
+          -1981.0,
+          809.6,
+          143.1
+        ],
+        "bbox_bottom": 76.5028,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_95_1",
+        "center": [
+          -2277.8,
+          1011.0,
+          201.4
+        ],
+        "bbox_bottom": 159.38670000000002,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_96_0",
+        "center": [
+          -2264.0,
+          -562.4,
+          86.4
+        ],
+        "bbox_bottom": 50.4453,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_96_1",
+        "center": [
+          -2443.2,
+          -684.0,
+          121.6
+        ],
+        "bbox_bottom": 90.5654,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_97_0",
+        "center": [
+          -2243.0,
+          644.8,
+          105.3
+        ],
+        "bbox_bottom": 61.745799999999996,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_97_1",
+        "center": [
+          -2461.4,
+          793.0,
+          148.2
+        ],
+        "bbox_bottom": 110.58529999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_98_0",
+        "center": [
+          -2442.0,
+          -727.2,
+          124.2
+        ],
+        "bbox_bottom": 73.14160000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_98_1",
+        "center": [
+          -2699.6,
+          -902.0,
+          174.8
+        ],
+        "bbox_bottom": 130.68,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_99_0",
+        "center": [
+          -2421.0,
+          809.6,
+          143.1
+        ],
+        "bbox_bottom": 84.6328,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_99_1",
+        "center": [
+          -2717.8,
+          1011.0,
+          201.4
+        ],
+        "bbox_bottom": 150.8497,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_100_0",
+        "center": [
+          -2704.0,
+          -562.4,
+          86.4
+        ],
+        "bbox_bottom": 54.6773,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_100_1",
+        "center": [
+          -2883.2,
+          -684.0,
+          121.6
+        ],
+        "bbox_bottom": 93.89059999999999,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_101_0",
+        "center": [
+          -2683.0,
+          644.8,
+          105.3
+        ],
+        "bbox_bottom": 66.9035,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_101_1",
+        "center": [
+          -2901.4,
+          793.0,
+          148.2
+        ],
+        "bbox_bottom": 114.6378,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_102_0",
+        "center": [
+          -2882.0,
+          -727.2,
+          124.2
+        ],
+        "bbox_bottom": 79.2251,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_102_1",
+        "center": [
+          -3139.6,
+          -902.0,
+          174.8
+        ],
+        "bbox_bottom": 135.4599,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_103_0",
+        "center": [
+          -2861.0,
+          809.6,
+          143.1
+        ],
+        "bbox_bottom": 91.642,
+        "hidden": false
+      },
+      {
+        "label": "DYExt34_Lobe_103_1",
+        "center": [
+          -3157.8,
+          1011.0,
+          201.4
+        ],
+        "bbox_bottom": 156.357,
+        "hidden": false
+      }
+    ],
+    "ground_bushes_review": [
+      {
+        "label": "DYExt7_Bush_0_0",
+        "center": [
+          -2350.0,
+          -1390.0,
+          102.0
+        ],
+        "bbox_bottom": -4.513000000000005,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Bush_0_1",
+        "center": [
+          -2350.0,
+          960.0,
+          118.5
+        ],
+        "bbox_bottom": -17.350899999999996,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Bush_1_0",
+        "center": [
+          -2770.0,
+          -1510.0,
+          135.0
+        ],
+        "bbox_bottom": -5.125,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Bush_1_1",
+        "center": [
+          -2770.0,
+          1070.0,
+          151.5
+        ],
+        "bbox_bottom": -21.230999999999995,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Bush_2_0",
+        "center": [
+          -3190.0,
+          -1390.0,
+          102.0
+        ],
+        "bbox_bottom": -3.2313999999999936,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Bush_2_1",
+        "center": [
+          -3190.0,
+          1180.0,
+          118.5
+        ],
+        "bbox_bottom": -15.861899999999991,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Bush_3_0",
+        "center": [
+          -3610.0,
+          -1510.0,
+          135.0
+        ],
+        "bbox_bottom": -3.4285999999999888,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Bush_3_1",
+        "center": [
+          -3610.0,
+          960.0,
+          151.5
+        ],
+        "bbox_bottom": -19.32740000000001,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Bush_4_0",
+        "center": [
+          -4030.0,
+          -1390.0,
+          102.0
+        ],
+        "bbox_bottom": -1.949700000000007,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Bush_4_1",
+        "center": [
+          -4030.0,
+          1070.0,
+          118.5
+        ],
+        "bbox_bottom": -14.372899999999987,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Bush_5_0",
+        "center": [
+          -4450.0,
+          -1510.0,
+          135.0
+        ],
+        "bbox_bottom": 13.980999999999995,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Bush_5_1",
+        "center": [
+          -4450.0,
+          1180.0,
+          151.5
+        ],
+        "bbox_bottom": 0.21010000000001128,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Bush_6_0",
+        "center": [
+          -4870.0,
+          -1390.0,
+          102.0
+        ],
+        "bbox_bottom": 11.2042,
+        "hidden": false
+      },
+      {
+        "label": "DYExt7_Bush_6_1",
+        "center": [
+          -4870.0,
+          960.0,
+          118.5
+        ],
+        "bbox_bottom": 0.9087999999999994,
+        "hidden": false
+      },
+      {
+        "label": "DYExt31_Shrub_00",
+        "center": [
+          -1920.0,
+          -620.0,
+          99.2
+        ],
+        "bbox_bottom": 48.7552,
+        "hidden": false
+      },
+      {
+        "label": "DYExt31_Shrub_04",
+        "center": [
+          -2360.0,
+          -620.0,
+          99.2
+        ],
+        "bbox_bottom": 44.5261,
+        "hidden": false
+      },
+      {
+        "label": "DYExt31_Shrub_08",
+        "center": [
+          -2800.0,
+          -620.0,
+          99.2
+        ],
+        "bbox_bottom": 40.297000000000004,
+        "hidden": false
+      },
+      {
+        "label": "DYExt31_Shrub_10",
+        "center": [
+          -3020.0,
+          -810.0,
+          142.6
+        ],
+        "bbox_bottom": 57.7466,
+        "hidden": false
+      }
+    ],
+    "notes": [
+      "Main pairs have matching XY centers. Some original trunk/crown boxes already have small vertical gaps; rows record these. Recheck the actual root graft natively.",
+      "Small DYExt7_Canopy/DYExt34_Lobe/DYExt30_Lobe/Lobe2 spheres are offset garnish. Replacing each with a root-based whole crown creates floating trees.",
+      "Suggested secondary cleanup is to hide exact listed satellite labels only after source/visibility backup; do not delete actors or move trunks.",
+      "Ground bushes include elevated bottoms; replacement needs native scene review. This source task does not change their visibility.",
+      "Do not restore ART_B1/ART_B2 failed Run99 actors. Both new candidates are single StaticMesh objects, not chains of Actors."
+    ],
+    "hide_satellite_labels_exact": [
+      "DYExt7_Canopy_0_0",
+      "DYExt7_Canopy_0_1",
+      "DYExt7_Canopy_1_0",
+      "DYExt7_Canopy_1_1",
+      "DYExt7_Canopy_2_0",
+      "DYExt7_Canopy_2_1",
+      "DYExt7_Canopy_3_0",
+      "DYExt7_Canopy_3_1",
+      "DYExt7_Canopy_4_0",
+      "DYExt7_Canopy_4_1",
+      "DYExt7_Canopy_5_0",
+      "DYExt7_Canopy_5_1",
+      "DYExt7_Canopy_6_0",
+      "DYExt7_Canopy_6_1",
+      "DYExt7_Canopy_7_0",
+      "DYExt7_Canopy_7_1",
+      "DYExt7_Canopy_8_0",
+      "DYExt7_Canopy_8_1",
+      "DYExt7_Canopy_9_0",
+      "DYExt7_Canopy_9_1",
+      "DYExt7_Canopy_10_0",
+      "DYExt7_Canopy_10_1",
+      "DYExt7_Canopy_11_0",
+      "DYExt7_Canopy_11_1",
+      "DYExt7_Canopy_12_0",
+      "DYExt7_Canopy_12_1",
+      "DYExt7_Canopy_13_0",
+      "DYExt7_Canopy_13_1",
+      "DYExt30_Lobe_00",
+      "DYExt30_Lobe_01",
+      "DYExt30_Lobe_02",
+      "DYExt30_Lobe_03",
+      "DYExt30_Lobe_04",
+      "DYExt30_Lobe_05",
+      "DYExt30_Lobe_06",
+      "DYExt30_Lobe_07",
+      "DYExt30_Lobe_08",
+      "DYExt30_Lobe_09",
+      "DYExt30_Lobe_10",
+      "DYExt30_Lobe_11",
+      "DYExt30_Lobe_12",
+      "DYExt30_Lobe_13",
+      "DYExt30_Lobe2_00",
+      "DYExt30_Lobe2_01",
+      "DYExt30_Lobe2_02",
+      "DYExt30_Lobe2_03",
+      "DYExt30_Lobe2_04",
+      "DYExt30_Lobe2_05",
+      "DYExt30_Lobe2_06",
+      "DYExt30_Lobe2_07",
+      "DYExt30_Lobe2_08",
+      "DYExt30_Lobe2_09",
+      "DYExt30_Lobe2_10",
+      "DYExt30_Lobe2_11",
+      "DYExt30_Lobe2_12",
+      "DYExt30_Lobe2_13",
+      "DYExt34_Lobe_00_0",
+      "DYExt34_Lobe_00_1",
+      "DYExt34_Lobe_01_0",
+      "DYExt34_Lobe_01_1",
+      "DYExt34_Lobe_02_0",
+      "DYExt34_Lobe_02_1",
+      "DYExt34_Lobe_03_0",
+      "DYExt34_Lobe_03_1",
+      "DYExt34_Lobe_04_0",
+      "DYExt34_Lobe_04_1",
+      "DYExt34_Lobe_05_0",
+      "DYExt34_Lobe_05_1",
+      "DYExt34_Lobe_06_0",
+      "DYExt34_Lobe_06_1",
+      "DYExt34_Lobe_07_0",
+      "DYExt34_Lobe_07_1",
+      "DYExt34_Lobe_08_0",
+      "DYExt34_Lobe_08_1",
+      "DYExt34_Lobe_09_0",
+      "DYExt34_Lobe_09_1",
+      "DYExt34_Lobe_10_0",
+      "DYExt34_Lobe_10_1",
+      "DYExt34_Lobe_11_0",
+      "DYExt34_Lobe_11_1",
+      "DYExt34_Lobe_12_0",
+      "DYExt34_Lobe_12_1",
+      "DYExt34_Lobe_13_0",
+      "DYExt34_Lobe_13_1",
+      "DYExt34_Lobe_14_0",
+      "DYExt34_Lobe_14_1",
+      "DYExt34_Lobe_15_0",
+      "DYExt34_Lobe_15_1",
+      "DYExt34_Lobe_16_0",
+      "DYExt34_Lobe_16_1",
+      "DYExt34_Lobe_17_0",
+      "DYExt34_Lobe_17_1",
+      "DYExt34_Lobe_18_0",
+      "DYExt34_Lobe_18_1",
+      "DYExt34_Lobe_19_0",
+      "DYExt34_Lobe_19_1",
+      "DYExt34_Lobe_20_0",
+      "DYExt34_Lobe_20_1",
+      "DYExt34_Lobe_21_0",
+      "DYExt34_Lobe_21_1",
+      "DYExt34_Lobe_22_0",
+      "DYExt34_Lobe_22_1",
+      "DYExt34_Lobe_23_0",
+      "DYExt34_Lobe_23_1",
+      "DYExt34_Lobe_24_0",
+      "DYExt34_Lobe_24_1",
+      "DYExt34_Lobe_25_0",
+      "DYExt34_Lobe_25_1",
+      "DYExt34_Lobe_26_0",
+      "DYExt34_Lobe_26_1",
+      "DYExt34_Lobe_27_0",
+      "DYExt34_Lobe_27_1",
+      "DYExt34_Lobe_28_0",
+      "DYExt34_Lobe_28_1",
+      "DYExt34_Lobe_29_0",
+      "DYExt34_Lobe_29_1",
+      "DYExt34_Lobe_30_0",
+      "DYExt34_Lobe_30_1",
+      "DYExt34_Lobe_31_0",
+      "DYExt34_Lobe_31_1",
+      "DYExt34_Lobe_32_0",
+      "DYExt34_Lobe_32_1",
+      "DYExt34_Lobe_33_0",
+      "DYExt34_Lobe_33_1",
+      "DYExt34_Lobe_34_0",
+      "DYExt34_Lobe_34_1",
+      "DYExt34_Lobe_35_0",
+      "DYExt34_Lobe_35_1",
+      "DYExt34_Lobe_36_0",
+      "DYExt34_Lobe_36_1",
+      "DYExt34_Lobe_37_0",
+      "DYExt34_Lobe_37_1",
+      "DYExt34_Lobe_38_0",
+      "DYExt34_Lobe_38_1",
+      "DYExt34_Lobe_39_0",
+      "DYExt34_Lobe_39_1",
+      "DYExt34_Lobe_40_0",
+      "DYExt34_Lobe_40_1",
+      "DYExt34_Lobe_41_0",
+      "DYExt34_Lobe_41_1",
+      "DYExt34_Lobe_42_0",
+      "DYExt34_Lobe_42_1",
+      "DYExt34_Lobe_43_0",
+      "DYExt34_Lobe_43_1",
+      "DYExt34_Lobe_44_0",
+      "DYExt34_Lobe_44_1",
+      "DYExt34_Lobe_45_0",
+      "DYExt34_Lobe_45_1",
+      "DYExt34_Lobe_46_0",
+      "DYExt34_Lobe_46_1",
+      "DYExt34_Lobe_47_0",
+      "DYExt34_Lobe_47_1",
+      "DYExt34_Lobe_48_0",
+      "DYExt34_Lobe_48_1",
+      "DYExt34_Lobe_49_0",
+      "DYExt34_Lobe_49_1",
+      "DYExt34_Lobe_50_0",
+      "DYExt34_Lobe_50_1",
+      "DYExt34_Lobe_51_0",
+      "DYExt34_Lobe_51_1",
+      "DYExt34_Lobe_52_0",
+      "DYExt34_Lobe_52_1",
+      "DYExt34_Lobe_53_0",
+      "DYExt34_Lobe_53_1",
+      "DYExt34_Lobe_54_0",
+      "DYExt34_Lobe_54_1",
+      "DYExt34_Lobe_55_0",
+      "DYExt34_Lobe_55_1",
+      "DYExt34_Lobe_56_0",
+      "DYExt34_Lobe_56_1",
+      "DYExt34_Lobe_57_0",
+      "DYExt34_Lobe_57_1",
+      "DYExt34_Lobe_58_0",
+      "DYExt34_Lobe_58_1",
+      "DYExt34_Lobe_59_0",
+      "DYExt34_Lobe_59_1",
+      "DYExt34_Lobe_60_0",
+      "DYExt34_Lobe_60_1",
+      "DYExt34_Lobe_61_0",
+      "DYExt34_Lobe_61_1",
+      "DYExt34_Lobe_62_0",
+      "DYExt34_Lobe_62_1",
+      "DYExt34_Lobe_63_0",
+      "DYExt34_Lobe_63_1",
+      "DYExt34_Lobe_64_0",
+      "DYExt34_Lobe_64_1",
+      "DYExt34_Lobe_65_0",
+      "DYExt34_Lobe_65_1",
+      "DYExt34_Lobe_66_0",
+      "DYExt34_Lobe_66_1",
+      "DYExt34_Lobe_67_0",
+      "DYExt34_Lobe_67_1",
+      "DYExt34_Lobe_68_0",
+      "DYExt34_Lobe_68_1",
+      "DYExt34_Lobe_69_0",
+      "DYExt34_Lobe_69_1",
+      "DYExt34_Lobe_70_0",
+      "DYExt34_Lobe_70_1",
+      "DYExt34_Lobe_71_0",
+      "DYExt34_Lobe_71_1",
+      "DYExt34_Lobe_72_0",
+      "DYExt34_Lobe_72_1",
+      "DYExt34_Lobe_73_0",
+      "DYExt34_Lobe_73_1",
+      "DYExt34_Lobe_74_0",
+      "DYExt34_Lobe_74_1",
+      "DYExt34_Lobe_75_0",
+      "DYExt34_Lobe_75_1",
+      "DYExt34_Lobe_76_0",
+      "DYExt34_Lobe_76_1",
+      "DYExt34_Lobe_77_0",
+      "DYExt34_Lobe_77_1",
+      "DYExt34_Lobe_78_0",
+      "DYExt34_Lobe_78_1",
+      "DYExt34_Lobe_79_0",
+      "DYExt34_Lobe_79_1",
+      "DYExt34_Lobe_80_0",
+      "DYExt34_Lobe_80_1",
+      "DYExt34_Lobe_81_0",
+      "DYExt34_Lobe_81_1",
+      "DYExt34_Lobe_82_0",
+      "DYExt34_Lobe_82_1",
+      "DYExt34_Lobe_83_0",
+      "DYExt34_Lobe_83_1",
+      "DYExt34_Lobe_84_0",
+      "DYExt34_Lobe_84_1",
+      "DYExt34_Lobe_85_0",
+      "DYExt34_Lobe_85_1",
+      "DYExt34_Lobe_86_0",
+      "DYExt34_Lobe_86_1",
+      "DYExt34_Lobe_87_0",
+      "DYExt34_Lobe_87_1",
+      "DYExt34_Lobe_88_0",
+      "DYExt34_Lobe_88_1",
+      "DYExt34_Lobe_89_0",
+      "DYExt34_Lobe_89_1",
+      "DYExt34_Lobe_90_0",
+      "DYExt34_Lobe_90_1",
+      "DYExt34_Lobe_91_0",
+      "DYExt34_Lobe_91_1",
+      "DYExt34_Lobe_92_0",
+      "DYExt34_Lobe_92_1",
+      "DYExt34_Lobe_93_0",
+      "DYExt34_Lobe_93_1",
+      "DYExt34_Lobe_94_0",
+      "DYExt34_Lobe_94_1",
+      "DYExt34_Lobe_95_0",
+      "DYExt34_Lobe_95_1",
+      "DYExt34_Lobe_96_0",
+      "DYExt34_Lobe_96_1",
+      "DYExt34_Lobe_97_0",
+      "DYExt34_Lobe_97_1",
+      "DYExt34_Lobe_98_0",
+      "DYExt34_Lobe_98_1",
+      "DYExt34_Lobe_99_0",
+      "DYExt34_Lobe_99_1",
+      "DYExt34_Lobe_100_0",
+      "DYExt34_Lobe_100_1",
+      "DYExt34_Lobe_101_0",
+      "DYExt34_Lobe_101_1",
+      "DYExt34_Lobe_102_0",
+      "DYExt34_Lobe_102_1",
+      "DYExt34_Lobe_103_0",
+      "DYExt34_Lobe_103_1",
+      "DYExt7_Bush_0_0",
+      "DYExt7_Bush_0_1",
+      "DYExt7_Bush_1_0",
+      "DYExt7_Bush_1_1",
+      "DYExt7_Bush_2_0",
+      "DYExt7_Bush_2_1",
+      "DYExt7_Bush_3_0",
+      "DYExt7_Bush_3_1",
+      "DYExt7_Bush_4_0",
+      "DYExt7_Bush_4_1",
+      "DYExt7_Bush_5_0",
+      "DYExt7_Bush_5_1",
+      "DYExt7_Bush_6_0",
+      "DYExt7_Bush_6_1",
+      "DYExt31_Shrub_00",
+      "DYExt31_Shrub_04",
+      "DYExt31_Shrub_08",
+      "DYExt31_Shrub_10"
+    ]
+  },
+  "material_slot": "MI_DY_TreeTrunk",
+  "existing_material": "/Game/DengYingShanHai/Dev/WorldV2/Materials/MI_DY_TreeTrunk",
+  "source_provenance": "Original standard-library curved cubic-Bezier sweep geometry by Codex; no downloads, Blender, external models or alpha cards.",
+  "reference": "B2_DeadTree_v01.png; previous Final-Entry.png; latest scene-before.json snapshot",
+  "preview_views_left_to_right": [
+    "YZ front",
+    "XZ side",
+    "XY top"
+  ],
+  "preview_scope": "Source mesh technical raster; not Unreal lighting or runtime acceptance.",
+  "UE_modified": false,
+  "map_modified": false,
+  "actor_created": false,
+  "transforms_changed": false,
+  "native_import_status": "NOT_RUN",
+  "source_script": {
+    "name": "build_branch_crowns.py",
+    "sha256": "DD2B8C2F4DA08B6C3215B435A3ACD449EEC81B21DDE125096E7B21AD59827E66"
+  },
+  "diagnostic": {
+    "path": "D:\\灯影山海\\Saved\\Audit-2026-10-22-B2WallPolish\\scene-before.json",
+    "sha256": "99611ACC4AB177F9959A84182B017EC52E2D21D550AB5B07C1DD4FBFFB8360BA"
+  }
+}

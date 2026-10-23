@@ -1,0 +1,1957 @@
+{
+  "id": "Xingtian",
+  "reference": "D:/灯影山海/Assets/Sources/DengYingArt/Concept-20261021/C1_Xingtian_Ortho_v01.png",
+  "height_cm": 180,
+  "thickness_cm": 0.65,
+  "root_px": [
+    518,
+    448
+  ],
+  "bones": [
+    {
+      "name": "Root",
+      "parent": null,
+      "pivot_px": [
+        518,
+        448
+      ]
+    },
+    {
+      "name": "Arm_L_Upper",
+      "parent": "Root",
+      "pivot_px": [
+        381,
+        219
+      ]
+    },
+    {
+      "name": "Arm_L_Fore",
+      "parent": "Arm_L_Upper",
+      "pivot_px": [
+        283,
+        292
+      ]
+    },
+    {
+      "name": "Hand_L",
+      "parent": "Arm_L_Fore",
+      "pivot_px": [
+        217,
+        405
+      ]
+    },
+    {
+      "name": "Axe",
+      "parent": "Hand_L",
+      "pivot_px": [
+        210,
+        456
+      ]
+    },
+    {
+      "name": "Arm_R_Upper",
+      "parent": "Root",
+      "pivot_px": [
+        655,
+        219
+      ]
+    },
+    {
+      "name": "Arm_R_Fore",
+      "parent": "Arm_R_Upper",
+      "pivot_px": [
+        746,
+        292
+      ]
+    },
+    {
+      "name": "Shield",
+      "parent": "Arm_R_Fore",
+      "pivot_px": [
+        791,
+        483
+      ]
+    },
+    {
+      "name": "Leg_L_Upper",
+      "parent": "Root",
+      "pivot_px": [
+        421,
+        493
+      ]
+    },
+    {
+      "name": "Leg_L_Lower",
+      "parent": "Leg_L_Upper",
+      "pivot_px": [
+        381,
+        666
+      ]
+    },
+    {
+      "name": "Foot_L",
+      "parent": "Leg_L_Lower",
+      "pivot_px": [
+        333,
+        799
+      ]
+    },
+    {
+      "name": "Leg_R_Upper",
+      "parent": "Root",
+      "pivot_px": [
+        609,
+        493
+      ]
+    },
+    {
+      "name": "Leg_R_Lower",
+      "parent": "Leg_R_Upper",
+      "pivot_px": [
+        655,
+        666
+      ]
+    },
+    {
+      "name": "Foot_R",
+      "parent": "Leg_R_Lower",
+      "pivot_px": [
+        701,
+        799
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "name": "Torso_EyeChest_NavelMouth",
+      "bone": "Root",
+      "polygon_px": [
+        [
+          427,
+          170
+        ],
+        [
+          451,
+          169
+        ],
+        [
+          463,
+          184
+        ],
+        [
+          495,
+          192
+        ],
+        [
+          519,
+          195
+        ],
+        [
+          546,
+          190
+        ],
+        [
+          568,
+          181
+        ],
+        [
+          575,
+          170
+        ],
+        [
+          602,
+          176
+        ],
+        [
+          629,
+          188
+        ],
+        [
+          640,
+          203
+        ],
+        [
+          637,
+          228
+        ],
+        [
+          632,
+          254
+        ],
+        [
+          629,
+          292
+        ],
+        [
+          619,
+          322
+        ],
+        [
+          611,
+          345
+        ],
+        [
+          608,
+          373
+        ],
+        [
+          615,
+          395
+        ],
+        [
+          620,
+          417
+        ],
+        [
+          612,
+          437
+        ],
+        [
+          592,
+          453
+        ],
+        [
+          562,
+          462
+        ],
+        [
+          518,
+          466
+        ],
+        [
+          473,
+          462
+        ],
+        [
+          436,
+          454
+        ],
+        [
+          416,
+          440
+        ],
+        [
+          410,
+          422
+        ],
+        [
+          417,
+          400
+        ],
+        [
+          424,
+          377
+        ],
+        [
+          420,
+          349
+        ],
+        [
+          412,
+          326
+        ],
+        [
+          404,
+          311
+        ],
+        [
+          398,
+          287
+        ],
+        [
+          395,
+          252
+        ],
+        [
+          397,
+          222
+        ],
+        [
+          404,
+          197
+        ]
+      ],
+      "layer_cm": 0
+    },
+    {
+      "name": "Arm_L_Upper",
+      "bone": "Arm_L_Upper",
+      "polygon_px": [
+        [
+          365,
+          199
+        ],
+        [
+          387,
+          197
+        ],
+        [
+          403,
+          211
+        ],
+        [
+          407,
+          235
+        ],
+        [
+          398,
+          259
+        ],
+        [
+          382,
+          278
+        ],
+        [
+          354,
+          294
+        ],
+        [
+          319,
+          309
+        ],
+        [
+          294,
+          318
+        ],
+        [
+          278,
+          311
+        ],
+        [
+          270,
+          298
+        ],
+        [
+          276,
+          282
+        ],
+        [
+          291,
+          265
+        ],
+        [
+          324,
+          247
+        ],
+        [
+          346,
+          224
+        ]
+      ],
+      "layer_cm": 0.1
+    },
+    {
+      "name": "Arm_L_Forearm",
+      "bone": "Arm_L_Fore",
+      "polygon_px": [
+        [
+          277,
+          282
+        ],
+        [
+          298,
+          291
+        ],
+        [
+          304,
+          307
+        ],
+        [
+          289,
+          332
+        ],
+        [
+          270,
+          360
+        ],
+        [
+          252,
+          392
+        ],
+        [
+          236,
+          415
+        ],
+        [
+          218,
+          424
+        ],
+        [
+          204,
+          412
+        ],
+        [
+          205,
+          395
+        ],
+        [
+          223,
+          370
+        ],
+        [
+          236,
+          339
+        ],
+        [
+          255,
+          312
+        ]
+      ],
+      "layer_cm": 0.2
+    },
+    {
+      "name": "Hand_L_Grip",
+      "bone": "Hand_L",
+      "polygon_px": [
+        [
+          202,
+          402
+        ],
+        [
+          223,
+          403
+        ],
+        [
+          236,
+          420
+        ],
+        [
+          234,
+          442
+        ],
+        [
+          227,
+          458
+        ],
+        [
+          226,
+          476
+        ],
+        [
+          215,
+          485
+        ],
+        [
+          201,
+          485
+        ],
+        [
+          189,
+          477
+        ],
+        [
+          180,
+          465
+        ],
+        [
+          174,
+          451
+        ],
+        [
+          176,
+          436
+        ],
+        [
+          187,
+          420
+        ]
+      ],
+      "layer_cm": 0.38
+    },
+    {
+      "name": "Axe_UpperHandle",
+      "bone": "Axe",
+      "polygon_px": [
+        [
+          93,
+          287
+        ],
+        [
+          107,
+          288
+        ],
+        [
+          123,
+          298
+        ],
+        [
+          140,
+          313
+        ],
+        [
+          145,
+          326
+        ],
+        [
+          136,
+          341
+        ],
+        [
+          153,
+          367
+        ],
+        [
+          176,
+          399
+        ],
+        [
+          190,
+          419
+        ],
+        [
+          192,
+          430
+        ],
+        [
+          181,
+          440
+        ],
+        [
+          168,
+          423
+        ],
+        [
+          143,
+          389
+        ],
+        [
+          118,
+          361
+        ],
+        [
+          111,
+          347
+        ],
+        [
+          101,
+          343
+        ],
+        [
+          96,
+          334
+        ],
+        [
+          91,
+          310
+        ]
+      ],
+      "layer_cm": 0.12
+    },
+    {
+      "name": "Axe_LowerHandle",
+      "bone": "Axe",
+      "polygon_px": [
+        [
+          208,
+          466
+        ],
+        [
+          227,
+          470
+        ],
+        [
+          245,
+          501
+        ],
+        [
+          263,
+          530
+        ],
+        [
+          283,
+          559
+        ],
+        [
+          304,
+          588
+        ],
+        [
+          320,
+          603
+        ],
+        [
+          328,
+          617
+        ],
+        [
+          326,
+          629
+        ],
+        [
+          313,
+          636
+        ],
+        [
+          298,
+          628
+        ],
+        [
+          289,
+          611
+        ],
+        [
+          271,
+          586
+        ],
+        [
+          251,
+          557
+        ],
+        [
+          232,
+          528
+        ],
+        [
+          215,
+          503
+        ],
+        [
+          199,
+          480
+        ]
+      ],
+      "layer_cm": 0.12
+    },
+    {
+      "name": "Axe_PiercedBlade",
+      "bone": "Axe",
+      "polygon_px": [
+        [
+          282,
+          501
+        ],
+        [
+          303,
+          545
+        ],
+        [
+          285,
+          559
+        ],
+        [
+          281,
+          574
+        ],
+        [
+          283,
+          594
+        ],
+        [
+          274,
+          614
+        ],
+        [
+          272,
+          634
+        ],
+        [
+          282,
+          654
+        ],
+        [
+          276,
+          678
+        ],
+        [
+          286,
+          702
+        ],
+        [
+          275,
+          730
+        ],
+        [
+          279,
+          770
+        ],
+        [
+          288,
+          798
+        ],
+        [
+          265,
+          791
+        ],
+        [
+          238,
+          781
+        ],
+        [
+          211,
+          767
+        ],
+        [
+          183,
+          753
+        ],
+        [
+          154,
+          737
+        ],
+        [
+          130,
+          719
+        ],
+        [
+          104,
+          692
+        ],
+        [
+          98,
+          653
+        ],
+        [
+          94,
+          613
+        ],
+        [
+          92,
+          568
+        ],
+        [
+          118,
+          575
+        ],
+        [
+          147,
+          576
+        ],
+        [
+          174,
+          572
+        ],
+        [
+          202,
+          563
+        ],
+        [
+          221,
+          550
+        ],
+        [
+          237,
+          540
+        ],
+        [
+          247,
+          526
+        ],
+        [
+          261,
+          522
+        ]
+      ],
+      "layer_cm": 0.12
+    },
+    {
+      "name": "Arm_R_Upper",
+      "bone": "Arm_R_Upper",
+      "polygon_px": [
+        [
+          639,
+          202
+        ],
+        [
+          654,
+          198
+        ],
+        [
+          674,
+          205
+        ],
+        [
+          687,
+          223
+        ],
+        [
+          710,
+          239
+        ],
+        [
+          737,
+          259
+        ],
+        [
+          750,
+          278
+        ],
+        [
+          759,
+          294
+        ],
+        [
+          750,
+          312
+        ],
+        [
+          735,
+          320
+        ],
+        [
+          715,
+          309
+        ],
+        [
+          685,
+          293
+        ],
+        [
+          655,
+          278
+        ],
+        [
+          635,
+          260
+        ],
+        [
+          629,
+          237
+        ]
+      ],
+      "layer_cm": 0.1
+    },
+    {
+      "name": "Arm_R_Forearm_Visible",
+      "bone": "Arm_R_Fore",
+      "polygon_px": [
+        [
+          739,
+          283
+        ],
+        [
+          757,
+          291
+        ],
+        [
+          768,
+          313
+        ],
+        [
+          782,
+          340
+        ],
+        [
+          786,
+          364
+        ],
+        [
+          774,
+          375
+        ],
+        [
+          759,
+          370
+        ],
+        [
+          749,
+          346
+        ],
+        [
+          735,
+          326
+        ],
+        [
+          731,
+          308
+        ]
+      ],
+      "layer_cm": 0.12
+    },
+    {
+      "name": "Leg_L_Thigh",
+      "bone": "Leg_L_Upper",
+      "polygon_px": [
+        [
+          402,
+          510
+        ],
+        [
+          431,
+          515
+        ],
+        [
+          440,
+          536
+        ],
+        [
+          432,
+          566
+        ],
+        [
+          421,
+          601
+        ],
+        [
+          414,
+          637
+        ],
+        [
+          403,
+          666
+        ],
+        [
+          390,
+          682
+        ],
+        [
+          368,
+          683
+        ],
+        [
+          352,
+          668
+        ],
+        [
+          359,
+          643
+        ],
+        [
+          373,
+          613
+        ],
+        [
+          380,
+          578
+        ],
+        [
+          389,
+          545
+        ]
+      ],
+      "layer_cm": -0.16
+    },
+    {
+      "name": "Leg_R_Thigh",
+      "bone": "Leg_R_Upper",
+      "polygon_px": [
+        [
+          588,
+          511
+        ],
+        [
+          613,
+          506
+        ],
+        [
+          630,
+          530
+        ],
+        [
+          640,
+          560
+        ],
+        [
+          651,
+          597
+        ],
+        [
+          663,
+          632
+        ],
+        [
+          673,
+          660
+        ],
+        [
+          666,
+          679
+        ],
+        [
+          644,
+          685
+        ],
+        [
+          623,
+          670
+        ],
+        [
+          614,
+          641
+        ],
+        [
+          601,
+          606
+        ],
+        [
+          590,
+          568
+        ],
+        [
+          581,
+          539
+        ]
+      ],
+      "layer_cm": -0.16
+    },
+    {
+      "name": "Skirt_Center_Pierced",
+      "bone": "Root",
+      "polygon_px": [
+        [
+          426,
+          440
+        ],
+        [
+          455,
+          446
+        ],
+        [
+          483,
+          449
+        ],
+        [
+          518,
+          446
+        ],
+        [
+          554,
+          448
+        ],
+        [
+          583,
+          445
+        ],
+        [
+          607,
+          442
+        ],
+        [
+          612,
+          470
+        ],
+        [
+          609,
+          500
+        ],
+        [
+          607,
+          533
+        ],
+        [
+          607,
+          563
+        ],
+        [
+          606,
+          594
+        ],
+        [
+          604,
+          620
+        ],
+        [
+          595,
+          650
+        ],
+        [
+          582,
+          674
+        ],
+        [
+          559,
+          692
+        ],
+        [
+          539,
+          715
+        ],
+        [
+          520,
+          721
+        ],
+        [
+          501,
+          715
+        ],
+        [
+          480,
+          699
+        ],
+        [
+          459,
+          681
+        ],
+        [
+          441,
+          663
+        ],
+        [
+          432,
+          644
+        ],
+        [
+          430,
+          620
+        ],
+        [
+          429,
+          592
+        ],
+        [
+          425,
+          561
+        ],
+        [
+          423,
+          529
+        ],
+        [
+          420,
+          499
+        ],
+        [
+          421,
+          470
+        ]
+      ],
+      "layer_cm": 0.34
+    },
+    {
+      "name": "Skirt_L_OuterTassels",
+      "bone": "Root",
+      "polygon_px": [
+        [
+          428,
+          444
+        ],
+        [
+          409,
+          446
+        ],
+        [
+          395,
+          458
+        ],
+        [
+          381,
+          480
+        ],
+        [
+          369,
+          500
+        ],
+        [
+          353,
+          519
+        ],
+        [
+          338,
+          535
+        ],
+        [
+          332,
+          548
+        ],
+        [
+          340,
+          550
+        ],
+        [
+          332,
+          563
+        ],
+        [
+          340,
+          571
+        ],
+        [
+          355,
+          561
+        ],
+        [
+          368,
+          546
+        ],
+        [
+          383,
+          530
+        ],
+        [
+          374,
+          554
+        ],
+        [
+          364,
+          576
+        ],
+        [
+          356,
+          598
+        ],
+        [
+          351,
+          619
+        ],
+        [
+          359,
+          621
+        ],
+        [
+          369,
+          606
+        ],
+        [
+          381,
+          587
+        ],
+        [
+          392,
+          566
+        ],
+        [
+          400,
+          539
+        ],
+        [
+          408,
+          557
+        ],
+        [
+          405,
+          586
+        ],
+        [
+          408,
+          610
+        ],
+        [
+          417,
+          612
+        ],
+        [
+          424,
+          593
+        ],
+        [
+          431,
+          567
+        ],
+        [
+          437,
+          533
+        ],
+        [
+          442,
+          493
+        ],
+        [
+          442,
+          461
+        ]
+      ],
+      "layer_cm": 0.33
+    },
+    {
+      "name": "Skirt_R_OuterTassels",
+      "bone": "Root",
+      "polygon_px": [
+        [
+          603,
+          441
+        ],
+        [
+          621,
+          447
+        ],
+        [
+          635,
+          463
+        ],
+        [
+          645,
+          483
+        ],
+        [
+          660,
+          503
+        ],
+        [
+          672,
+          521
+        ],
+        [
+          682,
+          539
+        ],
+        [
+          690,
+          555
+        ],
+        [
+          685,
+          566
+        ],
+        [
+          676,
+          558
+        ],
+        [
+          664,
+          544
+        ],
+        [
+          652,
+          529
+        ],
+        [
+          662,
+          553
+        ],
+        [
+          672,
+          574
+        ],
+        [
+          683,
+          597
+        ],
+        [
+          691,
+          620
+        ],
+        [
+          684,
+          626
+        ],
+        [
+          674,
+          610
+        ],
+        [
+          662,
+          592
+        ],
+        [
+          650,
+          571
+        ],
+        [
+          638,
+          543
+        ],
+        [
+          632,
+          561
+        ],
+        [
+          636,
+          588
+        ],
+        [
+          633,
+          611
+        ],
+        [
+          626,
+          615
+        ],
+        [
+          616,
+          597
+        ],
+        [
+          609,
+          568
+        ],
+        [
+          603,
+          535
+        ],
+        [
+          597,
+          494
+        ],
+        [
+          596,
+          461
+        ]
+      ],
+      "layer_cm": 0.33
+    },
+    {
+      "name": "Belt_MonsterBuckle",
+      "bone": "Root",
+      "polygon_px": [
+        [
+          426,
+          389
+        ],
+        [
+          450,
+          400
+        ],
+        [
+          481,
+          409
+        ],
+        [
+          518,
+          411
+        ],
+        [
+          550,
+          409
+        ],
+        [
+          582,
+          402
+        ],
+        [
+          609,
+          389
+        ],
+        [
+          619,
+          409
+        ],
+        [
+          620,
+          429
+        ],
+        [
+          609,
+          449
+        ],
+        [
+          586,
+          463
+        ],
+        [
+          562,
+          479
+        ],
+        [
+          549,
+          486
+        ],
+        [
+          528,
+          488
+        ],
+        [
+          508,
+          488
+        ],
+        [
+          490,
+          481
+        ],
+        [
+          477,
+          468
+        ],
+        [
+          452,
+          463
+        ],
+        [
+          430,
+          453
+        ],
+        [
+          416,
+          436
+        ],
+        [
+          415,
+          415
+        ]
+      ],
+      "layer_cm": 0.48
+    },
+    {
+      "name": "Leg_L_Calf",
+      "bone": "Leg_L_Lower",
+      "polygon_px": [
+        [
+          369,
+          646
+        ],
+        [
+          392,
+          647
+        ],
+        [
+          407,
+          663
+        ],
+        [
+          410,
+          689
+        ],
+        [
+          398,
+          721
+        ],
+        [
+          378,
+          755
+        ],
+        [
+          354,
+          795
+        ],
+        [
+          337,
+          813
+        ],
+        [
+          317,
+          808
+        ],
+        [
+          309,
+          790
+        ],
+        [
+          317,
+          751
+        ],
+        [
+          317,
+          718
+        ],
+        [
+          329,
+          689
+        ],
+        [
+          348,
+          667
+        ]
+      ],
+      "layer_cm": 0.02
+    },
+    {
+      "name": "Leg_R_Calf",
+      "bone": "Leg_R_Lower",
+      "polygon_px": [
+        [
+          640,
+          646
+        ],
+        [
+          666,
+          646
+        ],
+        [
+          684,
+          666
+        ],
+        [
+          699,
+          693
+        ],
+        [
+          710,
+          724
+        ],
+        [
+          710,
+          748
+        ],
+        [
+          708,
+          758
+        ],
+        [
+          708,
+          763
+        ],
+        [
+          707,
+          765
+        ],
+        [
+          708,
+          770
+        ],
+        [
+          710,
+          778
+        ],
+        [
+          713,
+          785
+        ],
+        [
+          719,
+          791
+        ],
+        [
+          706,
+          811
+        ],
+        [
+          687,
+          816
+        ],
+        [
+          675,
+          798
+        ],
+        [
+          659,
+          769
+        ],
+        [
+          639,
+          744
+        ],
+        [
+          627,
+          713
+        ],
+        [
+          622,
+          687
+        ],
+        [
+          628,
+          665
+        ]
+      ],
+      "layer_cm": 0.02
+    },
+    {
+      "name": "Foot_L",
+      "bone": "Foot_L",
+      "polygon_px": [
+        [
+          317,
+          784
+        ],
+        [
+          344,
+          784
+        ],
+        [
+          355,
+          802
+        ],
+        [
+          364,
+          825
+        ],
+        [
+          371,
+          852
+        ],
+        [
+          356,
+          864
+        ],
+        [
+          330,
+          865
+        ],
+        [
+          303,
+          866
+        ],
+        [
+          273,
+          865
+        ],
+        [
+          251,
+          863
+        ],
+        [
+          249,
+          855
+        ],
+        [
+          265,
+          842
+        ],
+        [
+          286,
+          830
+        ],
+        [
+          306,
+          809
+        ]
+      ],
+      "layer_cm": 0.1
+    },
+    {
+      "name": "Foot_R",
+      "bone": "Foot_R",
+      "polygon_px": [
+        [
+          681,
+          789
+        ],
+        [
+          708,
+          786
+        ],
+        [
+          723,
+          805
+        ],
+        [
+          739,
+          826
+        ],
+        [
+          758,
+          839
+        ],
+        [
+          777,
+          849
+        ],
+        [
+          789,
+          858
+        ],
+        [
+          784,
+          868
+        ],
+        [
+          760,
+          868
+        ],
+        [
+          732,
+          867
+        ],
+        [
+          706,
+          866
+        ],
+        [
+          686,
+          862
+        ],
+        [
+          682,
+          844
+        ]
+      ],
+      "layer_cm": 0.1
+    },
+    {
+      "name": "Shield_SunDisc",
+      "bone": "Shield",
+      "polygon_px": [
+        [
+          791,
+          332
+        ],
+        [
+          819,
+          335
+        ],
+        [
+          845,
+          345
+        ],
+        [
+          866,
+          365
+        ],
+        [
+          880,
+          391
+        ],
+        [
+          888,
+          423
+        ],
+        [
+          891,
+          460
+        ],
+        [
+          888,
+          501
+        ],
+        [
+          879,
+          540
+        ],
+        [
+          864,
+          577
+        ],
+        [
+          844,
+          607
+        ],
+        [
+          819,
+          626
+        ],
+        [
+          793,
+          633
+        ],
+        [
+          766,
+          626
+        ],
+        [
+          739,
+          611
+        ],
+        [
+          716,
+          587
+        ],
+        [
+          698,
+          557
+        ],
+        [
+          684,
+          521
+        ],
+        [
+          674,
+          482
+        ],
+        [
+          669,
+          443
+        ],
+        [
+          674,
+          406
+        ],
+        [
+          687,
+          376
+        ],
+        [
+          704,
+          357
+        ],
+        [
+          723,
+          346
+        ],
+        [
+          745,
+          338
+        ],
+        [
+          768,
+          334
+        ]
+      ],
+      "layer_cm": 1.05
+    }
+  ],
+  "poses": [
+    {
+      "name": "Rest",
+      "angles_deg": {
+        "Root": 0,
+        "Arm_L_Upper": -14,
+        "Arm_L_Fore": 0,
+        "Hand_L": 0,
+        "Axe": -35,
+        "Arm_R_Upper": -10,
+        "Arm_R_Fore": 0,
+        "Shield": 0,
+        "Leg_L_Upper": 4,
+        "Leg_L_Lower": 0,
+        "Foot_L": 0,
+        "Leg_R_Upper": -4,
+        "Leg_R_Lower": 0,
+        "Foot_R": 0
+      }
+    },
+    {
+      "name": "Guard",
+      "angles_deg": {
+        "Root": 0,
+        "Arm_L_Upper": -26,
+        "Arm_L_Fore": 20,
+        "Hand_L": -6,
+        "Axe": -43,
+        "Arm_R_Upper": 0,
+        "Arm_R_Fore": -12,
+        "Shield": -6,
+        "Leg_L_Upper": 4,
+        "Leg_L_Lower": 0,
+        "Foot_L": 0,
+        "Leg_R_Upper": -4,
+        "Leg_R_Lower": 0,
+        "Foot_R": 0
+      }
+    },
+    {
+      "name": "Reach",
+      "angles_deg": {
+        "Root": 0,
+        "Arm_L_Upper": 10,
+        "Arm_L_Fore": -18,
+        "Hand_L": 8,
+        "Axe": -47,
+        "Arm_R_Upper": -16,
+        "Arm_R_Fore": 8,
+        "Shield": 8,
+        "Leg_L_Upper": 4,
+        "Leg_L_Lower": 0,
+        "Foot_L": 0,
+        "Leg_R_Upper": -4,
+        "Leg_R_Lower": 0,
+        "Foot_R": 0
+      }
+    }
+  ],
+  "rods": [
+    {
+      "name": "BodyRod",
+      "bone": "Root",
+      "attach_px": [
+        518,
+        415
+      ],
+      "length_cm": 90
+    },
+    {
+      "name": "AxeHandRod",
+      "bone": "Hand_L",
+      "attach_px": [
+        213,
+        453
+      ],
+      "length_cm": 80,
+      "spar_px": [
+        258,
+        520
+      ]
+    },
+    {
+      "name": "ShieldRod",
+      "bone": "Shield",
+      "attach_px": [
+        791,
+        483
+      ],
+      "length_cm": 85,
+      "spar_px": [
+        800,
+        560
+      ]
+    }
+  ],
+  "notes": [
+    "Pixel coordinates are measured against the original 2048x1365 source, never the resized chat preview. Only the large left front elevation is used; side, back, enlarged accessories, labels, and dimension arrows are excluded.",
+    "Headless torso silhouette, paired chest eyes, navel mouth, sun shield, axe openwork, waist beast buckle, and torn skirt are identity-critical. Chest eyes and mouth are surface artwork, not holes; only background-connected negative spaces in the axe and skirt should be opened.",
+    "The left axe is split into visible upper handle, lower handle, and pierced blade to prevent the hand artwork being baked into the axe. All three pieces share the Axe bone and overlap behind the hand.",
+    "The right hand is hidden by the front-view shield. No invented hand silhouette is added; the Shield bone is placed at the visible sun hub and parented to the visible forearm.",
+    "Shoulder, elbow, knee, and ankle centers are taken from drawn brass joints; hip pivots lie beneath the existing belt/skirt. Overlap by a few source pixels at joints is intentional.",
+    "Keep the legs planted in these three preview poses: the reference does not reveal full upper thighs behind the layered skirt. Large leg swings require drawn hidden extensions rather than stretching source pixels.",
+    "Use rigid single-bone weights for articulated leather-sheet pieces; do not smooth-skin across riveted joints. Back faces and cut edges should be leather colored.",
+    "The ornamental sun motif is not a through-hole; preserve the shield as a solid leather disc for a readable real shadow.",
+    "Run2: right calf outer boundary is clipped to the actual source silhouette at x707-710 around y758-778; this excludes the ankle-label arrow at y765-769 without trimming the leather leg. Reviewed against all five Run1 previews and the original 2048x1365 pixels."
+  ]
+}

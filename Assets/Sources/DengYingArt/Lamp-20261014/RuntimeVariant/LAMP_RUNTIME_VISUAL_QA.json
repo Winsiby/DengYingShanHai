@@ -1,0 +1,24 @@
+{
+  "status": "PASS_ANALYTIC_VARIANT_SOURCE_VISUAL_AND_COLD_READ_NOT_UE",
+  "full_source_triangles": 93712,
+  "runtime_variant_triangles": 33104,
+  "reduction_percent": 64.68,
+  "source_preserved": true,
+  "preservation_evidence": "RUNTIME_PARAMETER_DIFF.json verifies original script, blend, two FBX and three review PNG SHA256 before/after",
+  "method": "Analytic resampling with 57 named parts retained; no decimate; visual approximation, not lossless",
+  "reviewed_images": ["Lamp_Head_A_Source.png", "Lamp_Head_B_Runtime.png", "Lamp_Full_Review.png", "Lamp_Side_Review.png"],
+  "head_ab_configuration": "Same 1920x1440 camera position/target, ortho 1.47m, lights/world, Cycles80, AgX and exposure0",
+  "visual_findings": [
+    "Head silhouette remains rounded at the provided close camera",
+    "Rolled aperture edge retains continuous round-over; reduced sampling is a visual approximation",
+    "Recessed reflector and optical window retain depth and separation",
+    "Small clamp wheels retain readable circular silhouette and bevel highlights",
+    "Mast/yoke/feet remain visibly connected; mast wood grain follows the length",
+    "No new gap or obvious low-poly faceting is visible in these three review views"
+  ],
+  "cold_fbx": "PASS: two mesh FBX, original bounds, pivots, UVMap+UVLightmap, UV1 in 0-1, nonzero faces, unit normals and material slot order",
+  "cold_blend": "PASS: Root_Back_Source origin, 57 editable meshes, original three packed 2K PNG SHA256",
+  "critical_coordinates": {"frontmost_actor_local_x_cm":42,"existing_keylight_x_cm":45,"forward_clearance_cm":3,"floor_actor_local_z_cm":-310},
+  "unverified": ["UE import", "Engine materials", "runtime real-time shadows", "collision", "rail endpoints", "core camera", "performance", "Development/Shipping"],
+  "responsibility": "One human author chooses creative direction and confirms experience; Codex performs authorized technical integration"
+}

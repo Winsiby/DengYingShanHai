@@ -1,0 +1,177 @@
+{
+  "status": "PASS-MODEL-SOURCE-FBX-ROUNDTRIP",
+  "id": "Xingtian",
+  "vertices": 3960,
+  "triangles": 7916,
+  "bone_count": 14,
+  "part_count": 20,
+  "real_cutouts": 33,
+  "source_bounds_cm": [
+    [
+      -0.48500001430511475,
+      2.4800000190734863
+    ],
+    [
+      -110.11461639404297,
+      95.67335510253906
+    ],
+    [
+      0.25788000226020813,
+      180.0
+    ]
+  ],
+  "fresh_fbx_bounds_cm": [
+    [
+      -0.48500001430511475,
+      2.4800000190734863
+    ],
+    [
+      -110.11459350585938,
+      95.67337036132812
+    ],
+    [
+      0.25787025690078735,
+      180.0
+    ]
+  ],
+  "skin_thickness_cm": 0.65,
+  "material_slots": [
+    "Skin.002",
+    "CutEdge.002",
+    "Brass.002"
+  ],
+  "poses": [
+    {
+      "pose": "Rest",
+      "bounds_cm": [
+        [
+          -0.48500001430511475,
+          2.4800000190734863
+        ],
+        [
+          -110.11461639404297,
+          95.67335510253906
+        ],
+        [
+          0.25788000226020813,
+          180.0
+        ]
+      ]
+    },
+    {
+      "pose": "Guard",
+      "bounds_cm": [
+        [
+          -0.48500001430511475,
+          2.4800000190734863
+        ],
+        [
+          -111.66947937011719,
+          98.11040496826172
+        ],
+        [
+          0.25788000226020813,
+          180.0
+        ]
+      ]
+    },
+    {
+      "pose": "Reach",
+      "bounds_cm": [
+        [
+          -0.48500001430511475,
+          2.4800000190734863
+        ],
+        [
+          -95.17642211914062,
+          95.49738311767578
+        ],
+        [
+          0.25788000226020813,
+          180.0
+        ]
+      ]
+    }
+  ],
+  "previews": [
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run2\\Xingtian\\Preview_Rest.png",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run2\\Xingtian\\Preview_Guard.png",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run2\\Xingtian\\Preview_Reach.png",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run2\\Xingtian\\Preview_Oblique.png",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run2\\Xingtian\\Preview_RealShadow.png"
+  ],
+  "checks": [
+    "Torso_EyeChest_NavelMouth closed manifold shells",
+    "Torso_EyeChest_NavelMouth positive volume",
+    "Arm_L_Upper closed manifold shells",
+    "Arm_L_Upper positive volume",
+    "Arm_L_Forearm closed manifold shells",
+    "Arm_L_Forearm positive volume",
+    "Hand_L_Grip closed manifold shells",
+    "Hand_L_Grip positive volume",
+    "Axe_UpperHandle closed manifold shells",
+    "Axe_UpperHandle positive volume",
+    "Axe_LowerHandle closed manifold shells",
+    "Axe_LowerHandle positive volume",
+    "Axe_PiercedBlade closed manifold shells",
+    "Axe_PiercedBlade positive volume",
+    "Arm_R_Upper closed manifold shells",
+    "Arm_R_Upper positive volume",
+    "Arm_R_Forearm_Visible closed manifold shells",
+    "Arm_R_Forearm_Visible positive volume",
+    "Leg_L_Thigh closed manifold shells",
+    "Leg_L_Thigh positive volume",
+    "Leg_R_Thigh closed manifold shells",
+    "Leg_R_Thigh positive volume",
+    "Skirt_Center_Pierced closed manifold shells",
+    "Skirt_Center_Pierced positive volume",
+    "Skirt_L_OuterTassels closed manifold shells",
+    "Skirt_L_OuterTassels positive volume",
+    "Skirt_R_OuterTassels closed manifold shells",
+    "Skirt_R_OuterTassels positive volume",
+    "Belt_MonsterBuckle closed manifold shells",
+    "Belt_MonsterBuckle positive volume",
+    "Leg_L_Calf closed manifold shells",
+    "Leg_L_Calf positive volume",
+    "Leg_R_Calf closed manifold shells",
+    "Leg_R_Calf positive volume",
+    "Foot_L closed manifold shells",
+    "Foot_L positive volume",
+    "Foot_R closed manifold shells",
+    "Foot_R positive volume",
+    "Shield_SunDisc closed manifold shells",
+    "Shield_SunDisc positive volume",
+    "Every vertex rigidly bound to exactly one bone",
+    "Hero mesh under 26000 triangles",
+    "Bone present Root",
+    "Bone present Arm_L_Upper",
+    "Bone present Arm_L_Fore",
+    "Bone present Hand_L",
+    "Bone present Axe",
+    "Bone present Arm_R_Upper",
+    "Bone present Arm_R_Fore",
+    "Bone present Shield",
+    "Bone present Leg_L_Upper",
+    "Bone present Leg_L_Lower",
+    "Bone present Foot_L",
+    "Bone present Leg_R_Upper",
+    "Bone present Leg_R_Lower",
+    "Bone present Foot_R",
+    "Rest finite deformed geometry",
+    "Guard finite deformed geometry",
+    "Reach finite deformed geometry",
+    "Cold FBX import has one skeletal mesh and one armature",
+    "Cold FBX bone count matches",
+    "Cold FBX preserves rigid weights",
+    "Cold FBX triangle count matches",
+    "Cold FBX world centimetre bounds match within 0.02 cm"
+  ],
+  "provenance": {
+    "reference_sha256": "0FB737A8800778DA8D771A19974B9641DA418F323316A42E3D2ABBBB3AC910DA",
+    "spec_sha256": "BAC4A934758A74CE8B6DC44A10E93434FC31F76936362EAC4AF833C57CC964BE",
+    "method": "Contour-modeled extruded leather pieces from existing project concept; real holes, rigid articulation, cleaned artwork UV atlas; no purchased mesh or new image generation.",
+    "texture_note": "Stylized painted artwork, not a scanned physical albedo. Existing design-sheet markings are excluded."
+  },
+  "runtime_integration": false,
+  "human_art_acceptance": false
+}

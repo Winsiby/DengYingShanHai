@@ -1,0 +1,60 @@
+{
+  "Status": "PASS-AUTHORED-STAFF-AND-EXPORTED-FBX-READBACK",
+  "Blender": "4.5.14 LTS",
+  "Mesh": "SM_DY_Kuafu_Staff",
+  "Vertices": 1490,
+  "Triangles": 2976,
+  "UVLayers": 1,
+  "ClosedManifold": true,
+  "LocalMin": [
+    -50.0,
+    -50.0,
+    -50.0
+  ],
+  "LocalMax": [
+    50.0,
+    50.0,
+    50.0
+  ],
+  "EndA": [
+    0.0,
+    0.0,
+    -50.0
+  ],
+  "EndB": [
+    0.0,
+    0.0,
+    50.0
+  ],
+  "ImportedFBXDimensions": [
+    100.00000762939453,
+    100.00000762939453,
+    100.0
+  ],
+  "ComponentScaleUnchanged": [
+    0.06,
+    0.06,
+    1.55
+  ],
+  "ActualLengthCm": 155.0,
+  "CoreProjectFilesWritten": false,
+  "ImportedToUE": false,
+  "HistoricalWoodSpeciesClaimed": false,
+  "Artifacts": [
+    {
+      "File": "SM_DY_Kuafu_Staff.fbx",
+      "Bytes": 70588,
+      "SHA256": "E9B9FF7C5259057267BA3E995F48E5288FAD0A46D51427740687A290EE532DBB"
+    },
+    {
+      "File": "DY_Kuafu_Staff.blend",
+      "Bytes": 66714160,
+      "SHA256": "E8AAB597B7DB4B3A6482C645FD22BC3DE931B30AFCB91AEE017F9D1421F6AB0F"
+    },
+    {
+      "File": "Staff-ActualScale.png",
+      "Bytes": 502483,
+      "SHA256": "C56710D676F9CCC76F98693ABCC5DB7A4414638B18F999910E8534C9656E7737"
+    }
+  ]
+}

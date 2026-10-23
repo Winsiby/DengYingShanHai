@@ -1,0 +1,518 @@
+{
+  "status": "PASS_NORMAL_NORMALIZATION_UV1_PRIMARY_TBN_RENDERED",
+  "normal_corrections": [
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_NormalDX.png",
+      "before_sha256": "2FE5DFC95852BC604EA88B65A8CD45E9D05DD8522772224D7AE20F98FB506862",
+      "all": {
+        "count": 4194304,
+        "min": 0.9948967695236206,
+        "max": 1.0049858093261719,
+        "p01_p50_p99": [
+          1.000015377998352,
+          1.000015377998352,
+          1.000630259513855
+        ],
+        "error_above_04": 0
+      },
+      "covered": {
+        "count": 1417171,
+        "min": 0.9948967695236206,
+        "max": 1.0049858093261719,
+        "p01_p50_p99": [
+          1.000015377998352,
+          1.000015377998352,
+          1.0003843307495117
+        ],
+        "error_above_04": 0
+      },
+      "interior": {
+        "count": 1356075,
+        "min": 0.9948967695236206,
+        "max": 1.0049858093261719,
+        "p01_p50_p99": [
+          1.000015377998352,
+          1.000015377998352,
+          1.0001999139785767
+        ],
+        "error_above_04": 0
+      },
+      "boundary": {
+        "count": 61096,
+        "min": 0.9959473013877869,
+        "max": 1.0044960975646973,
+        "p01_p50_p99": [
+          0.9973669022321701,
+          1.000015377998352,
+          1.0028409957885742
+        ],
+        "error_above_04": 0
+      },
+      "outside": {
+        "count": 2777133,
+        "min": 0.9955765604972839,
+        "max": 1.0049858093261719,
+        "p01_p50_p99": [
+          1.000015377998352,
+          1.000015377998352,
+          1.0006303787231445
+        ],
+        "error_above_04": 0
+      },
+      "after": {
+        "count": 4194304,
+        "min": 0.9948967695236206,
+        "max": 1.0049858093261719,
+        "p01_p50_p99": [
+          1.000015377998352,
+          1.000015377998352,
+          1.000630259513855
+        ],
+        "error_above_04": 0
+      },
+      "after_sha256": "2FE5DFC95852BC604EA88B65A8CD45E9D05DD8522772224D7AE20F98FB506862",
+      "operation": "Unit normalize decoded tangent vector; direction preserved, then 8-bit PNG quantization"
+    },
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_NormalDX.png",
+      "before_sha256": "54092BEF2CDFDE2F7E16F0605C981A57AB669C1A9EB2200F6449BC9CAD8568E8",
+      "all": {
+        "count": 4194304,
+        "min": 0.9960708022117615,
+        "max": 1.0040059089660645,
+        "p01_p50_p99": [
+          1.000015377998352,
+          1.000015377998352,
+          1.0013062953948975
+        ],
+        "error_above_04": 0
+      },
+      "covered": {
+        "count": 1724549,
+        "min": 0.9960708022117615,
+        "max": 1.0040059089660645,
+        "p01_p50_p99": [
+          1.000015377998352,
+          1.0000768899917603,
+          1.0017362833023071
+        ],
+        "error_above_04": 0
+      },
+      "interior": {
+        "count": 1644881,
+        "min": 0.9960708022117615,
+        "max": 1.0040059089660645,
+        "p01_p50_p99": [
+          1.000015377998352,
+          1.0000768899917603,
+          1.0015519857406616
+        ],
+        "error_above_04": 0
+      },
+      "boundary": {
+        "count": 79668,
+        "min": 0.9961326122283936,
+        "max": 1.0037606954574585,
+        "p01_p50_p99": [
+          1.000015377998352,
+          1.0000768899917603,
+          1.0027797222137451
+        ],
+        "error_above_04": 0
+      },
+      "outside": {
+        "count": 2469755,
+        "min": 0.9961326122283936,
+        "max": 1.0037606954574585,
+        "p01_p50_p99": [
+          1.000015377998352,
+          1.000015377998352,
+          1.0013062953948975
+        ],
+        "error_above_04": 0
+      },
+      "after": {
+        "count": 4194304,
+        "min": 0.9960708022117615,
+        "max": 1.0040059089660645,
+        "p01_p50_p99": [
+          1.000015377998352,
+          1.000015377998352,
+          1.0013062953948975
+        ],
+        "error_above_04": 0
+      },
+      "after_sha256": "54092BEF2CDFDE2F7E16F0605C981A57AB669C1A9EB2200F6449BC9CAD8568E8",
+      "operation": "Unit normalize decoded tangent vector; direction preserved, then 8-bit PNG quantization"
+    }
+  ],
+  "tangents": [
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\SM_DY_LampBody_Baked.fbx",
+      "primary_tbn_name": "BakeUV1",
+      "loop_vectors": 60048,
+      "tangent_max_error": 1.7881393432617188e-07,
+      "binormal_max_error": 1.7881393432617188e-07,
+      "uv0_preserved": true,
+      "ue_normal_import": "Import Normals and Tangents",
+      "ue_recompute_normals": false,
+      "ue_recompute_tangents": false,
+      "ue_generate_lightmap_uvs": false,
+      "ue_atlas_texcoord": 1
+    },
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\SM_DY_LampStand_Baked.fbx",
+      "primary_tbn_name": "BakeUV1",
+      "loop_vectors": 39264,
+      "tangent_max_error": 1.7881393432617188e-07,
+      "binormal_max_error": 1.7881393432617188e-07,
+      "uv0_preserved": true,
+      "ue_normal_import": "Import Normals and Tangents",
+      "ue_recompute_normals": false,
+      "ue_recompute_tangents": false,
+      "ue_generate_lightmap_uvs": false,
+      "ue_atlas_texcoord": 1
+    }
+  ],
+  "previous_attempt": {
+    "status": "failed",
+    "normal_corrections": [
+      {
+        "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_NormalDX.png",
+        "before_sha256": "548993974D133F171CA4E07D957298D3E2C4B7ABB282649C28E67990F0832E12",
+        "all": {
+          "count": 4194304,
+          "min": 0.9948967695236206,
+          "max": 1.0049858093261719,
+          "p01_p50_p99": [
+            1.000015377998352,
+            1.000015377998352,
+            1.000630259513855
+          ],
+          "error_above_04": 0
+        },
+        "covered": {
+          "count": 1417171,
+          "min": 0.9948967695236206,
+          "max": 1.0049858093261719,
+          "p01_p50_p99": [
+            1.000015377998352,
+            1.000015377998352,
+            1.0003843307495117
+          ],
+          "error_above_04": 0
+        },
+        "interior": {
+          "count": 1356075,
+          "min": 0.9948967695236206,
+          "max": 1.0049858093261719,
+          "p01_p50_p99": [
+            1.000015377998352,
+            1.000015377998352,
+            1.0001999139785767
+          ],
+          "error_above_04": 0
+        },
+        "boundary": {
+          "count": 61096,
+          "min": 0.9959473013877869,
+          "max": 1.0044960975646973,
+          "p01_p50_p99": [
+            0.9973669022321701,
+            1.000015377998352,
+            1.0028409957885742
+          ],
+          "error_above_04": 0
+        },
+        "outside": {
+          "count": 2777133,
+          "min": 0.9953293800354004,
+          "max": 1.0049858093261719,
+          "p01_p50_p99": [
+            1.000015377998352,
+            1.000015377998352,
+            1.0006303787231445
+          ],
+          "error_above_04": 0
+        },
+        "after": {
+          "count": 4194304,
+          "min": 0.9948967695236206,
+          "max": 1.0049858093261719,
+          "p01_p50_p99": [
+            1.000015377998352,
+            1.000015377998352,
+            1.000630259513855
+          ],
+          "error_above_04": 0
+        },
+        "after_sha256": "2FE5DFC95852BC604EA88B65A8CD45E9D05DD8522772224D7AE20F98FB506862",
+        "operation": "Unit normalize decoded tangent vector; direction preserved, then 8-bit PNG quantization"
+      },
+      {
+        "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_NormalDX.png",
+        "before_sha256": "54092BEF2CDFDE2F7E16F0605C981A57AB669C1A9EB2200F6449BC9CAD8568E8",
+        "all": {
+          "count": 4194304,
+          "min": 0.9960708022117615,
+          "max": 1.0040059089660645,
+          "p01_p50_p99": [
+            1.000015377998352,
+            1.000015377998352,
+            1.0013062953948975
+          ],
+          "error_above_04": 0
+        },
+        "covered": {
+          "count": 1724549,
+          "min": 0.9960708022117615,
+          "max": 1.0040059089660645,
+          "p01_p50_p99": [
+            1.000015377998352,
+            1.0000768899917603,
+            1.0017362833023071
+          ],
+          "error_above_04": 0
+        },
+        "interior": {
+          "count": 1644881,
+          "min": 0.9960708022117615,
+          "max": 1.0040059089660645,
+          "p01_p50_p99": [
+            1.000015377998352,
+            1.0000768899917603,
+            1.0015519857406616
+          ],
+          "error_above_04": 0
+        },
+        "boundary": {
+          "count": 79668,
+          "min": 0.9961326122283936,
+          "max": 1.0037606954574585,
+          "p01_p50_p99": [
+            1.000015377998352,
+            1.0000768899917603,
+            1.0027797222137451
+          ],
+          "error_above_04": 0
+        },
+        "outside": {
+          "count": 2469755,
+          "min": 0.9961326122283936,
+          "max": 1.0037606954574585,
+          "p01_p50_p99": [
+            1.000015377998352,
+            1.000015377998352,
+            1.0013062953948975
+          ],
+          "error_above_04": 0
+        },
+        "after": {
+          "count": 4194304,
+          "min": 0.9960708022117615,
+          "max": 1.0040059089660645,
+          "p01_p50_p99": [
+            1.000015377998352,
+            1.000015377998352,
+            1.0013062953948975
+          ],
+          "error_above_04": 0
+        },
+        "after_sha256": "54092BEF2CDFDE2F7E16F0605C981A57AB669C1A9EB2200F6449BC9CAD8568E8",
+        "operation": "Unit normalize decoded tangent vector; direction preserved, then 8-bit PNG quantization"
+      }
+    ],
+    "tangents": [],
+    "previous_attempt": {
+      "status": "failed",
+      "normal_corrections": [
+        {
+          "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_NormalDX.png",
+          "before_sha256": "5EF92FF04F1302B57F836F7CBBB3191D275B1AD68EF515A2DB5238EC6ADF9ED4",
+          "all": {
+            "count": 4194304,
+            "min": 0.9175047278404236,
+            "max": 1.0093830823898315,
+            "p01_p50_p99": [
+              1.000015377998352,
+              1.000015377998352,
+              1.00044584274292
+            ],
+            "error_above_04": 60
+          },
+          "covered": {
+            "count": 1417171,
+            "min": 0.994649350643158,
+            "max": 1.0053529739379883,
+            "p01_p50_p99": [
+              1.000015377998352,
+              1.000015377998352,
+              1.0003843307495117
+            ],
+            "error_above_04": 0
+          },
+          "interior": {
+            "count": 1356075,
+            "min": 0.994649350643158,
+            "max": 1.0053529739379883,
+            "p01_p50_p99": [
+              1.000015377998352,
+              1.000015377998352,
+              1.0001999139785767
+            ],
+            "error_above_04": 0
+          },
+          "boundary": {
+            "count": 61096,
+            "min": 0.9953911900520325,
+            "max": 1.0044960975646973,
+            "p01_p50_p99": [
+              0.997798502445221,
+              1.000015377998352,
+              1.0031476020812988
+            ],
+            "error_above_04": 0
+          },
+          "outside": {
+            "count": 2777133,
+            "min": 0.9175047278404236,
+            "max": 1.0093830823898315,
+            "p01_p50_p99": [
+              1.000015377998352,
+              1.000015377998352,
+              1.000630259513855
+            ],
+            "error_above_04": 60
+          },
+          "after": {
+            "count": 4194304,
+            "min": 0.9948967695236206,
+            "max": 1.0049858093261719,
+            "p01_p50_p99": [
+              1.000015377998352,
+              1.000015377998352,
+              1.000630259513855
+            ],
+            "error_above_04": 0
+          },
+          "after_sha256": "548993974D133F171CA4E07D957298D3E2C4B7ABB282649C28E67990F0832E12",
+          "operation": "Unit normalize decoded tangent vector; direction preserved, then 8-bit PNG quantization"
+        },
+        {
+          "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_NormalDX.png",
+          "before_sha256": "AD08DA4DFACA36EC2481565C4363EC3C93A6570B58EB0B68D0A8350C224867E9",
+          "all": {
+            "count": 4194304,
+            "min": 0.9921724796295166,
+            "max": 1.0049856901168823,
+            "p01_p50_p99": [
+              1.000015377998352,
+              1.000015377998352,
+              1.0013062953948975
+            ],
+            "error_above_04": 0
+          },
+          "covered": {
+            "count": 1724549,
+            "min": 0.9953912496566772,
+            "max": 1.0048021078109741,
+            "p01_p50_p99": [
+              1.000015377998352,
+              1.0000768899917603,
+              1.0017362833023071
+            ],
+            "error_above_04": 0
+          },
+          "interior": {
+            "count": 1644881,
+            "min": 0.9953912496566772,
+            "max": 1.0048021078109741,
+            "p01_p50_p99": [
+              1.000015377998352,
+              1.0000768899917603,
+              1.0016136169433594
+            ],
+            "error_above_04": 0
+          },
+          "boundary": {
+            "count": 79668,
+            "min": 0.9957619905471802,
+            "max": 1.0042508840560913,
+            "p01_p50_p99": [
+              1.000015377998352,
+              1.0000768899917603,
+              1.0027797222137451
+            ],
+            "error_above_04": 0
+          },
+          "outside": {
+            "count": 2469755,
+            "min": 0.9921724796295166,
+            "max": 1.0049856901168823,
+            "p01_p50_p99": [
+              1.000015377998352,
+              1.000015377998352,
+              1.0013062953948975
+            ],
+            "error_above_04": 0
+          },
+          "after": {
+            "count": 4194304,
+            "min": 0.9960708022117615,
+            "max": 1.0040059089660645,
+            "p01_p50_p99": [
+              1.000015377998352,
+              1.000015377998352,
+              1.0013062953948975
+            ],
+            "error_above_04": 0
+          },
+          "after_sha256": "54092BEF2CDFDE2F7E16F0605C981A57AB669C1A9EB2200F6449BC9CAD8568E8",
+          "operation": "Unit normalize decoded tangent vector; direction preserved, then 8-bit PNG quantization"
+        }
+      ],
+      "tangents": [],
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\finalize_bake.py\", line 146, in <module>\n    main()\n  File \"C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\finalize_bake.py\", line 110, in main\n    assert len(tangent_sets) == len(binormal_sets) == 2\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+    },
+    "triangulation": [
+      {
+        "mesh": "SM_DY_LampBody_Baked",
+        "method": "Copy existing render loop_triangles; original vertex coordinates, UV0/UV1 corner values, normals and material partitions retained",
+        "triangles": 20016,
+        "vertices": 10113,
+        "original_polygons": 9560
+      },
+      {
+        "mesh": "SM_DY_LampStand_Baked",
+        "method": "Copy existing render loop_triangles; original vertex coordinates, UV0/UV1 corner values, normals and material partitions retained",
+        "triangles": 13088,
+        "vertices": 6592,
+        "original_polygons": 6200
+      }
+    ],
+    "error": "Traceback (most recent call last):\n  File \"C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\finalize_bake.py\", line 175, in <module>\n    main()\n  File \"C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\finalize_bake.py\", line 143, in main\n    assert np.array_equal(ts[0], ts[1]) and np.array_equal(bs[0], bs[1])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+  },
+  "triangulation": [
+    {
+      "mesh": "SM_DY_LampBody_Baked",
+      "method": "Copy existing render loop_triangles; original vertex coordinates, UV0/UV1 corner values, normals and material partitions retained",
+      "triangles": 20016,
+      "vertices": 10113,
+      "original_polygons": 9560
+    },
+    {
+      "mesh": "SM_DY_LampStand_Baked",
+      "method": "Copy existing render loop_triangles; original vertex coordinates, UV0/UV1 corner values, normals and material partitions retained",
+      "triangles": 13088,
+      "vertices": 6592,
+      "original_polygons": 6200
+    }
+  ],
+  "last_tbn_check": {
+    "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\SM_DY_LampStand_Baked.fbx",
+    "tangent_sets_finite": true,
+    "binormal_sets_finite": true,
+    "tangent_set_difference": 1.7881393432617188e-07,
+    "binormal_set_difference": 1.7881393432617188e-07
+  }
+}

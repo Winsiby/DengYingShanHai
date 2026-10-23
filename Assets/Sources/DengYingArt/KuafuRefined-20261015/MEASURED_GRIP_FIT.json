@@ -1,0 +1,29 @@
+{
+  "scope": "MEASURED-DEV-VISUAL-ASSEMBLY-NOT-FORMAL-ACCEPTANCE",
+  "native_pie_input": "D:\\灯影山海\\Saved\\Audit-2026-10-14-ArtAppearance\\PuppetPIE-Run2\\RESULT.json",
+  "uniform_scale": 0.8,
+  "relative_yaw_degrees": 180,
+  "relative_translation_cm": [
+    -3.895285105196915e-06,
+    -42.4406816939884,
+    -104.57372449381457
+  ],
+  "native_staff_moved": false,
+  "samples": [
+    {
+      "pose": "P02_StrideBack",
+      "grip_axis_distance_cm": 0.3018819737958926,
+      "grip_along_staff_0_1": 0.4864372898727768
+    },
+    {
+      "pose": "P02_StrideMid",
+      "grip_axis_distance_cm": 0.5673525262445276,
+      "grip_along_staff_0_1": 0.4863658060889681
+    },
+    {
+      "pose": "P02_StrideReach",
+      "grip_axis_distance_cm": 0.3018819737940074,
+      "grip_along_staff_0_1": 0.5099032094915837
+    }
+  ]
+}

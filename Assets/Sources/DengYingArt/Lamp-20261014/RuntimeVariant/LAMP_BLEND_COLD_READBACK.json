@@ -1,0 +1,381 @@
+{
+  "status": "PASS_EDITABLE_BLEND_COLD_READ",
+  "source_root": "Root_Back_Source",
+  "unit_scale_meter": 1.0,
+  "editable_part_count": 57,
+  "packed_images": [
+    {
+      "name": "wood_table_diff_2k.png",
+      "pixels": [
+        2048,
+        2048
+      ],
+      "packed_original_sha256": "DE99E3D8D7AFE58FEDC3AE9CAAF441D516547570643CFF5A0259E547A6B0C00A",
+      "same_as_original": true
+    },
+    {
+      "name": "wood_table_nor_dx_2k.png",
+      "pixels": [
+        2048,
+        2048
+      ],
+      "packed_original_sha256": "C214D164C26B59CC0962728F640FD143DD28F9039AE856F888B486E0CA4F4DA7",
+      "same_as_original": true
+    },
+    {
+      "name": "wood_table_arm_2k.png",
+      "pixels": [
+        2048,
+        2048
+      ],
+      "packed_original_sha256": "4C211965FFDD72F2A1D9358A14022A8F54AB5E6B18759E5D22C3998C1D70FF63",
+      "same_as_original": true
+    }
+  ],
+  "source_triangles": 33104,
+  "triangles_by_part": [
+    {
+      "name": "Lamp_Copper_HollowShell",
+      "group": "BODY",
+      "triangles": 3328,
+      "percent_total": 10.05
+    },
+    {
+      "name": "Lamp_RolledFrontRim",
+      "group": "BODY",
+      "triangles": 1920,
+      "percent_total": 5.8
+    },
+    {
+      "name": "Lamp_InnerReflector",
+      "group": "BODY",
+      "triangles": 1536,
+      "percent_total": 4.64
+    },
+    {
+      "name": "Lamp_OpticalWindowRetainer",
+      "group": "BODY",
+      "triangles": 1024,
+      "percent_total": 3.09
+    },
+    {
+      "name": "Lamp_UpperBodySeam",
+      "group": "BODY",
+      "triangles": 768,
+      "percent_total": 2.32
+    },
+    {
+      "name": "Lamp_RearServiceRing",
+      "group": "BODY",
+      "triangles": 768,
+      "percent_total": 2.32
+    },
+    {
+      "name": "Lamp_TiltClampRim_-1",
+      "group": "BODY",
+      "triangles": 768,
+      "percent_total": 2.32
+    },
+    {
+      "name": "Lamp_TiltClampRim_1",
+      "group": "BODY",
+      "triangles": 768,
+      "percent_total": 2.32
+    },
+    {
+      "name": "Stand_YokeStemCollar",
+      "group": "STAND",
+      "triangles": 768,
+      "percent_total": 2.32
+    },
+    {
+      "name": "Stand_SleeveEdge_0",
+      "group": "STAND",
+      "triangles": 768,
+      "percent_total": 2.32
+    },
+    {
+      "name": "Stand_SleeveEdge_1",
+      "group": "STAND",
+      "triangles": 768,
+      "percent_total": 2.32
+    },
+    {
+      "name": "Stand_SleeveEdge_2",
+      "group": "STAND",
+      "triangles": 768,
+      "percent_total": 2.32
+    },
+    {
+      "name": "Stand_SleeveEdge_3",
+      "group": "STAND",
+      "triangles": 768,
+      "percent_total": 2.32
+    },
+    {
+      "name": "Lamp_RecessedOpticalWindow",
+      "group": "BODY",
+      "triangles": 764,
+      "percent_total": 2.31
+    },
+    {
+      "name": "Lamp_TiltTrunnion_-1",
+      "group": "BODY",
+      "triangles": 764,
+      "percent_total": 2.31
+    },
+    {
+      "name": "Lamp_TiltClampWheel_-1",
+      "group": "BODY",
+      "triangles": 764,
+      "percent_total": 2.31
+    },
+    {
+      "name": "Lamp_TiltTrunnion_1",
+      "group": "BODY",
+      "triangles": 764,
+      "percent_total": 2.31
+    },
+    {
+      "name": "Lamp_TiltClampWheel_1",
+      "group": "BODY",
+      "triangles": 764,
+      "percent_total": 2.31
+    },
+    {
+      "name": "Stand_YokeStem",
+      "group": "STAND",
+      "triangles": 764,
+      "percent_total": 2.31
+    },
+    {
+      "name": "Stand_WoodMast",
+      "group": "STAND",
+      "triangles": 764,
+      "percent_total": 2.31
+    },
+    {
+      "name": "Stand_BronzeSleeve_0",
+      "group": "STAND",
+      "triangles": 764,
+      "percent_total": 2.31
+    },
+    {
+      "name": "Stand_BronzeSleeve_1",
+      "group": "STAND",
+      "triangles": 764,
+      "percent_total": 2.31
+    },
+    {
+      "name": "Stand_BronzeSleeve_2",
+      "group": "STAND",
+      "triangles": 764,
+      "percent_total": 2.31
+    },
+    {
+      "name": "Stand_BronzeSleeve_3",
+      "group": "STAND",
+      "triangles": 764,
+      "percent_total": 2.31
+    },
+    {
+      "name": "Lamp_RearWoodGrip",
+      "group": "BODY",
+      "triangles": 508,
+      "percent_total": 1.53
+    },
+    {
+      "name": "Lamp_GripEnd_-1",
+      "group": "BODY",
+      "triangles": 508,
+      "percent_total": 1.53
+    },
+    {
+      "name": "Lamp_GripEnd_1",
+      "group": "BODY",
+      "triangles": 508,
+      "percent_total": 1.53
+    },
+    {
+      "name": "Stand_AdjustmentLock",
+      "group": "STAND",
+      "triangles": 508,
+      "percent_total": 1.53
+    },
+    {
+      "name": "Lamp_ClampPin_-1",
+      "group": "BODY",
+      "triangles": 380,
+      "percent_total": 1.15
+    },
+    {
+      "name": "Lamp_ClampPin_1",
+      "group": "BODY",
+      "triangles": 380,
+      "percent_total": 1.15
+    },
+    {
+      "name": "Lamp_RimScrew_0",
+      "group": "BODY",
+      "triangles": 380,
+      "percent_total": 1.15
+    },
+    {
+      "name": "Lamp_RimScrew_60",
+      "group": "BODY",
+      "triangles": 380,
+      "percent_total": 1.15
+    },
+    {
+      "name": "Lamp_RimScrew_120",
+      "group": "BODY",
+      "triangles": 380,
+      "percent_total": 1.15
+    },
+    {
+      "name": "Lamp_RimScrew_180",
+      "group": "BODY",
+      "triangles": 380,
+      "percent_total": 1.15
+    },
+    {
+      "name": "Lamp_RimScrew_240",
+      "group": "BODY",
+      "triangles": 380,
+      "percent_total": 1.15
+    },
+    {
+      "name": "Lamp_RimScrew_300",
+      "group": "BODY",
+      "triangles": 380,
+      "percent_total": 1.15
+    },
+    {
+      "name": "Stand_AdjustmentBolt",
+      "group": "STAND",
+      "triangles": 380,
+      "percent_total": 1.15
+    },
+    {
+      "name": "Stand_FootFastener_-1_-1",
+      "group": "STAND",
+      "triangles": 380,
+      "percent_total": 1.15
+    },
+    {
+      "name": "Stand_FootFastener_-1_1",
+      "group": "STAND",
+      "triangles": 380,
+      "percent_total": 1.15
+    },
+    {
+      "name": "Stand_FootFastener_1_-1",
+      "group": "STAND",
+      "triangles": 380,
+      "percent_total": 1.15
+    },
+    {
+      "name": "Stand_FootFastener_1_1",
+      "group": "STAND",
+      "triangles": 380,
+      "percent_total": 1.15
+    },
+    {
+      "name": "Lamp_HandleSocket_-1",
+      "group": "BODY",
+      "triangles": 188,
+      "percent_total": 0.57
+    },
+    {
+      "name": "Lamp_HandleArm_-1",
+      "group": "BODY",
+      "triangles": 188,
+      "percent_total": 0.57
+    },
+    {
+      "name": "Lamp_HandleSocket_1",
+      "group": "BODY",
+      "triangles": 188,
+      "percent_total": 0.57
+    },
+    {
+      "name": "Lamp_HandleArm_1",
+      "group": "BODY",
+      "triangles": 188,
+      "percent_total": 0.57
+    },
+    {
+      "name": "Stand_YokeArm_-1",
+      "group": "STAND",
+      "triangles": 188,
+      "percent_total": 0.57
+    },
+    {
+      "name": "Stand_YokeArm_1",
+      "group": "STAND",
+      "triangles": 188,
+      "percent_total": 0.57
+    },
+    {
+      "name": "Stand_YokeBridge",
+      "group": "STAND",
+      "triangles": 188,
+      "percent_total": 0.57
+    },
+    {
+      "name": "Stand_BaseCrossTie",
+      "group": "STAND",
+      "triangles": 188,
+      "percent_total": 0.57
+    },
+    {
+      "name": "Stand_Runner_-1",
+      "group": "STAND",
+      "triangles": 188,
+      "percent_total": 0.57
+    },
+    {
+      "name": "Stand_RunnerEndCap_-1_-1",
+      "group": "STAND",
+      "triangles": 188,
+      "percent_total": 0.57
+    },
+    {
+      "name": "Stand_RunnerEndCap_-1_1",
+      "group": "STAND",
+      "triangles": 188,
+      "percent_total": 0.57
+    },
+    {
+      "name": "Stand_RunnerSole_-1",
+      "group": "STAND",
+      "triangles": 188,
+      "percent_total": 0.57
+    },
+    {
+      "name": "Stand_Runner_1",
+      "group": "STAND",
+      "triangles": 188,
+      "percent_total": 0.57
+    },
+    {
+      "name": "Stand_RunnerEndCap_1_-1",
+      "group": "STAND",
+      "triangles": 188,
+      "percent_total": 0.57
+    },
+    {
+      "name": "Stand_RunnerEndCap_1_1",
+      "group": "STAND",
+      "triangles": 188,
+      "percent_total": 0.57
+    },
+    {
+      "name": "Stand_RunnerSole_1",
+      "group": "STAND",
+      "triangles": 188,
+      "percent_total": 0.57
+    }
+  ],
+  "not_checked": "UE or published runtime"
+}

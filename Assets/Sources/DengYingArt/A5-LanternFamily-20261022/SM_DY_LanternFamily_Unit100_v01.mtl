@@ -1,0 +1,21 @@
+# Preview colors only. UE assigns existing project materials by slot name. No emission.
+newmtl Paper
+Ka 0 0 0
+Kd 0.88 0.78 0.62
+Ks 0.02 0.02 0.02
+Ns 4
+illum 2
+
+newmtl Wood
+Ka 0 0 0
+Kd 0.176 0.129 0.094
+Ks 0.04 0.04 0.04
+Ns 12
+illum 2
+
+newmtl Brass
+Ka 0 0 0
+Kd 0.65 0.42 0.14
+Ks 0.22 0.18 0.10
+Ns 40
+illum 2

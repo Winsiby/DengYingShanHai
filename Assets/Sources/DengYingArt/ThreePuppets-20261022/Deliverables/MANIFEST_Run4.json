@@ -1,0 +1,622 @@
+{
+  "version": "20261022-Run4",
+  "scope": "Three editable layered leather puppet models with control rods merged into the mesh. Imported into the production content folder and wired into the four-act campaign in development builds. ZIP holds source/export/evidence, not a standalone UE migration bundle. Public Shipping entry still Run143.",
+  "models": {
+    "Jingwei": {
+      "vertices": 7890,
+      "triangles": 16024,
+      "bone_count": 17,
+      "real_cutouts": 99,
+      "skin_thickness_cm": 0.65,
+      "human_art_acceptance": false
+    },
+    "Xingtian": {
+      "vertices": 4094,
+      "triangles": 8168,
+      "bone_count": 14,
+      "real_cutouts": 33,
+      "skin_thickness_cm": 0.65,
+      "human_art_acceptance": false
+    },
+    "Zhulong": {
+      "vertices": 3984,
+      "triangles": 8028,
+      "bone_count": 8,
+      "real_cutouts": 32,
+      "skin_thickness_cm": 0.65,
+      "human_art_acceptance": false
+    }
+  },
+  "files": [
+    {
+      "path": "ThreePuppets-20261022/Run4/Jingwei/A_DY_Jingwei_Flight.fbx",
+      "bytes": 564220,
+      "sha256": "4d22fec16209003f72e95fe4235e6ad1bd7a333317f9512c6cc4d64385d2a3ad"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Jingwei/A_DY_Jingwei_Reach.fbx",
+      "bytes": 564220,
+      "sha256": "397edc86c4e1cba391c7e99e61baeeaac5794f053a9f342c14a8982a78cfabd2"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Jingwei/A_DY_Jingwei_Rest.fbx",
+      "bytes": 564220,
+      "sha256": "b9982d3b0e4611441e3ab48cdeabe3779f66b7e355daf64ce027abd286857ad4"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Jingwei/GeometryMask.png",
+      "bytes": 13565,
+      "sha256": "82afc4a5f16527cb669a46d147f44fc033570361e25688d0c902cf28569d7f17"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Jingwei/Jingwei_Puppet_Source.blend",
+      "bytes": 40414816,
+      "sha256": "ecdaf4eabd0eda2be52d6908d5d1d188ec8656e10448ed3bab7f80a99d90b789"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Jingwei/MODEL_VERIFICATION.json",
+      "bytes": 5462,
+      "sha256": "578216588e1de5844b91055ef780f82c4dadc98bef20a4c18dd60d8b90da0513"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Jingwei/prepared.json",
+      "bytes": 700325,
+      "sha256": "33c1594e1948f14e2be0fb4066be801d7bc3baf697e69d9d5afb20c785658a4a"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Jingwei/Preview_Flight.png",
+      "bytes": 2422058,
+      "sha256": "32940257a2aaf06fa4592d26b5b2d387306f24bff815c636f7a48ee4e205eede"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Jingwei/Preview_Oblique.png",
+      "bytes": 2381582,
+      "sha256": "9e54aa971522ae3c4ca823d84aa9ab70c15cbf1f37dab526b9f833d588a9a654"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Jingwei/Preview_Reach.png",
+      "bytes": 2395003,
+      "sha256": "2f64673e3512f83b6211ded2b4ff127155336493681ae78d09bdce42babcacd3"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Jingwei/Preview_RealShadow.png",
+      "bytes": 1913995,
+      "sha256": "157681deb554b96bf386b5c45525f7533ff9917ccd4445084eab1ae6824ac4cb"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Jingwei/Preview_Rest.png",
+      "bytes": 2401551,
+      "sha256": "29baa8f8cfbfe5975a7ca8eac12f0e8f5a9c3c2e006158c581133ad411151ef9"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Jingwei/SK_DY_Jingwei.fbx",
+      "bytes": 477404,
+      "sha256": "9dc3a8e4a54bdaa5ac05982a6ac678a2a6325734a51cfd078255850f9c3ed557"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Jingwei/SM_DY_Jingwei_Rest.mtl",
+      "bytes": 599,
+      "sha256": "f59367b1775578d18d7030af1394cfef016c177ec3f01afd5291f73d078b3af5"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Jingwei/SM_DY_Jingwei_Rest.obj",
+      "bytes": 1082717,
+      "sha256": "aa56dee75beee7c543e6f63c97e680e1ccf50438a60662481c89fe28da2bdaa9"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Jingwei/T_DY_Jingwei_BaseColor.png",
+      "bytes": 8734343,
+      "sha256": "09fe4d4155839dbf1720ae02c0b98f0236ea0751c9579034d9db7f432428c4c3"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Jingwei/T_DY_Jingwei_NormalDX.png",
+      "bytes": 12245545,
+      "sha256": "a3dd316f9f8d37b4ca0076bd9bd8884899704a1a4b368639d768ec0c88342062"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Jingwei/T_DY_Jingwei_ORM.png",
+      "bytes": 15026909,
+      "sha256": "fcbc7e56ef3135f5ee290262ba5f8378d0874428070215f1b22f63cd896dc975"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Xingtian/A_DY_Xingtian_Guard.fbx",
+      "bytes": 343276,
+      "sha256": "bb54c81f8027d936fceb27d81495690202b34f346a0c6561e72afe25d0d624e1"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Xingtian/A_DY_Xingtian_Reach.fbx",
+      "bytes": 343276,
+      "sha256": "7151c2d731fc286132de43267ca4f5f103e3ba94e315399e9ab1f6e451708680"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Xingtian/A_DY_Xingtian_Rest.fbx",
+      "bytes": 343276,
+      "sha256": "1686bd89a4ac5758a548050587270a4be2a686d6d9780589a4e8793fd00ed246"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Xingtian/GeometryMask.png",
+      "bytes": 9091,
+      "sha256": "0a50d0709a64c169b41fc63c7e3b4daa777a133213be32e9c29708f7b188852e"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Xingtian/MODEL_VERIFICATION.json",
+      "bytes": 5701,
+      "sha256": "fddeabe1ac1028b1cfe9388ed5984062ca497bfd0e119673731b3e4cf0c6bcab"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Xingtian/prepared.json",
+      "bytes": 324841,
+      "sha256": "71fa30771eec0ba79fe2d400a9b7fd8ab0ba196696c0727cec6dd8ec31fa2ecc"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Xingtian/Preview_Guard.png",
+      "bytes": 2541029,
+      "sha256": "1ba659e0782e60f631689930a0069c84903a1f7b17c7a4faaebd2572e1cb97b0"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Xingtian/Preview_Oblique.png",
+      "bytes": 2539700,
+      "sha256": "45a6ce667416db5f91abd0d1837fdd57504da6ff4440a1afabd7419c8b36bd03"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Xingtian/Preview_Reach.png",
+      "bytes": 2564341,
+      "sha256": "a869750bf9ca626d55cb364c169234d26963cc6c5e47b62c52ba7117af455374"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Xingtian/Preview_RealShadow.png",
+      "bytes": 1938326,
+      "sha256": "ba370b6ca8e60da24ea28e9e5cdc989af102c560b68afbe54fecf986d7223a69"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Xingtian/Preview_Rest.png",
+      "bytes": 2542949,
+      "sha256": "f26ced62c2945e4d4d83c2a39ded1a6e80ca47ca279c55b08b12203728beb98b"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Xingtian/SK_DY_Xingtian.fbx",
+      "bytes": 272604,
+      "sha256": "19f9e82b8187447ae60db4a66a4024911ad116733d345cdec5cb2bf25a3f8e76"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Xingtian/SM_DY_Xingtian_Rest.mtl",
+      "bytes": 635,
+      "sha256": "7a56f68ed5756c0971fdf0491558e6889e1289ffed01eb02ceedc74903e25faa"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Xingtian/SM_DY_Xingtian_Rest.obj",
+      "bytes": 567787,
+      "sha256": "2e8f6a84b4f5246bf99c237f6a1267ed130c9b662b3885bee5a2a28a7971d251"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Xingtian/T_DY_Xingtian_BaseColor.png",
+      "bytes": 10174276,
+      "sha256": "c6c1d77d21c2f232ddeb366d051cb395b121db177ba162e2700920864c6c4de5"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Xingtian/T_DY_Xingtian_NormalDX.png",
+      "bytes": 12245545,
+      "sha256": "a3dd316f9f8d37b4ca0076bd9bd8884899704a1a4b368639d768ec0c88342062"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Xingtian/T_DY_Xingtian_ORM.png",
+      "bytes": 15026909,
+      "sha256": "fcbc7e56ef3135f5ee290262ba5f8378d0874428070215f1b22f63cd896dc975"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Xingtian/Xingtian_Puppet_Source.blend",
+      "bytes": 78144619,
+      "sha256": "e582ce282f2da906442f5e3d9df69ccb69416673539b93ca8cfea210312c70c6"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/A_DY_Zhulong_Day.fbx",
+      "bytes": 299452,
+      "sha256": "cba94fe967b648d4e30ff157ee05e9c858fee0e64a99bfb6fd445efdce34de30"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/A_DY_Zhulong_Night.fbx",
+      "bytes": 299452,
+      "sha256": "bd456bfdae8b2897fa55020711fb40ee98074ae6c5747aca536508dbbd3942ae"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/A_DY_Zhulong_Reach.fbx",
+      "bytes": 299452,
+      "sha256": "4479af7530d910b2127f2d45034378e8fc158b135da0e66ba932c93e2d253e41"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/A_DY_Zhulong_Rest.fbx",
+      "bytes": 299452,
+      "sha256": "c36444cb8f9d662f193a38dd6e5857f2f56d712547941fc79341831d98936934"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/GeometryMask.png",
+      "bytes": 7716,
+      "sha256": "ca919d12d814e77d353bc4c7f2a0c7505fa7ecaae127130e63b7dcbdb4ec1860"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/MODEL_VERIFICATION.json",
+      "bytes": 4897,
+      "sha256": "4ae1a75d6af9d3742aff0174297886504b5d62f84b055d146d4b8ef13a98ebe7"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/prepared.json",
+      "bytes": 361167,
+      "sha256": "da9c4021ace46649fc2d3907585aa62e697868d7240ca3c2136774e03dd7e852"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/Preview_Day.png",
+      "bytes": 2478522,
+      "sha256": "eedef6766b8170fd8c96ade3458f142cebfa2fb7b43811491bcc8412bb27c8d8"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/Preview_Night.png",
+      "bytes": 2482658,
+      "sha256": "2db47803a3626bddeee3171d7d43b88547c773200e927846f9cffc6d913a3889"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/Preview_Oblique.png",
+      "bytes": 2444891,
+      "sha256": "fe9b844bdb19c3aea8c68e1ea15299ee16f231398cd090f013ab8c6e0020b875"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/Preview_Reach.png",
+      "bytes": 2472388,
+      "sha256": "5d43e8241eed5e87717ce49b85eb1d6d3a48f24ca1f92697db38920601c5ab69"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/Preview_RealShadow.png",
+      "bytes": 1899063,
+      "sha256": "7fb5b9826d5a01fb1b47f10de411b9df55f798b7867f180bbbd1e3a180c44784"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/Preview_Rest.png",
+      "bytes": 2478634,
+      "sha256": "302f83c3eaae56cb3248cd54c1cba721d0f8ccde22ba7a8188eca3e7c7c24570"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/SK_DY_Zhulong.fbx",
+      "bytes": 257404,
+      "sha256": "84de6acd2070625f45002a90701a8de02c486d144532ee4aad9f93a5d5aa87ee"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/SM_DY_Zhulong_Rest.mtl",
+      "bytes": 831,
+      "sha256": "fb9d208598826741f9c2a0f74e02cb390a44506b9b64bb88047d0211badbaa82"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/SM_DY_Zhulong_Rest.obj",
+      "bytes": 543965,
+      "sha256": "5bfaa52613c3113ba0d41bfcdf73775b16eb2c67e5450bc5d3f0ebabbd35ff43"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/T_DY_Zhulong_BaseColor.png",
+      "bytes": 10933778,
+      "sha256": "7b5ee16510389ab62855970782628c0882097d95f78a6d20148bdc96bb2209d6"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/T_DY_Zhulong_ClosedBaseColor.png",
+      "bytes": 10930801,
+      "sha256": "c0b86822642a5bf46517dadb584f68244ff38727bb19e021abd6d0f8e9266224"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/T_DY_Zhulong_NormalDX.png",
+      "bytes": 12245545,
+      "sha256": "a3dd316f9f8d37b4ca0076bd9bd8884899704a1a4b368639d768ec0c88342062"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/T_DY_Zhulong_ORM.png",
+      "bytes": 15026909,
+      "sha256": "fcbc7e56ef3135f5ee290262ba5f8378d0874428070215f1b22f63cd896dc975"
+    },
+    {
+      "path": "ThreePuppets-20261022/Run4/Zhulong/Zhulong_Puppet_Source.blend",
+      "bytes": 128435900,
+      "sha256": "9390d80d84da8cc56f48cb6b8089d40644f4beaa4da288e7631358fc344f2635"
+    },
+    {
+      "path": "ThreePuppets-20261022/README.md",
+      "bytes": 8297,
+      "sha256": "b316d0888b6d00d21b5d74a4d6e8eb8d39fd145875f6391c1fccd0409f9a08e6"
+    },
+    {
+      "path": "ThreePuppets-20261022/jingwei_spec.json",
+      "bytes": 37720,
+      "sha256": "e91962c90d3948ea8750c173651a0543f8e89cb409472ac8e1ba5526cca8e5e6"
+    },
+    {
+      "path": "ThreePuppets-20261022/xingtian_spec.json",
+      "bytes": 27827,
+      "sha256": "c3f3d2fc549dee6d73d4350c791e9ae630f9cd79af3f7de35ae5ff3202e8735d"
+    },
+    {
+      "path": "ThreePuppets-20261022/zhulong_spec.json",
+      "bytes": 29891,
+      "sha256": "3f6f4d7628c1520277af2238c391346f1e853f26af164182ed0c7ac03c136a49"
+    },
+    {
+      "path": "ThreePuppets-20261022/prepare_meshes.py",
+      "bytes": 11053,
+      "sha256": "2c415802ea94249efbd475eeb5653fd06766d2aedfa1bf2d837ff7bd9ba55570"
+    },
+    {
+      "path": "ThreePuppets-20261022/build_blender.py",
+      "bytes": 19248,
+      "sha256": "b53676b5b39abef5c61b103d244a76ec7bd190e2eb93c43bc744cd20ec5000b5"
+    },
+    {
+      "path": "ThreePuppets-20261022/import_ue.py",
+      "bytes": 23819,
+      "sha256": "ed7a219a772e879007a32bcdc550bf29398a68755a01d49202fcc103d0ed8175"
+    },
+    {
+      "path": "ThreePuppets-20261022/package_delivery.py",
+      "bytes": 4724,
+      "sha256": "8335c55df074c5ef2d8910af59e552145261e5ce9d99d01aa5141a4fca295a6e"
+    },
+    {
+      "path": "ThreePuppets-20261022/package_delivery_run4.py",
+      "bytes": 6993,
+      "sha256": "0fa0d2e1bd6ebbbbadb8586103e68995d5d4a7f8611451318b48a41d9fb84d90"
+    },
+    {
+      "path": "ThreePuppets-20261022/pose_probe.py",
+      "bytes": 3210,
+      "sha256": "4e9ef803289b01493c268710f0b7d8cc3315bda8cd22e682b2f98e01abfdfe57"
+    },
+    {
+      "path": "ThreePuppets-20261022/pose_probe_all.py",
+      "bytes": 3040,
+      "sha256": "d1f6af47761a4b2dfe43dc4c43361b25d29b0ce31cceed90513efd5db483fd40"
+    },
+    {
+      "path": "ThreePuppets-20261022/pose_probe2.py",
+      "bytes": 3801,
+      "sha256": "06417d9d2b2df3c144a2da12de2b285d0f990e8be807facff77ca51fffa43735"
+    },
+    {
+      "path": "Concept-20261021/C1_Jingwei_Ortho_v01.png",
+      "bytes": 4372394,
+      "sha256": "8f530fc6c1b1e34a70ab3e0f42a94dfa54e8c71f37513b3cca896b8853e1650c"
+    },
+    {
+      "path": "Concept-20261021/C1_Xingtian_Ortho_v01.png",
+      "bytes": 4513817,
+      "sha256": "0fb737a8800778da8d771a19974b9641da418f323316a42e3d2abbbb3ac910da"
+    },
+    {
+      "path": "Concept-20261021/C1_Zhulong_Ortho_v01.png",
+      "bytes": 4472924,
+      "sha256": "37efdb88a558b75c12cfa0b0bcb652a4762ffced1301c203c739a5d4dfefe9a9"
+    },
+    {
+      "path": "THREE_PUPPETS_MODELS_20261022.md",
+      "bytes": 18540,
+      "sha256": "2c2c015444a6f88543e6f71b69e9dba1ba74eb2cb06d6fba1291cba1365794e6"
+    },
+    {
+      "path": "FOURACT_CAST_20261022.md",
+      "bytes": 16470,
+      "sha256": "983fbea5951e6972191c303313b1dc5560b1b319ff6e63ffba0fd454d824b407"
+    },
+    {
+      "path": "ART_AUDIT_20261022_FOURACT.md",
+      "bytes": 7212,
+      "sha256": "2f506082dd0586441c6a94a415d484fee441d6c74a25a5ef80bfe38a54f7411a"
+    },
+    {
+      "path": "Overview_Models.png",
+      "bytes": 640704,
+      "sha256": "c734359e3b2dce6fb8beaa7d3f7b9b9d3796fd2cbe5f9d3402de8817d0bfe4d5"
+    },
+    {
+      "path": "Overview_UE.png",
+      "bytes": 391807,
+      "sha256": "16c786169bb1750f719f6ceadfc570c3984c4585592e8ba58cd1da8822c33a55"
+    },
+    {
+      "path": "Verification/UE-Import.json",
+      "bytes": 56139,
+      "sha256": "412be7cdad765bda09741bf875a1c459bc92da74bb67ce3d8a4b0d257d76cc1b"
+    },
+    {
+      "path": "Verification/UE-Projection.json",
+      "bytes": 50385,
+      "sha256": "1979fbaf98df8e751cdc77d1b28f333b98df490dc6a1e3194e1552a44c8b24ce"
+    },
+    {
+      "path": "Verification/UE-ColdReload-Final.json",
+      "bytes": 6572,
+      "sha256": "244832f92838dd6206e07cbf80ede425968972221fb845feea8a5db336d66d5a"
+    },
+    {
+      "path": "Verification/UE-Projection-Jingwei-Rest.png",
+      "bytes": 952642,
+      "sha256": "4e87c7e937aa8cabbe5d75e774f22bbc19006bb0a89dfe2e42442ebe6892cbec"
+    },
+    {
+      "path": "Verification/UE-Projection-Jingwei-Flight.png",
+      "bytes": 954455,
+      "sha256": "a40ff6e787196716827ccbfa6578afcb13ecf3aefdd35db6eff571e581c1f96c"
+    },
+    {
+      "path": "Verification/UE-Projection-Jingwei-Reach.png",
+      "bytes": 944585,
+      "sha256": "8325af2001fdc719b8aa788dd91347b2db9be43f0a282c88d626f1461ee09b1f"
+    },
+    {
+      "path": "Verification/UE-Projection-Xingtian-Rest.png",
+      "bytes": 949247,
+      "sha256": "e29806210640b3e51bb61b7cf9812614feeffa2471b1fd0978b3a4a0de19b83c"
+    },
+    {
+      "path": "Verification/UE-Projection-Xingtian-Guard.png",
+      "bytes": 948552,
+      "sha256": "80322ee42c29c93fe4ca99cdd7d062f352feb69425342c740fdbce3b0c4c5db9"
+    },
+    {
+      "path": "Verification/UE-Projection-Xingtian-Reach.png",
+      "bytes": 930023,
+      "sha256": "4b6c664c29036105c2d5cc210356c4d5e509a63cbaa59482952f41dc6ad9b63e"
+    },
+    {
+      "path": "Verification/UE-Projection-Zhulong-Rest.png",
+      "bytes": 893034,
+      "sha256": "34c81aa2e84375cd27d92de0d8a0454908d202f13375e86da835c5368906ee91"
+    },
+    {
+      "path": "Verification/UE-Projection-Zhulong-Day.png",
+      "bytes": 891877,
+      "sha256": "749b723479f769aa8ed93b007f3dbd7b0c0a822a614016b2ea78974f26c78e9a"
+    },
+    {
+      "path": "Verification/UE-Projection-Zhulong-Night.png",
+      "bytes": 892442,
+      "sha256": "a6fe202691c0ac27aa73248c2652c859a3da98874baabb76f15c4f7167248ade"
+    },
+    {
+      "path": "Verification/UE-Projection-Zhulong-Reach.png",
+      "bytes": 886793,
+      "sha256": "04bafae7873eab0d1fc7fe4c4e792fe2e72a7d1b98ae1f24906e134eb0cf8b7a"
+    },
+    {
+      "path": "Verification/UE-Projection-Zhulong-DayEye.png",
+      "bytes": 1972958,
+      "sha256": "88fc36457750f6210e0742020d4775c5a5c3d50858707cf680a1fe9e2973c37a"
+    },
+    {
+      "path": "Verification/UE-Projection-Zhulong-NightEye.png",
+      "bytes": 2097699,
+      "sha256": "8bdd0422c8513dbd8a49e94a045b87d5f2ae4397ac576fa0e5157b663709456f"
+    },
+    {
+      "path": "Verification/run4-verify.json",
+      "bytes": 11500,
+      "sha256": "5d7c35643e2a10b60e759b29c738bb5912b62aeb91088e1b9e11317bfa95d468"
+    },
+    {
+      "path": "Verification/packaged-acts-verify.json",
+      "bytes": 2261,
+      "sha256": "d1db62a35da1d67450f8fb880cc6600106aa8f487682d130db8c4e5dbc4a10d4"
+    },
+    {
+      "path": "Verification/title-swap-calls.json",
+      "bytes": 1173,
+      "sha256": "069b98ed63a8eb7150bf88310caa1acd6b0b9695792fc55fd9ce4d3669044804"
+    },
+    {
+      "path": "Verification/final-acts.json",
+      "bytes": 763,
+      "sha256": "dda029911a8ff17699f656e933552fbcc4b322abd830cd33cbb8005b147bffb8"
+    },
+    {
+      "path": "Verification/cast-import.json",
+      "bytes": 25072,
+      "sha256": "7e5f9fa3ac112d794def7d7319032e43cfb9dda770650bb792465a395c03d203"
+    },
+    {
+      "path": "Verification/shipping144-archive.json",
+      "bytes": 614,
+      "sha256": "1fb6b599a5f97f93f62bcf2e27736f13873fc7a8fc2a4a2ed6869049b2a4e881"
+    },
+    {
+      "path": "Verification/shipping144-verify.json",
+      "bytes": 1637,
+      "sha256": "dde86d3e0db253b29bb79122a3218e9203414b759e52158b1da67d019139c601"
+    },
+    {
+      "path": "Verification/Packaged-Acts234.png",
+      "bytes": 522771,
+      "sha256": "c16c7573fcb5a7bcab33977410455a73a33dd74367e8803cb30dc8f1ef0e815a"
+    },
+    {
+      "path": "Verification/Shipping144-Acts.png",
+      "bytes": 337262,
+      "sha256": "8c055e78220f74f9fa66c7b44a10fdd71c896b0efda903028036d1f9a486cce0"
+    },
+    {
+      "path": "Verification/Final-Act1.png",
+      "bytes": 1458736,
+      "sha256": "c9f2fb710afbf7605bf91aef43a8c52f68b89e4be18b44b3d174bf0a52dd06fd"
+    },
+    {
+      "path": "Verification/Final-Act2.png",
+      "bytes": 1486773,
+      "sha256": "16a1ad6528d1f783616e3494db0902e6d7213a358972e5ac48595d85deff853d"
+    },
+    {
+      "path": "Verification/Final-Act3.png",
+      "bytes": 1490936,
+      "sha256": "88fa633899ba1de7aa448b89334d91da4039b0356d7665d675ab45db1a35c542"
+    },
+    {
+      "path": "Verification/Final-Act4.png",
+      "bytes": 1480041,
+      "sha256": "3084f8e7a0e809aeb88920eee58e97f064cf88d8d5f1bb82cc08c74432789c05"
+    },
+    {
+      "path": "Verification/Title3-Strip.png",
+      "bytes": 259840,
+      "sha256": "d0935ad5300a2807cfccb153f70ab18684a407f9fcc4f6b9ccad8ab7a74eb04b"
+    },
+    {
+      "path": "Verification/Packaged/r7-act2.png",
+      "bytes": 1100427,
+      "sha256": "00270bfcd13a608036809de7c59bab63bbf45987a14ff245cbfbed55c0cbf010"
+    },
+    {
+      "path": "Verification/Packaged/r7-act3.png",
+      "bytes": 1180443,
+      "sha256": "856bf2a9fb59761ea4362a113d9f216251851f73aaf102247ebcd1d081463751"
+    },
+    {
+      "path": "Verification/Packaged/r7-act4.png",
+      "bytes": 1180335,
+      "sha256": "385e176a9cb2d91b27a70089e126d5881f61d037258dfa95b656b8c7dc012185"
+    },
+    {
+      "path": "Verification/Packaged/r7-act2-zoom.png",
+      "bytes": 400642,
+      "sha256": "99bab5f6f3a7cbd1130bebf930004e9360ac147577fa891821cfeae0802345da"
+    },
+    {
+      "path": "Verification/Packaged/r7-act3-zoom.png",
+      "bytes": 395262,
+      "sha256": "df20c232c34fe6a69141c1dae5e4038800e672d62214bf7508504568b0641365"
+    },
+    {
+      "path": "Verification/Packaged/r7-act4-zoom.png",
+      "bytes": 394239,
+      "sha256": "37bc80df9578cf578a51f068eb3a42e032752d5401f7f13d6b9475b51d30d960"
+    },
+    {
+      "path": "Verification/Packaged/r7-panel.png",
+      "bytes": 1180803,
+      "sha256": "f5421d617df65680c7da9f27b4d2341394de696c5499154bae328c0073c7af0d"
+    },
+    {
+      "path": "Verification/Jingwei-MODEL_VERIFICATION.json",
+      "bytes": 5462,
+      "sha256": "578216588e1de5844b91055ef780f82c4dadc98bef20a4c18dd60d8b90da0513"
+    },
+    {
+      "path": "Verification/Xingtian-MODEL_VERIFICATION.json",
+      "bytes": 5701,
+      "sha256": "fddeabe1ac1028b1cfe9388ed5984062ca497bfd0e119673731b3e4cf0c6bcab"
+    },
+    {
+      "path": "Verification/Zhulong-MODEL_VERIFICATION.json",
+      "bytes": 4897,
+      "sha256": "4ae1a75d6af9d3742aff0174297886504b5d62f84b055d146d4b8ef13a98ebe7"
+    },
+    {
+      "path": "Verification/Probe-ProportionSheet.png",
+      "bytes": 414309,
+      "sha256": "dbe2359486f1447fb98bddd9e57cf54136528b9b9cec865126861c27ac9ab94a"
+    },
+    {
+      "path": "Verification/Probe-CharacterSilhouettes.png",
+      "bytes": 531215,
+      "sha256": "ddf4fcf12c3efc688cf76f387b5756a84aef81df6013ee19a38d0ebb2d0048d7"
+    }
+  ]
+}

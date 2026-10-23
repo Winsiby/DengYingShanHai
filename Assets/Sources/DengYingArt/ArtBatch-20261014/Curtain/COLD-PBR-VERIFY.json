@@ -1,0 +1,143 @@
+{
+  "status": "PASS-COLD-FBX-ACTUAL-BUFFER-UV-AND-2K-PNG-PIXELS",
+  "blender_version": "4.5.14 LTS",
+  "mesh": {
+    "vertices": 11538,
+    "polygons": 11536,
+    "triangles": 23072,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "volume_m3": 0.020732960082724555,
+    "uv_layer_order": [
+      "BakeUV",
+      "SourceUV"
+    ],
+    "material_names": [
+      "M_DY_Curtain_ProceduralWoven",
+      "M_DY_Curtain_ProceduralHem"
+    ],
+    "polygon_material_counts": {
+      "0": 8448,
+      "1": 3088
+    }
+  },
+  "max_world_vertex_distance_metres": 5.960464477539063e-08,
+  "uv_corner_correspondence": [
+    {
+      "name": "BakeUV",
+      "same_world_vertex_uv_corner_multisets": true,
+      "max_corner_uv_error": 0
+    },
+    {
+      "name": "SourceUV",
+      "same_world_vertex_uv_corner_multisets": true,
+      "max_corner_uv_error": 0
+    }
+  ],
+  "textures": [
+    {
+      "name": "BaseColor",
+      "PNG_dimensions": [
+        2048,
+        2048
+      ],
+      "PNG_bit_depth": 8,
+      "PNG_color_type": 6,
+      "colorspace_for_sampling": "sRGB",
+      "covered_pixel_count": 1371766,
+      "linear_rgb_min": [
+        0.04373503476381302,
+        0.0021246890537440777,
+        0.0060488334856927395
+      ],
+      "linear_rgb_max": [
+        0.054480280727148056,
+        0.002428215928375721,
+        0.008568125776946545
+      ],
+      "linear_rgb_std": [
+        0.002321762265637517,
+        6.707312422804534e-05,
+        0.0005622620228677988
+      ],
+      "covered_alpha_min": 1.0,
+      "sha256": "DCED3FAABD1E729E67A68900E3E6096CB07BCC4381A17A3DA4CB7DFB998667CF",
+      "not_flat_placeholder": true
+    },
+    {
+      "name": "Roughness",
+      "PNG_dimensions": [
+        2048,
+        2048
+      ],
+      "PNG_bit_depth": 8,
+      "PNG_color_type": 6,
+      "colorspace_for_sampling": "Non-Color",
+      "covered_pixel_count": 1371766,
+      "linear_rgb_min": [
+        0.7882353663444519,
+        0.7882353663444519,
+        0.7882353663444519
+      ],
+      "linear_rgb_max": [
+        0.847058892250061,
+        0.847058892250061,
+        0.847058892250061
+      ],
+      "linear_rgb_std": [
+        0.009780324064195156,
+        0.009780324064195156,
+        0.009780324064195156
+      ],
+      "covered_alpha_min": 1.0,
+      "sha256": "185D36B9FCCFEBE54E653EC8C2F79261735F40045268323331084317754AE2BA",
+      "not_flat_placeholder": true
+    },
+    {
+      "name": "Normal_DX",
+      "PNG_dimensions": [
+        2048,
+        2048
+      ],
+      "PNG_bit_depth": 8,
+      "PNG_color_type": 6,
+      "colorspace_for_sampling": "Non-Color",
+      "covered_pixel_count": 1371766,
+      "linear_rgb_min": [
+        0.3490196168422699,
+        0.35686275362968445,
+        0.9647059440612793
+      ],
+      "linear_rgb_max": [
+        0.6705882549285889,
+        0.6549019813537598,
+        1.0
+      ],
+      "linear_rgb_std": [
+        0.010286967270076275,
+        0.011925416998565197,
+        0.000262683373875916
+      ],
+      "covered_alpha_min": 1.0,
+      "sha256": "CECA2CFA63838BA65D11EE16506D66C37C101826C64796A8B711A4C105F56E94",
+      "not_flat_placeholder": true
+    }
+  ],
+  "actual_unique_uv_coverage": {
+    "resolution": 2048,
+    "covered_pixels": 1371766,
+    "coverage_percent": 32.7054500579834,
+    "overlapping_triangle_interior_pixels": 0,
+    "zero_area_uv_triangles": 0,
+    "triangles_without_pixel_centres": 2954,
+    "triangles": 23072,
+    "method": "actual BakeUV triangle raster at pixel centres; shared edges excluded"
+  },
+  "baked_actual_curved_mesh_not_unrelated_plane": true,
+  "source_run2_preserved": true,
+  "ue_imported": false,
+  "d_product_writes": false,
+  "normal_convention": "Cycles native tangent bake R=+X, G=-Y, B=+Z (DX). UE Normalmap/sRGB=false/FlipGreenChannel=false.",
+  "subpixel_uv_note": "2954 triangles have no 2K pixel centre, mostly small thickness/bevel sides; report and 12px bake padding are retained. Not claimed full-texel-per-triangle.",
+  "protected_LICENSES_md_read_or_hashed": false
+}

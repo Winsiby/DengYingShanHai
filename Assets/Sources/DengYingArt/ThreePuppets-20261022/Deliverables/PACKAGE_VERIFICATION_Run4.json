@@ -1,0 +1,259 @@
+{
+  "ok": true,
+  "archive": "DY_ThreePuppets_20261022_Run4.zip",
+  "bytes": 441460493,
+  "sha256": "ab02513b817377f022bd5b894b8288a528c689216c491a11f20291c158fe9ad3",
+  "files": 119,
+  "models": 3,
+  "editable_blend": 3,
+  "mesh_fbx": 3,
+  "pose_fbx": 10,
+  "zip_crc_and_all_file_hashes_verified": true,
+  "runtime_integration": "four-act campaign wired in development build RunD7; verified in packaged exe with in-game chapter selection",
+  "public_shipping": "Shipping Run144 built and verified in this round; public entry script still points at Run143 and switching requires user approval",
+  "evidence": {
+    "run4_verify_checks": [
+      {
+        "label": "cast asset is DYPuppetCastData",
+        "ok": true
+      },
+      {
+        "label": "cast holds four chapters",
+        "ok": true
+      },
+      {
+        "label": "entry label 0",
+        "ok": true
+      },
+      {
+        "label": "entry 0 location",
+        "ok": true
+      },
+      {
+        "label": "entry 0 yaw 180",
+        "ok": true
+      },
+      {
+        "label": "entry 0 scale",
+        "ok": true
+      },
+      {
+        "label": "kuafu keeps blueprint staff, no baked clips",
+        "ok": true
+      },
+      {
+        "label": "entry label 1",
+        "ok": true
+      },
+      {
+        "label": "entry 1 location",
+        "ok": true
+      },
+      {
+        "label": "entry 1 yaw 180",
+        "ok": true
+      },
+      {
+        "label": "entry 1 scale",
+        "ok": true
+      },
+      {
+        "label": "cast entry 1 has four pose clips",
+        "ok": true
+      },
+      {
+        "label": "entry label 2",
+        "ok": true
+      },
+      {
+        "label": "entry 2 location",
+        "ok": true
+      },
+      {
+        "label": "entry 2 yaw 180",
+        "ok": true
+      },
+      {
+        "label": "entry 2 scale",
+        "ok": true
+      },
+      {
+        "label": "cast entry 2 has four pose clips",
+        "ok": true
+      },
+      {
+        "label": "entry label 3",
+        "ok": true
+      },
+      {
+        "label": "entry 3 location",
+        "ok": true
+      },
+      {
+        "label": "entry 3 yaw 180",
+        "ok": true
+      },
+      {
+        "label": "entry 3 scale",
+        "ok": true
+      },
+      {
+        "label": "cast entry 3 has four pose clips",
+        "ok": true
+      },
+      {
+        "label": "anim Jingwei Rest",
+        "ok": true
+      },
+      {
+        "label": "anim Jingwei Rest is 1s",
+        "ok": true
+      },
+      {
+        "label": "anim Jingwei Flight",
+        "ok": true
+      },
+      {
+        "label": "anim Jingwei Flight is 1s",
+        "ok": true
+      },
+      {
+        "label": "anim Jingwei Reach",
+        "ok": true
+      },
+      {
+        "label": "anim Jingwei Reach is 1s",
+        "ok": true
+      },
+      {
+        "label": "Jingwei poses differ on WingL_Upper",
+        "ok": true
+      },
+      {
+        "label": "anim Xingtian Rest",
+        "ok": true
+      },
+      {
+        "label": "anim Xingtian Rest is 1s",
+        "ok": true
+      },
+      {
+        "label": "anim Xingtian Guard",
+        "ok": true
+      },
+      {
+        "label": "anim Xingtian Guard is 1s",
+        "ok": true
+      },
+      {
+        "label": "anim Xingtian Reach",
+        "ok": true
+      },
+      {
+        "label": "anim Xingtian Reach is 1s",
+        "ok": true
+      },
+      {
+        "label": "Xingtian poses differ on Arm_L_Upper",
+        "ok": true
+      },
+      {
+        "label": "anim Zhulong Rest",
+        "ok": true
+      },
+      {
+        "label": "anim Zhulong Rest is 1s",
+        "ok": true
+      },
+      {
+        "label": "anim Zhulong Day",
+        "ok": true
+      },
+      {
+        "label": "anim Zhulong Day is 1s",
+        "ok": true
+      },
+      {
+        "label": "anim Zhulong Night",
+        "ok": true
+      },
+      {
+        "label": "anim Zhulong Night is 1s",
+        "ok": true
+      },
+      {
+        "label": "anim Zhulong Reach",
+        "ok": true
+      },
+      {
+        "label": "anim Zhulong Reach is 1s",
+        "ok": true
+      },
+      {
+        "label": "zhulong night keeps eyelid open",
+        "ok": true
+      },
+      {
+        "label": "zhulong day closes eyelid",
+        "ok": true
+      },
+      {
+        "label": "texture resident /Game/DengYingShanHai/Puppets/Textures/T_DY_Jingwei_BaseColor.T_DY_Jingwei_BaseColor",
+        "ok": true
+      },
+      {
+        "label": "texture resident /Game/DengYingShanHai/Puppets/Textures/T_DY_Xingtian_BaseColor.T_DY_Xingtian_BaseColor",
+        "ok": true
+      },
+      {
+        "label": "texture resident /Game/DengYingShanHai/Puppets/Textures/T_DY_Zhulong_BaseColor.T_DY_Zhulong_BaseColor",
+        "ok": true
+      },
+      {
+        "label": "texture resident /Game/DengYingShanHai/Puppets/Textures/T_DY_Zhulong_ClosedBaseColor.T_DY_Zhulong_ClosedBaseColor",
+        "ok": true
+      },
+      {
+        "label": "skeletal usage /Game/DengYingShanHai/Puppets/Materials/MI_DY_Jingwei_Brass.MI_DY_Jingwei_Brass",
+        "ok": true
+      },
+      {
+        "label": "skeletal usage /Game/DengYingShanHai/Puppets/Materials/MI_DY_Jingwei_CutEdge.MI_DY_Jingwei_CutEdge",
+        "ok": true
+      },
+      {
+        "label": "skeletal usage /Game/DengYingShanHai/Puppets/Materials/MI_DY_Jingwei_Skin.MI_DY_Jingwei_Skin",
+        "ok": true
+      },
+      {
+        "label": "skeletal usage /Game/DengYingShanHai/Puppets/Materials/MI_DY_Xingtian_Brass.MI_DY_Xingtian_Brass",
+        "ok": true
+      },
+      {
+        "label": "skeletal usage /Game/DengYingShanHai/Puppets/Materials/MI_DY_Xingtian_CutEdge.MI_DY_Xingtian_CutEdge",
+        "ok": true
+      },
+      {
+        "label": "skeletal usage /Game/DengYingShanHai/Puppets/Materials/MI_DY_Xingtian_Skin.MI_DY_Xingtian_Skin",
+        "ok": true
+      },
+      {
+        "label": "skeletal usage /Game/DengYingShanHai/Puppets/Materials/MI_DY_Zhulong_Brass.MI_DY_Zhulong_Brass",
+        "ok": true
+      },
+      {
+        "label": "skeletal usage /Game/DengYingShanHai/Puppets/Materials/MI_DY_Zhulong_CutEdge.MI_DY_Zhulong_CutEdge",
+        "ok": true
+      },
+      {
+        "label": "skeletal usage /Game/DengYingShanHai/Puppets/Materials/MI_DY_Zhulong_EyelidSkin.MI_DY_Zhulong_EyelidSkin",
+        "ok": true
+      },
+      {
+        "label": "skeletal usage /Game/DengYingShanHai/Puppets/Materials/MI_DY_Zhulong_Skin.MI_DY_Zhulong_Skin",
+        "ok": true
+      }
+    ],
+    "packaged_captures": 8
+  }
+}

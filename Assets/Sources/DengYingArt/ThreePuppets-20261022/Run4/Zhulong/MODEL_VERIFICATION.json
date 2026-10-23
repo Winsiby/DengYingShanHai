@@ -1,0 +1,170 @@
+{
+  "status": "PASS-MODEL-SOURCE-FBX-ROUNDTRIP",
+  "id": "Zhulong",
+  "vertices": 3984,
+  "triangles": 8028,
+  "bone_count": 8,
+  "part_count": 6,
+  "control_rods_in_mesh": 3,
+  "real_cutouts": 32,
+  "source_bounds_cm": [
+    [
+      -3.950000286102295,
+      2.4800000190734863
+    ],
+    [
+      -10.011919021606445,
+      92.88200378417969
+    ],
+    [
+      -10.817432403564453,
+      213.9170379638672
+    ]
+  ],
+  "fresh_fbx_bounds_cm": [
+    [
+      -3.950000286102295,
+      2.4800000190734863
+    ],
+    [
+      -10.0119047164917,
+      92.88203430175781
+    ],
+    [
+      -10.817432403564453,
+      213.91702270507812
+    ]
+  ],
+  "skin_thickness_cm": 0.65,
+  "material_slots": [
+    "Skin.004",
+    "CutEdge.004",
+    "Brass.004",
+    "EyelidSkin"
+  ],
+  "poses": [
+    {
+      "pose": "Rest",
+      "bounds_cm": [
+        [
+          -3.950000286102295,
+          2.4800000190734863
+        ],
+        [
+          -10.011919021606445,
+          92.88200378417969
+        ],
+        [
+          -10.817432403564453,
+          213.9170379638672
+        ]
+      ]
+    },
+    {
+      "pose": "Day",
+      "bounds_cm": [
+        [
+          -3.950000286102295,
+          2.4800000190734863
+        ],
+        [
+          -10.011919021606445,
+          99.28028869628906
+        ],
+        [
+          -10.817432403564453,
+          210.42630004882812
+        ]
+      ]
+    },
+    {
+      "pose": "Night",
+      "bounds_cm": [
+        [
+          -3.950000286102295,
+          2.4800000190734863
+        ],
+        [
+          -14.921638488769531,
+          94.58650207519531
+        ],
+        [
+          -10.817432403564453,
+          217.7687225341797
+        ]
+      ]
+    },
+    {
+      "pose": "Reach",
+      "bounds_cm": [
+        [
+          -3.950000286102295,
+          2.4800000190734863
+        ],
+        [
+          -9.794618606567383,
+          103.66988372802734
+        ],
+        [
+          -10.817432403564453,
+          207.72463989257812
+        ]
+      ]
+    }
+  ],
+  "previews": [
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run4\\Zhulong\\Preview_Rest.png",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run4\\Zhulong\\Preview_Day.png",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run4\\Zhulong\\Preview_Night.png",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run4\\Zhulong\\Preview_Reach.png",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run4\\Zhulong\\Preview_Oblique.png",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run4\\Zhulong\\Preview_RealShadow.png"
+  ],
+  "checks": [
+    "Proportion correction applied to Head",
+    "Head closed manifold shells",
+    "Head positive volume",
+    "Neck closed manifold shells",
+    "Neck positive volume",
+    "BodyUpper closed manifold shells",
+    "BodyUpper positive volume",
+    "BodyMiddle closed manifold shells",
+    "BodyMiddle positive volume",
+    "BodyLower closed manifold shells",
+    "BodyLower positive volume",
+    "Tail closed manifold shells",
+    "Tail positive volume",
+    "DayNight_EyeShutter closed manifold shells",
+    "DayNight_EyeShutter positive volume",
+    "Every vertex rigidly bound to exactly one bone",
+    "Hero mesh under 26000 triangles",
+    "Bone present Root",
+    "Bone present BodyUpper",
+    "Bone present Neck",
+    "Bone present Head",
+    "Bone present BodyMiddle",
+    "Bone present BodyLower",
+    "Bone present Tail",
+    "Bone present Eyelid",
+    "Control rods joined into the puppet mesh on their own bones",
+    "Hero mesh including control rods under 26000 triangles",
+    "Every vertex including rods rigidly bound to exactly one bone",
+    "Rest finite deformed geometry",
+    "Day finite deformed geometry",
+    "Night finite deformed geometry",
+    "Reach finite deformed geometry",
+    "Cold FBX import has one skeletal mesh and one armature",
+    "Cold FBX bone count matches",
+    "Cold FBX preserves rigid weights",
+    "Cold FBX triangle count matches",
+    "Cold FBX world centimetre bounds match within 0.02 cm"
+  ],
+  "provenance": {
+    "reference_sha256": "37EFDB88A558B75C12CFA0B0BCB652A4762FFCED1301C203C739A5D4DFEFE9A9",
+    "spec_sha256": "3F6F4D7628C1520277AF2238C391346F1E853F26AF164182ED0C7AC03C136A49",
+    "method": "Contour-modeled extruded leather pieces from existing project concept; real holes, rigid articulation, cleaned artwork UV atlas; no purchased mesh or new image generation.",
+    "texture_note": "Stylized painted artwork, not a scanned physical albedo. Existing design-sheet markings are excluded."
+  },
+  "runtime_integration": false,
+  "human_art_acceptance": false
+}

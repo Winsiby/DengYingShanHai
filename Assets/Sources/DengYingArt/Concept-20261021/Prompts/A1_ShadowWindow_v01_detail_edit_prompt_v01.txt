@@ -1,0 +1,6 @@
+Use case: precise-object-edit. Edit the referenced A1 shadow-window textile and edge-detail concept board. Preserve its entire composition, drawings, style, calligraphy, empty plain screen, dimensions, material swatches, and all objects. Make only these exact Chinese label corrections:
+1. In the upper-right side section replace "框面宽 12（固定）" with "框面宽 12（拟定）"; "框深 16（固定）" with "框深 16（拟定）"; "上横杆 Ø12（固定）" with "上横杆 Ø12（拟定）"; "间隙 3（固定）" with "间隙 3（拟定）"; "下横杆 Ø10（固定）" with "下横杆 Ø10（拟定）".
+2. Change the upper-right title "侧剖图（YZ）" to "侧剖图（XZ）".
+3. Change the lower-middle title "包边剖面放大（YZ）" to "包边剖面放大", removing the ambiguous axis suffix.
+4. Leave the small front overview's "900（固定）" and "800（固定）" UNCHANGED. Every already-拟定 label remains unchanged. Do not change any numeric value. Do not add marks or patterns to the plain cloth.
+Keep the whole sheet, native original aspect ratio and all margins. No new shapes, no design reinterpretation, no cropping. These are terminology corrections only.

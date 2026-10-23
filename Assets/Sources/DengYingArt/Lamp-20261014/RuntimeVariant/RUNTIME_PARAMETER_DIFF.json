@@ -1,0 +1,106 @@
+{
+  "method": "Analytic primitive/profile resampling, never decimation; visual fidelity approximation, not lossless",
+  "source_preserved": true,
+  "source_hashes": {
+    "build_lamp.py": "050417d4b31559f754f09ff436769377fd0b2e24c6da5dbf86832ac8e52ed2bb",
+    "DY_HeroSpotlight_Source.blend": "5425d5daad920cb4331e8e81fee80ed8ddbf9f2e95a8ca43d2058a8c74243582",
+    "SM_DY_LampBody_Source.fbx": "2c87df23501e71db960e8e0afd7cc107db6bf615a55f0e2d0e76745c7f67c662",
+    "SM_DY_LampStand_Source.fbx": "72dfc48283ebaa46a1e11c9c97d3911ce1f7f17823fcf792b9a1ae246f731d1f",
+    "Lamp_Head_Review.png": "05894f024da8179d899b276148c273d2f545f0b11ec95e9b1e79c2eed8d4b79c",
+    "Lamp_Full_Review.png": "9d938415ff017e0efc4c04dcc7db08ad064b55b3cb0b5e885abd9c6cbaaa371b",
+    "Lamp_Side_Review.png": "133e598777d6abbb5d96e96fdb59d78e770c8e6813b04cc8a07bd5d3b4bedfdb"
+  },
+  "parameter_diff": {
+    "lathe_circumference": [
+      128,
+      64
+    ],
+    "default_cylinder_circumference": [
+      96,
+      48
+    ],
+    "wood_mast_circumference": [
+      96,
+      48
+    ],
+    "small_cylinder_32": [
+      32,
+      24
+    ],
+    "small_cylinder_48": [
+      48,
+      32
+    ],
+    "small_cylinder_64": [
+      64,
+      32
+    ],
+    "edge_bevel_segments": [
+      4,
+      3
+    ],
+    "front_rim_major_minor": [
+      [
+        128,
+        16
+      ],
+      [
+        80,
+        12
+      ]
+    ],
+    "optics_retainer_major_minor": [
+      [
+        128,
+        16
+      ],
+      [
+        64,
+        8
+      ]
+    ],
+    "other_torus_major_minor": [
+      [
+        128,
+        16
+      ],
+      [
+        48,
+        8
+      ]
+    ]
+  },
+  "parameters_retained": [
+    "All profile positions and radii",
+    "All thicknesses, edge widths, component pivots, and source anchors",
+    "All named parts and material partitions",
+    "Physical wood UV direction and analytical shell UV formula",
+    "Same review camera/light/world/exposure/shader configuration"
+  ],
+  "ab_head_camera": {
+    "position_m": [
+      2.4,
+      -2.8,
+      0.85
+    ],
+    "target_m": [
+      0,
+      0,
+      -0.17
+    ],
+    "type": "ORTHO",
+    "ortho_scale_m": 1.47,
+    "resolution": [
+      1920,
+      1440
+    ],
+    "cycles_samples": 80,
+    "view_transform": "AgX",
+    "exposure": 0.0
+  },
+  "small_sample_literal_occurrences": {
+    "32": 4,
+    "48": 1,
+    "64": 2
+  }
+}

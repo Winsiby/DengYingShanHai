@@ -1,0 +1,50 @@
+{
+  "Status": "PASS-ACQUIRED-NOT-ART-ACCEPTED",
+  "Source": "https://polyhaven.com/a/wood_table",
+  "License": "CC0-1.0",
+  "Author": "Dimitrios Savva",
+  "Files": [
+    {
+      "Kind": "Diffuse",
+      "Name": "wood_table_diff_2k.png",
+      "URL": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/wood_table/wood_table_diff_2k.png",
+      "Bytes": 22848819,
+      "Dimensions": [
+        2048,
+        2048
+      ],
+      "MD5": "97f4d03029053f81ef3afef7dad3d43d",
+      "SHA256": "DE99E3D8D7AFE58FEDC3AE9CAAF441D516547570643CFF5A0259E547A6B0C00A"
+    },
+    {
+      "Kind": "nor_dx",
+      "Name": "wood_table_nor_dx_2k.png",
+      "URL": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/wood_table/wood_table_nor_dx_2k.png",
+      "Bytes": 20348021,
+      "Dimensions": [
+        2048,
+        2048
+      ],
+      "MD5": "8381da9ffdd628d7d018ec7a470fd7c0",
+      "SHA256": "C214D164C26B59CC0962728F640FD143DD28F9039AE856F888B486E0CA4F4DA7"
+    },
+    {
+      "Kind": "arm",
+      "Name": "wood_table_arm_2k.png",
+      "URL": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/wood_table/wood_table_arm_2k.png",
+      "Bytes": 17221313,
+      "Dimensions": [
+        2048,
+        2048
+      ],
+      "MD5": "329c5bf8e1fafeb09a69da65e3578eae",
+      "SHA256": "4C211965FFDD72F2A1D9358A14022A8F54AB5E6B18759E5D22C3998C1D70FF63"
+    }
+  ],
+  "Payment": 0,
+  "Login": false,
+  "TLSValidationDisabled": false,
+  "PreviewRendersUsed": false,
+  "RuntimeChanged": false,
+  "RetrievedUtc": "2026-10-11T16:38:10.1087696Z"
+}

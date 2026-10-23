@@ -1,0 +1,115 @@
+{
+  "exports": [
+    {
+      "mesh_name": "SM_DY_LampBody_Source",
+      "pivot_actor_local_cm": [
+        0,
+        0,
+        0
+      ],
+      "bounds_component_local": {
+        "min_cm": [
+          -45.7,
+          -34.75,
+          -27.2
+        ],
+        "max_cm": [
+          42.0,
+          34.75,
+          27.2
+        ],
+        "size_cm": [
+          87.7,
+          69.5,
+          54.4
+        ]
+      },
+      "uv_layers": [
+        "UVMap",
+        "UVLightmap"
+      ],
+      "material_slots": [
+        "M_DY_Bronze_Procedural_SOURCE",
+        "M_DY_Bronze_Edge_SOURCE",
+        "M_DY_BlackMetal_SOURCE",
+        "M_DY_Reflector_SOURCE",
+        "M_DY_OpticalWindow_SOURCE",
+        "M_DY_Wood_CC0_SOURCE"
+      ]
+    },
+    {
+      "mesh_name": "SM_DY_LampStand_Source",
+      "pivot_actor_local_cm": [
+        0,
+        0,
+        -95.0
+      ],
+      "bounds_component_local": {
+        "min_cm": [
+          -42.7,
+          -49.5,
+          -215.0
+        ],
+        "max_cm": [
+          35.7,
+          49.5,
+          94.1
+        ],
+        "size_cm": [
+          78.4,
+          99.0,
+          309.1
+        ]
+      },
+      "uv_layers": [
+        "UVMap",
+        "UVLightmap"
+      ],
+      "material_slots": [
+        "M_DY_Bronze_Procedural_SOURCE",
+        "M_DY_BlackMetal_SOURCE",
+        "M_DY_Bronze_Edge_SOURCE",
+        "M_DY_Wood_CC0_SOURCE",
+        "M_DY_Rubber_SOURCE"
+      ]
+    }
+  ],
+  "integration": {
+    "LampBody": {
+      "relative_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "LampStand": {
+      "relative_cm": [
+        0,
+        0,
+        -95
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "KeyLight": "Do not change any property",
+    "collision": "Preserve existing query interaction profile; use simple collision, never per-poly or blocking movement"
+  }
+}

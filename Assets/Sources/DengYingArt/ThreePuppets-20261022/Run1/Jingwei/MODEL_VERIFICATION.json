@@ -1,0 +1,174 @@
+{
+  "status": "PASS-MODEL-SOURCE-FBX-ROUNDTRIP",
+  "id": "Jingwei",
+  "vertices": 7796,
+  "triangles": 15856,
+  "bone_count": 17,
+  "part_count": 17,
+  "real_cutouts": 100,
+  "source_bounds_cm": [
+    [
+      -1.065000057220459,
+      2.4800000190734863
+    ],
+    [
+      -139.78494262695312,
+      133.52688598632812
+    ],
+    [
+      0.2150540053844452,
+      160.0
+    ]
+  ],
+  "fresh_fbx_bounds_cm": [
+    [
+      -1.065000057220459,
+      2.4800000190734863
+    ],
+    [
+      -139.784912109375,
+      133.52691650390625
+    ],
+    [
+      0.2150578498840332,
+      160.0
+    ]
+  ],
+  "skin_thickness_cm": 0.65,
+  "material_slots": [
+    "Skin",
+    "CutEdge",
+    "Brass"
+  ],
+  "poses": [
+    {
+      "pose": "Rest",
+      "bounds_cm": [
+        [
+          -1.065000057220459,
+          2.4800000190734863
+        ],
+        [
+          -139.78494262695312,
+          133.52688598632812
+        ],
+        [
+          0.2150540053844452,
+          160.0
+        ]
+      ]
+    },
+    {
+      "pose": "Flight",
+      "bounds_cm": [
+        [
+          -1.065000057220459,
+          2.4800000190734863
+        ],
+        [
+          -130.6866455078125,
+          124.5211181640625
+        ],
+        [
+          1.062429428100586,
+          178.60264587402344
+        ]
+      ]
+    },
+    {
+      "pose": "Reach",
+      "bounds_cm": [
+        [
+          -1.065000057220459,
+          2.4800000190734863
+        ],
+        [
+          -142.86961364746094,
+          136.73304748535156
+        ],
+        [
+          1.0968208312988281,
+          158.29855346679688
+        ]
+      ]
+    }
+  ],
+  "previews": [
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run1\\Jingwei\\Preview_Rest.png",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run1\\Jingwei\\Preview_Flight.png",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run1\\Jingwei\\Preview_Reach.png",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run1\\Jingwei\\Preview_Oblique.png",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\ThreePuppets-20261022\\Run1\\Jingwei\\Preview_RealShadow.png"
+  ],
+  "checks": [
+    "Torso closed manifold shells",
+    "Torso positive volume",
+    "HumanHead_Crown_Ribbons closed manifold shells",
+    "HumanHead_Crown_Ribbons positive volume",
+    "LeftInnerWing closed manifold shells",
+    "LeftInnerWing positive volume",
+    "LeftMiddleWing closed manifold shells",
+    "LeftMiddleWing positive volume",
+    "LeftOuterWing closed manifold shells",
+    "LeftOuterWing positive volume",
+    "RightInnerWing closed manifold shells",
+    "RightInnerWing positive volume",
+    "RightMiddleWing closed manifold shells",
+    "RightMiddleWing positive volume",
+    "RightOuterWing closed manifold shells",
+    "RightOuterWing positive volume",
+    "TailCenter closed manifold shells",
+    "TailCenter positive volume",
+    "TailLeftFan closed manifold shells",
+    "TailLeftFan positive volume",
+    "TailRightFan closed manifold shells",
+    "TailRightFan positive volume",
+    "LeftThigh closed manifold shells",
+    "LeftThigh positive volume",
+    "LeftShin closed manifold shells",
+    "LeftShin positive volume",
+    "LeftClaw closed manifold shells",
+    "LeftClaw positive volume",
+    "RightThigh closed manifold shells",
+    "RightThigh positive volume",
+    "RightShin closed manifold shells",
+    "RightShin positive volume",
+    "RightClaw closed manifold shells",
+    "RightClaw positive volume",
+    "Every vertex rigidly bound to exactly one bone",
+    "Hero mesh under 26000 triangles",
+    "Bone present Root",
+    "Bone present Head",
+    "Bone present WingL_Upper",
+    "Bone present WingL_Mid",
+    "Bone present WingL_Tip",
+    "Bone present WingR_Upper",
+    "Bone present WingR_Mid",
+    "Bone present WingR_Tip",
+    "Bone present Tail_C",
+    "Bone present Tail_L",
+    "Bone present Tail_R",
+    "Bone present LegL_Upper",
+    "Bone present LegL_Lower",
+    "Bone present LegL_Foot",
+    "Bone present LegR_Upper",
+    "Bone present LegR_Lower",
+    "Bone present LegR_Foot",
+    "Rest finite deformed geometry",
+    "Flight finite deformed geometry",
+    "Reach finite deformed geometry",
+    "Cold FBX import has one skeletal mesh and one armature",
+    "Cold FBX bone count matches",
+    "Cold FBX preserves rigid weights",
+    "Cold FBX triangle count matches",
+    "Cold FBX world centimetre bounds match within 0.02 cm"
+  ],
+  "provenance": {
+    "reference_sha256": "8F530FC6C1B1E34A70AB3E0F42A94DFA54E8C71F37513B3CCA896B8853E1650C",
+    "spec_sha256": "95F7770D639BA387010DB81B6C84AC69371095842312838B812FD9FA1E3C7F72",
+    "method": "Contour-modeled extruded leather pieces from existing project concept; real holes, rigid articulation, cleaned artwork UV atlas; no purchased mesh or new image generation.",
+    "texture_note": "Stylized painted artwork, not a scanned physical albedo. Existing design-sheet markings are excluded."
+  },
+  "runtime_integration": false,
+  "human_art_acceptance": false
+}

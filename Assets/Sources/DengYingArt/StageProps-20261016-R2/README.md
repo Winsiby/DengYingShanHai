@@ -1,0 +1,7 @@
+# Two backstage woodwork source candidates
+
+Operator rod rack and waiting/rehearsal bench only; the four hanging rods are passive joined source geometry, not the interactive Staff. Creative procedural modeling with Codex assistance; no upstream mesh/texture or historical reconstruction claim.
+
+Each FBX has one visual mesh with UV0/Wood preview slot and 14 rack or 13 bench unmaterialed UV-less UBX boxes. Closed wooden component shells meet through verified common interior points, not a Boolean solid union. Wood UVs use physical 50cm tiling, with V along the projected long direction and planar end faces. The preview material is not final wood texture. Each real wooden part has its own UBX AABB, never one enclosing prop-wide air-wall. Boxes approximate 0.4cm beveled and circular corners; actual convex-source maximum corner gaps are reported. UBX triangles are explicitly paired per planar face to satisfy this local UE5.8 AddBoxGeomFromTris implementation. The raw physical Run3 FBX failure is reproduced and raw new FBX triangle-order simulation passes; this is not native UE import acceptance. No collision is rendered. Prior Run2 visual positions/topology/UV0/corner-normal float signatures match exactly after fresh FBX reads.
+
+Two studio PNGs are local shape reviews, not UE gameplay, final-lighting, shadow or performance acceptance. SOURCE.json includes actual component/source/FBX counts, bounds, grounding, contact and source checks. No map, old fixture, old asset, gameplay code or D-drive file is changed.

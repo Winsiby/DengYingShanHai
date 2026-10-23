@@ -1,0 +1,179 @@
+{
+  "character": "Zhulong",
+  "fps": 30,
+  "clips": [
+    {
+      "name": "A_DY_Zhulong_Perf_Coil",
+      "frames": 49,
+      "loop": true,
+      "bones_keyed": [
+        "BodyLower",
+        "BodyMiddle",
+        "BodyUpper",
+        "Head",
+        "Neck",
+        "Tail"
+      ],
+      "samples": [
+        1,
+        16,
+        32,
+        49
+      ],
+      "bounds": {
+        "1": [
+          -120.0,
+          120.0
+        ],
+        "16": [
+          -120.0,
+          120.0
+        ],
+        "32": [
+          -120.0,
+          120.0
+        ],
+        "49": [
+          -120.0,
+          120.0
+        ]
+      }
+    },
+    {
+      "name": "A_DY_Zhulong_Perf_HeadRise",
+      "frames": 49,
+      "loop": false,
+      "bones_keyed": [
+        "BodyMiddle",
+        "BodyUpper",
+        "Head",
+        "Neck",
+        "Tail"
+      ],
+      "samples": [
+        1,
+        16,
+        32,
+        49
+      ],
+      "bounds": {
+        "1": [
+          -120.0,
+          120.0
+        ],
+        "16": [
+          -120.0,
+          120.0
+        ],
+        "32": [
+          -120.0,
+          120.0
+        ],
+        "49": [
+          -120.0,
+          120.0
+        ]
+      }
+    },
+    {
+      "name": "A_DY_Zhulong_Perf_Swim",
+      "frames": 49,
+      "loop": true,
+      "bones_keyed": [
+        "BodyLower",
+        "BodyMiddle",
+        "BodyUpper",
+        "Head",
+        "Neck",
+        "Tail"
+      ],
+      "samples": [
+        1,
+        16,
+        32,
+        49
+      ],
+      "bounds": {
+        "1": [
+          -120.0,
+          120.0
+        ],
+        "16": [
+          -120.0,
+          120.0
+        ],
+        "32": [
+          -120.0,
+          120.0
+        ],
+        "49": [
+          -120.0,
+          120.0
+        ]
+      }
+    },
+    {
+      "name": "A_DY_Zhulong_Perf_Settle",
+      "frames": 49,
+      "loop": true,
+      "bones_keyed": [
+        "BodyLower",
+        "BodyMiddle",
+        "BodyUpper",
+        "Head",
+        "Tail"
+      ],
+      "samples": [
+        1,
+        16,
+        32,
+        49
+      ],
+      "bounds": {
+        "1": [
+          -120.0,
+          120.0
+        ],
+        "16": [
+          -120.0,
+          120.0
+        ],
+        "32": [
+          -120.0,
+          120.0
+        ],
+        "49": [
+          -120.0,
+          120.0
+        ]
+      }
+    }
+  ],
+  "unknown_bones": [],
+  "bone_count": 8,
+  "exports": [
+    "A_DY_Zhulong_Perf_Coil.fbx",
+    "A_DY_Zhulong_Perf_HeadRise.fbx",
+    "A_DY_Zhulong_Perf_Swim.fbx",
+    "A_DY_Zhulong_Perf_Settle.fbx"
+  ],
+  "previews": [
+    "Preview\\A_DY_Zhulong_Perf_Coil_f001.png",
+    "Preview\\A_DY_Zhulong_Perf_Coil_f016.png",
+    "Preview\\A_DY_Zhulong_Perf_Coil_f032.png",
+    "Preview\\A_DY_Zhulong_Perf_Coil_f049.png",
+    "Preview\\A_DY_Zhulong_Perf_HeadRise_f001.png",
+    "Preview\\A_DY_Zhulong_Perf_HeadRise_f016.png",
+    "Preview\\A_DY_Zhulong_Perf_HeadRise_f032.png",
+    "Preview\\A_DY_Zhulong_Perf_HeadRise_f049.png",
+    "Preview\\A_DY_Zhulong_Perf_Swim_f001.png",
+    "Preview\\A_DY_Zhulong_Perf_Swim_f016.png",
+    "Preview\\A_DY_Zhulong_Perf_Swim_f032.png",
+    "Preview\\A_DY_Zhulong_Perf_Swim_f049.png",
+    "Preview\\A_DY_Zhulong_Perf_Settle_f001.png",
+    "Preview\\A_DY_Zhulong_Perf_Settle_f016.png",
+    "Preview\\A_DY_Zhulong_Perf_Settle_f032.png",
+    "Preview\\A_DY_Zhulong_Perf_Settle_f049.png"
+  ],
+  "ok": true
+}

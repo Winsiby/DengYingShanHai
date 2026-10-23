@@ -1,0 +1,464 @@
+{
+  "status": "PASS_LOCAL_PBR_BAKE_COLD_READ_VISUAL_REVIEW",
+  "source_blend": "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\RuntimeVariant\\DY_HeroSpotlight_RuntimeVariant.blend",
+  "bakes": [
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "color_space": "sRGB",
+      "sha256": "932FE04C73C8CD7F9321CC5B99513C7C88AA07AFE947DFF716219466B4234033"
+    },
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "color_space": "Non-Color",
+      "sha256": "F11E5E6E85EAFD65E9026B686D44A84B95387494E87BE213ABF8038740428C73"
+    },
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampBody_NormalDX.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "color_space": "Non-Color",
+      "sha256": "2FE5DFC95852BC604EA88B65A8CD45E9D05DD8522772224D7AE20F98FB506862"
+    },
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "color_space": "sRGB",
+      "sha256": "AA72D165D53BB34451A02347C5241D72007109D522139664E2E3991DE4B79AB2"
+    },
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_ORM.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "color_space": "Non-Color",
+      "sha256": "D4E2386F88482213E9AE7500AF605BBBC7A99EECC44CDA3D025EF3528AF9B465"
+    },
+    {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\T_DY_LampStand_NormalDX.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "color_space": "Non-Color",
+      "sha256": "54092BEF2CDFDE2F7E16F0605C981A57AB669C1A9EB2200F6449BC9CAD8568E8"
+    }
+  ],
+  "uv": {
+    "BODY_source_fbx": {
+      "available": true,
+      "triangles_nonzero_uv": 20016,
+      "overlap_pairs": 0,
+      "first_overlap_pairs": [],
+      "uv_min": [
+        0.0041497391648590565,
+        0.004149747546762228
+      ],
+      "uv_max": [
+        0.9858757257461548,
+        0.9958503246307373
+      ],
+      "method": "Strict triangle separating-axis overlap, 1e-9 UV tolerance; edges excluded"
+    },
+    "STAND_source_fbx": {
+      "available": true,
+      "triangles_nonzero_uv": 13088,
+      "overlap_pairs": 0,
+      "first_overlap_pairs": [],
+      "uv_min": [
+        0.004684370942413807,
+        0.004684345796704292
+      ],
+      "uv_max": [
+        0.9655759334564209,
+        0.9953156113624573
+      ],
+      "method": "Strict triangle separating-axis overlap, 1e-9 UV tolerance; edges excluded"
+    },
+    "BODY_BakeUV1": {
+      "available": true,
+      "triangles_nonzero_uv": 20016,
+      "overlap_pairs": 0,
+      "first_overlap_pairs": [],
+      "uv_min": [
+        0.009548269212245941,
+        0.009548268280923367
+      ],
+      "uv_max": [
+        0.9904518127441406,
+        0.9895339012145996
+      ],
+      "method": "Strict triangle separating-axis overlap, 1e-9 UV tolerance; edges excluded"
+    },
+    "BODY_uv0_unchanged": true,
+    "STAND_BakeUV1": {
+      "available": true,
+      "triangles_nonzero_uv": 13088,
+      "overlap_pairs": 0,
+      "first_overlap_pairs": [],
+      "uv_min": [
+        0.009975476190447807,
+        0.009975454770028591
+      ],
+      "uv_max": [
+        0.9881811141967773,
+        0.9900245666503906
+      ],
+      "method": "Strict triangle separating-axis overlap, 1e-9 UV tolerance; edges excluded"
+    },
+    "STAND_uv0_unchanged": true
+  },
+  "source_hashes_before": {
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\RuntimeVariant\\DY_HeroSpotlight_RuntimeVariant.blend": "B6EF06E1D5B116D6D4D9EF44432A306245BEC68C87984EE7F2AEAD61AE4BF8FF",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\DY_HeroSpotlight_Source.blend": "5425D5DAAD920CB4331E8E81FEE80ED8DDBF9F2E95A8CA43D2058A8C74243582",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\SM_DY_LampBody_Source.fbx": "2C87DF23501E71DB960E8E0AFD7CC107DB6BF615A55F0E2D0E76745C7F67C662",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\SM_DY_LampStand_Source.fbx": "72DFC48283EBAA46A1E11C9C97D3911CE1F7F17823FCF792B9A1AE246F731D1F",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\RuntimeVariant\\SM_DY_LampBody_Source.fbx": "01A72E8B0690599CA39C73F471A2AE4481918CAE75935E3ED16960A9C8B9C553",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\RuntimeVariant\\SM_DY_LampStand_Source.fbx": "C37AE8D34DBAA7970E8B184AFF308957D0A5D5F2772D1E613B9A9B1ACB18C301",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\Sources\\wood_table_diff_2k.png": "DE99E3D8D7AFE58FEDC3AE9CAAF441D516547570643CFF5A0259E547A6B0C00A",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\Sources\\wood_table_arm_2k.png": "4C211965FFDD72F2A1D9358A14022A8F54AB5E6B18759E5D22C3998C1D70FF63",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\Sources\\wood_table_nor_dx_2k.png": "C214D164C26B59CC0962728F640FD143DD28F9039AE856F888B486E0CA4F4DA7"
+  },
+  "source_fbx": {
+    "BODY": {
+      "vertices": 10113,
+      "triangles": 20016,
+      "bounds_local_cm": {
+        "min": [
+          -45.70000469684601,
+          -34.74999964237213,
+          -27.19999849796295
+        ],
+        "max": [
+          42.00000464916229,
+          34.74999964237213,
+          27.19999849796295
+        ]
+      },
+      "pivot_actor_local_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    "STAND": {
+      "vertices": 6592,
+      "triangles": 13088,
+      "bounds_local_cm": {
+        "min": [
+          -42.70000755786896,
+          -49.500006437301636,
+          -214.99998569488525
+        ],
+        "max": [
+          35.700008273124695,
+          49.500006437301636,
+          94.10000443458557
+        ]
+      },
+      "pivot_actor_local_m": [
+        0,
+        0,
+        -0.95
+      ]
+    }
+  },
+  "source_part_uv_layers": {
+    "Lamp_Copper_HollowShell": [
+      "UVMap"
+    ],
+    "Lamp_RolledFrontRim": [
+      "UVMap"
+    ],
+    "Lamp_UpperBodySeam": [
+      "UVMap"
+    ],
+    "Lamp_RearServiceRing": [
+      "UVMap"
+    ],
+    "Lamp_InnerReflector": [
+      "UVMap"
+    ],
+    "Lamp_RecessedOpticalWindow": [
+      "UVMap"
+    ],
+    "Lamp_OpticalWindowRetainer": [
+      "UVMap"
+    ],
+    "Lamp_HandleSocket_-1": [
+      "UVMap"
+    ],
+    "Lamp_HandleArm_-1": [
+      "UVMap"
+    ],
+    "Lamp_HandleSocket_1": [
+      "UVMap"
+    ],
+    "Lamp_HandleArm_1": [
+      "UVMap"
+    ],
+    "Lamp_RearWoodGrip": [
+      "UVMap"
+    ],
+    "Lamp_GripEnd_-1": [
+      "UVMap"
+    ],
+    "Lamp_TiltTrunnion_-1": [
+      "UVMap"
+    ],
+    "Lamp_TiltClampWheel_-1": [
+      "UVMap"
+    ],
+    "Lamp_TiltClampRim_-1": [
+      "UVMap"
+    ],
+    "Lamp_ClampPin_-1": [
+      "UVMap"
+    ],
+    "Lamp_GripEnd_1": [
+      "UVMap"
+    ],
+    "Lamp_TiltTrunnion_1": [
+      "UVMap"
+    ],
+    "Lamp_TiltClampWheel_1": [
+      "UVMap"
+    ],
+    "Lamp_TiltClampRim_1": [
+      "UVMap"
+    ],
+    "Lamp_ClampPin_1": [
+      "UVMap"
+    ],
+    "Lamp_RimScrew_0": [
+      "UVMap"
+    ],
+    "Lamp_RimScrew_60": [
+      "UVMap"
+    ],
+    "Lamp_RimScrew_120": [
+      "UVMap"
+    ],
+    "Lamp_RimScrew_180": [
+      "UVMap"
+    ],
+    "Lamp_RimScrew_240": [
+      "UVMap"
+    ],
+    "Lamp_RimScrew_300": [
+      "UVMap"
+    ],
+    "Stand_YokeArm_-1": [
+      "UVMap"
+    ],
+    "Stand_YokeArm_1": [
+      "UVMap"
+    ],
+    "Stand_YokeBridge": [
+      "UVMap"
+    ],
+    "Stand_YokeStem": [
+      "UVMap"
+    ],
+    "Stand_YokeStemCollar": [
+      "UVMap"
+    ],
+    "Stand_WoodMast": [
+      "UVMap"
+    ],
+    "Stand_BronzeSleeve_0": [
+      "UVMap"
+    ],
+    "Stand_SleeveEdge_0": [
+      "UVMap"
+    ],
+    "Stand_BronzeSleeve_1": [
+      "UVMap"
+    ],
+    "Stand_SleeveEdge_1": [
+      "UVMap"
+    ],
+    "Stand_BronzeSleeve_2": [
+      "UVMap"
+    ],
+    "Stand_SleeveEdge_2": [
+      "UVMap"
+    ],
+    "Stand_BronzeSleeve_3": [
+      "UVMap"
+    ],
+    "Stand_SleeveEdge_3": [
+      "UVMap"
+    ],
+    "Stand_AdjustmentLock": [
+      "UVMap"
+    ],
+    "Stand_AdjustmentBolt": [
+      "UVMap"
+    ],
+    "Stand_BaseCrossTie": [
+      "UVMap"
+    ],
+    "Stand_Runner_-1": [
+      "UVMap"
+    ],
+    "Stand_RunnerEndCap_-1_-1": [
+      "UVMap"
+    ],
+    "Stand_FootFastener_-1_-1": [
+      "UVMap"
+    ],
+    "Stand_RunnerEndCap_-1_1": [
+      "UVMap"
+    ],
+    "Stand_FootFastener_-1_1": [
+      "UVMap"
+    ],
+    "Stand_RunnerSole_-1": [
+      "UVMap"
+    ],
+    "Stand_Runner_1": [
+      "UVMap"
+    ],
+    "Stand_RunnerEndCap_1_-1": [
+      "UVMap"
+    ],
+    "Stand_FootFastener_1_-1": [
+      "UVMap"
+    ],
+    "Stand_RunnerEndCap_1_1": [
+      "UVMap"
+    ],
+    "Stand_FootFastener_1_1": [
+      "UVMap"
+    ],
+    "Stand_RunnerSole_1": [
+      "UVMap"
+    ]
+  },
+  "packed_original_hashes": {
+    "wood_table_arm_2k.png": "4C211965FFDD72F2A1D9358A14022A8F54AB5E6B18759E5D22C3998C1D70FF63",
+    "wood_table_diff_2k.png": "DE99E3D8D7AFE58FEDC3AE9CAAF441D516547570643CFF5A0259E547A6B0C00A",
+    "wood_table_nor_dx_2k.png": "C214D164C26B59CC0962728F640FD143DD28F9039AE856F888B486E0CA4F4DA7"
+  },
+  "exports": {
+    "BODY": {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\SM_DY_LampBody_Baked.fbx",
+      "vertices": 10113,
+      "triangles": 20016,
+      "bounds_component_cm": {
+        "min": [
+          -45.70000171661377,
+          -34.74999964237213,
+          -27.19999849796295
+        ],
+        "max": [
+          42.000001668930054,
+          34.74999964237213,
+          27.19999849796295
+        ]
+      },
+      "bounds_actor_cm": {
+        "min": [
+          -45.70000171661377,
+          -34.74999964237213,
+          -27.19999849796295
+        ],
+        "max": [
+          42.000001668930054,
+          34.74999964237213,
+          27.19999849796295
+        ]
+      },
+      "pivot_actor_local_m": [
+        0,
+        0,
+        0
+      ],
+      "uv_layers": [
+        "UVMap",
+        "BakeUV1"
+      ],
+      "material_slots": [
+        "M_DY_Bronze_Procedural_SOURCE_BODY_BAKE",
+        "M_DY_Bronze_Edge_SOURCE_BODY_BAKE",
+        "M_DY_BlackMetal_SOURCE_BODY_BAKE",
+        "M_DY_Reflector_SOURCE_BODY_BAKE",
+        "M_DY_OpticalWindow_SOURCE_BODY_BAKE",
+        "M_DY_Wood_CC0_SOURCE_BODY_BAKE"
+      ],
+      "has_custom_normals": true
+    },
+    "STAND": {
+      "file": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\LampBake\\SM_DY_LampStand_Baked.fbx",
+      "vertices": 6592,
+      "triangles": 13088,
+      "bounds_component_cm": {
+        "min": [
+          -42.69999861717224,
+          -49.50000047683716,
+          -214.99998569488525
+        ],
+        "max": [
+          35.69999933242798,
+          49.50000047683716,
+          94.10000443458557
+        ]
+      },
+      "bounds_actor_cm": {
+        "min": [
+          -42.69999861717224,
+          -49.50000047683716,
+          -309.99999046325684
+        ],
+        "max": [
+          35.69999933242798,
+          49.50000047683716,
+          -0.9000003337860107
+        ]
+      },
+      "pivot_actor_local_m": [
+        0,
+        0,
+        -0.95
+      ],
+      "uv_layers": [
+        "UVMap",
+        "BakeUV1"
+      ],
+      "material_slots": [
+        "M_DY_Bronze_Procedural_SOURCE_STAND_BAKE",
+        "M_DY_BlackMetal_SOURCE_STAND_BAKE",
+        "M_DY_Bronze_Edge_SOURCE_STAND_BAKE",
+        "M_DY_Wood_CC0_SOURCE_STAND_BAKE",
+        "M_DY_Rubber_SOURCE_STAND_BAKE"
+      ],
+      "has_custom_normals": true
+    }
+  },
+  "source_hashes_after": {
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\RuntimeVariant\\DY_HeroSpotlight_RuntimeVariant.blend": "B6EF06E1D5B116D6D4D9EF44432A306245BEC68C87984EE7F2AEAD61AE4BF8FF",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\DY_HeroSpotlight_Source.blend": "5425D5DAAD920CB4331E8E81FEE80ED8DDBF9F2E95A8CA43D2058A8C74243582",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\SM_DY_LampBody_Source.fbx": "2C87DF23501E71DB960E8E0AFD7CC107DB6BF615A55F0E2D0E76745C7F67C662",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\SM_DY_LampStand_Source.fbx": "72DFC48283EBAA46A1E11C9C97D3911CE1F7F17823FCF792B9A1AE246F731D1F",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\RuntimeVariant\\SM_DY_LampBody_Source.fbx": "01A72E8B0690599CA39C73F471A2AE4481918CAE75935E3ED16960A9C8B9C553",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\RuntimeVariant\\SM_DY_LampStand_Source.fbx": "C37AE8D34DBAA7970E8B184AFF308957D0A5D5F2772D1E613B9A9B1ACB18C301",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\Sources\\wood_table_diff_2k.png": "DE99E3D8D7AFE58FEDC3AE9CAAF441D516547570643CFF5A0259E547A6B0C00A",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\Sources\\wood_table_arm_2k.png": "4C211965FFDD72F2A1D9358A14022A8F54AB5E6B18759E5D22C3998C1D70FF63",
+    "D:\\灯影山海\\Assets\\Sources\\DengYingArt\\Lamp-20261014\\Sources\\wood_table_nor_dx_2k.png": "C214D164C26B59CC0962728F640FD143DD28F9039AE856F888B486E0CA4F4DA7"
+  },
+  "source_unchanged": true
+}

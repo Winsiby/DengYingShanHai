@@ -1,0 +1,189 @@
+{
+  "character": "Jingwei",
+  "fps": 30,
+  "clips": [
+    {
+      "name": "A_DY_Jingwei_Perf_Flap",
+      "frames": 41,
+      "loop": true,
+      "bones_keyed": [
+        "Head",
+        "Tail_C",
+        "WingL_Mid",
+        "WingL_Tip",
+        "WingL_Upper",
+        "WingR_Mid",
+        "WingR_Tip",
+        "WingR_Upper"
+      ],
+      "samples": [
+        1,
+        13,
+        27,
+        41
+      ],
+      "bounds": {
+        "1": [
+          -246.19,
+          246.19
+        ],
+        "13": [
+          -246.19,
+          246.19
+        ],
+        "27": [
+          -246.19,
+          246.19
+        ],
+        "41": [
+          -246.19,
+          246.19
+        ]
+      }
+    },
+    {
+      "name": "A_DY_Jingwei_Perf_Dive",
+      "frames": 49,
+      "loop": false,
+      "bones_keyed": [
+        "Head",
+        "LegL_Upper",
+        "LegR_Upper",
+        "Tail_C",
+        "WingL_Mid",
+        "WingL_Tip",
+        "WingL_Upper",
+        "WingR_Mid",
+        "WingR_Tip",
+        "WingR_Upper"
+      ],
+      "samples": [
+        1,
+        16,
+        32,
+        49
+      ],
+      "bounds": {
+        "1": [
+          -246.19,
+          246.19
+        ],
+        "16": [
+          -246.19,
+          246.19
+        ],
+        "32": [
+          -246.19,
+          246.19
+        ],
+        "49": [
+          -246.19,
+          246.19
+        ]
+      }
+    },
+    {
+      "name": "A_DY_Jingwei_Perf_Hover",
+      "frames": 41,
+      "loop": true,
+      "bones_keyed": [
+        "Head",
+        "Tail_C",
+        "WingL_Mid",
+        "WingL_Upper",
+        "WingR_Mid",
+        "WingR_Upper"
+      ],
+      "samples": [
+        1,
+        13,
+        27,
+        41
+      ],
+      "bounds": {
+        "1": [
+          -246.19,
+          246.19
+        ],
+        "13": [
+          -246.19,
+          246.19
+        ],
+        "27": [
+          -246.19,
+          246.19
+        ],
+        "41": [
+          -246.19,
+          246.19
+        ]
+      }
+    },
+    {
+      "name": "A_DY_Jingwei_Perf_Land",
+      "frames": 49,
+      "loop": false,
+      "bones_keyed": [
+        "Head",
+        "LegL_Upper",
+        "LegR_Upper",
+        "Tail_C",
+        "WingL_Mid",
+        "WingL_Upper",
+        "WingR_Mid",
+        "WingR_Upper"
+      ],
+      "samples": [
+        1,
+        16,
+        32,
+        49
+      ],
+      "bounds": {
+        "1": [
+          -246.19,
+          246.19
+        ],
+        "16": [
+          -246.19,
+          246.19
+        ],
+        "32": [
+          -246.19,
+          246.19
+        ],
+        "49": [
+          -246.19,
+          246.19
+        ]
+      }
+    }
+  ],
+  "unknown_bones": [],
+  "bone_count": 17,
+  "exports": [
+    "A_DY_Jingwei_Perf_Flap.fbx",
+    "A_DY_Jingwei_Perf_Dive.fbx",
+    "A_DY_Jingwei_Perf_Hover.fbx",
+    "A_DY_Jingwei_Perf_Land.fbx"
+  ],
+  "previews": [
+    "Preview\\A_DY_Jingwei_Perf_Flap_f001.png",
+    "Preview\\A_DY_Jingwei_Perf_Flap_f013.png",
+    "Preview\\A_DY_Jingwei_Perf_Flap_f027.png",
+    "Preview\\A_DY_Jingwei_Perf_Flap_f041.png",
+    "Preview\\A_DY_Jingwei_Perf_Dive_f001.png",
+    "Preview\\A_DY_Jingwei_Perf_Dive_f016.png",
+    "Preview\\A_DY_Jingwei_Perf_Dive_f032.png",
+    "Preview\\A_DY_Jingwei_Perf_Dive_f049.png",
+    "Preview\\A_DY_Jingwei_Perf_Hover_f001.png",
+    "Preview\\A_DY_Jingwei_Perf_Hover_f013.png",
+    "Preview\\A_DY_Jingwei_Perf_Hover_f027.png",
+    "Preview\\A_DY_Jingwei_Perf_Hover_f041.png",
+    "Preview\\A_DY_Jingwei_Perf_Land_f001.png",
+    "Preview\\A_DY_Jingwei_Perf_Land_f016.png",
+    "Preview\\A_DY_Jingwei_Perf_Land_f032.png",
+    "Preview\\A_DY_Jingwei_Perf_Land_f049.png"
+  ],
+  "ok": true
+}

@@ -1,0 +1,2789 @@
+{
+  "status": "PASS-LOCAL-DERIVED-FULLSPAN-SOURCE-NATIVE-AND-ART-PENDING",
+  "source": "D:\\灯影山海\\Saved\\Audit-2026-10-13-FrameBeamTopUV\\Sources\\frame-beam-topuv-calibrated.fbx",
+  "source_bytes": 15211,
+  "source_sha256": "9D67085097B6EA5D18E098BFD5002D74148943F681182E2C17598EDC7835F999",
+  "output": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\StageComposition\\FullFrame\\Source-Run1\\frame-beam-fullspan.fbx",
+  "output_bytes": 15305,
+  "output_sha256": "90420DDD092B156C21EEE3DE4AD886E6AA9576F292062095CAB4A18F4DCBBB0E",
+  "author_tool": {
+    "path": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\StageComposition\\FullFrame\\derive_fullspan.py",
+    "sha256": "972FD22548CEE23385B4F01C59FF1DA2BE604B875F846513CF8CCFF162F44BF6",
+    "source_utf8": "\"\"\"Extend only the straight span of the frozen CC0 TopUV beam, as FBX data.\n\nNo Blender/UE, downloads, D-drive writes, source overwrite, material edits or\nnormal/tangent regeneration. Only new local source artifacts are generated.\n\"\"\"\nimport argparse\nimport ast\nimport copy\nimport hashlib\nimport json\nimport math\nfrom pathlib import Path\nimport re\nimport struct\nimport zlib\n\n\nHERE = Path(__file__).resolve().parent\nSOURCE = Path('D:/灯影山海/Saved/Audit-2026-10-13-FrameBeamTopUV/Sources/frame-beam-topuv-calibrated.fbx')\nPARSER = Path('D:/灯影山海/Saved/Audit-2026-10-12-FrameBeamAsset/Inspect-Pavilion.py')\nENCODER = PARSER.with_name('Extract-FrameBeam.py')\nEXPECTED = {\n    SOURCE: '9D67085097B6EA5D18E098BFD5002D74148943F681182E2C17598EDC7835F999',\n    PARSER: '07009683AE115BCC73188206477EA74CB9A0B87675742CEBAD3CDC28D8F48F9A',\n    ENCODER: '9FBEE15E9A51843BFEC664822133A0D04B918DD0BD8AE34B051F718540D82E17',\n}\nSCALE = .39290377163557627\nACTOR_LOCATION = [950., 66.77584636395318, 816.7876838516025]\nRIGHT_WORLD_Y = 583.5516927279066\nLEFT_EXTENSION_WORLD_CM = 133.55169272790636\nLONG_FACES = (0, 1, 2, 9)\nLEFT_IDS = [0, 1, 2, 3, 8, 9, 10, 11]\nCHECKS = []\n\n\ndef req(value, message):\n    if not value:\n        raise AssertionError(message)\n    CHECKS.append(message)\n    return value\n\n\ndef digest(raw):\n    return hashlib.sha256(raw).hexdigest().upper()\n\n\ndef functions_only(path, wanted, namespace):\n    tree = ast.parse(path.read_text(encoding='utf-8'))\n    nodes = [n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name in wanted]\n    req(len(nodes) == len(wanted), 'Exact reviewed function whitelist from '+path.name)\n    exec(compile(ast.Module(body=nodes, type_ignores=[]), str(path), 'exec'), namespace)\n\n\ndef replace_double_array(node, values):\n    original = node['_property_bytes']\n    req(original[:1] == b'd' and len(node['properties']) == 1, 'Single existing double array '+node['name'])\n    count, encoding, length = struct.unpack_from('<III', original, 1)\n    req(count == len(values) == len(node['properties'][0]) and encoding in (0, 1)\n        and length+13 == len(original), 'Array count/encoding and bounded payload preserved')\n    raw = struct.pack('<'+'d'*len(values), *values)\n    encoded = zlib.compress(raw) if encoding else raw\n    node['properties'] = [values]\n    node['_property_bytes'] = b'd'+struct.pack('<III', count, encoding, len(encoded))+encoded\n\n\ndef data(child, geometry):\n    coordinates = child(geometry, 'Vertices')['properties'][0]\n    vertices = [coordinates[i:i+3] for i in range(0, len(coordinates), 3)]\n    layer = child(geometry, 'LayerElementUV')\n    req(child(layer, 'MappingInformationType')['properties'] == ['ByPolygonVertex']\n        and child(layer, 'ReferenceInformationType')['properties'] == ['IndexToDirect'], 'Exact indexed corner UV layout')\n    raw_uv = child(layer, 'UV')['properties'][0]\n    uv = [raw_uv[i:i+2] for i in range(0, len(raw_uv), 2)]\n    ui = child(layer, 'UVIndex')['properties'][0]\n    raw_indices = child(geometry, 'PolygonVertexIndex')['properties'][0]\n    polygons, current = [], []\n    for corner, value in enumerate(raw_indices):\n        index = -value-1 if value < 0 else value\n        req(0 <= index < len(vertices) and 0 <= ui[corner] < len(uv), 'Valid corner vertex/UV index')\n        current.append((corner, index))\n        if value < 0:\n            polygons.append(current)\n            current = []\n    req(not current and len(vertices) == 16 and len(polygons) == 10\n        and len(raw_indices) == len(ui) == 48 and len(uv) == 38, 'Frozen 16-point/10-face/48-corner/38-UV topology')\n    return vertices, polygons, uv, ui\n\n\ndef geometry_of(child, roots):\n    objects = child({'children': roots}, 'Objects')['children']\n    geometries = [n for n in objects if n['name'] == 'Geometry']\n    req(len(objects) == 3 and len(geometries) == 1\n        and geometries[0]['properties'][0] == 512851073, 'One frozen original Geometry/Model/Material')\n    return geometries[0]\n\n\ndef long_edge_gradients(vertices, polygon, uv, indices):\n    result = []\n    for (ca, va), (cb, vb) in zip(polygon, polygon[1:]+polygon[:1]):\n        a, b = vertices[va], vertices[vb]\n        if a[1:] == b[1:] and a[0] != b[0]:\n            gradient = [(uv[indices[cb]][k]-uv[indices[ca]][k])/(b[0]-a[0]) for k in range(2)]\n            result.append(dict(corners=[ca, cb], gradient=gradient,\n                               density_source2K_texels_per_world_m=math.hypot(*gradient)*2048*100/SCALE))\n    req(len(result) == 2, 'Exactly two pure source-X long edges')\n    return result\n\n\ndef bounds_world(vertices):\n    # Existing native importer observation: local=(sourceX,sourceZ,sourceY), then actor Yaw90.\n    world = [[ACTOR_LOCATION[0]-p[2]*SCALE, ACTOR_LOCATION[1]+p[0]*SCALE,\n              ACTOR_LOCATION[2]+p[1]*SCALE] for p in vertices]\n    return dict(min=[min(p[i] for p in world) for i in range(3)],\n                max=[max(p[i] for p in world) for i in range(3)])\n\n\ndef compare_nodes(left_roots, right_roots):\n    changed = []\n    rows = []\n    def walk(a, b, path):\n        req(a['name'] == b['name'] and len(a['children']) == len(b['children'])\n            and len(a['properties']) == len(b['properties']), 'Same FBX tree structure '+path)\n        equal = a['_property_bytes'] == b['_property_bytes']\n        rows.append(dict(path=path, identical=equal, before=digest(a['_property_bytes']), after=digest(b['_property_bytes'])))\n        if not equal:\n            changed.append(path)\n        counts = {}\n        for aa, bb in zip(a['children'], b['children']):\n            number = counts.get(aa['name'], 0)\n            counts[aa['name']] = number+1\n            walk(aa, bb, path+'/'+aa['name']+'['+str(number)+']')\n    req(len(left_roots) == len(right_roots), 'Same root node count')\n    counts = {}\n    for a, b in zip(left_roots, right_roots):\n        number = counts.get(a['name'], 0)\n        counts[a['name']] = number+1\n        walk(a, b, '/'+a['name']+'['+str(number)+']')\n    req(set(changed) == {'/Objects[0]/Geometry[0]/Vertices[0]',\n                         '/Objects[0]/Geometry[0]/LayerElementUV[0]/UV[0]'}\n        and len(changed) == 2, 'Only Vertices and UV array properties differ in entire FBX tree')\n    return changed, rows\n\n\ndef verify_geometry(source_data, derived_data, shift):\n    old, polygons, uv, ui = source_data\n    new, new_polygons, new_uv, new_ui = derived_data\n    req(polygons == new_polygons and ui == new_ui, 'All polygon and UV indices exactly unchanged')\n    req([i for i, p in enumerate(old) if p[0] < 0] == LEFT_IDS, 'Exact existing left endpoint membership')\n    for i, (a, b) in enumerate(zip(old, new)):\n        req(a[1:] == b[1:] and (b[0] == a[0]+shift if i in LEFT_IDS else a == b), 'Only intended left X translation vertex '+str(i))\n    end_faces = [p for i,p in enumerate(polygons) if i not in LONG_FACES]\n    req(len(end_faces) == 6, 'Exactly six original beveled end faces')\n    for polygon in end_faces:\n        ids = [index for _,index in polygon]\n        req(all(i in LEFT_IDS for i in ids) or all(i not in LEFT_IDS for i in ids), 'End face belongs entirely to one rigid endpoint')\n        for i in ids:\n            req(max(abs((new[i][k]-new[ids[0]][k])-(old[i][k]-old[ids[0]][k])) for k in range(3)) < 1e-10,\n                'Beveled end internal shape/cross-section preserved')\n    req(all(math.isfinite(v) for p in new_uv for v in p), 'Extended UVs finite without clamp')\n    density = []\n    for pi in LONG_FACES:\n        before = long_edge_gradients(old, polygons[pi], uv, ui)\n        after = long_edge_gradients(new, polygons[pi], new_uv, new_ui)\n        residual = [a['density_source2K_texels_per_world_m']-b['density_source2K_texels_per_world_m'] for a,b in zip(after,before)]\n        req(max(abs(v) for v in residual) < .0001, 'Long-face source texture density retained to 0.0001 texel/m face '+str(pi))\n        density.append(dict(face=pi,before=before,after=after,residual_texels_per_world_m=residual))\n    world = bounds_world(new)\n    req(abs(world['min'][1]+RIGHT_WORLD_Y) < 1e-9 and abs(world['max'][1]-RIGHT_WORLD_Y) < 1e-9,\n        'Derived world endpoints symmetric, old right endpoint held')\n    req(abs(world['min'][2]-800) < 1e-4, 'Original world beam-bottom Z800 held within native-coordinate precision')\n    return density, world\n\n\ndef main():\n    parser = argparse.ArgumentParser(description=__doc__)\n    parser.add_argument('--out', required=True, type=Path)\n    out = parser.parse_args().out\n    req(out.is_absolute() and out.resolve().parent == HERE\n        and re.fullmatch(r'Source-Run[1-9][0-9]*', out.name)\n        and not out.exists(), 'Explicit absent local Source-RunN output; no other directory writes')\n    author_path = Path(__file__).resolve()\n    author_code = author_path.read_bytes()\n    input_bytes = {path: path.read_bytes() for path in EXPECTED}\n    req(all(digest(raw) == EXPECTED[path] for path,raw in input_bytes.items()), 'Exact source/parser/encoder hashes before execution')\n    namespace = {'struct':struct,'math':math,'zlib':zlib}\n    functions_only(PARSER, {'require','parse_fbx','child'}, namespace)\n    functions_only(ENCODER, {'encode'}, namespace)\n    child, parse, encode = namespace['child'], namespace['parse_fbx'], namespace['encode']\n    raw = input_bytes[SOURCE]\n    version, roots = parse(raw)\n    req(version == 7400 and len(raw) == 15211, 'Exact source narrow-offset FBX7400')\n    source_geometry = geometry_of(child, roots)\n    source_data = data(child, source_geometry)\n    vertices, polygons, uv, ui = source_data\n    shift = -LEFT_EXTENSION_WORLD_CM/SCALE\n    req(abs(shift-(-339.9094189703463)) < 1e-10, 'Extension calculated from actual world delta and unchanged uniform scale')\n    next_vertices, next_uv = copy.deepcopy(vertices), copy.deepcopy(uv)\n    for index in LEFT_IDS:\n        next_vertices[index][0] += shift\n    uvset = lambda pi: {ui[c] for c,_ in polygons[pi]}\n    groups = {\n        0: uvset(4)|uvset(6),\n        1: {ui[c] for c,v in polygons[1] if v in LEFT_IDS},\n        2: {ui[c] for c,v in polygons[2] if v in LEFT_IDS},\n        9: uvset(7),\n    }\n    expected_groups = {0:{0,2,19,29,33,35},1:{1,9,22,32},2:{5,15,16,31},9:{6,10,26,36}}\n    req(groups == expected_groups and sum(len(v) for v in groups.values()) == 18\n        and len(set.union(*groups.values())) == 18, 'Exact four disjoint left UV islands; 18 pairs affected')\n    shifts = []\n    for pi, indices in groups.items():\n        edges = long_edge_gradients(vertices, polygons[pi], uv, ui)\n        gradient = [sum(e['gradient'][i] for e in edges)/len(edges) for i in range(2)]\n        delta = [shift*v for v in gradient]\n        for index in indices:\n            next_uv[index] = [a+b for a,b in zip(next_uv[index],delta)]\n        # End-island translation, not scaling/shear: every internal UV vector remains intact.\n        anchor = min(indices)\n        req(max(abs((next_uv[i][k]-next_uv[anchor][k])-(uv[i][k]-uv[anchor][k]))\n                for i in indices for k in range(2)) < 1e-15, 'Rigid UV island translation face '+str(pi))\n        shifts.append(dict(long_face=pi,uv_pair_indices=sorted(indices),gradient_mean_dUV_dSourceX=gradient,translation_uv=delta))\n    moved_uv = set.union(*groups.values())\n    req(all(next_uv[i] == uv[i] for i in set(range(38))-moved_uv), 'Right twenty UV pairs byte-value unchanged')\n    req(all(next_uv[i] != uv[i] for i in moved_uv), 'Exactly eighteen left UV pairs changed')\n    derived = copy.deepcopy(roots)\n    geometry = geometry_of(child, derived)\n    replace_double_array(child(geometry,'Vertices'), [v for p in next_vertices for v in p])\n    replace_double_array(child(child(geometry,'LayerElementUV'),'UV'), [v for p in next_uv for v in p])\n    encoded = bytearray(raw[:27])\n    for node in derived:\n        encoded += encode(node, len(encoded))\n    encoded += bytes(13)+raw[roots[-1]['_end']+13:]\n    reread_version, reread = parse(bytes(encoded))\n    req(reread_version == version and bytes(encoded[:27]) == raw[:27]\n        and bytes(encoded[reread[-1]['_end']+13:]) == raw[roots[-1]['_end']+13:], 'FBX header/version/footer bytes preserved')\n    changed_nodes, node_rows = compare_nodes(roots, reread)\n    density, world = verify_geometry(source_data, data(child,geometry_of(child,reread)), shift)\n    old_world = bounds_world(vertices)\n    req(all(world[side][i] == old_world[side][i] for side in ('min','max') for i in (0,2)), 'World X/Z extents exactly retained')\n    req(all(path.read_bytes() == input_bytes[path] for path in EXPECTED) and author_path.read_bytes() == author_code, 'All exact inputs and author code unchanged before output')\n    out.mkdir()\n    fbx_path = out/'frame-beam-fullspan.fbx'\n    with fbx_path.open('xb') as stream:\n        stream.write(encoded)\n    # Fresh disk read/parse is separate from the modified in-memory node tree.\n    cold_raw = fbx_path.read_bytes()\n    cold_version, cold_roots = parse(cold_raw)\n    req(cold_version == version and cold_raw == bytes(encoded), 'Independent cold physical FBX bytes/parse match generated payload')\n    cold_changed, _ = compare_nodes(roots,cold_roots)\n    cold_density, cold_world = verify_geometry(source_data,data(child,geometry_of(child,cold_roots)),shift)\n    req(cold_changed == changed_nodes and cold_density == density and cold_world == world, 'Independent cold parse reproduces geometry/UV/extent contracts')\n    report = dict(status='PASS-LOCAL-DERIVED-FULLSPAN-SOURCE-NATIVE-AND-ART-PENDING',\n        source=str(SOURCE),source_bytes=len(raw),source_sha256=digest(raw),\n        output=str(fbx_path),output_bytes=len(cold_raw),output_sha256=digest(cold_raw),\n        author_tool=dict(path=str(author_path),sha256=digest(author_code),source_utf8=author_code.decode('utf-8')),\n        parser=dict(path=str(PARSER),sha256=EXPECTED[PARSER],functions=['require','parse_fbx','child']),\n        encoder=dict(path=str(ENCODER),sha256=EXPECTED[ENCODER],functions=['encode']),\n        old_module_mains_executed=False,source_x_translation=shift,source_vertex_ids=LEFT_IDS,\n        world_left_extension_cm=LEFT_EXTENSION_WORLD_CM,actor_location_cm=ACTOR_LOCATION,\n        actor_yaw_degrees=90,uniform_scale=SCALE,source_to_native_local_axes='sourceX,sourceZ,sourceY; previously observed actual importer',\n        old_world_bounds=old_world,derived_world_bounds=world,world_bounds_are_offline_not_native=True,\n        topology=dict(vertices=16,polygons=10,corners=48,fan_triangles=28,uv_pairs=38),\n        unchanged_right_vertex_count=8,unchanged_right_uv_pair_count=20,\n        rigid_original_end_faces=[3,4,5,6,7,8],changed_long_faces=list(LONG_FACES),\n        uv_island_shifts=shifts,density_source2K=density,\n        uv_bounds=dict(min=[min(p[i] for p in next_uv) for i in range(2)],max=[max(p[i] for p in next_uv) for i in range(2)]),\n        uv_outside_0_1_allowed='Existing texture Wrap, no clamp, material/texture edits or scale',\n        changed_property_nodes=changed_nodes,all_node_property_rows=node_rows,\n        cold_physical_parse=True,normals_recomputed=False,tangents_recomputed=False,\n        source_provenance='Existing CC0 VVayToyek Chinese Four-corner Pavilion beam + existing CC0 Poly Haven Dark Wood; see project FRAME_BEAM_ASSET_SOURCES.md / FRAME_POST_ASSET_SOURCES.md',\n        ai_assistance='Codex data-only modeling adaptation: extend straight span, preserve bevels/cross-section, extend UV islands; not original pavilion authorship or historical reconstruction',\n        scope=dict(D_writes=False,UE=False,old_asset_changed=False,shared_material_changed=False,\n                   new_download=False,paid_asset=False,restricted_register_access=False,native_verified=False,art_accepted=False),\n        checks=CHECKS,check_count=len(CHECKS))\n    with (out/'DERIVATION.json').open('x',encoding='utf-8') as stream:\n        json.dump(report,stream,ensure_ascii=False,indent=2)\n    with (out/'README.md').open('x',encoding='utf-8') as stream:\n        stream.write('# FullSpan beam: local source artifact\\n\\n'\n            'Reuses the existing CC0 VVayToyek Chinese Four-corner Pavilion beam and existing CC0 Poly Haven Dark Wood texture family. '\n            'Upstream source and license evidence remain in project Docs/FRAME_BEAM_ASSET_SOURCES.md and FRAME_POST_ASSET_SOURCES.md; '\n            'this task did not access the restricted register. No download, payment or new texture.\\n\\n'\n            'Codex assisted with data-only adaptation: translate the left beveled end rigidly, extend only four straight faces, '\n            'translate four left UV islands to retain existing wood sampling density. Original pavilion authorship is not claimed. '\n            'No historical joinery, load-bearing structure or particular shadow-theater tradition is asserted.\\n\\n'\n            'DERIVATION.json contains exact source/tool/helper/output hashes, the complete author-tool source, '\n            'all node-property comparisons and a fresh physical FBX parse. Only Vertices and UV array properties change. '\n            'This is source-only validation, not native import, gameplay, collision, final lighting, GPU or artistic acceptance.\\n')\n    print(json.dumps({k:report[k] for k in ('status','output','output_sha256','source_x_translation','derived_world_bounds','check_count')},indent=2))\n\n\nif __name__ == '__main__':\n    main()\n"
+  },
+  "parser": {
+    "path": "D:\\灯影山海\\Saved\\Audit-2026-10-12-FrameBeamAsset\\Inspect-Pavilion.py",
+    "sha256": "07009683AE115BCC73188206477EA74CB9A0B87675742CEBAD3CDC28D8F48F9A",
+    "functions": [
+      "require",
+      "parse_fbx",
+      "child"
+    ]
+  },
+  "encoder": {
+    "path": "D:\\灯影山海\\Saved\\Audit-2026-10-12-FrameBeamAsset\\Extract-FrameBeam.py",
+    "sha256": "9FBEE15E9A51843BFEC664822133A0D04B918DD0BD8AE34B051F718540D82E17",
+    "functions": [
+      "encode"
+    ]
+  },
+  "old_module_mains_executed": false,
+  "source_x_translation": -339.9094189703463,
+  "source_vertex_ids": [
+    0,
+    1,
+    2,
+    3,
+    8,
+    9,
+    10,
+    11
+  ],
+  "world_left_extension_cm": 133.55169272790636,
+  "actor_location_cm": [
+    950.0,
+    66.77584636395318,
+    816.7876838516025
+  ],
+  "actor_yaw_degrees": 90,
+  "uniform_scale": 0.39290377163557627,
+  "source_to_native_local_axes": "sourceX,sourceZ,sourceY; previously observed actual importer",
+  "old_world_bounds": {
+    "min": [
+      928.171408000771,
+      -450.0,
+      800.0
+    ],
+    "max": [
+      971.828591999229,
+      583.5516927279064,
+      856.0780610151602
+    ]
+  },
+  "derived_world_bounds": {
+    "min": [
+      928.171408000771,
+      -583.5516927279064,
+      800.0
+    ],
+    "max": [
+      971.828591999229,
+      583.5516927279064,
+      856.0780610151602
+    ]
+  },
+  "world_bounds_are_offline_not_native": true,
+  "topology": {
+    "vertices": 16,
+    "polygons": 10,
+    "corners": 48,
+    "fan_triangles": 28,
+    "uv_pairs": 38
+  },
+  "unchanged_right_vertex_count": 8,
+  "unchanged_right_uv_pair_count": 20,
+  "rigid_original_end_faces": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "changed_long_faces": [
+    0,
+    1,
+    2,
+    9
+  ],
+  "uv_island_shifts": [
+    {
+      "long_face": 0,
+      "uv_pair_indices": [
+        0,
+        2,
+        19,
+        29,
+        33,
+        35
+      ],
+      "gradient_mean_dUV_dSourceX": [
+        -2.3371973959854567e-11,
+        0.0003801491450573295
+      ],
+      "translation_uv": [
+        7.94435408888423e-09,
+        -0.12921627501851077
+      ]
+    },
+    {
+      "long_face": 1,
+      "uv_pair_indices": [
+        1,
+        9,
+        22,
+        32
+      ],
+      "gradient_mean_dUV_dSourceX": [
+        -1.18244221740919e-11,
+        0.00038014941098000413
+      ],
+      "translation_uv": [
+        4.019232470855657e-09,
+        -0.12921636540813258
+      ]
+    },
+    {
+      "long_face": 2,
+      "uv_pair_indices": [
+        5,
+        15,
+        16,
+        31
+      ],
+      "gradient_mean_dUV_dSourceX": [
+        1.18244221740919e-11,
+        -0.00038014941098000413
+      ],
+      "translation_uv": [
+        -4.019232470855657e-09,
+        0.12921636540813258
+      ]
+    },
+    {
+      "long_face": 9,
+      "uv_pair_indices": [
+        6,
+        10,
+        26,
+        36
+      ],
+      "gradient_mean_dUV_dSourceX": [
+        0.0,
+        0.00038014898224832935
+      ],
+      "translation_uv": [
+        -0.0,
+        -0.1292162196781981
+      ]
+    }
+  ],
+  "density_source2K": [
+    {
+      "face": 0,
+      "before": [
+        {
+          "corners": [
+            0,
+            1
+          ],
+          "gradient": [
+            -2.3371973959854567e-11,
+            0.0003801491450573295
+          ],
+          "density_source2K_texels_per_world_m": 198.15168631150837
+        },
+        {
+          "corners": [
+            2,
+            3
+          ],
+          "gradient": [
+            -2.3371973959854567e-11,
+            0.0003801491450573295
+          ],
+          "density_source2K_texels_per_world_m": 198.15168631150837
+        }
+      ],
+      "after": [
+        {
+          "corners": [
+            0,
+            1
+          ],
+          "gradient": [
+            -2.337197396066907e-11,
+            0.0003801491450573295
+          ],
+          "density_source2K_texels_per_world_m": 198.15168631150837
+        },
+        {
+          "corners": [
+            2,
+            3
+          ],
+          "gradient": [
+            -2.337197396066907e-11,
+            0.0003801491450573295
+          ],
+          "density_source2K_texels_per_world_m": 198.15168631150837
+        }
+      ],
+      "residual_texels_per_world_m": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "face": 1,
+      "before": [
+        {
+          "corners": [
+            7,
+            8
+          ],
+          "gradient": [
+            -1.1685986979927284e-11,
+            0.00038014945690024315
+          ],
+          "density_source2K_texels_per_world_m": 198.15184885876093
+        },
+        {
+          "corners": [
+            11,
+            4
+          ],
+          "gradient": [
+            -1.1962857368256516e-11,
+            0.0003801493650597651
+          ],
+          "density_source2K_texels_per_world_m": 198.15180098716678
+        }
+      ],
+      "after": [
+        {
+          "corners": [
+            7,
+            8
+          ],
+          "gradient": [
+            -1.1702268170544906e-11,
+            0.0003801494514996207
+          ],
+          "density_source2K_texels_per_world_m": 198.15184604370148
+        },
+        {
+          "corners": [
+            11,
+            4
+          ],
+          "gradient": [
+            -1.1946236746688302e-11,
+            0.0003801493705729796
+          ],
+          "density_source2K_texels_per_world_m": 198.15180386091453
+        }
+      ],
+      "residual_texels_per_world_m": [
+        -2.815059445993029e-06,
+        2.873747746434674e-06
+      ]
+    },
+    {
+      "face": 2,
+      "before": [
+        {
+          "corners": [
+            15,
+            16
+          ],
+          "gradient": [
+            1.1685986979927284e-11,
+            -0.00038014945690024315
+          ],
+          "density_source2K_texels_per_world_m": 198.15184885876093
+        },
+        {
+          "corners": [
+            19,
+            12
+          ],
+          "gradient": [
+            1.1962857368256516e-11,
+            -0.0003801493650597651
+          ],
+          "density_source2K_texels_per_world_m": 198.15180098716678
+        }
+      ],
+      "after": [
+        {
+          "corners": [
+            15,
+            16
+          ],
+          "gradient": [
+            1.1702268172945765e-11,
+            -0.0003801494514996207
+          ],
+          "density_source2K_texels_per_world_m": 198.15184604370148
+        },
+        {
+          "corners": [
+            19,
+            12
+          ],
+          "gradient": [
+            1.1946236745565907e-11,
+            -0.0003801493705729796
+          ],
+          "density_source2K_texels_per_world_m": 198.15180386091453
+        }
+      ],
+      "residual_texels_per_world_m": [
+        -2.815059445993029e-06,
+        2.873747746434674e-06
+      ]
+    },
+    {
+      "face": 9,
+      "before": [
+        {
+          "corners": [
+            44,
+            45
+          ],
+          "gradient": [
+            0.0,
+            0.00038014898224832935
+          ],
+          "density_source2K_texels_per_world_m": 198.15160144776874
+        },
+        {
+          "corners": [
+            46,
+            47
+          ],
+          "gradient": [
+            -0.0,
+            0.00038014898224832935
+          ],
+          "density_source2K_texels_per_world_m": 198.15160144776874
+        }
+      ],
+      "after": [
+        {
+          "corners": [
+            44,
+            45
+          ],
+          "gradient": [
+            0.0,
+            0.0003801489822483293
+          ],
+          "density_source2K_texels_per_world_m": 198.1516014477687
+        },
+        {
+          "corners": [
+            46,
+            47
+          ],
+          "gradient": [
+            -0.0,
+            0.0003801489822483293
+          ],
+          "density_source2K_texels_per_world_m": 198.1516014477687
+        }
+      ],
+      "residual_texels_per_world_m": [
+        -2.842170943040401e-14,
+        -2.842170943040401e-14
+      ]
+    }
+  ],
+  "uv_bounds": {
+    "min": [
+      0.0,
+      -0.12921636540813258
+    ],
+    "max": [
+      0.22342777252197266,
+      1.1292163654081326
+    ]
+  },
+  "uv_outside_0_1_allowed": "Existing texture Wrap, no clamp, material/texture edits or scale",
+  "changed_property_nodes": [
+    "/Objects[0]/Geometry[0]/Vertices[0]",
+    "/Objects[0]/Geometry[0]/LayerElementUV[0]/UV[0]"
+  ],
+  "all_node_property_rows": [
+    {
+      "path": "/FBXHeaderExtension[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/FBXHeaderVersion[0]",
+      "identical": true,
+      "before": "0D7208027BEC2B7B3C4ABE1986D8FCCD2C80AD2FF6CE16A26AB1FDDE8F4FD606",
+      "after": "0D7208027BEC2B7B3C4ABE1986D8FCCD2C80AD2FF6CE16A26AB1FDDE8F4FD606"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/FBXVersion[0]",
+      "identical": true,
+      "before": "B5F307CB4C4190A774C6D08EF9770379D234168DE44380105672DA155F03FA44",
+      "after": "B5F307CB4C4190A774C6D08EF9770379D234168DE44380105672DA155F03FA44"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/EncryptionType[0]",
+      "identical": true,
+      "before": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF",
+      "after": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/CreationTimeStamp[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/CreationTimeStamp[0]/Version[0]",
+      "identical": true,
+      "before": "38F3C03A22182760883F907E5C7E446EEA8FE3ABAF3A775F9F2E03190E7D368C",
+      "after": "38F3C03A22182760883F907E5C7E446EEA8FE3ABAF3A775F9F2E03190E7D368C"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/CreationTimeStamp[0]/Year[0]",
+      "identical": true,
+      "before": "688D5B7CA01C2C3C8F5879C5A5E8484D020AF77B44FDDFEEB909D71DFE810F67",
+      "after": "688D5B7CA01C2C3C8F5879C5A5E8484D020AF77B44FDDFEEB909D71DFE810F67"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/CreationTimeStamp[0]/Month[0]",
+      "identical": true,
+      "before": "C800DB4C0A13542F89C3A3DF07BA395C51C0B7A35E09A4D6D53D9584E21CAA6E",
+      "after": "C800DB4C0A13542F89C3A3DF07BA395C51C0B7A35E09A4D6D53D9584E21CAA6E"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/CreationTimeStamp[0]/Day[0]",
+      "identical": true,
+      "before": "B9B93D991A187409C9539D1807E3348FCDA22DEF017800C5F003BA6A55377832",
+      "after": "B9B93D991A187409C9539D1807E3348FCDA22DEF017800C5F003BA6A55377832"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/CreationTimeStamp[0]/Hour[0]",
+      "identical": true,
+      "before": "0D2C6EAC75FB1D38BD600D14CC47424FC3B27672645E54E7275AEEBCA1789CC7",
+      "after": "0D2C6EAC75FB1D38BD600D14CC47424FC3B27672645E54E7275AEEBCA1789CC7"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/CreationTimeStamp[0]/Minute[0]",
+      "identical": true,
+      "before": "3107E0F6D33F4F461A6F5737DD85EE9FB721AF5A4265AFD95B6CE7919C0598FC",
+      "after": "3107E0F6D33F4F461A6F5737DD85EE9FB721AF5A4265AFD95B6CE7919C0598FC"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/CreationTimeStamp[0]/Second[0]",
+      "identical": true,
+      "before": "91B613C2C86C968A761825C25A40B1C3E9ECF8F53B4B9231969B990C7179ADA0",
+      "after": "91B613C2C86C968A761825C25A40B1C3E9ECF8F53B4B9231969B990C7179ADA0"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/CreationTimeStamp[0]/Millisecond[0]",
+      "identical": true,
+      "before": "4D76616A71CE2733D68DDA8CF61FAA3375F9057E7139A373D65EBCBA34373345",
+      "after": "4D76616A71CE2733D68DDA8CF61FAA3375F9057E7139A373D65EBCBA34373345"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/Creator[0]",
+      "identical": true,
+      "before": "038E08CD2B83072C1129CDD685FC43421D8CD4FE9A00F8A6DF3692A37408410C",
+      "after": "038E08CD2B83072C1129CDD685FC43421D8CD4FE9A00F8A6DF3692A37408410C"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]",
+      "identical": true,
+      "before": "BE9C6EC7434CFB4DA95C163F2CABEAE1D92463E39DD85F55B754D958E09656C4",
+      "after": "BE9C6EC7434CFB4DA95C163F2CABEAE1D92463E39DD85F55B754D958E09656C4"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/Type[0]",
+      "identical": true,
+      "before": "98F05059F640B4644A74B951E69B7FAC68E6F1AAD59B2E1AB427AC52C1A370A1",
+      "after": "98F05059F640B4644A74B951E69B7FAC68E6F1AAD59B2E1AB427AC52C1A370A1"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/Version[0]",
+      "identical": true,
+      "before": "C828CDA03F7FB34D4C94A51697674EFF9304B9631D74FF3B8F7DA8F30A2A125C",
+      "after": "C828CDA03F7FB34D4C94A51697674EFF9304B9631D74FF3B8F7DA8F30A2A125C"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Version[0]",
+      "identical": true,
+      "before": "C828CDA03F7FB34D4C94A51697674EFF9304B9631D74FF3B8F7DA8F30A2A125C",
+      "after": "C828CDA03F7FB34D4C94A51697674EFF9304B9631D74FF3B8F7DA8F30A2A125C"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Title[0]",
+      "identical": true,
+      "before": "2E2818527E4A6CAB6F3ADE4FA04E2E972A3D16E6B7AB4BA5068DCC9E2EDE5471",
+      "after": "2E2818527E4A6CAB6F3ADE4FA04E2E972A3D16E6B7AB4BA5068DCC9E2EDE5471"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Subject[0]",
+      "identical": true,
+      "before": "2E2818527E4A6CAB6F3ADE4FA04E2E972A3D16E6B7AB4BA5068DCC9E2EDE5471",
+      "after": "2E2818527E4A6CAB6F3ADE4FA04E2E972A3D16E6B7AB4BA5068DCC9E2EDE5471"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Author[0]",
+      "identical": true,
+      "before": "2E2818527E4A6CAB6F3ADE4FA04E2E972A3D16E6B7AB4BA5068DCC9E2EDE5471",
+      "after": "2E2818527E4A6CAB6F3ADE4FA04E2E972A3D16E6B7AB4BA5068DCC9E2EDE5471"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Keywords[0]",
+      "identical": true,
+      "before": "2E2818527E4A6CAB6F3ADE4FA04E2E972A3D16E6B7AB4BA5068DCC9E2EDE5471",
+      "after": "2E2818527E4A6CAB6F3ADE4FA04E2E972A3D16E6B7AB4BA5068DCC9E2EDE5471"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Revision[0]",
+      "identical": true,
+      "before": "2E2818527E4A6CAB6F3ADE4FA04E2E972A3D16E6B7AB4BA5068DCC9E2EDE5471",
+      "after": "2E2818527E4A6CAB6F3ADE4FA04E2E972A3D16E6B7AB4BA5068DCC9E2EDE5471"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Comment[0]",
+      "identical": true,
+      "before": "2E2818527E4A6CAB6F3ADE4FA04E2E972A3D16E6B7AB4BA5068DCC9E2EDE5471",
+      "after": "2E2818527E4A6CAB6F3ADE4FA04E2E972A3D16E6B7AB4BA5068DCC9E2EDE5471"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[0]",
+      "identical": true,
+      "before": "7FE3BDF13E115AE9BB2593C664158AB83DB38AAD3F947FC0738CBD83BB05A8A9",
+      "after": "7FE3BDF13E115AE9BB2593C664158AB83DB38AAD3F947FC0738CBD83BB05A8A9"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[1]",
+      "identical": true,
+      "before": "6B926AA435308808A049E10C20BBA2C3F300542475AEC134B739C0F37E5EA6B4",
+      "after": "6B926AA435308808A049E10C20BBA2C3F300542475AEC134B739C0F37E5EA6B4"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[2]",
+      "identical": true,
+      "before": "6252A26AFF71BB3C166D3E283676A4C0B3F0F31309FC1BFDF53D2A8E46EA4EF0",
+      "after": "6252A26AFF71BB3C166D3E283676A4C0B3F0F31309FC1BFDF53D2A8E46EA4EF0"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[3]",
+      "identical": true,
+      "before": "1E9E58C8386CC2E4FE7D268EF12208453CD1E8CA05699FCF33084409A0A22D9D",
+      "after": "1E9E58C8386CC2E4FE7D268EF12208453CD1E8CA05699FCF33084409A0A22D9D"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[4]",
+      "identical": true,
+      "before": "574D6386B66613311D53A7F0614AF04921F065EB8AAFE421DAC2ECE85DC5DF74",
+      "after": "574D6386B66613311D53A7F0614AF04921F065EB8AAFE421DAC2ECE85DC5DF74"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[5]",
+      "identical": true,
+      "before": "ABE849E8D95CC6F67449AC33402DEE7377666F290B088A056095F6224E406BAF",
+      "after": "ABE849E8D95CC6F67449AC33402DEE7377666F290B088A056095F6224E406BAF"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[6]",
+      "identical": true,
+      "before": "B5F0260D0C93E0170F31F7A3C0912185A02D93E48FEA398E22677F781DD5A063",
+      "after": "B5F0260D0C93E0170F31F7A3C0912185A02D93E48FEA398E22677F781DD5A063"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[7]",
+      "identical": true,
+      "before": "58EFFE248CBD4EBDB35335F5B6503F5F0161F525BB84BF3586D8ADAD3FB139C5",
+      "after": "58EFFE248CBD4EBDB35335F5B6503F5F0161F525BB84BF3586D8ADAD3FB139C5"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[8]",
+      "identical": true,
+      "before": "8DD3947EC0DB4AAC7C2740C86698F8CF709A43098BFDC61659EA13F06FA2BD5E",
+      "after": "8DD3947EC0DB4AAC7C2740C86698F8CF709A43098BFDC61659EA13F06FA2BD5E"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[9]",
+      "identical": true,
+      "before": "52F913BF0ABA1EF884BD85BF2C6753D13C30F9CB2804DA5421FDCBBE56F6EE53",
+      "after": "52F913BF0ABA1EF884BD85BF2C6753D13C30F9CB2804DA5421FDCBBE56F6EE53"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[10]",
+      "identical": true,
+      "before": "FEECCD5031188F4AF4E5A1790C01550FB0ED96246E811C8378F1688718B8B379",
+      "after": "FEECCD5031188F4AF4E5A1790C01550FB0ED96246E811C8378F1688718B8B379"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[11]",
+      "identical": true,
+      "before": "0E7EE5D960D5901E8D31E4B0AAFEE4A6A7FE9DC2510614948EE8FEA429DCC1F1",
+      "after": "0E7EE5D960D5901E8D31E4B0AAFEE4A6A7FE9DC2510614948EE8FEA429DCC1F1"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[12]",
+      "identical": true,
+      "before": "62B66E25B502987C1C03879386CFF45FBE600F2B567FFE6C1CBF9F71BD8974C1",
+      "after": "62B66E25B502987C1C03879386CFF45FBE600F2B567FFE6C1CBF9F71BD8974C1"
+    },
+    {
+      "path": "/FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[13]",
+      "identical": true,
+      "before": "F452BCD9B02861F147EB2D9B58F0FFF40FF368F1162C352498712BB6A58A0839",
+      "after": "F452BCD9B02861F147EB2D9B58F0FFF40FF368F1162C352498712BB6A58A0839"
+    },
+    {
+      "path": "/FileId[0]",
+      "identical": true,
+      "before": "9A0DC1E8956B2ED8696019B4833A4AA3753D0B8ADABBC59501457E9FE4C0AB0F",
+      "after": "9A0DC1E8956B2ED8696019B4833A4AA3753D0B8ADABBC59501457E9FE4C0AB0F"
+    },
+    {
+      "path": "/CreationTime[0]",
+      "identical": true,
+      "before": "F5B046D76B9FAF97B8CC1B948C21220B11DC5D9D256F9DA367F23DBA536282C3",
+      "after": "F5B046D76B9FAF97B8CC1B948C21220B11DC5D9D256F9DA367F23DBA536282C3"
+    },
+    {
+      "path": "/Creator[0]",
+      "identical": true,
+      "before": "038E08CD2B83072C1129CDD685FC43421D8CD4FE9A00F8A6DF3692A37408410C",
+      "after": "038E08CD2B83072C1129CDD685FC43421D8CD4FE9A00F8A6DF3692A37408410C"
+    },
+    {
+      "path": "/GlobalSettings[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/GlobalSettings[0]/Version[0]",
+      "identical": true,
+      "before": "38F3C03A22182760883F907E5C7E446EEA8FE3ABAF3A775F9F2E03190E7D368C",
+      "after": "38F3C03A22182760883F907E5C7E446EEA8FE3ABAF3A775F9F2E03190E7D368C"
+    },
+    {
+      "path": "/GlobalSettings[0]/Properties70[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/GlobalSettings[0]/Properties70[0]/P[0]",
+      "identical": true,
+      "before": "C04758ED2A69D86D6919906776F0AB0A07AB0DCC44D940F71306BA892670D022",
+      "after": "C04758ED2A69D86D6919906776F0AB0A07AB0DCC44D940F71306BA892670D022"
+    },
+    {
+      "path": "/GlobalSettings[0]/Properties70[0]/P[1]",
+      "identical": true,
+      "before": "9E4E707733315229E2F26176709DEDA3A696A11481429F783355B3EA054809F3",
+      "after": "9E4E707733315229E2F26176709DEDA3A696A11481429F783355B3EA054809F3"
+    },
+    {
+      "path": "/GlobalSettings[0]/Properties70[0]/P[2]",
+      "identical": true,
+      "before": "4FA71D8C37B552313FAE414B3C8E85ACA5F1682A783DF0D7B882CAFE8FF18C67",
+      "after": "4FA71D8C37B552313FAE414B3C8E85ACA5F1682A783DF0D7B882CAFE8FF18C67"
+    },
+    {
+      "path": "/GlobalSettings[0]/Properties70[0]/P[3]",
+      "identical": true,
+      "before": "54C76ED5BC2C6CBDFE56B5223FD46BAB152E439346530B93A6507BDADCBC090F",
+      "after": "54C76ED5BC2C6CBDFE56B5223FD46BAB152E439346530B93A6507BDADCBC090F"
+    },
+    {
+      "path": "/GlobalSettings[0]/Properties70[0]/P[4]",
+      "identical": true,
+      "before": "87016E48565053B15590B9614ADB272FCE594CF416F57F4C26FA22CEECDEDD16",
+      "after": "87016E48565053B15590B9614ADB272FCE594CF416F57F4C26FA22CEECDEDD16"
+    },
+    {
+      "path": "/GlobalSettings[0]/Properties70[0]/P[5]",
+      "identical": true,
+      "before": "969B1F0F9316D7BEC284DCAEC80245AF00A5F5C3E30CAD1AD708F1A554F02DDF",
+      "after": "969B1F0F9316D7BEC284DCAEC80245AF00A5F5C3E30CAD1AD708F1A554F02DDF"
+    },
+    {
+      "path": "/GlobalSettings[0]/Properties70[0]/P[6]",
+      "identical": true,
+      "before": "8C5E313AD22AA44FC54233D36E21FECB2B30E26DDA88F92F5932476DEDC46014",
+      "after": "8C5E313AD22AA44FC54233D36E21FECB2B30E26DDA88F92F5932476DEDC46014"
+    },
+    {
+      "path": "/GlobalSettings[0]/Properties70[0]/P[7]",
+      "identical": true,
+      "before": "6A8AE886FD232DA780A5158D14E4DF6874A9FC0CA09B62C8B3B8C2605E1A7541",
+      "after": "6A8AE886FD232DA780A5158D14E4DF6874A9FC0CA09B62C8B3B8C2605E1A7541"
+    },
+    {
+      "path": "/GlobalSettings[0]/Properties70[0]/P[8]",
+      "identical": true,
+      "before": "AF6D61EDA0B137F3C2E0EB0C3FC23CD9F8281AAC89AAD7291D26F9E0E1276ADE",
+      "after": "AF6D61EDA0B137F3C2E0EB0C3FC23CD9F8281AAC89AAD7291D26F9E0E1276ADE"
+    },
+    {
+      "path": "/GlobalSettings[0]/Properties70[0]/P[9]",
+      "identical": true,
+      "before": "581E45519574A37D5B67516CDDAACD2A3DCE6C2AE008FE10D6F3B1C8F2A400E4",
+      "after": "581E45519574A37D5B67516CDDAACD2A3DCE6C2AE008FE10D6F3B1C8F2A400E4"
+    },
+    {
+      "path": "/GlobalSettings[0]/Properties70[0]/P[10]",
+      "identical": true,
+      "before": "1A45891694F552FA009A55191F90A8DA2577DA71D31D4611E3AD4F2CD208EBB3",
+      "after": "1A45891694F552FA009A55191F90A8DA2577DA71D31D4611E3AD4F2CD208EBB3"
+    },
+    {
+      "path": "/GlobalSettings[0]/Properties70[0]/P[11]",
+      "identical": true,
+      "before": "FC09BD7A7800880E809BAA14981B3F1779C9DD5703DA83726D05DF0F317AE149",
+      "after": "FC09BD7A7800880E809BAA14981B3F1779C9DD5703DA83726D05DF0F317AE149"
+    },
+    {
+      "path": "/GlobalSettings[0]/Properties70[0]/P[12]",
+      "identical": true,
+      "before": "BA19F39B90355BC371D52B8D4461BA64F8BB61D90F1B9C0BD170B01EA0E54F64",
+      "after": "BA19F39B90355BC371D52B8D4461BA64F8BB61D90F1B9C0BD170B01EA0E54F64"
+    },
+    {
+      "path": "/GlobalSettings[0]/Properties70[0]/P[13]",
+      "identical": true,
+      "before": "66A8AA44DA563ABB47284A9CE9D202FE36AD00413BD6372019B3F32B8E78734B",
+      "after": "66A8AA44DA563ABB47284A9CE9D202FE36AD00413BD6372019B3F32B8E78734B"
+    },
+    {
+      "path": "/GlobalSettings[0]/Properties70[0]/P[14]",
+      "identical": true,
+      "before": "2B42BFEBBFBCB4A5751D65B42B4F6680FDE357ED69CDCD5CDE777F5F6C36067B",
+      "after": "2B42BFEBBFBCB4A5751D65B42B4F6680FDE357ED69CDCD5CDE777F5F6C36067B"
+    },
+    {
+      "path": "/GlobalSettings[0]/Properties70[0]/P[15]",
+      "identical": true,
+      "before": "CA33651E05CE80A88201CAE5981A6F211C38DB5D94A9DA84B44C107BFE805614",
+      "after": "CA33651E05CE80A88201CAE5981A6F211C38DB5D94A9DA84B44C107BFE805614"
+    },
+    {
+      "path": "/Documents[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/Documents[0]/Count[0]",
+      "identical": true,
+      "before": "8AC652F96F80BF4DF5BE8B5E03A81AE961E637257C7F506D6618BC41BF8D6E5B",
+      "after": "8AC652F96F80BF4DF5BE8B5E03A81AE961E637257C7F506D6618BC41BF8D6E5B"
+    },
+    {
+      "path": "/Documents[0]/Document[0]",
+      "identical": true,
+      "before": "44A3947AAE8A7C602FA1A3E0815CED5104A16CEAC146AA48BF97B432388443C4",
+      "after": "44A3947AAE8A7C602FA1A3E0815CED5104A16CEAC146AA48BF97B432388443C4"
+    },
+    {
+      "path": "/Documents[0]/Document[0]/Properties70[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/Documents[0]/Document[0]/Properties70[0]/P[0]",
+      "identical": true,
+      "before": "11889BBB9349478BBFB049DC22ABD2E8DB5BB98B2AFDB4041743BC96A857F79F",
+      "after": "11889BBB9349478BBFB049DC22ABD2E8DB5BB98B2AFDB4041743BC96A857F79F"
+    },
+    {
+      "path": "/Documents[0]/Document[0]/Properties70[0]/P[1]",
+      "identical": true,
+      "before": "0129119D1933CF758F7CCB5609A52FE550A0DE75ED0D4694F5C1F39084346E36",
+      "after": "0129119D1933CF758F7CCB5609A52FE550A0DE75ED0D4694F5C1F39084346E36"
+    },
+    {
+      "path": "/Documents[0]/Document[0]/RootNode[0]",
+      "identical": true,
+      "before": "3ACDABED71E665D02644D2BBCB7F907937E8A315395B06C4FBE9BE30A91D39E5",
+      "after": "3ACDABED71E665D02644D2BBCB7F907937E8A315395B06C4FBE9BE30A91D39E5"
+    },
+    {
+      "path": "/References[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/Definitions[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/Definitions[0]/Version[0]",
+      "identical": true,
+      "before": "C828CDA03F7FB34D4C94A51697674EFF9304B9631D74FF3B8F7DA8F30A2A125C",
+      "after": "C828CDA03F7FB34D4C94A51697674EFF9304B9631D74FF3B8F7DA8F30A2A125C"
+    },
+    {
+      "path": "/Definitions[0]/Count[0]",
+      "identical": true,
+      "before": "732E55194E1B2F9AF559BFF7AF8B24F652C202C9E8E8AE83823447319F59DBF9",
+      "after": "732E55194E1B2F9AF559BFF7AF8B24F652C202C9E8E8AE83823447319F59DBF9"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[0]",
+      "identical": true,
+      "before": "D791A3B660D202EF4B15E2C3BAE9C1DEE408E3E8D48DE6418418D7D645194D52",
+      "after": "D791A3B660D202EF4B15E2C3BAE9C1DEE408E3E8D48DE6418418D7D645194D52"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[0]/Count[0]",
+      "identical": true,
+      "before": "8AC652F96F80BF4DF5BE8B5E03A81AE961E637257C7F506D6618BC41BF8D6E5B",
+      "after": "8AC652F96F80BF4DF5BE8B5E03A81AE961E637257C7F506D6618BC41BF8D6E5B"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[1]",
+      "identical": true,
+      "before": "861C21032D0111DB319E28EAC378ABA8C4AAB5BF0E1050596A419485251C264B",
+      "after": "861C21032D0111DB319E28EAC378ABA8C4AAB5BF0E1050596A419485251C264B"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[1]/Count[0]",
+      "identical": true,
+      "before": "8AC652F96F80BF4DF5BE8B5E03A81AE961E637257C7F506D6618BC41BF8D6E5B",
+      "after": "8AC652F96F80BF4DF5BE8B5E03A81AE961E637257C7F506D6618BC41BF8D6E5B"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[1]/PropertyTemplate[0]",
+      "identical": true,
+      "before": "9CEA9F7B8C89E09A27E9D98805459E01FF485137C8B3F52CD3BECB77E5008991",
+      "after": "9CEA9F7B8C89E09A27E9D98805459E01FF485137C8B3F52CD3BECB77E5008991"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]/P[0]",
+      "identical": true,
+      "before": "9AF89FA07FD0521560EBD29D4BD07191920D6442BF44F47F4F18EB6B5EC6B2A0",
+      "after": "9AF89FA07FD0521560EBD29D4BD07191920D6442BF44F47F4F18EB6B5EC6B2A0"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]/P[1]",
+      "identical": true,
+      "before": "48716D49D6A524DD2DE67A4141663410CF12FCB37311E427D22F7BD1E1C15A25",
+      "after": "48716D49D6A524DD2DE67A4141663410CF12FCB37311E427D22F7BD1E1C15A25"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]/P[2]",
+      "identical": true,
+      "before": "CF3547C9188BB72756129BC8AAC8E8B1436F47AD80DE9E0A933CFFD0C86C185B",
+      "after": "CF3547C9188BB72756129BC8AAC8E8B1436F47AD80DE9E0A933CFFD0C86C185B"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]/P[3]",
+      "identical": true,
+      "before": "3714689B555B2241B300AF167D70FF8E344F557344E9BC2B2C038862A1280F1F",
+      "after": "3714689B555B2241B300AF167D70FF8E344F557344E9BC2B2C038862A1280F1F"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]/P[4]",
+      "identical": true,
+      "before": "22CFAB92F4CBFCBAF1D74CC07FA491A8C519048011B76E642649C96FC454B160",
+      "after": "22CFAB92F4CBFCBAF1D74CC07FA491A8C519048011B76E642649C96FC454B160"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]/P[5]",
+      "identical": true,
+      "before": "F3B1E2C02460626193F1958949935715EB2CA231315AEC109E33918981025270",
+      "after": "F3B1E2C02460626193F1958949935715EB2CA231315AEC109E33918981025270"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]",
+      "identical": true,
+      "before": "F01C0BD6D5BEFC486F4648FD7C74C1E03D2E3F5238457F46EFE10D691253E346",
+      "after": "F01C0BD6D5BEFC486F4648FD7C74C1E03D2E3F5238457F46EFE10D691253E346"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/Count[0]",
+      "identical": true,
+      "before": "8AC652F96F80BF4DF5BE8B5E03A81AE961E637257C7F506D6618BC41BF8D6E5B",
+      "after": "8AC652F96F80BF4DF5BE8B5E03A81AE961E637257C7F506D6618BC41BF8D6E5B"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]",
+      "identical": true,
+      "before": "A04BF0F98C079B91E1F6E2A2D33C85C1ACC09EC8403593EBE91F0A49E413B01F",
+      "after": "A04BF0F98C079B91E1F6E2A2D33C85C1ACC09EC8403593EBE91F0A49E413B01F"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[0]",
+      "identical": true,
+      "before": "41FFB6DDB5DBCFB5DEBAFE966548105DFE3EA85E18849C417124AEB78525F3AA",
+      "after": "41FFB6DDB5DBCFB5DEBAFE966548105DFE3EA85E18849C417124AEB78525F3AA"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[1]",
+      "identical": true,
+      "before": "F109E4878DD672CD4D671902147BED521926E48453CAD336A4E012706E5C6167",
+      "after": "F109E4878DD672CD4D671902147BED521926E48453CAD336A4E012706E5C6167"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[2]",
+      "identical": true,
+      "before": "FFEDA6DA57AD952A0AD8860E0C0F3E61CF50723BF0E4F04A2F4EA204430412B1",
+      "after": "FFEDA6DA57AD952A0AD8860E0C0F3E61CF50723BF0E4F04A2F4EA204430412B1"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[3]",
+      "identical": true,
+      "before": "7D5B9235CD7773FA4B40611AF03A8EC90DF30ED54D686BF1271AD4A56670C9F2",
+      "after": "7D5B9235CD7773FA4B40611AF03A8EC90DF30ED54D686BF1271AD4A56670C9F2"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[4]",
+      "identical": true,
+      "before": "C5804318D2C2DDE18A3145418863540FC14A6DEC94DD6DF386A1C2977E4AA02F",
+      "after": "C5804318D2C2DDE18A3145418863540FC14A6DEC94DD6DF386A1C2977E4AA02F"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[5]",
+      "identical": true,
+      "before": "0E47B23191F645EF7C3E523F60C77079FD5712DCC51DCE03362DECF53F8D4918",
+      "after": "0E47B23191F645EF7C3E523F60C77079FD5712DCC51DCE03362DECF53F8D4918"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[6]",
+      "identical": true,
+      "before": "DCDFAF54142BB7AAF94CFCA46019D1DE149169E811FB456158F5C3F544AC513B",
+      "after": "DCDFAF54142BB7AAF94CFCA46019D1DE149169E811FB456158F5C3F544AC513B"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[7]",
+      "identical": true,
+      "before": "7757B11F548DFA0A960120E03956921C32048308736D2A9142404FAFD5A10923",
+      "after": "7757B11F548DFA0A960120E03956921C32048308736D2A9142404FAFD5A10923"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[8]",
+      "identical": true,
+      "before": "7D1218997FB2CC616FC97B7812E005BC8CC6095AA1FE7E49268BEA1EBBFF208B",
+      "after": "7D1218997FB2CC616FC97B7812E005BC8CC6095AA1FE7E49268BEA1EBBFF208B"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[9]",
+      "identical": true,
+      "before": "2F5196E81C783A5B52C5980AFC0FE7B2395E0F7E1B08196F181F0F59283B6BB1",
+      "after": "2F5196E81C783A5B52C5980AFC0FE7B2395E0F7E1B08196F181F0F59283B6BB1"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[10]",
+      "identical": true,
+      "before": "96751285B2FA148DAE42D7A1E8144CFB409A53CEAEFC4F2B93EB5B8EB0F17D0A",
+      "after": "96751285B2FA148DAE42D7A1E8144CFB409A53CEAEFC4F2B93EB5B8EB0F17D0A"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[11]",
+      "identical": true,
+      "before": "BF2E2D1574247A356483E23933C8A0FF80E51598323BFAAACE16543DFFEA4CCC",
+      "after": "BF2E2D1574247A356483E23933C8A0FF80E51598323BFAAACE16543DFFEA4CCC"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[12]",
+      "identical": true,
+      "before": "CC7DBEFF26B8B8E8C324DC35F0905AD6D463F6556EBB7D3DE4871BEB37EFDF2B",
+      "after": "CC7DBEFF26B8B8E8C324DC35F0905AD6D463F6556EBB7D3DE4871BEB37EFDF2B"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[13]",
+      "identical": true,
+      "before": "82D902CAC8A9B485936698C902EB56F92DD7B005DCEAAE6CD23711A7CF60C6E9",
+      "after": "82D902CAC8A9B485936698C902EB56F92DD7B005DCEAAE6CD23711A7CF60C6E9"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[14]",
+      "identical": true,
+      "before": "4942C62389184C5F06E29F55C903B3ABA9CE2D71F96019F39D8974F09A70DB13",
+      "after": "4942C62389184C5F06E29F55C903B3ABA9CE2D71F96019F39D8974F09A70DB13"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[15]",
+      "identical": true,
+      "before": "CBF1A0F12D15D0AADADCAF896870E48C76554DE7939C30DA31BBC6F5E7681B2F",
+      "after": "CBF1A0F12D15D0AADADCAF896870E48C76554DE7939C30DA31BBC6F5E7681B2F"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[16]",
+      "identical": true,
+      "before": "C87E2EFC216CCAE8035E79D717AB46B0018252500BE82581BEDCFFACDCF7DEA4",
+      "after": "C87E2EFC216CCAE8035E79D717AB46B0018252500BE82581BEDCFFACDCF7DEA4"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[17]",
+      "identical": true,
+      "before": "BF0B9205DD7DE138D5601D8DA39A22199A423D680B274CFEBA6E6DFE6ED7721A",
+      "after": "BF0B9205DD7DE138D5601D8DA39A22199A423D680B274CFEBA6E6DFE6ED7721A"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[18]",
+      "identical": true,
+      "before": "4789360A8283EF23058B39A29F08789F9F94405767043CF3B7E553E41EA28B1C",
+      "after": "4789360A8283EF23058B39A29F08789F9F94405767043CF3B7E553E41EA28B1C"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[19]",
+      "identical": true,
+      "before": "78138036C53E4E2D844075A0EAB008B37704106D65E53AFCFF405D1028902FE2",
+      "after": "78138036C53E4E2D844075A0EAB008B37704106D65E53AFCFF405D1028902FE2"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[20]",
+      "identical": true,
+      "before": "C8E5FB0BB9C91417F8CC6BAB90645CA3E4FDC3CB3CE3D10DF91DD5A2187C9533",
+      "after": "C8E5FB0BB9C91417F8CC6BAB90645CA3E4FDC3CB3CE3D10DF91DD5A2187C9533"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[21]",
+      "identical": true,
+      "before": "8AF93BB7B8D4013E53A33B759FB2E65D4A87FD58975246C3328F119C7CB1EB6C",
+      "after": "8AF93BB7B8D4013E53A33B759FB2E65D4A87FD58975246C3328F119C7CB1EB6C"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[22]",
+      "identical": true,
+      "before": "B3A00A3456AC64A1DDEFFD6FC157402BEFE5B7C4A4B84FC6BBFF9F66949CDD57",
+      "after": "B3A00A3456AC64A1DDEFFD6FC157402BEFE5B7C4A4B84FC6BBFF9F66949CDD57"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[23]",
+      "identical": true,
+      "before": "F027AF2A3C5B8DE021825E21549EA9D06B64918C510379E3B501EA344895898F",
+      "after": "F027AF2A3C5B8DE021825E21549EA9D06B64918C510379E3B501EA344895898F"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[24]",
+      "identical": true,
+      "before": "D447693142DF3E202FAA9E866651633A169C5812BA8B66805EF6DCCAA130116F",
+      "after": "D447693142DF3E202FAA9E866651633A169C5812BA8B66805EF6DCCAA130116F"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[25]",
+      "identical": true,
+      "before": "E870D45771835646033B68B5A3C284A91024610C3BD52471A4F466F8C9B48CA3",
+      "after": "E870D45771835646033B68B5A3C284A91024610C3BD52471A4F466F8C9B48CA3"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[26]",
+      "identical": true,
+      "before": "CF85EAF6482F6866E5C4C1D521C61BD109847DE8B279C04825D8698C8E18D38A",
+      "after": "CF85EAF6482F6866E5C4C1D521C61BD109847DE8B279C04825D8698C8E18D38A"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[27]",
+      "identical": true,
+      "before": "D3728EE28071C4507F91847F2114F5ECD77686A270B0A4D5670CA85593729A5B",
+      "after": "D3728EE28071C4507F91847F2114F5ECD77686A270B0A4D5670CA85593729A5B"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[28]",
+      "identical": true,
+      "before": "3080089F447C4D7D84B841B3285BBEF37FF5CBA5344782A898F08D11E8772EA7",
+      "after": "3080089F447C4D7D84B841B3285BBEF37FF5CBA5344782A898F08D11E8772EA7"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[29]",
+      "identical": true,
+      "before": "5F793E7765E6B9600A0F78646786FF4A124B468DC9038E6BC253E3108462B717",
+      "after": "5F793E7765E6B9600A0F78646786FF4A124B468DC9038E6BC253E3108462B717"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[30]",
+      "identical": true,
+      "before": "C4D512F7A3D69FA2AF524FCBB409C0988837973BF14553704F20DCDF89596939",
+      "after": "C4D512F7A3D69FA2AF524FCBB409C0988837973BF14553704F20DCDF89596939"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[31]",
+      "identical": true,
+      "before": "7CA906C2C5C0B7DD5D55CFD8E1ECC7BBCC90B06B0B085502C1BD8949793C79C7",
+      "after": "7CA906C2C5C0B7DD5D55CFD8E1ECC7BBCC90B06B0B085502C1BD8949793C79C7"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[32]",
+      "identical": true,
+      "before": "8005F9522D5728C7FE71B63911C15405257426B58B4EBE9E883D0B04D9864790",
+      "after": "8005F9522D5728C7FE71B63911C15405257426B58B4EBE9E883D0B04D9864790"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[33]",
+      "identical": true,
+      "before": "B01FA7ED87F1E35A7E7ABFFAD276D95D340F2ED8FA00F75CDF81F87764E7FDA3",
+      "after": "B01FA7ED87F1E35A7E7ABFFAD276D95D340F2ED8FA00F75CDF81F87764E7FDA3"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[34]",
+      "identical": true,
+      "before": "F961DD97211E74A84B570DE6881C9A5FEC0D0412008EBB9DF2E7F0DB8B2AFCFC",
+      "after": "F961DD97211E74A84B570DE6881C9A5FEC0D0412008EBB9DF2E7F0DB8B2AFCFC"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[35]",
+      "identical": true,
+      "before": "C3A2D7BC9A996C7985250F08C27576767D989BCCF07186F8275A8CC9660D3918",
+      "after": "C3A2D7BC9A996C7985250F08C27576767D989BCCF07186F8275A8CC9660D3918"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[36]",
+      "identical": true,
+      "before": "E704B6121C6F145AB9FB4CB30C5C62F660C1D5CC2583F670DC8260F2D04D26F4",
+      "after": "E704B6121C6F145AB9FB4CB30C5C62F660C1D5CC2583F670DC8260F2D04D26F4"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[37]",
+      "identical": true,
+      "before": "B4DC8B72E6E3A27C71BED36F2FB5F544054A7BA5DDA4EF7DFE610F3038F8CD04",
+      "after": "B4DC8B72E6E3A27C71BED36F2FB5F544054A7BA5DDA4EF7DFE610F3038F8CD04"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[38]",
+      "identical": true,
+      "before": "A9764E2A8498874823519EB0A35F6DBC55D53DC1325B9AEDADF7455C297FAE30",
+      "after": "A9764E2A8498874823519EB0A35F6DBC55D53DC1325B9AEDADF7455C297FAE30"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[39]",
+      "identical": true,
+      "before": "A3B116193F7993253A392946F54617EF6C0FDAE8FFA9538F0FE0674D97B57B95",
+      "after": "A3B116193F7993253A392946F54617EF6C0FDAE8FFA9538F0FE0674D97B57B95"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[40]",
+      "identical": true,
+      "before": "F09034A62BD504330FCDDB27D5B64A19A39C04E43B92B85C9DE7085B1397B547",
+      "after": "F09034A62BD504330FCDDB27D5B64A19A39C04E43B92B85C9DE7085B1397B547"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[41]",
+      "identical": true,
+      "before": "68BA0E899B46487C453A3D59D411A800A3BF02216414F2CEA6A9365CDD16628F",
+      "after": "68BA0E899B46487C453A3D59D411A800A3BF02216414F2CEA6A9365CDD16628F"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[42]",
+      "identical": true,
+      "before": "1FE39539889A4DE14C19B3223B5E2B057F5495BBE7296F88894F21C9AE4E7C3A",
+      "after": "1FE39539889A4DE14C19B3223B5E2B057F5495BBE7296F88894F21C9AE4E7C3A"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[43]",
+      "identical": true,
+      "before": "5F119195C4598AE2059AE7AF94476563B0238165E67AB99549F692A94B9D566D",
+      "after": "5F119195C4598AE2059AE7AF94476563B0238165E67AB99549F692A94B9D566D"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[44]",
+      "identical": true,
+      "before": "CA7FDA8EDC05C935C92F451D370825AE482928235670548E4B82BE74877FB742",
+      "after": "CA7FDA8EDC05C935C92F451D370825AE482928235670548E4B82BE74877FB742"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[45]",
+      "identical": true,
+      "before": "279BA460410EF02CCDCA419D297EACD645C855E46132013D0CAE52C7BEFF11E3",
+      "after": "279BA460410EF02CCDCA419D297EACD645C855E46132013D0CAE52C7BEFF11E3"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[46]",
+      "identical": true,
+      "before": "A1197C3CE53CF80725491C5B4BC443A1B76A4CF0928C47D485C3B09C7EDBE70C",
+      "after": "A1197C3CE53CF80725491C5B4BC443A1B76A4CF0928C47D485C3B09C7EDBE70C"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[47]",
+      "identical": true,
+      "before": "9611C5700EC67136448C2A97FAF6E3C50E21E368D904FB834EB292F8FF64EA68",
+      "after": "9611C5700EC67136448C2A97FAF6E3C50E21E368D904FB834EB292F8FF64EA68"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[48]",
+      "identical": true,
+      "before": "949F772AD0B70687FEABCAFB2CAA2893292A84CA7FB370F1C4EBE75B7AF1533C",
+      "after": "949F772AD0B70687FEABCAFB2CAA2893292A84CA7FB370F1C4EBE75B7AF1533C"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[49]",
+      "identical": true,
+      "before": "C3117A6ABE4A24F13BA1893DE97A92B5B8CAD08A3F7039C530A88FFDF23C3FD7",
+      "after": "C3117A6ABE4A24F13BA1893DE97A92B5B8CAD08A3F7039C530A88FFDF23C3FD7"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[50]",
+      "identical": true,
+      "before": "F3B7406B927920D012452B2C79A8D5DD7217B06FABD873CFA2D0AF7CB59A4A60",
+      "after": "F3B7406B927920D012452B2C79A8D5DD7217B06FABD873CFA2D0AF7CB59A4A60"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[51]",
+      "identical": true,
+      "before": "CAF8A42A6AB6F752C22303649C410F6ACD90008C989A24450B768E6519A0B4F6",
+      "after": "CAF8A42A6AB6F752C22303649C410F6ACD90008C989A24450B768E6519A0B4F6"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[52]",
+      "identical": true,
+      "before": "7FB94F0F5A940099737BCA4C701F0538715941C24B3AB387F2EA790822A5566E",
+      "after": "7FB94F0F5A940099737BCA4C701F0538715941C24B3AB387F2EA790822A5566E"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[53]",
+      "identical": true,
+      "before": "02E274EF23F395BC9213EDCFFE0FF40A86D40FFCBC3A6C9698C35FD70C832C7E",
+      "after": "02E274EF23F395BC9213EDCFFE0FF40A86D40FFCBC3A6C9698C35FD70C832C7E"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[54]",
+      "identical": true,
+      "before": "C5AB183D5428E94DD5702F28A5F145FC41BCB4E84F4C8713EF16D0D5BEA3C96F",
+      "after": "C5AB183D5428E94DD5702F28A5F145FC41BCB4E84F4C8713EF16D0D5BEA3C96F"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[55]",
+      "identical": true,
+      "before": "2E8D0E996D290FAB494CB67D0F199D7467CC81AC04BC16FBDDA095C9B366B4FC",
+      "after": "2E8D0E996D290FAB494CB67D0F199D7467CC81AC04BC16FBDDA095C9B366B4FC"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[56]",
+      "identical": true,
+      "before": "F0FA723A5EADFA2BD78CD8B796495ECAA09BBB645C3CD4FC1736810C8E383CCB",
+      "after": "F0FA723A5EADFA2BD78CD8B796495ECAA09BBB645C3CD4FC1736810C8E383CCB"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[57]",
+      "identical": true,
+      "before": "D1589BC2D702E1C56E68689A9EF931FEAD3867E4815595E3389AEB9B2E2CABEE",
+      "after": "D1589BC2D702E1C56E68689A9EF931FEAD3867E4815595E3389AEB9B2E2CABEE"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[58]",
+      "identical": true,
+      "before": "86FED24A5AB71F5ABFB876DFD0A6C2648B11F6A564A2EDB962273F0E4D49C427",
+      "after": "86FED24A5AB71F5ABFB876DFD0A6C2648B11F6A564A2EDB962273F0E4D49C427"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[59]",
+      "identical": true,
+      "before": "E61E0BFA9FE24CB968D6D38B697D5CE31A11E8FCF4D7A92041D163EF7FC1DFE8",
+      "after": "E61E0BFA9FE24CB968D6D38B697D5CE31A11E8FCF4D7A92041D163EF7FC1DFE8"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[60]",
+      "identical": true,
+      "before": "DDA1B28A23936A5AC58FC6CF636DF34C922081C407BA0F4075AB327582C31571",
+      "after": "DDA1B28A23936A5AC58FC6CF636DF34C922081C407BA0F4075AB327582C31571"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[61]",
+      "identical": true,
+      "before": "21B7EFCA2A5BC01751DB1A397128D701B4D028AF66AACE0B31B9DF3DA5427057",
+      "after": "21B7EFCA2A5BC01751DB1A397128D701B4D028AF66AACE0B31B9DF3DA5427057"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[62]",
+      "identical": true,
+      "before": "C99E57B863B7104EE1484385C5173302EC3A1BF474FE268E9E06640EA890AB72",
+      "after": "C99E57B863B7104EE1484385C5173302EC3A1BF474FE268E9E06640EA890AB72"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[63]",
+      "identical": true,
+      "before": "FE9027F51DF906CC9A41829D30888637AD19C1A130CB901B8CC1E731781FD666",
+      "after": "FE9027F51DF906CC9A41829D30888637AD19C1A130CB901B8CC1E731781FD666"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[64]",
+      "identical": true,
+      "before": "B45AA45BCBFEB60E4B4C314D9B44A2B1A666B9CD3F6D10EC2DA87DD055078C42",
+      "after": "B45AA45BCBFEB60E4B4C314D9B44A2B1A666B9CD3F6D10EC2DA87DD055078C42"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[65]",
+      "identical": true,
+      "before": "27905D72EBB699A3C81D3C7D864BA85013BE0BB61B0D523FF636DBDE20420A4A",
+      "after": "27905D72EBB699A3C81D3C7D864BA85013BE0BB61B0D523FF636DBDE20420A4A"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[66]",
+      "identical": true,
+      "before": "DDC89A3087137A6D2E786FD8176FA860B2AAE37BBA009621E44DCB0D7459B1E9",
+      "after": "DDC89A3087137A6D2E786FD8176FA860B2AAE37BBA009621E44DCB0D7459B1E9"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[67]",
+      "identical": true,
+      "before": "73135DCE324CFD7EE9E84FFDED87F8E75844335876E516A3D698C9C3F5F85BDC",
+      "after": "73135DCE324CFD7EE9E84FFDED87F8E75844335876E516A3D698C9C3F5F85BDC"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[68]",
+      "identical": true,
+      "before": "3B4DD9FE0B42FB0AAD5A4C54311B350C99DBC0061CA9EF6E82921DB908551FDE",
+      "after": "3B4DD9FE0B42FB0AAD5A4C54311B350C99DBC0061CA9EF6E82921DB908551FDE"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[69]",
+      "identical": true,
+      "before": "04C3E54B94328B6B1C3667158292AA9020D7966464299AFB8780BAA7CD4EC6A9",
+      "after": "04C3E54B94328B6B1C3667158292AA9020D7966464299AFB8780BAA7CD4EC6A9"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[70]",
+      "identical": true,
+      "before": "156266C13E7732D63CDEAE8A802E395437A049C440C4BD4827482C4939C89A7B",
+      "after": "156266C13E7732D63CDEAE8A802E395437A049C440C4BD4827482C4939C89A7B"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]",
+      "identical": true,
+      "before": "E90E62AE9C46DCC19FE040A8E628A0BB1C4FC0F8991CA8834AA2F57CF6C180FB",
+      "after": "E90E62AE9C46DCC19FE040A8E628A0BB1C4FC0F8991CA8834AA2F57CF6C180FB"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/Count[0]",
+      "identical": true,
+      "before": "8AC652F96F80BF4DF5BE8B5E03A81AE961E637257C7F506D6618BC41BF8D6E5B",
+      "after": "8AC652F96F80BF4DF5BE8B5E03A81AE961E637257C7F506D6618BC41BF8D6E5B"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]",
+      "identical": true,
+      "before": "4E80ECA9391CAB77F04BC49574AEEB2857A1FA0DF39A875B4F7F342A32A17861",
+      "after": "4E80ECA9391CAB77F04BC49574AEEB2857A1FA0DF39A875B4F7F342A32A17861"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[0]",
+      "identical": true,
+      "before": "CD7737568201AF7985680AEFDFA2180A9B2D7A617D8050E74F792DAF3AFC61B9",
+      "after": "CD7737568201AF7985680AEFDFA2180A9B2D7A617D8050E74F792DAF3AFC61B9"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[1]",
+      "identical": true,
+      "before": "EC3B04E35DA28A01339911EE5B72674B236EC7032D62CDD1C11599B09C25531D",
+      "after": "EC3B04E35DA28A01339911EE5B72674B236EC7032D62CDD1C11599B09C25531D"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[2]",
+      "identical": true,
+      "before": "BE11BC2C57217DCCB50971CA54A7E1DDAD90A30237EE1D869709737C1C28F4B4",
+      "after": "BE11BC2C57217DCCB50971CA54A7E1DDAD90A30237EE1D869709737C1C28F4B4"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[3]",
+      "identical": true,
+      "before": "B21ED383B6310AE1E208CA28DEC5C31B4E92AB4CD6FAF0F7EC0B5424AA936E45",
+      "after": "B21ED383B6310AE1E208CA28DEC5C31B4E92AB4CD6FAF0F7EC0B5424AA936E45"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[4]",
+      "identical": true,
+      "before": "AEFFE3C5AAF9EC2D442BB91116013A5FFF9EAE9EFE74641AADF76D539B64210F",
+      "after": "AEFFE3C5AAF9EC2D442BB91116013A5FFF9EAE9EFE74641AADF76D539B64210F"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[5]",
+      "identical": true,
+      "before": "BE8D125DA7D68E149C59CAE0F063508354849C70F5A31EBEE1A4EF1C6C073803",
+      "after": "BE8D125DA7D68E149C59CAE0F063508354849C70F5A31EBEE1A4EF1C6C073803"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[6]",
+      "identical": true,
+      "before": "A9B60C7EB0DC9B86C257A1997951B3F5F91C4C99079A453FAF80DF39FD259C23",
+      "after": "A9B60C7EB0DC9B86C257A1997951B3F5F91C4C99079A453FAF80DF39FD259C23"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[7]",
+      "identical": true,
+      "before": "14818979583B5DF42F1FDDE0819618D330D6A2B3A41B5B24EC92DD276DA7B78C",
+      "after": "14818979583B5DF42F1FDDE0819618D330D6A2B3A41B5B24EC92DD276DA7B78C"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[8]",
+      "identical": true,
+      "before": "A488DEADB2D93DCC38BEB297085BDDB7720D6D3E9199CEF7EC83E6A40AE5B71C",
+      "after": "A488DEADB2D93DCC38BEB297085BDDB7720D6D3E9199CEF7EC83E6A40AE5B71C"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[9]",
+      "identical": true,
+      "before": "6D5DED5C59410136E58EE6A2E5DBB6A78AB28BC1EAEAFF83273BAFDB58F74121",
+      "after": "6D5DED5C59410136E58EE6A2E5DBB6A78AB28BC1EAEAFF83273BAFDB58F74121"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[10]",
+      "identical": true,
+      "before": "FCD58E3EB87EE3961C084194571520EA5E10A1FC827668772860D3DC1F302C5E",
+      "after": "FCD58E3EB87EE3961C084194571520EA5E10A1FC827668772860D3DC1F302C5E"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[11]",
+      "identical": true,
+      "before": "32E6A217480697E64D6BCD61DE9AC6C81935A73854271AADF2DCC84886F36F7C",
+      "after": "32E6A217480697E64D6BCD61DE9AC6C81935A73854271AADF2DCC84886F36F7C"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[12]",
+      "identical": true,
+      "before": "FD1ECA2059EB1B328EA245188D359831691BCDEA94C2628F78862DC5467170F1",
+      "after": "FD1ECA2059EB1B328EA245188D359831691BCDEA94C2628F78862DC5467170F1"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[13]",
+      "identical": true,
+      "before": "2A9FC05B6F52C4C17B7C042112872D981E125C88F55B8007D566FBD826610D8C",
+      "after": "2A9FC05B6F52C4C17B7C042112872D981E125C88F55B8007D566FBD826610D8C"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[14]",
+      "identical": true,
+      "before": "6F1492AB3841A0A617C2E363825B8475EBF0F7CA954D80306B65B9D688EBE7EB",
+      "after": "6F1492AB3841A0A617C2E363825B8475EBF0F7CA954D80306B65B9D688EBE7EB"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[15]",
+      "identical": true,
+      "before": "3C859E182611DFBA42069553B712CFA153F236D60CAE0EBC365660E81B6747F4",
+      "after": "3C859E182611DFBA42069553B712CFA153F236D60CAE0EBC365660E81B6747F4"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[16]",
+      "identical": true,
+      "before": "4820A3F0BEAC4D02562A8D55893A47249720969CF774475C2DF15351CEF5552E",
+      "after": "4820A3F0BEAC4D02562A8D55893A47249720969CF774475C2DF15351CEF5552E"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[17]",
+      "identical": true,
+      "before": "28C17CE50F864283EE73984AC51AD6C8F4A6F3588A5F501390EC23A28FB75481",
+      "after": "28C17CE50F864283EE73984AC51AD6C8F4A6F3588A5F501390EC23A28FB75481"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[18]",
+      "identical": true,
+      "before": "E68E2EFEB16642C941557E0697002EC63BFC6EE6BCF166F6C5FBBE4537364AFB",
+      "after": "E68E2EFEB16642C941557E0697002EC63BFC6EE6BCF166F6C5FBBE4537364AFB"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[19]",
+      "identical": true,
+      "before": "C2758DA161E45C396BF8216315C1598F82042D101F09134B3B08C28EA2F459F0",
+      "after": "C2758DA161E45C396BF8216315C1598F82042D101F09134B3B08C28EA2F459F0"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[20]",
+      "identical": true,
+      "before": "49BEB1256C6CA3EE03A9A8AC24A140AFA20A2563BC67EE32E2C2D2B7E5EABAC0",
+      "after": "49BEB1256C6CA3EE03A9A8AC24A140AFA20A2563BC67EE32E2C2D2B7E5EABAC0"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[21]",
+      "identical": true,
+      "before": "3DBE0AD6A0132F7F52C6026B15F4115C5726743E33CAC4E9A397CFD80BB5A278",
+      "after": "3DBE0AD6A0132F7F52C6026B15F4115C5726743E33CAC4E9A397CFD80BB5A278"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[22]",
+      "identical": true,
+      "before": "8FD729E71A4127B624D7B227BD230D9910735F6C428BC8AADE8ECC144B318373",
+      "after": "8FD729E71A4127B624D7B227BD230D9910735F6C428BC8AADE8ECC144B318373"
+    },
+    {
+      "path": "/Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[23]",
+      "identical": true,
+      "before": "AE65E90F30590AEFA3DDA95DBA7C8C1C72412D47CA7A08AAF47C05CF66F77553",
+      "after": "AE65E90F30590AEFA3DDA95DBA7C8C1C72412D47CA7A08AAF47C05CF66F77553"
+    },
+    {
+      "path": "/Objects[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]",
+      "identical": true,
+      "before": "B8BB59E21BE2C8389C03A37D8F76F4D6AEA21EE8DB1A7E3D6E8D1D0467856B39",
+      "after": "B8BB59E21BE2C8389C03A37D8F76F4D6AEA21EE8DB1A7E3D6E8D1D0467856B39"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/Properties70[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/GeometryVersion[0]",
+      "identical": true,
+      "before": "56BC7185F55584481230B37ED0EE431E3484E159F133E5B74F8846026B5A8178",
+      "after": "56BC7185F55584481230B37ED0EE431E3484E159F133E5B74F8846026B5A8178"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/Vertices[0]",
+      "identical": false,
+      "before": "56CD5DB1E0DFE1351FC6F92E7BA0FAD03C0715C31FE85F1781957D67CF4B1C44",
+      "after": "89A4C5A04BA1A60A5FC3BFB8540837B3B0E273D127450110F7A19E0866CA71B6"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/PolygonVertexIndex[0]",
+      "identical": true,
+      "before": "187D7A848D4A3F52CA5C4BE3E0DE0DBAE3829E8321A168E7CFBEB8467CB36AA4",
+      "after": "187D7A848D4A3F52CA5C4BE3E0DE0DBAE3829E8321A168E7CFBEB8467CB36AA4"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/Edges[0]",
+      "identical": true,
+      "before": "781485C3336DEFC04D5CDB0E38BC8BF357DA791BC65638AEDC821106B8AF639C",
+      "after": "781485C3336DEFC04D5CDB0E38BC8BF357DA791BC65638AEDC821106B8AF639C"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementNormal[0]",
+      "identical": true,
+      "before": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF",
+      "after": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementNormal[0]/Version[0]",
+      "identical": true,
+      "before": "4062ED50DECDA0C62086273A944A3E9067B86FF8CAB5AE3E7B64B9FC5502DA6B",
+      "after": "4062ED50DECDA0C62086273A944A3E9067B86FF8CAB5AE3E7B64B9FC5502DA6B"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementNormal[0]/Name[0]",
+      "identical": true,
+      "before": "2E2818527E4A6CAB6F3ADE4FA04E2E972A3D16E6B7AB4BA5068DCC9E2EDE5471",
+      "after": "2E2818527E4A6CAB6F3ADE4FA04E2E972A3D16E6B7AB4BA5068DCC9E2EDE5471"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementNormal[0]/MappingInformationType[0]",
+      "identical": true,
+      "before": "ABEC39480C43D820026BCBD3E3814B426DEEF9C2FD23B0C0ED88BF1796111EB1",
+      "after": "ABEC39480C43D820026BCBD3E3814B426DEEF9C2FD23B0C0ED88BF1796111EB1"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementNormal[0]/ReferenceInformationType[0]",
+      "identical": true,
+      "before": "20A9A9A8DE275B83B29BA99E54D750584A3352AACB66211C1F916845F89AF190",
+      "after": "20A9A9A8DE275B83B29BA99E54D750584A3352AACB66211C1F916845F89AF190"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementNormal[0]/Normals[0]",
+      "identical": true,
+      "before": "526E5C4843230F13A2400DEB7EF5B01CAE08DC1D6389707B983A8C5F64958E56",
+      "after": "526E5C4843230F13A2400DEB7EF5B01CAE08DC1D6389707B983A8C5F64958E56"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementUV[0]",
+      "identical": true,
+      "before": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF",
+      "after": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementUV[0]/Version[0]",
+      "identical": true,
+      "before": "4062ED50DECDA0C62086273A944A3E9067B86FF8CAB5AE3E7B64B9FC5502DA6B",
+      "after": "4062ED50DECDA0C62086273A944A3E9067B86FF8CAB5AE3E7B64B9FC5502DA6B"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementUV[0]/Name[0]",
+      "identical": true,
+      "before": "243C5357C513B4586D26D342FB0B56C9DA1B7B601B411E53153832927F46E578",
+      "after": "243C5357C513B4586D26D342FB0B56C9DA1B7B601B411E53153832927F46E578"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementUV[0]/MappingInformationType[0]",
+      "identical": true,
+      "before": "ABEC39480C43D820026BCBD3E3814B426DEEF9C2FD23B0C0ED88BF1796111EB1",
+      "after": "ABEC39480C43D820026BCBD3E3814B426DEEF9C2FD23B0C0ED88BF1796111EB1"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementUV[0]/ReferenceInformationType[0]",
+      "identical": true,
+      "before": "128B7BB1423ACE7FA64C8EF78FC4613BBA5C8049CDB97182A647FDA5C15BACED",
+      "after": "128B7BB1423ACE7FA64C8EF78FC4613BBA5C8049CDB97182A647FDA5C15BACED"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementUV[0]/UV[0]",
+      "identical": false,
+      "before": "3FFF0850E4B1FECE5604AD82C6D7D9BFB3DCB2019E3DAD7AB52238FD3FD2EB1D",
+      "after": "B7E284F6C52268FC77A0501D3A09D323EBF8FC981E14404185A4E40A4AF829C9"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementUV[0]/UVIndex[0]",
+      "identical": true,
+      "before": "96F466FAC37EDE535C4493DD6E08D93289C48BA1B045E8143E7EDC2CBC45D27A",
+      "after": "96F466FAC37EDE535C4493DD6E08D93289C48BA1B045E8143E7EDC2CBC45D27A"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementMaterial[0]",
+      "identical": true,
+      "before": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF",
+      "after": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementMaterial[0]/Version[0]",
+      "identical": true,
+      "before": "4062ED50DECDA0C62086273A944A3E9067B86FF8CAB5AE3E7B64B9FC5502DA6B",
+      "after": "4062ED50DECDA0C62086273A944A3E9067B86FF8CAB5AE3E7B64B9FC5502DA6B"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementMaterial[0]/Name[0]",
+      "identical": true,
+      "before": "2E2818527E4A6CAB6F3ADE4FA04E2E972A3D16E6B7AB4BA5068DCC9E2EDE5471",
+      "after": "2E2818527E4A6CAB6F3ADE4FA04E2E972A3D16E6B7AB4BA5068DCC9E2EDE5471"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementMaterial[0]/MappingInformationType[0]",
+      "identical": true,
+      "before": "1E339119F367B3B76F1C8C25A273DDCD6F14E4DF2E83229066AD5E5196854EEF",
+      "after": "1E339119F367B3B76F1C8C25A273DDCD6F14E4DF2E83229066AD5E5196854EEF"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementMaterial[0]/ReferenceInformationType[0]",
+      "identical": true,
+      "before": "128B7BB1423ACE7FA64C8EF78FC4613BBA5C8049CDB97182A647FDA5C15BACED",
+      "after": "128B7BB1423ACE7FA64C8EF78FC4613BBA5C8049CDB97182A647FDA5C15BACED"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/LayerElementMaterial[0]/Materials[0]",
+      "identical": true,
+      "before": "15BA01133CEC526DE369497BC9BDC018459B7B1069E892059177F649EF5035C2",
+      "after": "15BA01133CEC526DE369497BC9BDC018459B7B1069E892059177F649EF5035C2"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/Layer[0]",
+      "identical": true,
+      "before": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF",
+      "after": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/Layer[0]/Version[0]",
+      "identical": true,
+      "before": "C828CDA03F7FB34D4C94A51697674EFF9304B9631D74FF3B8F7DA8F30A2A125C",
+      "after": "C828CDA03F7FB34D4C94A51697674EFF9304B9631D74FF3B8F7DA8F30A2A125C"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/Layer[0]/LayerElement[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/Layer[0]/LayerElement[0]/Type[0]",
+      "identical": true,
+      "before": "A4EF5114B24CDF3028CDDBF884C0C9503540DA13EAAD48A028012F773BAAE7E3",
+      "after": "A4EF5114B24CDF3028CDDBF884C0C9503540DA13EAAD48A028012F773BAAE7E3"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/Layer[0]/LayerElement[0]/TypedIndex[0]",
+      "identical": true,
+      "before": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF",
+      "after": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/Layer[0]/LayerElement[1]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/Layer[0]/LayerElement[1]/Type[0]",
+      "identical": true,
+      "before": "40766F079B17FC2C4C173F3C42E2E10E95CBC32E2254E97F76B6B523FE35D528",
+      "after": "40766F079B17FC2C4C173F3C42E2E10E95CBC32E2254E97F76B6B523FE35D528"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/Layer[0]/LayerElement[1]/TypedIndex[0]",
+      "identical": true,
+      "before": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF",
+      "after": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/Layer[0]/LayerElement[2]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/Layer[0]/LayerElement[2]/Type[0]",
+      "identical": true,
+      "before": "93C2FBDADC7A4B42E741726885D0047211548C62CE2D285F5395B703A06C46E9",
+      "after": "93C2FBDADC7A4B42E741726885D0047211548C62CE2D285F5395B703A06C46E9"
+    },
+    {
+      "path": "/Objects[0]/Geometry[0]/Layer[0]/LayerElement[2]/TypedIndex[0]",
+      "identical": true,
+      "before": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF",
+      "after": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF"
+    },
+    {
+      "path": "/Objects[0]/Model[0]",
+      "identical": true,
+      "before": "705C29DC082309E9BCCE9286FE63531CFC6AE7DAD3AB5672DA0F2A4539E48912",
+      "after": "705C29DC082309E9BCCE9286FE63531CFC6AE7DAD3AB5672DA0F2A4539E48912"
+    },
+    {
+      "path": "/Objects[0]/Model[0]/Version[0]",
+      "identical": true,
+      "before": "A59134BDC2A37A9FBD7C06D48AC290F7C809A1726FFAEA0A560B16CF81DDDE8B",
+      "after": "A59134BDC2A37A9FBD7C06D48AC290F7C809A1726FFAEA0A560B16CF81DDDE8B"
+    },
+    {
+      "path": "/Objects[0]/Model[0]/Properties70[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/Objects[0]/Model[0]/Properties70[0]/P[0]",
+      "identical": true,
+      "before": "DDC89A3087137A6D2E786FD8176FA860B2AAE37BBA009621E44DCB0D7459B1E9",
+      "after": "DDC89A3087137A6D2E786FD8176FA860B2AAE37BBA009621E44DCB0D7459B1E9"
+    },
+    {
+      "path": "/Objects[0]/Model[0]/Properties70[0]/P[1]",
+      "identical": true,
+      "before": "B128741B11964856982FC1AAA0A1E3BEECE1233FD1F38E6B210EF9D393FB7B4C",
+      "after": "B128741B11964856982FC1AAA0A1E3BEECE1233FD1F38E6B210EF9D393FB7B4C"
+    },
+    {
+      "path": "/Objects[0]/Model[0]/Properties70[0]/P[2]",
+      "identical": true,
+      "before": "A5B90713DBABAF764AA2DF0A991BD6D5FE688A8A3857DBA5B693B56858EC2B64",
+      "after": "A5B90713DBABAF764AA2DF0A991BD6D5FE688A8A3857DBA5B693B56858EC2B64"
+    },
+    {
+      "path": "/Objects[0]/Model[0]/MultiLayer[0]",
+      "identical": true,
+      "before": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF",
+      "after": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF"
+    },
+    {
+      "path": "/Objects[0]/Model[0]/MultiTake[0]",
+      "identical": true,
+      "before": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF",
+      "after": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF"
+    },
+    {
+      "path": "/Objects[0]/Model[0]/Shading[0]",
+      "identical": true,
+      "before": "22B4344368229A43687098401C9207FD9BE7221FCD460D2DA563E0B16E7D9058",
+      "after": "22B4344368229A43687098401C9207FD9BE7221FCD460D2DA563E0B16E7D9058"
+    },
+    {
+      "path": "/Objects[0]/Model[0]/Culling[0]",
+      "identical": true,
+      "before": "6C4EFFFF0D9F7321C68B36BD49EA54AAE644A9E592E431AF476692151E2EB040",
+      "after": "6C4EFFFF0D9F7321C68B36BD49EA54AAE644A9E592E431AF476692151E2EB040"
+    },
+    {
+      "path": "/Objects[0]/Material[0]",
+      "identical": true,
+      "before": "1C79C25D8D813C87894BAFF9085878F5A6CB96EFE75AD9C13089E4E8584E24F1",
+      "after": "1C79C25D8D813C87894BAFF9085878F5A6CB96EFE75AD9C13089E4E8584E24F1"
+    },
+    {
+      "path": "/Objects[0]/Material[0]/Version[0]",
+      "identical": true,
+      "before": "DA9DC41C57A6B061597D7638DAFADFCDFF397335E43C13B215F614463705F1AC",
+      "after": "DA9DC41C57A6B061597D7638DAFADFCDFF397335E43C13B215F614463705F1AC"
+    },
+    {
+      "path": "/Objects[0]/Material[0]/ShadingModel[0]",
+      "identical": true,
+      "before": "E5A3886B05CE14102E70296972825B4D9341F6F1681CFD38B9AFD879FCF91C8A",
+      "after": "E5A3886B05CE14102E70296972825B4D9341F6F1681CFD38B9AFD879FCF91C8A"
+    },
+    {
+      "path": "/Objects[0]/Material[0]/MultiLayer[0]",
+      "identical": true,
+      "before": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF",
+      "after": "7244E162A74AAC7FDD1961CCA8856A9CF85A114A02145AA91E706CB225E725AF"
+    },
+    {
+      "path": "/Objects[0]/Material[0]/Properties70[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/Objects[0]/Material[0]/Properties70[0]/P[0]",
+      "identical": true,
+      "before": "4A12B0606E20426EBE34AB394F6D83BED3DF3782E247825E2B2AD3B94394D8CA",
+      "after": "4A12B0606E20426EBE34AB394F6D83BED3DF3782E247825E2B2AD3B94394D8CA"
+    },
+    {
+      "path": "/Objects[0]/Material[0]/Properties70[0]/P[1]",
+      "identical": true,
+      "before": "4837774F5E0A3254BF762AECDA15AA132B3F27E9078520FE0F6316FE9325C5F0",
+      "after": "4837774F5E0A3254BF762AECDA15AA132B3F27E9078520FE0F6316FE9325C5F0"
+    },
+    {
+      "path": "/Objects[0]/Material[0]/Properties70[0]/P[2]",
+      "identical": true,
+      "before": "3142560E602F5C66426E8580FFADE4C62D8B5A9609372BCAF0ED5FF38C1F2718",
+      "after": "3142560E602F5C66426E8580FFADE4C62D8B5A9609372BCAF0ED5FF38C1F2718"
+    },
+    {
+      "path": "/Objects[0]/Material[0]/Properties70[0]/P[3]",
+      "identical": true,
+      "before": "9F5B8291FBC0A667D64D3EDFC658872C143E4D66F17D1C78614DFEB76743BD00",
+      "after": "9F5B8291FBC0A667D64D3EDFC658872C143E4D66F17D1C78614DFEB76743BD00"
+    },
+    {
+      "path": "/Objects[0]/Material[0]/Properties70[0]/P[4]",
+      "identical": true,
+      "before": "445E5639E87424A3CA66631999E42FBF4B4FBC48E262E2B1EF9A50DFB5157BA9",
+      "after": "445E5639E87424A3CA66631999E42FBF4B4FBC48E262E2B1EF9A50DFB5157BA9"
+    },
+    {
+      "path": "/Objects[0]/Material[0]/Properties70[0]/P[5]",
+      "identical": true,
+      "before": "18ED756FE6B3F073A4356C3CCF2E0CFC88F8E1A09444C98DD893BD8232E176BB",
+      "after": "18ED756FE6B3F073A4356C3CCF2E0CFC88F8E1A09444C98DD893BD8232E176BB"
+    },
+    {
+      "path": "/Objects[0]/Material[0]/Properties70[0]/P[6]",
+      "identical": true,
+      "before": "FB4B38F9FCD5DC992950709FE543396E7DD7233D90837A5B87E8A239B19F3CD6",
+      "after": "FB4B38F9FCD5DC992950709FE543396E7DD7233D90837A5B87E8A239B19F3CD6"
+    },
+    {
+      "path": "/Objects[0]/Material[0]/Properties70[0]/P[7]",
+      "identical": true,
+      "before": "9DF75E73BE75C990F718C1F70378E7657D5319874462DE08C01BAC86AD8F46FA",
+      "after": "9DF75E73BE75C990F718C1F70378E7657D5319874462DE08C01BAC86AD8F46FA"
+    },
+    {
+      "path": "/Objects[0]/Material[0]/Properties70[0]/P[8]",
+      "identical": true,
+      "before": "44C13891E8F3F350B5262CB981B0000BDDC8C6D2B6E40D7402821A034F1890E6",
+      "after": "44C13891E8F3F350B5262CB981B0000BDDC8C6D2B6E40D7402821A034F1890E6"
+    },
+    {
+      "path": "/Objects[0]/Material[0]/Properties70[0]/P[9]",
+      "identical": true,
+      "before": "70F4D856349DC373F1305AF53E02DEDC18FFB6D75622B1EFEF1CD17F21BF525A",
+      "after": "70F4D856349DC373F1305AF53E02DEDC18FFB6D75622B1EFEF1CD17F21BF525A"
+    },
+    {
+      "path": "/Connections[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/Connections[0]/C[0]",
+      "identical": true,
+      "before": "A5DCA1CDCEE47A19B754FCCF2FB601C1FFD8D088D279781C957592A70AC24947",
+      "after": "A5DCA1CDCEE47A19B754FCCF2FB601C1FFD8D088D279781C957592A70AC24947"
+    },
+    {
+      "path": "/Connections[0]/C[1]",
+      "identical": true,
+      "before": "523C8D49CE9AD61D8D1BDCF8457AE8AC48C65B89C098C3A055F5E32B3AF60B50",
+      "after": "523C8D49CE9AD61D8D1BDCF8457AE8AC48C65B89C098C3A055F5E32B3AF60B50"
+    },
+    {
+      "path": "/Connections[0]/C[2]",
+      "identical": true,
+      "before": "99F6300ACF0A3F93F285B1C085D6165C66A3C99B1C88E8417CF0B0ED12AD8095",
+      "after": "99F6300ACF0A3F93F285B1C085D6165C66A3C99B1C88E8417CF0B0ED12AD8095"
+    },
+    {
+      "path": "/Takes[0]",
+      "identical": true,
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "/Takes[0]/Current[0]",
+      "identical": true,
+      "before": "2E2818527E4A6CAB6F3ADE4FA04E2E972A3D16E6B7AB4BA5068DCC9E2EDE5471",
+      "after": "2E2818527E4A6CAB6F3ADE4FA04E2E972A3D16E6B7AB4BA5068DCC9E2EDE5471"
+    }
+  ],
+  "cold_physical_parse": true,
+  "normals_recomputed": false,
+  "tangents_recomputed": false,
+  "source_provenance": "Existing CC0 VVayToyek Chinese Four-corner Pavilion beam + existing CC0 Poly Haven Dark Wood; see project FRAME_BEAM_ASSET_SOURCES.md / FRAME_POST_ASSET_SOURCES.md",
+  "ai_assistance": "Codex data-only modeling adaptation: extend straight span, preserve bevels/cross-section, extend UV islands; not original pavilion authorship or historical reconstruction",
+  "scope": {
+    "D_writes": false,
+    "UE": false,
+    "old_asset_changed": false,
+    "shared_material_changed": false,
+    "new_download": false,
+    "paid_asset": false,
+    "restricted_register_access": false,
+    "native_verified": false,
+    "art_accepted": false
+  },
+  "checks": [
+    "Explicit absent local Source-RunN output; no other directory writes",
+    "Exact source/parser/encoder hashes before execution",
+    "Exact reviewed function whitelist from Inspect-Pavilion.py",
+    "Exact reviewed function whitelist from Extract-FrameBeam.py",
+    "Exact source narrow-offset FBX7400",
+    "One frozen original Geometry/Model/Material",
+    "Exact indexed corner UV layout",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Frozen 16-point/10-face/48-corner/38-UV topology",
+    "Extension calculated from actual world delta and unchanged uniform scale",
+    "Exact four disjoint left UV islands; 18 pairs affected",
+    "Exactly two pure source-X long edges",
+    "Rigid UV island translation face 0",
+    "Exactly two pure source-X long edges",
+    "Rigid UV island translation face 1",
+    "Exactly two pure source-X long edges",
+    "Rigid UV island translation face 2",
+    "Exactly two pure source-X long edges",
+    "Rigid UV island translation face 9",
+    "Right twenty UV pairs byte-value unchanged",
+    "Exactly eighteen left UV pairs changed",
+    "One frozen original Geometry/Model/Material",
+    "Single existing double array Vertices",
+    "Array count/encoding and bounded payload preserved",
+    "Single existing double array UV",
+    "Array count/encoding and bounded payload preserved",
+    "FBX header/version/footer bytes preserved",
+    "Same root node count",
+    "Same FBX tree structure /FBXHeaderExtension[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/FBXHeaderVersion[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/FBXVersion[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/EncryptionType[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/CreationTimeStamp[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/CreationTimeStamp[0]/Version[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/CreationTimeStamp[0]/Year[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/CreationTimeStamp[0]/Month[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/CreationTimeStamp[0]/Day[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/CreationTimeStamp[0]/Hour[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/CreationTimeStamp[0]/Minute[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/CreationTimeStamp[0]/Second[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/CreationTimeStamp[0]/Millisecond[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/Creator[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Type[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Version[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Version[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Title[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Subject[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Author[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Keywords[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Revision[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Comment[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[1]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[2]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[3]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[4]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[5]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[6]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[7]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[8]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[9]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[10]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[11]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[12]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[13]",
+    "Same FBX tree structure /FileId[0]",
+    "Same FBX tree structure /CreationTime[0]",
+    "Same FBX tree structure /Creator[0]",
+    "Same FBX tree structure /GlobalSettings[0]",
+    "Same FBX tree structure /GlobalSettings[0]/Version[0]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[0]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[1]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[2]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[3]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[4]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[5]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[6]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[7]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[8]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[9]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[10]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[11]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[12]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[13]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[14]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[15]",
+    "Same FBX tree structure /Documents[0]",
+    "Same FBX tree structure /Documents[0]/Count[0]",
+    "Same FBX tree structure /Documents[0]/Document[0]",
+    "Same FBX tree structure /Documents[0]/Document[0]/Properties70[0]",
+    "Same FBX tree structure /Documents[0]/Document[0]/Properties70[0]/P[0]",
+    "Same FBX tree structure /Documents[0]/Document[0]/Properties70[0]/P[1]",
+    "Same FBX tree structure /Documents[0]/Document[0]/RootNode[0]",
+    "Same FBX tree structure /References[0]",
+    "Same FBX tree structure /Definitions[0]",
+    "Same FBX tree structure /Definitions[0]/Version[0]",
+    "Same FBX tree structure /Definitions[0]/Count[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[0]/Count[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]/Count[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]/PropertyTemplate[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]/P[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]/P[1]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]/P[2]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]/P[3]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]/P[4]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]/P[5]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/Count[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[1]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[2]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[3]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[4]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[5]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[6]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[7]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[8]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[9]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[10]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[11]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[12]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[13]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[14]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[15]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[16]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[17]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[18]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[19]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[20]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[21]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[22]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[23]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[24]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[25]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[26]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[27]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[28]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[29]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[30]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[31]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[32]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[33]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[34]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[35]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[36]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[37]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[38]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[39]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[40]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[41]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[42]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[43]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[44]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[45]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[46]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[47]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[48]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[49]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[50]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[51]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[52]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[53]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[54]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[55]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[56]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[57]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[58]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[59]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[60]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[61]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[62]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[63]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[64]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[65]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[66]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[67]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[68]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[69]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[70]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/Count[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[1]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[2]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[3]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[4]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[5]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[6]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[7]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[8]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[9]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[10]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[11]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[12]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[13]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[14]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[15]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[16]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[17]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[18]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[19]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[20]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[21]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[22]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[23]",
+    "Same FBX tree structure /Objects[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Properties70[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/GeometryVersion[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Vertices[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/PolygonVertexIndex[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Edges[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementNormal[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementNormal[0]/Version[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementNormal[0]/Name[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementNormal[0]/MappingInformationType[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementNormal[0]/ReferenceInformationType[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementNormal[0]/Normals[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementUV[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementUV[0]/Version[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementUV[0]/Name[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementUV[0]/MappingInformationType[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementUV[0]/ReferenceInformationType[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementUV[0]/UV[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementUV[0]/UVIndex[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementMaterial[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementMaterial[0]/Version[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementMaterial[0]/Name[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementMaterial[0]/MappingInformationType[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementMaterial[0]/ReferenceInformationType[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementMaterial[0]/Materials[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/Version[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/LayerElement[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/LayerElement[0]/Type[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/LayerElement[0]/TypedIndex[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/LayerElement[1]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/LayerElement[1]/Type[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/LayerElement[1]/TypedIndex[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/LayerElement[2]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/LayerElement[2]/Type[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/LayerElement[2]/TypedIndex[0]",
+    "Same FBX tree structure /Objects[0]/Model[0]",
+    "Same FBX tree structure /Objects[0]/Model[0]/Version[0]",
+    "Same FBX tree structure /Objects[0]/Model[0]/Properties70[0]",
+    "Same FBX tree structure /Objects[0]/Model[0]/Properties70[0]/P[0]",
+    "Same FBX tree structure /Objects[0]/Model[0]/Properties70[0]/P[1]",
+    "Same FBX tree structure /Objects[0]/Model[0]/Properties70[0]/P[2]",
+    "Same FBX tree structure /Objects[0]/Model[0]/MultiLayer[0]",
+    "Same FBX tree structure /Objects[0]/Model[0]/MultiTake[0]",
+    "Same FBX tree structure /Objects[0]/Model[0]/Shading[0]",
+    "Same FBX tree structure /Objects[0]/Model[0]/Culling[0]",
+    "Same FBX tree structure /Objects[0]/Material[0]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Version[0]",
+    "Same FBX tree structure /Objects[0]/Material[0]/ShadingModel[0]",
+    "Same FBX tree structure /Objects[0]/Material[0]/MultiLayer[0]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[0]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[1]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[2]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[3]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[4]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[5]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[6]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[7]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[8]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[9]",
+    "Same FBX tree structure /Connections[0]",
+    "Same FBX tree structure /Connections[0]/C[0]",
+    "Same FBX tree structure /Connections[0]/C[1]",
+    "Same FBX tree structure /Connections[0]/C[2]",
+    "Same FBX tree structure /Takes[0]",
+    "Same FBX tree structure /Takes[0]/Current[0]",
+    "Only Vertices and UV array properties differ in entire FBX tree",
+    "One frozen original Geometry/Model/Material",
+    "Exact indexed corner UV layout",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Frozen 16-point/10-face/48-corner/38-UV topology",
+    "All polygon and UV indices exactly unchanged",
+    "Exact existing left endpoint membership",
+    "Only intended left X translation vertex 0",
+    "Only intended left X translation vertex 1",
+    "Only intended left X translation vertex 2",
+    "Only intended left X translation vertex 3",
+    "Only intended left X translation vertex 4",
+    "Only intended left X translation vertex 5",
+    "Only intended left X translation vertex 6",
+    "Only intended left X translation vertex 7",
+    "Only intended left X translation vertex 8",
+    "Only intended left X translation vertex 9",
+    "Only intended left X translation vertex 10",
+    "Only intended left X translation vertex 11",
+    "Only intended left X translation vertex 12",
+    "Only intended left X translation vertex 13",
+    "Only intended left X translation vertex 14",
+    "Only intended left X translation vertex 15",
+    "Exactly six original beveled end faces",
+    "End face belongs entirely to one rigid endpoint",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "End face belongs entirely to one rigid endpoint",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "End face belongs entirely to one rigid endpoint",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "End face belongs entirely to one rigid endpoint",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "End face belongs entirely to one rigid endpoint",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "End face belongs entirely to one rigid endpoint",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Extended UVs finite without clamp",
+    "Exactly two pure source-X long edges",
+    "Exactly two pure source-X long edges",
+    "Long-face source texture density retained to 0.0001 texel/m face 0",
+    "Exactly two pure source-X long edges",
+    "Exactly two pure source-X long edges",
+    "Long-face source texture density retained to 0.0001 texel/m face 1",
+    "Exactly two pure source-X long edges",
+    "Exactly two pure source-X long edges",
+    "Long-face source texture density retained to 0.0001 texel/m face 2",
+    "Exactly two pure source-X long edges",
+    "Exactly two pure source-X long edges",
+    "Long-face source texture density retained to 0.0001 texel/m face 9",
+    "Derived world endpoints symmetric, old right endpoint held",
+    "Original world beam-bottom Z800 held within native-coordinate precision",
+    "World X/Z extents exactly retained",
+    "All exact inputs and author code unchanged before output",
+    "Independent cold physical FBX bytes/parse match generated payload",
+    "Same root node count",
+    "Same FBX tree structure /FBXHeaderExtension[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/FBXHeaderVersion[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/FBXVersion[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/EncryptionType[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/CreationTimeStamp[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/CreationTimeStamp[0]/Version[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/CreationTimeStamp[0]/Year[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/CreationTimeStamp[0]/Month[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/CreationTimeStamp[0]/Day[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/CreationTimeStamp[0]/Hour[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/CreationTimeStamp[0]/Minute[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/CreationTimeStamp[0]/Second[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/CreationTimeStamp[0]/Millisecond[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/Creator[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Type[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Version[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Version[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Title[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Subject[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Author[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Keywords[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Revision[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/MetaData[0]/Comment[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[0]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[1]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[2]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[3]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[4]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[5]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[6]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[7]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[8]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[9]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[10]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[11]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[12]",
+    "Same FBX tree structure /FBXHeaderExtension[0]/SceneInfo[0]/Properties70[0]/P[13]",
+    "Same FBX tree structure /FileId[0]",
+    "Same FBX tree structure /CreationTime[0]",
+    "Same FBX tree structure /Creator[0]",
+    "Same FBX tree structure /GlobalSettings[0]",
+    "Same FBX tree structure /GlobalSettings[0]/Version[0]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[0]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[1]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[2]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[3]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[4]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[5]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[6]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[7]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[8]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[9]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[10]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[11]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[12]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[13]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[14]",
+    "Same FBX tree structure /GlobalSettings[0]/Properties70[0]/P[15]",
+    "Same FBX tree structure /Documents[0]",
+    "Same FBX tree structure /Documents[0]/Count[0]",
+    "Same FBX tree structure /Documents[0]/Document[0]",
+    "Same FBX tree structure /Documents[0]/Document[0]/Properties70[0]",
+    "Same FBX tree structure /Documents[0]/Document[0]/Properties70[0]/P[0]",
+    "Same FBX tree structure /Documents[0]/Document[0]/Properties70[0]/P[1]",
+    "Same FBX tree structure /Documents[0]/Document[0]/RootNode[0]",
+    "Same FBX tree structure /References[0]",
+    "Same FBX tree structure /Definitions[0]",
+    "Same FBX tree structure /Definitions[0]/Version[0]",
+    "Same FBX tree structure /Definitions[0]/Count[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[0]/Count[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]/Count[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]/PropertyTemplate[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]/P[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]/P[1]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]/P[2]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]/P[3]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]/P[4]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[1]/PropertyTemplate[0]/Properties70[0]/P[5]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/Count[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[1]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[2]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[3]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[4]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[5]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[6]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[7]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[8]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[9]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[10]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[11]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[12]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[13]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[14]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[15]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[16]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[17]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[18]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[19]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[20]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[21]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[22]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[23]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[24]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[25]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[26]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[27]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[28]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[29]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[30]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[31]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[32]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[33]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[34]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[35]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[36]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[37]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[38]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[39]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[40]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[41]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[42]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[43]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[44]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[45]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[46]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[47]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[48]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[49]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[50]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[51]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[52]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[53]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[54]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[55]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[56]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[57]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[58]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[59]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[60]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[61]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[62]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[63]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[64]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[65]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[66]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[67]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[68]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[69]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[2]/PropertyTemplate[0]/Properties70[0]/P[70]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/Count[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[0]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[1]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[2]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[3]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[4]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[5]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[6]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[7]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[8]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[9]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[10]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[11]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[12]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[13]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[14]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[15]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[16]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[17]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[18]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[19]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[20]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[21]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[22]",
+    "Same FBX tree structure /Definitions[0]/ObjectType[3]/PropertyTemplate[0]/Properties70[0]/P[23]",
+    "Same FBX tree structure /Objects[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Properties70[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/GeometryVersion[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Vertices[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/PolygonVertexIndex[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Edges[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementNormal[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementNormal[0]/Version[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementNormal[0]/Name[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementNormal[0]/MappingInformationType[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementNormal[0]/ReferenceInformationType[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementNormal[0]/Normals[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementUV[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementUV[0]/Version[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementUV[0]/Name[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementUV[0]/MappingInformationType[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementUV[0]/ReferenceInformationType[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementUV[0]/UV[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementUV[0]/UVIndex[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementMaterial[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementMaterial[0]/Version[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementMaterial[0]/Name[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementMaterial[0]/MappingInformationType[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementMaterial[0]/ReferenceInformationType[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/LayerElementMaterial[0]/Materials[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/Version[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/LayerElement[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/LayerElement[0]/Type[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/LayerElement[0]/TypedIndex[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/LayerElement[1]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/LayerElement[1]/Type[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/LayerElement[1]/TypedIndex[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/LayerElement[2]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/LayerElement[2]/Type[0]",
+    "Same FBX tree structure /Objects[0]/Geometry[0]/Layer[0]/LayerElement[2]/TypedIndex[0]",
+    "Same FBX tree structure /Objects[0]/Model[0]",
+    "Same FBX tree structure /Objects[0]/Model[0]/Version[0]",
+    "Same FBX tree structure /Objects[0]/Model[0]/Properties70[0]",
+    "Same FBX tree structure /Objects[0]/Model[0]/Properties70[0]/P[0]",
+    "Same FBX tree structure /Objects[0]/Model[0]/Properties70[0]/P[1]",
+    "Same FBX tree structure /Objects[0]/Model[0]/Properties70[0]/P[2]",
+    "Same FBX tree structure /Objects[0]/Model[0]/MultiLayer[0]",
+    "Same FBX tree structure /Objects[0]/Model[0]/MultiTake[0]",
+    "Same FBX tree structure /Objects[0]/Model[0]/Shading[0]",
+    "Same FBX tree structure /Objects[0]/Model[0]/Culling[0]",
+    "Same FBX tree structure /Objects[0]/Material[0]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Version[0]",
+    "Same FBX tree structure /Objects[0]/Material[0]/ShadingModel[0]",
+    "Same FBX tree structure /Objects[0]/Material[0]/MultiLayer[0]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[0]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[1]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[2]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[3]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[4]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[5]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[6]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[7]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[8]",
+    "Same FBX tree structure /Objects[0]/Material[0]/Properties70[0]/P[9]",
+    "Same FBX tree structure /Connections[0]",
+    "Same FBX tree structure /Connections[0]/C[0]",
+    "Same FBX tree structure /Connections[0]/C[1]",
+    "Same FBX tree structure /Connections[0]/C[2]",
+    "Same FBX tree structure /Takes[0]",
+    "Same FBX tree structure /Takes[0]/Current[0]",
+    "Only Vertices and UV array properties differ in entire FBX tree",
+    "One frozen original Geometry/Model/Material",
+    "Exact indexed corner UV layout",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Valid corner vertex/UV index",
+    "Frozen 16-point/10-face/48-corner/38-UV topology",
+    "All polygon and UV indices exactly unchanged",
+    "Exact existing left endpoint membership",
+    "Only intended left X translation vertex 0",
+    "Only intended left X translation vertex 1",
+    "Only intended left X translation vertex 2",
+    "Only intended left X translation vertex 3",
+    "Only intended left X translation vertex 4",
+    "Only intended left X translation vertex 5",
+    "Only intended left X translation vertex 6",
+    "Only intended left X translation vertex 7",
+    "Only intended left X translation vertex 8",
+    "Only intended left X translation vertex 9",
+    "Only intended left X translation vertex 10",
+    "Only intended left X translation vertex 11",
+    "Only intended left X translation vertex 12",
+    "Only intended left X translation vertex 13",
+    "Only intended left X translation vertex 14",
+    "Only intended left X translation vertex 15",
+    "Exactly six original beveled end faces",
+    "End face belongs entirely to one rigid endpoint",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "End face belongs entirely to one rigid endpoint",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "End face belongs entirely to one rigid endpoint",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "End face belongs entirely to one rigid endpoint",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "End face belongs entirely to one rigid endpoint",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "End face belongs entirely to one rigid endpoint",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Beveled end internal shape/cross-section preserved",
+    "Extended UVs finite without clamp",
+    "Exactly two pure source-X long edges",
+    "Exactly two pure source-X long edges",
+    "Long-face source texture density retained to 0.0001 texel/m face 0",
+    "Exactly two pure source-X long edges",
+    "Exactly two pure source-X long edges",
+    "Long-face source texture density retained to 0.0001 texel/m face 1",
+    "Exactly two pure source-X long edges",
+    "Exactly two pure source-X long edges",
+    "Long-face source texture density retained to 0.0001 texel/m face 2",
+    "Exactly two pure source-X long edges",
+    "Exactly two pure source-X long edges",
+    "Long-face source texture density retained to 0.0001 texel/m face 9",
+    "Derived world endpoints symmetric, old right endpoint held",
+    "Original world beam-bottom Z800 held within native-coordinate precision",
+    "Independent cold parse reproduces geometry/UV/extent contracts"
+  ],
+  "check_count": 824
+}

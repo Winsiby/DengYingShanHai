@@ -1,0 +1,224 @@
+{
+  "character": "Xingtian",
+  "fps": 30,
+  "clips": [
+    {
+      "name": "A_DY_Xingtian_Perf_AxeRaise",
+      "frames": 49,
+      "loop": true,
+      "bones_keyed": [
+        "Arm_L_Fore",
+        "Arm_L_Upper",
+        "Arm_R_Fore",
+        "Arm_R_Upper",
+        "Axe",
+        "Hand_L",
+        "Leg_L_Upper",
+        "Leg_R_Upper"
+      ],
+      "samples": [
+        1,
+        16,
+        32,
+        49
+      ],
+      "bounds": {
+        "1": [
+          -185.44,
+          185.44
+        ],
+        "16": [
+          -185.44,
+          185.44
+        ],
+        "32": [
+          -185.44,
+          185.44
+        ],
+        "49": [
+          -185.44,
+          185.44
+        ]
+      }
+    },
+    {
+      "name": "A_DY_Xingtian_Perf_AxeSwing",
+      "frames": 49,
+      "loop": false,
+      "bones_keyed": [
+        "Arm_L_Fore",
+        "Arm_L_Upper",
+        "Arm_R_Upper",
+        "Axe",
+        "Hand_L",
+        "Leg_L_Upper",
+        "Leg_R_Upper"
+      ],
+      "samples": [
+        1,
+        16,
+        32,
+        49
+      ],
+      "bounds": {
+        "1": [
+          -185.44,
+          185.44
+        ],
+        "16": [
+          -185.44,
+          185.44
+        ],
+        "32": [
+          -185.44,
+          185.44
+        ],
+        "49": [
+          -185.44,
+          185.44
+        ]
+      }
+    },
+    {
+      "name": "A_DY_Xingtian_Perf_Guard",
+      "frames": 41,
+      "loop": true,
+      "bones_keyed": [
+        "Arm_L_Fore",
+        "Arm_L_Upper",
+        "Arm_R_Fore",
+        "Arm_R_Upper",
+        "Leg_L_Upper",
+        "Leg_R_Upper"
+      ],
+      "samples": [
+        1,
+        13,
+        27,
+        41
+      ],
+      "bounds": {
+        "1": [
+          -185.44,
+          185.44
+        ],
+        "13": [
+          -185.44,
+          185.44
+        ],
+        "27": [
+          -185.44,
+          185.44
+        ],
+        "41": [
+          -185.44,
+          185.44
+        ]
+      }
+    },
+    {
+      "name": "A_DY_Xingtian_Perf_Stomp",
+      "frames": 49,
+      "loop": false,
+      "bones_keyed": [
+        "Arm_L_Upper",
+        "Arm_R_Upper",
+        "Leg_L_Lower",
+        "Leg_L_Upper",
+        "Leg_R_Lower",
+        "Leg_R_Upper"
+      ],
+      "samples": [
+        1,
+        16,
+        32,
+        49
+      ],
+      "bounds": {
+        "1": [
+          -185.44,
+          185.44
+        ],
+        "16": [
+          -185.44,
+          185.44
+        ],
+        "32": [
+          -185.44,
+          185.44
+        ],
+        "49": [
+          -185.44,
+          185.44
+        ]
+      }
+    },
+    {
+      "name": "A_DY_Xingtian_Perf_Roar",
+      "frames": 41,
+      "loop": true,
+      "bones_keyed": [
+        "Arm_L_Fore",
+        "Arm_L_Upper",
+        "Arm_R_Fore",
+        "Arm_R_Upper"
+      ],
+      "samples": [
+        1,
+        13,
+        27,
+        41
+      ],
+      "bounds": {
+        "1": [
+          -185.44,
+          185.44
+        ],
+        "13": [
+          -185.44,
+          185.44
+        ],
+        "27": [
+          -185.44,
+          185.44
+        ],
+        "41": [
+          -185.44,
+          185.44
+        ]
+      }
+    }
+  ],
+  "unknown_bones": [],
+  "bone_count": 14,
+  "exports": [
+    "A_DY_Xingtian_Perf_AxeRaise.fbx",
+    "A_DY_Xingtian_Perf_AxeSwing.fbx",
+    "A_DY_Xingtian_Perf_Guard.fbx",
+    "A_DY_Xingtian_Perf_Stomp.fbx",
+    "A_DY_Xingtian_Perf_Roar.fbx"
+  ],
+  "previews": [
+    "Preview\\A_DY_Xingtian_Perf_AxeRaise_f001.png",
+    "Preview\\A_DY_Xingtian_Perf_AxeRaise_f016.png",
+    "Preview\\A_DY_Xingtian_Perf_AxeRaise_f032.png",
+    "Preview\\A_DY_Xingtian_Perf_AxeRaise_f049.png",
+    "Preview\\A_DY_Xingtian_Perf_AxeSwing_f001.png",
+    "Preview\\A_DY_Xingtian_Perf_AxeSwing_f016.png",
+    "Preview\\A_DY_Xingtian_Perf_AxeSwing_f032.png",
+    "Preview\\A_DY_Xingtian_Perf_AxeSwing_f049.png",
+    "Preview\\A_DY_Xingtian_Perf_Guard_f001.png",
+    "Preview\\A_DY_Xingtian_Perf_Guard_f013.png",
+    "Preview\\A_DY_Xingtian_Perf_Guard_f027.png",
+    "Preview\\A_DY_Xingtian_Perf_Guard_f041.png",
+    "Preview\\A_DY_Xingtian_Perf_Stomp_f001.png",
+    "Preview\\A_DY_Xingtian_Perf_Stomp_f016.png",
+    "Preview\\A_DY_Xingtian_Perf_Stomp_f032.png",
+    "Preview\\A_DY_Xingtian_Perf_Stomp_f049.png",
+    "Preview\\A_DY_Xingtian_Perf_Roar_f001.png",
+    "Preview\\A_DY_Xingtian_Perf_Roar_f013.png",
+    "Preview\\A_DY_Xingtian_Perf_Roar_f027.png",
+    "Preview\\A_DY_Xingtian_Perf_Roar_f041.png"
+  ],
+  "ok": true
+}
