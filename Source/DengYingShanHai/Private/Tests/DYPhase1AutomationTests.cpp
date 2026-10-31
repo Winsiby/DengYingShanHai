@@ -132,9 +132,9 @@ bool FDYPhase1ClassDefaultsTest::RunTest(const FString& Parameters)
 			FormalPawn->GetCharacterMovement()->MaxWalkSpeed,
 			360.0f);
 		TestEqual(
-			TEXT("Formal camera arm remains 360 cm"),
+			TEXT("Formal camera arm keeps theater framing"),
 			FormalPawn->GetCameraBoom()->TargetArmLength,
-			360.0f);
+			800.0f);
 		TestEqual(
 			TEXT("Formal stride remains 150 cm"),
 			FormalPawn->FootstepAudio->StepDistanceCentimeters,
@@ -202,7 +202,7 @@ bool FDYPhase1OperatorComponentsTest::RunTest(const FString& Parameters)
 	}
 	if (Boom)
 	{
-		TestEqual(TEXT("Camera boom arm length"), Boom->TargetArmLength, 360.0f);
+		TestEqual(TEXT("Camera boom arm length"), Boom->TargetArmLength, 800.0f);
 		TestTrue(TEXT("Camera boom uses controller rotation"), Boom->bUsePawnControlRotation);
 		TestTrue(TEXT("Camera collision is enabled"), Boom->bDoCollisionTest);
 		TestEqual(TEXT("Camera collision probe size"), Boom->ProbeSize, 28.0f);

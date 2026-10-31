@@ -242,8 +242,11 @@ void ADYPuppetActor::ApplyChapterFigure(const int32 ChapterIndex, const bool bFo
 	ActiveMesh->SetRelativeLocation(Figure.MeshRelativeLocation);
 	ActiveMesh->SetRelativeRotation(Figure.MeshRelativeRotation);
 	ActiveMesh->SetRelativeScale3D(Figure.MeshRelativeScale);
+	Torso->SetRelativeLocation(Figure.ControlProxyRelativeLocation);
 	ActiveMesh->SetVisibility(true, true);
 	ActiveMesh->SetCastShadow(true);
+	// Jingwei's animated feathers leave bind-pose bounds; retain their VSM invalidation region.
+	ActiveMesh->SetBoundsScale(ChapterIndex == 1 ? 1.5f : 1.0f);
 
 	// Only one display component may draw or cast at a time, otherwise a leftover Kuafu
 	// mesh would double the silhouette.

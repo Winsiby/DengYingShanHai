@@ -151,7 +151,7 @@ void UDYInteractionHUDWidget::BuildNativePrototype()
 	TitleSlot->SetAutoSize(true);
 
 	UBorder* Back = WidgetTree->ConstructWidget<UBorder>(UBorder::StaticClass(), TEXT("DYPromptBack"));
-	Back->SetBrushColor(FLinearColor(0.018f, 0.013f, 0.01f, 0.65f));
+	Back->SetBrushColor(FLinearColor(0.035f, 0.022f, 0.012f, 0.92f));
 	Back->SetPadding(FMargin(24.0f, 10.0f));
 	PromptBack = Back;
 	UCanvasPanelSlot* BackSlot = Root->AddChildToCanvas(Back);
@@ -224,6 +224,25 @@ void UDYInteractionHUDWidget::ShowHint(const FText& InText, float Seconds)
 		World->GetTimerManager().ClearTimer(HintHandle);
 		World->GetTimerManager().SetTimer(HintHandle, FTimerDelegate::CreateUObject(this, &UDYInteractionHUDWidget::HideHint), Seconds, false);
 	}
+}
+
+void UDYInteractionHUDWidget::SetPerformancePresentation(bool bActive)
+{
+	if (bPerformancePresentation == bActive) { return; }
+	bPerformancePresentation = bActive;
+	PerformanceCaptionText = FText::GetEmpty();
+	// A stale walk/status timer must not bring its line back after a show starts.
+	if (UWorld* World = GetWorld()) { World->GetTimerManager().ClearTimer(HintHandle); }
+	bHintOverride = false;
+	HintOverrideText = FText::GetEmpty();
+	RefreshView();
+}
+
+void UDYInteractionHUDWidget::ShowPerformanceCaption(const FText& InText)
+{
+	SetPerformancePresentation(true);
+	PerformanceCaptionText = InText;
+	RefreshView();
 }
 
 void UDYInteractionHUDWidget::SetEntryWalkGuide(bool bActive, const FText& InText)
@@ -355,7 +374,7 @@ void UDYInteractionHUDWidget::RefreshView()
 	// The chapter card borrows the title line for a few seconds, but only once the stage
 	// HUD is actually on screen: the entry walk must stay free of chapter titles.
 	const bool bShowChapterCard = bChapterCardActive && !ChapterCardText.IsEmpty() && bStageHudVisible
-		&& !bEntryWalkGuide && IsStageReached();
+		&& !bEntryWalkGuide && !bPerformancePresentation && IsStageReached();
 	if (bShowChapterCard && !bChapterCardCountdown) { StartChapterCardCountdown(); }
 	const FText& DisplayTitle = bShowChapterCard ? ChapterCardText : CurrentTitle;
 	if (TitleText)
@@ -366,7 +385,7 @@ void UDYInteractionHUDWidget::RefreshView()
 	if (Prompt) { Prompt->SetText(GetPromptText(bFocused, bControlling)); }
 	// The entry walk owns the screen: the play instrumentation would otherwise read
 	// as a puzzle instruction while the player is still in the 山海 exterior.
-	const ESlateVisibility StageVisibility = (bStageHudVisible && !bEntryWalkGuide) ? ESlateVisibility::HitTestInvisible : ESlateVisibility::Collapsed;
+	const ESlateVisibility StageVisibility = (bStageHudVisible && !bEntryWalkGuide && !bPerformancePresentation) ? ESlateVisibility::HitTestInvisible : ESlateVisibility::Collapsed;
 	if (TitleText) { TitleText->SetVisibility(StageVisibility); }
 	if (PromptBack) { PromptBack->SetVisibility(StageVisibility); }
 	// Restored every pass so the hint override below never leaves the prompt hidden.
@@ -383,6 +402,8 @@ void UDYInteractionHUDWidget::RefreshView()
 		{
 			Line = FText::Format(LOCTEXT("ActComplete", "{0} · 成"), CurrentTitle);
 		}
+		Status->SetFont(FSlateFontInfo(ChineseFont, bPerformancePresentation ? BodyFontSize + 2 : BodyFontSize, TEXT("Regular")));
+		Status->SetColorAndOpacity(FSlateColor(bPerformancePresentation ? PaperColor : AccentColor));
 		Status->SetText(Line);
 		Status->SetVisibility(!bStageHudVisible || Line.IsEmpty() ? ESlateVisibility::Collapsed : ESlateVisibility::HitTestInvisible);
 	}
@@ -411,7 +432,18 @@ void UDYInteractionHUDWidget::RefreshView()
 		if (Readiness) { Readiness->SetVisibility(ESlateVisibility::Collapsed); }
 		if (HoldProgressBox) { HoldProgressBox->SetVisibility(ESlateVisibility::Collapsed); }
 	}
-	const bool bAlignmentVisible = bStageHudVisible && !bEntryWalkGuide && AlignmentDisplay.bEnabled && AlignmentDisplay.bHasValidSample
+	if (bPerformancePresentation)
+	{
+		if (TitleText) { TitleText->SetVisibility(ESlateVisibility::Collapsed); }
+		if (PromptBack) { PromptBack->SetVisibility(PerformanceCaptionText.IsEmpty() ? ESlateVisibility::Collapsed : ESlateVisibility::HitTestInvisible); }
+		if (Prompt) { Prompt->SetVisibility(ESlateVisibility::Collapsed); }
+		if (Status)
+		{
+			Status->SetText(PerformanceCaptionText);
+			Status->SetVisibility(PerformanceCaptionText.IsEmpty() ? ESlateVisibility::Collapsed : ESlateVisibility::HitTestInvisible);
+		}
+	}
+	const bool bAlignmentVisible = bStageHudVisible && !bEntryWalkGuide && !bPerformancePresentation && AlignmentDisplay.bEnabled && AlignmentDisplay.bHasValidSample
 		&& (!ActDisplay.bSequenceEnabled || ActDisplay.Phase == EDYActSequencePhase::Playing)
 		&& Feedback != EDYStageFeedbackDisplay::Hidden && Feedback != EDYStageFeedbackDisplay::Complete;
 	if (Readiness)

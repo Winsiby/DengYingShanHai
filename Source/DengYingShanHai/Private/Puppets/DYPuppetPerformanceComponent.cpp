@@ -3,9 +3,11 @@
 #include "DengYingShanHai.h"
 #include "Animation/AnimSequence.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Core/DYDevEntryPlayerController.h"
 #include "Engine/World.h"
 #include "Interaction/DYPuppetActor.h"
 #include "TimerManager.h"
+#include "UI/DYInteractionHUD.h"
 #include "UI/DYInteractionHUDWidget.h"
 #include "UObject/UObjectIterator.h"
 
@@ -100,6 +102,7 @@ bool UDYPuppetPerformanceComponent::StartChapterPerformance(int32 ChapterIndex)
 	}
 
 	bPerforming = true;
+	SetHudPerformanceActive(true);
 	UE_LOG(LogDengYingShanHai, Display,
 		TEXT("[PuppetPerformance] chapter %d starts: %d segments, %.2f s, mesh=%s"),
 		PerformingChapter, ActiveSegments.Num(), TotalSeconds,
@@ -121,7 +124,7 @@ void UDYPuppetPerformanceComponent::PlaySegment(int32 InSegmentIndex)
 
 	const FDYPerformanceSegment& Segment = ActiveSegments[InSegmentIndex];
 	PlayOnMesh(Segment, Segment.bLoop);
-	ShowCaption(FText::FromString(Segment.Caption), Segment.Seconds);
+	ShowCaption(FText::FromString(Segment.Caption));
 }
 
 void UDYPuppetPerformanceComponent::PlayOnMesh(const FDYPerformanceSegment& Segment, bool bForceLoop)
@@ -199,6 +202,7 @@ void UDYPuppetPerformanceComponent::SkipPerformance()
 void UDYPuppetPerformanceComponent::CancelPlayback()
 {
 	const bool bHadPlayback = OwnsAnimation() || PlaybackMesh.IsValid();
+	if (bPerforming) { SetHudPerformanceActive(false); }
 	if (UWorld* World = GetWorld()) { World->GetTimerManager().ClearTimer(FeedbackHandle); }
 	bPerforming = false;
 	bFeedbackActive = false;
@@ -223,6 +227,7 @@ void UDYPuppetPerformanceComponent::Finish(bool bSkipped)
 	ActiveSegments.Reset();
 	ActiveFeedback.Reset();
 
+	SetHudPerformanceActive(false);
 	RestorePose();
 	OnPerformanceFinished.Broadcast(FinishedChapter, bSkipped);
 }
@@ -232,7 +237,21 @@ float UDYPuppetPerformanceComponent::GetPerformanceProgress() const
 	return TotalSeconds > KINDA_SMALL_NUMBER ? FMath::Clamp(ElapsedSeconds / TotalSeconds, 0.f, 1.f) : 0.f;
 }
 
-void UDYPuppetPerformanceComponent::ShowCaption(const FText& Caption, float Seconds)
+void UDYPuppetPerformanceComponent::SetHudPerformanceActive(bool bActive)
+{
+	UWorld* World = GetWorld();
+	if (!World) { return; }
+	if (ADYDevEntryPlayerController* Controller = Cast<ADYDevEntryPlayerController>(World->GetFirstPlayerController()))
+	{
+		Controller->SetPerformancePresentation(bActive);
+	}
+	for (TObjectIterator<UDYInteractionHUDWidget> It; It; ++It)
+	{
+		if (IsValid(*It) && It->GetWorld() == World) { It->SetPerformancePresentation(bActive); }
+	}
+}
+
+void UDYPuppetPerformanceComponent::ShowCaption(const FText& Caption)
 {
 	// The skip key is discoverable from the show itself; no separate tutorial line.
 	const FText Suffix = NSLOCTEXT("DYPuppetPerformance", "SkipHint", "　空格可跳过演出");
@@ -241,12 +260,24 @@ void UDYPuppetPerformanceComponent::ShowCaption(const FText& Caption, float Seco
 	UWorld* World = GetWorld();
 	if (!World) { return; }
 
+	// Keep a single subtitle carrier when a presentation wrapper also owns a widget.
+	if (APlayerController* Controller = World->GetFirstPlayerController())
+	{
+		if (ADYInteractionHUD* Hud = Cast<ADYInteractionHUD>(Controller->GetHUD()))
+		{
+			if (UDYInteractionHUDWidget* Widget = Hud->GetView())
+			{
+				Widget->ShowPerformanceCaption(Shown);
+				return;
+			}
+		}
+	}
 	for (TObjectIterator<UDYInteractionHUDWidget> It; It; ++It)
 	{
 		UDYInteractionHUDWidget* Widget = *It;
-		if (IsValid(Widget) && Widget->GetWorld() == World)
+		if (IsValid(Widget) && Widget->GetWorld() == World && Widget->IsVisible())
 		{
-			Widget->ShowHint(Shown, Seconds);
+			Widget->ShowPerformanceCaption(Shown);
 			return;
 		}
 	}

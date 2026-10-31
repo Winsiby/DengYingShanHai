@@ -56,6 +56,18 @@ public:
 	UPROPERTY(BlueprintAssignable, Category = "DY|Stage")
 	FDYStageEnvironmentStateChangedSignature OnStateChanged;
 
+	/** Optional authored motifs driven only by accepted presentation facts. */
+	void ApplyChapterScenery(int32 ChapterIndex, int32 StepIndex, bool bStepResolved);
+
+	UPROPERTY(EditInstanceOnly, Category = "DY|Chapter Scenery")
+	TArray<TObjectPtr<AActor>> JingweiSeaProps;
+	UPROPERTY(EditInstanceOnly, Category = "DY|Chapter Scenery")
+	TArray<TObjectPtr<AActor>> JingweiStoneProps;
+	UPROPERTY(EditInstanceOnly, Category = "DY|Chapter Scenery")
+	TObjectPtr<AActor> ZhulongDaySymbol;
+	UPROPERTY(EditInstanceOnly, Category = "DY|Chapter Scenery")
+	TObjectPtr<AActor> ZhulongNightSymbol;
+
 	/** Turns the tagged exterior dead canopies green once P03 resolves. Presentation only: never reads the puzzle director. */
 	UFUNCTION(BlueprintCallable, Category = "DY|Exterior")
 	void TriggerExteriorGreening();

@@ -1119,10 +1119,10 @@ void ADYPuzzleDirector::ApplyChapterPalette()
 	const int32 ColorIndex = FMath::Clamp(CurrentChapterIndex, 0, 3);
 	if (ADYLightRigActor* Rig = LightRig.Get())
 	{
-		if (USpotLightComponent* Key = Rig->GetKeyLightComponent())
-		{
-			Key->SetLightColor(ChapterKeyColors[ColorIndex] * ChapterKeyIntensity[ColorIndex]);
-		}
+		const FLinearColor KeyColor = CurrentChapterIndex == 3
+			? (bDaylight ? FLinearColor(1.0f, 0.86f, 0.64f) : FLinearColor(0.24f, 0.42f, 0.82f))
+			: ChapterKeyColors[ColorIndex];
+		Rig->SetChapterKeyColor(KeyColor * ChapterKeyIntensity[ColorIndex]);
 	}
 }
 

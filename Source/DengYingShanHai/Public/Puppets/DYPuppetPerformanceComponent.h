@@ -59,7 +59,8 @@ public:
 private:
 	void ResolveData();
 	void PlaySegment(int32 InSegmentIndex);
-	void ShowCaption(const FText& Caption, float Seconds);
+	void ShowCaption(const FText& Caption);
+	void SetHudPerformanceActive(bool bActive);
 	void Finish(bool bSkipped);
 	void PlayOnMesh(const FDYPerformanceSegment& Segment, bool bForceLoop);
 	void RestorePose();

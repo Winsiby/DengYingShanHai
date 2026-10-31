@@ -1,0 +1,18 @@
+Use case: stylized-concept.
+Asset type: a polished landscape art-direction concept sheet for the forest in the Chinese shadow-puppet game 灯影山海. Brand new tree design, for user visual review before any modelling. This is concept art, never present as an Unreal screenshot.
+Primary request: redesign Kuafu's "staff falls and becomes a grove" as an ORGANIC, DENSE, CONNECTED GROVE, while preserving a strong traditional-inspired shadow-theatre cut-leather aesthetic.
+
+Composition: high-resolution landscape sheet, approximately 16:10, warm ivory paper margins and very restrained red-brown annotation rules. Top two-thirds is ONE large front elevation of the completed forest silhouette on an amber backlit silk rectangle. No theatre architecture, curtains, UI, walls or perspective environment. The lower third contains three clean labelled detail panels: a single trunk and fork study, a close-up of an actual connected leaf-and-branch cluster in slightly raised dark brown cut leather, and a three-thumbnail growth sequence that uses the SAME final forest design.
+
+Forest design: FIVE uneven trunks of different thicknesses and heights, with organic S curves, strong taper and believable Y forks. Two substantial foreground trunks and three slimmer secondary trunks interweave into ONE broad, continuous treetop; crowns overlap rather than resembling separate lollipops or brooms. The outer canopy has three irregular, asymmetric rising and falling lobes. Dense broad pointed SOLID leaf clusters provide the main dark masses, interspersed with medium-sized sky gaps and a few narrow incised vein-shaped openings. Leaves are mainly filled dark shapes, NOT hollow oval rings and NOT loops on wires. Broad curving branches visibly thicken at junctions and run into leaf masses; avoid uniform rods. All leaves visibly attach to twigs. Favor a few large legible silhouettes over many tiny decorative holes. Keep the overall forest canopy dense, with readable branching in the lower half.
+
+Narrative and spacing: all trunks emerge from a low, natural spreading root system connected to one small fallen-staff contact point. Roots bend organically with tapered ends; NO straight base rail, NO rectangular or trapezoid lower framework, NO triangular supports. Include just one SMALL, muted ochre Kuafu shadow-puppet figure as a scale/narrative marker near the lower middle and a slim fallen staff; the figure is subordinate, without portrait detail. Leave an irregular pocket of clear amber around his torso, head and staff. Do not create a symmetrical doorway-shaped arch around him. Canopy occupies most of the upper field, with asymmetric depth formed by slightly lighter secondary silhouettes, still suitable for a single screen.
+
+Style/material: sophisticated Chinese paper-cut / carved-leather shadow-play visual language, ancient and simple rather than ornate fantasy; ink-black and very dark warm brown forest against soft golden amber silk. Subtle handcrafted edge texture, bold clean silhouette hierarchy. The detail panel should clearly suggest shallow solid cut-leather relief, connected geometry and usable 3D modelling shapes. No photoreal foliage, no needle-thin lace, no flowers, fruit, landscape mountains, animals, extra characters, detached fragments, bonsai pot or gigantic pedestal. No wireframe, no mechanical scaffolding, no glowing magical particles. Do NOT copy the rejected three-crown hollow-loop tree design.
+
+Exact Chinese text, use short legible captions only:
+Title: "落杖成林 · 新造型提案"
+Subtitle: "概念设计 / 非游戏实图"
+Bottom panel captions: "树干与分叉", "枝叶结构", "生长示意".
+Growth thumbnail captions: "落杖", "生干", "成林".
+No other text, no watermark.

@@ -2,8 +2,8 @@
 $ErrorActionPreference = 'Stop'
 try {
     $dyRoot = 'D:\灯影山海'
-    $dyArchive = Join-Path $dyRoot 'Builds\FormalMain-Shipping-20261023-Run167\Windows'
-    $dyAudit = Join-Path $dyRoot 'Saved\Audit-2026-10-23-Performance\Package-Run167'
+    $dyArchive = Join-Path $dyRoot 'Builds\FormalMain-Shipping-20261031-Run176\Windows'
+    $dyAudit = Join-Path $dyRoot 'Saved\CoreVisualFix-2026-10-31\Attempt1\Package-Run176'
     $dyIdentityPath = Join-Path $dyArchive 'RELEASE-ENTRY-BUILD.json'
     $dyArtifactsPath = Join-Path $dyAudit 'ARTIFACTS.json'
     $dyMapFile = Join-Path $dyRoot 'Content\DengYingShanHai\Maps\L_DY_Main.umap'

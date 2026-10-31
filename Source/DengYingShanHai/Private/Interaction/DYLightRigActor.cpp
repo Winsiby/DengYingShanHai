@@ -72,10 +72,18 @@ ADYLightRigActor::ADYLightRigActor()
 
 void ADYLightRigActor::ApplyResolvedDevFeedback(const bool bResolved)
 {
-	KeyLight->SetLightColor(bResolved ? FLinearColor(1.0f, 0.42f, 0.08f) : FLinearColor(1.0f, 0.78f, 0.52f));
+	KeyLight->SetLightColor(bHasChapterKeyColor ? ChapterKeyColor
+		: (bResolved ? FLinearColor(1.0f, 0.42f, 0.08f) : FLinearColor(1.0f, 0.78f, 0.52f)));
 	KeyLight->SetIntensity(bResolved
 		? DYLightRigVisuals::ResolvedIntensityLumens
 		: DYLightRigVisuals::SearchingIntensityLumens);
+}
+
+void ADYLightRigActor::SetChapterKeyColor(const FLinearColor& Color)
+{
+	ChapterKeyColor = Color;
+	bHasChapterKeyColor = true;
+	KeyLight->SetLightColor(Color);
 }
 
 bool ADYLightRigActor::CanBeginControl_Implementation(const FDYControlContext& Context) const

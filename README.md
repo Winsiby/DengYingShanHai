@@ -63,6 +63,8 @@ Tools/                        辅助工具
 
 **环境基线**：Unreal Engine 5.8.3 · Visual Studio 2026 · Windows SDK 10.0.26100 · Git LFS
 
+> 本仓库沿用既有入库范围，未包含 `Dev/` 中的部分正式依赖。克隆后需先补齐这些本地资源；以下步骤适用于资源齐全的本地工程。仓库不包含可直接启动的打包游戏。
+
 ```powershell
 # 1. 环境自检（Required failures 必须为 0）
 powershell -ExecutionPolicy Bypass -File .\Scripts\Check-Environment.ps1
@@ -123,7 +125,7 @@ Builds/FormalMain-Shipping-<日期>-Run<n>/Windows/DengYingShanHai.exe
 
 - `Builds/` 发布包与 `Intermediate/`、`Binaries/`、`Saved/` 等引擎产物；
 - `Assets/Sources/` 下的 `.blend`、`.fbx`、超大贴图与第三方源包（约 3 GB）；
-- `Content/DengYingShanHai/Dev/` 实验关卡与影偶核验地图（约 362 MB）；
+- `Content/DengYingShanHai/Dev/` 开发与验证资源（本轮沿用忽略规则，其中也包含正式游戏引用的资源，克隆后需补齐）；
 - `Video/` 原始录制分段、字体与质检帧；
 - `Tools/ffmpeg/` 二进制（约 315 MB）。
 
@@ -139,9 +141,12 @@ Builds/FormalMain-Shipping-<日期>-Run<n>/Windows/DengYingShanHai.exe
 
 ## 状态
 
-- 正式主地图 `L_DY_Main` 四幕全流程可通关，Windows Shipping 包已构建并实机冒烟；
-- 评审片、实机截图、三具影偶与 AI 使用说明已交付；
-- 进行中：整体复核遗留项的收尾（HUD 分幕文案、跨幕音频去重、入口近景清理）。
+2026-11-01 同步当前开发快照：
+
+- 已包含近期门楼、成林、四幕表现、阴影与界面的源码和正式资产改动；
+- 本地 Development RunD22 已构建，最终代码自动化为 190 成功 / 0 失败；这是此前本地验证记录，本次 Git 上传没有重跑游戏测试；
+- 最新 Shipping Run177 尚未构建，最终原生界面、完整/跳过重玩和正式入口验收待续。当前正式启动器仍指向 Run176，与已编辑主图不匹配时会被哈希保护拦截；
+- 本轮为开发快照同步，不是新的可玩版本发布。范围、验证与续做位置见 [实施草稿](Docs/PRESENTATION_POLISH_20261031_DRAFT.md) 和 [本次仓库同步说明](Docs/GITHUB_SYNC_20261101.md)。
 
 ---
 

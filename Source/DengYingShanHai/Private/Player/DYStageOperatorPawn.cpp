@@ -48,9 +48,9 @@ ADYStageOperatorPawn::ADYStageOperatorPawn()
 
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
-	CameraBoom->TargetArmLength = 360.0f;
-	CameraBoom->TargetOffset = FVector(0.0f, 0.0f, 70.0f);
-	CameraBoom->SocketOffset = FVector(0.0f, 55.0f, 10.0f);
+	CameraBoom->TargetArmLength = 800.0f;
+	CameraBoom->TargetOffset = FVector(0.0f, 0.0f, 240.0f);
+	CameraBoom->SocketOffset = FVector(0.0f, -180.0f, 10.0f);
 	CameraBoom->bUsePawnControlRotation = true;
 	CameraBoom->bDoCollisionTest = true;
 	CameraBoom->ProbeSize = 28.0f;

@@ -576,6 +576,100 @@ bool FDYForestSavedAssetRuntimeTest::RunTest(const FString& Parameters)
 	return true;
 }
 
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FDYForestCanopyAnchorTest,
+	"DengYingShanHai.P03.ForestPresentation.CanopyAnchorsApplyWorldOffsetOnce", DYForestPresentationTests::Flags)
+bool FDYForestCanopyAnchorTest::RunTest(const FString& Parameters)
+{
+	DYForestPresentationTests::FFixture F;
+	if (!TestTrue(TEXT("Fixture ready"), F.Ready())) { return false; }
+	UStaticMesh* CrownMesh = LoadObject<UStaticMesh>(nullptr, TEXT("/Engine/BasicShapes/Cube.Cube"));
+	DYForestPresentationTests::ObjectProperty(F.Forest, TEXT("CanopyMesh"), CrownMesh);
+	const FArrayProperty* CrownIndices = FindFProperty<FArrayProperty>(F.Forest->GetClass(), TEXT("CanopyBranches"));
+	*CrownIndices->ContainerPtrToValuePtr<TArray<int32>>(F.Forest) = {1};
+	const FStructProperty* Offset = FindFProperty<FStructProperty>(F.Forest->GetClass(), TEXT("WorldOffset"));
+	*Offset->ContainerPtrToValuePtr<FVector>(F.Forest) = FVector(-40, 17, 5);
+	const FGuid Token = F.Grow(.55);
+	const auto Branches = F.Forest->GetBranchMeshComponents();
+	const auto Crowns = F.Forest->GetCanopyMeshComponents();
+	if (!TestEqual(TEXT("Original authored branches unchanged"), Branches.Num(), 2)
+		|| !TestEqual(TEXT("One separate crown created"), Crowns.Num(), 1)) { return false; }
+	TestFalse(TEXT("Crown stays hidden until its growth phase"), Crowns[0]->IsVisible());
+	for (const double Progress : {.8, 1.0})
+	{
+		TestTrue(TEXT("Actual contact token drives growth"), F.Presentation->SetForestNormalizedGrowth(Token, Progress));
+		const FVector Tip = Branches[1]->GetComponentTransform().TransformPosition(
+			FVector(0, 0, Branches[1]->GetStaticMesh()->GetBoundingBox().Max.Z));
+		const FVector CrownBase = Crowns[0]->GetComponentTransform().TransformPosition(
+			FVector(0, 0, CrownMesh->GetBoundingBox().Min.Z));
+		TestTrue(TEXT("Crown root meets the actual branch tip with nonzero XYZ world offset"), CrownBase.Equals(Tip, 1e-6));
+		TestTrue(TEXT("Growing crown is visible and casts shadow"), Crowns[0]->IsVisible() && Crowns[0]->CastShadow);
+	}
+	F.Director->ResetCurrentPuzzle();
+	TestEqual(TEXT("Reset removes all crowns"), F.Forest->GetCanopyMeshComponents().Num(), 0);
+	TestEqual(TEXT("Reset removes all branches"), F.Forest->GetBranchMeshComponents().Num(), 0);
+	return true;
+}
+
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FDYForestCanopyHeightRevealTest,
+	"DengYingShanHai.P03.ForestPresentation.CanopyHeightRevealFreezesScaleAndSession", DYForestPresentationTests::Flags)
+bool FDYForestCanopyHeightRevealTest::RunTest(const FString& Parameters)
+{
+	DYForestPresentationTests::FFixture F;
+	if (!TestTrue(TEXT("Fixture ready"), F.Ready())) { return false; }
+	const FBoolProperty* HeightReveal = FindFProperty<FBoolProperty>(F.Forest->GetClass(), TEXT("bCanopyHeightReveal"));
+	if (!TestNotNull(TEXT("Height reveal is an authored property"), HeightReveal)) { return false; }
+	TestFalse(TEXT("Existing canopy growth stays the default"), HeightReveal->GetPropertyValue_InContainer(F.Forest));
+	HeightReveal->SetPropertyValue_InContainer(F.Forest, true);
+	UStaticMesh* CrownMesh = LoadObject<UStaticMesh>(nullptr, TEXT("/Engine/BasicShapes/Cube.Cube"));
+	if (!TestNotNull(TEXT("Crown test mesh loads"), CrownMesh)) { return false; }
+	DYForestPresentationTests::ObjectProperty(F.Forest, TEXT("CanopyMesh"), CrownMesh);
+	const FArrayProperty* CrownIndices = FindFProperty<FArrayProperty>(F.Forest->GetClass(), TEXT("CanopyBranches"));
+	*CrownIndices->ContainerPtrToValuePtr<TArray<int32>>(F.Forest) = {1};
+	const FArrayProperty* CrownScales = FindFProperty<FArrayProperty>(F.Forest->GetClass(), TEXT("CanopyScales"));
+	constexpr double ClusterScale = 1.25;
+	*CrownScales->ContainerPtrToValuePtr<TArray<double>>(F.Forest) = {ClusterScale};
+	const FStructProperty* Offset = FindFProperty<FStructProperty>(F.Forest->GetClass(), TEXT("WorldOffset"));
+	*Offset->ContainerPtrToValuePtr<FVector>(F.Forest) = FVector(-40, 17, 5);
+	const FGuid Token = F.Grow(.5);
+	const auto Branches = F.Forest->GetBranchMeshComponents();
+	const auto Crowns = F.Forest->GetCanopyMeshComponents();
+	if (!TestTrue(TEXT("Actual contact starts the session"), Token.IsValid() && F.Forest->HasForestSession())
+		|| !TestEqual(TEXT("Original authored branches remain"), Branches.Num(), 2)
+		|| !TestEqual(TEXT("One separate crown created"), Crowns.Num(), 1)) { return false; }
+	HeightReveal->SetPropertyValue_InContainer(F.Forest, false);
+	for (const double Progress : {.5, .55, .8, 1.0})
+	{
+		if (!TestTrue(TEXT("Actual contact token drives height reveal"), F.Presentation->SetForestNormalizedGrowth(Token, Progress))) { return false; }
+		const double Growth = FMath::Clamp((Progress - .55) / .45, 0.0, 1.0);
+		TestTrue(TEXT("Session keeps full authored scale despite a mid-session option edit"), Crowns[0]->GetComponentScale().Equals(FVector(ClusterScale), 1e-6));
+		const FVector Tip = Branches[1]->GetComponentTransform().TransformPosition(
+			FVector(0, 0, Branches[1]->GetStaticMesh()->GetBoundingBox().Max.Z));
+		const FVector CrownBase = Crowns[0]->GetComponentTransform().TransformPosition(
+			FVector(0, 0, CrownMesh->GetBoundingBox().Min.Z));
+		TestTrue(TEXT("Fixed-scale root stays on the moving branch tip with XYZ world offset"), CrownBase.Equals(Tip, 1e-6));
+		const auto& Data = Crowns[0]->GetCustomPrimitiveData().Data;
+		if (TestTrue(TEXT("Height reveal supplies Custom Primitive Data 0"), Data.IsValidIndex(0)))
+		{
+			TestTrue(TEXT("Custom Primitive Data 0 retains the original normalized growth window"), FMath::IsNearlyEqual(Data[0], static_cast<float>(Growth), 1e-6f));
+		}
+		const bool bVisible = Progress > .55;
+		TestTrue(TEXT("Original visibility and shadow threshold is preserved"), Crowns[0]->IsVisible() == bVisible
+			&& Crowns[0]->bHiddenInGame == !bVisible && Crowns[0]->CastShadow == bVisible);
+	}
+	F.Director->ResetCurrentPuzzle();
+	TestFalse(TEXT("Reset ends the height-reveal session"), F.Forest->HasForestSession());
+	TestEqual(TEXT("Reset removes all crowns"), F.Forest->GetCanopyMeshComponents().Num(), 0);
+	TestEqual(TEXT("Reset removes all branches"), F.Forest->GetBranchMeshComponents().Num(), 0);
+	const FGuid NewToken = F.Grow(.8);
+	const auto NewCrowns = F.Forest->GetCanopyMeshComponents();
+	if (!TestTrue(TEXT("Reset accepts a fresh contact session"), NewToken.IsValid() && NewToken != Token && F.Forest->HasForestSession())
+		|| !TestEqual(TEXT("Fresh session creates one crown"), NewCrowns.Num(), 1)) { return false; }
+	const double OriginalScale = ClusterScale * ((.8 - .55) / .45);
+	TestTrue(TEXT("Fresh false-option session restores original scaled growth"), NewCrowns[0]->GetComponentScale().Equals(FVector(OriginalScale), 1e-6));
+	TestTrue(TEXT("Original path leaves Custom Primitive Data untouched"), NewCrowns[0]->GetCustomPrimitiveData().Data.IsEmpty());
+	return true;
+}
+
 #if WITH_EDITOR
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(FDYForestSavedAssetGraphTest,
 	"DengYingShanHai.P03.ForestAsset.SavedBlueprintHasNoExecutableGraphLogic", EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)

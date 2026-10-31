@@ -1,0 +1,63 @@
+{
+  "SourceTarget": "Assets\\Sources\\DengYingArt\\ForestCanopy-20261016",
+  "Sources": [
+    {
+      "Name": "forest-branch-leafed.fbx",
+      "Source": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\ForestCanopy\\Source-Run1\\forest-branch-leafed.fbx",
+      "Bytes": 35756,
+      "SHA256": "15CC92CB61462F99D02F1EE7C445B026B24CC838EE1875F0D87A087D09432606"
+    },
+    {
+      "Name": "SOURCE.json",
+      "Source": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\ForestCanopy\\Source-Run1\\SOURCE.json",
+      "Bytes": 2834173,
+      "SHA256": "07D77D6522F0146FEAAC7AF2BD8DC7520883999D11F7F27E2707665D6F056253"
+    },
+    {
+      "Name": "README.md",
+      "Source": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\ForestCanopy\\Source-Run1\\README.md",
+      "Bytes": 1562,
+      "SHA256": "798203198F69D2BD215267F5FAE1B61C093C6AC9204AAB060D7271424BB39E9D"
+    },
+    {
+      "Name": "01_FullContour.png",
+      "Source": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\ForestCanopy\\Source-Run1\\01_FullContour.png",
+      "Bytes": 918751,
+      "SHA256": "C1DDB1C1DFDB12A4AA46EFA4251742CC1F7C2D64CB17A36EFF780E64AF503680"
+    },
+    {
+      "Name": "02_SolidLeaves_Oblique.png",
+      "Source": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\ForestCanopy\\Source-Run1\\02_SolidLeaves_Oblique.png",
+      "Bytes": 922161,
+      "SHA256": "994C42E5C3EE78AEBA7CEC37FCA82B552771A358AE21734A651C8F825CC3BFE0"
+    },
+    {
+      "Name": "build_canopy.py",
+      "Source": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\ForestCanopy\\build_canopy.py",
+      "Bytes": 31194,
+      "SHA256": "B9536E1210354EFF6CB2D6B9D29F28DF4836E11EA4AB9BD35A7913C782D3D0BE"
+    }
+  ],
+  "Tools": [
+    {
+      "Source": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\ForestCanopy\\native_canopy.py",
+      "Bytes": 42445,
+      "SHA256": "85E48E83FA86931AC2D102A8CBF5F739100B475F8D96096E7FB24AFCFA1143D3"
+    },
+    {
+      "Source": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\ForestCanopy\\candidate_map.py",
+      "Bytes": 22833,
+      "SHA256": "DE5A29E047F5C0A27CF4F98DA7ED8375E2D0FECAB3A0F312E9D480AE9DCB14F2"
+    },
+    {
+      "Source": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\ForestCanopy\\capture_canopy.py",
+      "Bytes": 34911,
+      "SHA256": "51103CD9FCC0610134E0DD3DEFBB87C013378EE59B21B95B40DC10B4B2008C9D"
+    },
+    {
+      "Source": "C:\\Users\\lenovo\\Documents\\ChatGPT\\数媒游戏开发 2\\ArtIntegration-20261014\\ForestCanopy\\Run-Canopy.ps1",
+      "Bytes": 7639,
+      "SHA256": "D18096128F979B25F08164E18794714D27B04E2DF7FC6950CA1B56DBE239A5B0"
+    }
+  ]
+}

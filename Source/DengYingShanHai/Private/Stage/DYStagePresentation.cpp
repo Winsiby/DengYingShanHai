@@ -856,6 +856,11 @@ void ADYStagePresentation::HandleActSequenceChanged(const FDYActSequenceSnapshot
 		|| Snapshot.ActCount != Current.ActCount || Snapshot.Phase != Current.Phase
 		|| !Snapshot.ActTitle.EqualTo(Current.ActTitle)) { return; }
 	PlayerActDisplay = Snapshot;
+	if (IsValid(StageEnvironment) && PuzzleDirector->IsCampaignEnabled())
+	{
+		StageEnvironment->ApplyChapterScenery(Snapshot.ChapterIndex, Snapshot.ActIndex,
+			Snapshot.Phase != EDYActSequencePhase::Playing);
+	}
 	if (bEnableFiveStateDevEnvironment)
 	{
 		const FGuid EnvironmentOperationToken = PuzzleDirector->ActivationToken;

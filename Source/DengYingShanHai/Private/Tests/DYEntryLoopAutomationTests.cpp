@@ -3,6 +3,7 @@
 #if WITH_DEV_AUTOMATION_TESTS
 #include "Core/DYDevEntryPlayerController.h"
 #include "Components/TextBlock.h"
+#include "Components/SpotLightComponent.h"
 #include "Engine/Engine.h"
 #include "Engine/World.h"
 #include "Interaction/DYLightRigActor.h"
@@ -224,6 +225,10 @@ bool FDYEntryMenuFontTest::RunTest(const FString& Parameters)
 		TestEqual(TEXT("Primary uses menu plaque size"), Primary->GetFont().Size, 34.0f);
 		TestEqual(TEXT("Quit uses menu plaque size"), Quit->GetFont().Size, 34.0f);
 		TestTrue(TEXT("Same font asset, face, outline and size"), Primary->GetFont() == Quit->GetFont());
+		if (Panel != EDYDevEntryPanel::Reloading)
+		{
+			TestFalse(TEXT("Enabled plaque text inherits normal/hover foreground"), Primary->GetColorAndOpacity().IsColorSpecified());
+		}
 	}
 	TestEqual(TEXT("Quit wording unchanged"), Quit->GetText().ToString(), FString(TEXT("退出游戏")));
 	return true;
@@ -603,4 +608,56 @@ bool FDYEntryChapterReplaceTest::RunTest(const FString& Parameters)
 	TestFalse(TEXT("Plain start still cannot restart a running chapter"), FDYEntryLoopTestSeam::Start(*F.Director, F.Stage));
 	return true;
 }
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FDYChapterSceneryFactsTest, "DengYingShanHai.Presentation.ChapterSceneryFacts", DYEntryTests::Flags)
+bool FDYChapterSceneryFactsTest::RunTest(const FString&)
+{
+	DYEntryTests::FFixture F;
+	if (!TestTrue(TEXT("Fixture"), F.Valid())) { return false; }
+	AActor* Sea = F.World->SpawnActor<AActor>();
+	F.Environment->JingweiSeaProps.Add(Sea);
+	for (int32 Index = 0; Index < 3; ++Index) { F.Environment->JingweiStoneProps.Add(F.World->SpawnActor<AActor>()); }
+	F.Environment->ZhulongDaySymbol = F.World->SpawnActor<AActor>();
+	F.Environment->ZhulongNightSymbol = F.World->SpawnActor<AActor>();
+	const FDYActSequenceSnapshot Before = F.Director->GetActSequenceSnapshot();
+	F.Environment->ApplyChapterScenery(1, 0, false);
+	TestFalse(TEXT("Sea is visible in Jingwei"), Sea->IsHidden());
+	TestTrue(TEXT("No stone before the first resolved step"), F.Environment->JingweiStoneProps[0]->IsHidden());
+	F.Environment->ApplyChapterScenery(1, 0, true);
+	TestFalse(TEXT("A resolved step reveals one stone"), F.Environment->JingweiStoneProps[0]->IsHidden());
+	TestTrue(TEXT("Future stones stay hidden"), F.Environment->JingweiStoneProps[1]->IsHidden());
+	F.Environment->ApplyChapterScenery(1, 1, false);
+	TestFalse(TEXT("Completed stone survives transition"), F.Environment->JingweiStoneProps[0]->IsHidden());
+	F.Environment->ApplyChapterScenery(1, 2, true);
+	TestFalse(TEXT("Third resolved step reveals the third stone"), F.Environment->JingweiStoneProps[2]->IsHidden());
+	F.Environment->ApplyChapterScenery(3, 1, false);
+	TestTrue(TEXT("Other chapter clears sea"), Sea->IsHidden());
+	TestTrue(TEXT("Other chapter clears stones"), F.Environment->JingweiStoneProps[0]->IsHidden());
+	TestFalse(TEXT("Night remains until the daylight step resolves"), F.Environment->ZhulongNightSymbol->IsHidden());
+	F.Environment->ApplyChapterScenery(3, 1, true);
+	TestFalse(TEXT("Resolved daylight shows sun"), F.Environment->ZhulongDaySymbol->IsHidden());
+	TestTrue(TEXT("Resolved daylight hides moon"), F.Environment->ZhulongNightSymbol->IsHidden());
+	F.Environment->ApplyChapterScenery(3, 0, false);
+	TestTrue(TEXT("Chapter restart clears sun"), F.Environment->ZhulongDaySymbol->IsHidden());
+	TestFalse(TEXT("Chapter restart restores moon"), F.Environment->ZhulongNightSymbol->IsHidden());
+	TestEqual(TEXT("Scenery never advances the puzzle"), F.Director->GetActSequenceSnapshot().Phase, Before.Phase);
+	TestFalse(TEXT("Environment remains event driven"), F.Environment->PrimaryActorTick.bCanEverTick);
+	return true;
+}
+
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FDYChapterLightPaletteTest, "DengYingShanHai.Presentation.ChapterPaletteSurvivesFeedback", DYEntryTests::Flags)
+bool FDYChapterLightPaletteTest::RunTest(const FString&)
+{
+	DYEntryTests::FFixture F;
+	if (!TestTrue(TEXT("Fixture"), F.Valid())) { return false; }
+	F.Light->SetChapterKeyColor(FLinearColor(.55f, .86f, .92f));
+	const FLinearColor Expected = F.Light->GetKeyLightComponent()->GetLightColor();
+	F.Light->ApplyResolvedDevFeedback(true);
+	TestTrue(TEXT("Resolve keeps the chapter hue"), F.Light->GetKeyLightComponent()->GetLightColor().Equals(Expected, .001f));
+	F.Light->ApplyResolvedDevFeedback(false);
+	TestTrue(TEXT("Reset keeps the chapter hue"), F.Light->GetKeyLightComponent()->GetLightColor().Equals(Expected, .001f));
+	F.Light->SetChapterKeyColor(FLinearColor(1.f, .86f, .64f));
+	TestFalse(TEXT("Next palette replaces the prior hue"), F.Light->GetKeyLightComponent()->GetLightColor().Equals(Expected, .01f));
+	return true;
+}
+
 #endif

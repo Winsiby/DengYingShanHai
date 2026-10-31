@@ -1,4 +1,4 @@
-# 《灯影山海》资产来源与授权指南
+﻿# 《灯影山海》资产来源与授权指南
 
 > 状态：候选来源已核验，尚不代表项目已经下载或采用其中任何具体资产。每个实际进入项目的文件，仍须在 `Docs/LICENSES.md` 中登记到“单个资产/单个页面”级别。
 
@@ -146,3 +146,71 @@
 
 这套策略的目标不是“完全不用外部素材”，而是把外部素材限制在不决定作品创意归属的辅助层，让评审能够清楚区分作者创作贡献与第三方资源。
 > **项目资产预算：0 元。**这里只登记许可清晰、允许项目打包与比赛展示的免费/开源来源。任何付费条目、订阅资源或需要额外商业授权的资源均为禁用项，不能作为备用方案。准入与留证要求见 `Docs/FREE_ASSET_POLICY.md`。
+
+
+## 8. 门楼修复实际采用记录（2026-10-25任务，2026-10-26补记）
+
+本节记录已经进入工作主地图的实际采用项；前文来源指南中的候选表仍按其历史范围解释，不把其他候选自动列为已使用。现已采用至RunD14/Run171，两包构建、PIE辅助通行、候选固定审查视角门外图和实际公开CMD烟测均有本轮证据；独立人测、全面美术与性能未宣称通过。
+
+| 实际内容 | 来源与处理 | 记录 |
+| --- | --- | --- |
+| `SM_DY_GateLeaf_20261025` | 本地Blender Python用基础几何组合门框、门板、格栅、铰链与拉环，导出自有FBX；无第三方门模型下载，无新增图像生成调用 | `Saved/GateRepair-2026-10-25/Attempt1/Source/GateLeaf.blend`、FBX、MODEL.json及 `Tools/Build-Door-Leaf.py` |
+| Gate Lacquer / Brass | 本次UE常量材质，三个材质槽中分别承担漆面和金属；不引入新贴图或素材包 | `Stage/GateRepair_20261025/M_DY_GateLacquer`、`M_DY_GateBrass` |
+| 门柱与木槽 | 复用已有AudienceWood/FramePost材质链，新建 `MI_DY_GatePostWood`设置方向参数；摄影木纹来自既有Poly Haven `dark_wood`来源记录，不另称原创 | [FRAME_POST_ASSET_SOURCES.md](D:/灯影山海/Docs/FRAME_POST_ASSET_SOURCES.md)、LICENSES §13/§14 |
+| 门槛与横格 | 门槛复用工程既有 `MI_DY_RockTex`；横格使用引擎Cube与AudienceWood。没有将引擎基础形状归为自制网格或CC0 | [门专项交付草稿](D:/灯影山海/Docs/GATE_REPAIR_20261025_DRAFT.md) |
+
+本轮新增资源按 `Docs/LICENSES.md` **SELF-010** 登记。没有新增第三方下载、付费资产或运行时在线服务；既有第三方纹理/引擎内容继续按原来源披露，不因本次程序组装而改变上游身份。人类作者与最终责任人为用户，Codex提供脚本与核查辅助。源文件和资产哈希、13+3白名单与回退证据保存在 `Saved/GateRepair-2026-10-25/Attempt1/`；AI补记见 [AI-USAGE-GATE.md](D:/灯影山海/Saved/GateRepair-2026-10-25/Attempt1/AI-USAGE-GATE.md)。
+
+门专项最终结果见 [GATE_REPAIR_20261025.md](D:/灯影山海/Docs/GATE_REPAIR_20261025.md) 和 [Run171 PUBLIC-ENTRY-SMOKE.json](D:/灯影山海/Saved/GateRepair-2026-10-25/Attempt1/PUBLIC-ENTRY-SMOKE.json)，不借用Run170旧包画面。
+
+## 9. 林影加密实际采用记录（2026-10-26任务，2026-10-27验收）
+
+本轮自制宽冠与新Leaf已采用至Development RunD15及正式Shipping Run172，来源登记为 **SELF-011**。本轮编译、187项自动化、冷加载、打包、辅助完整/跳过/重玩、实际树林图与公开CMD入口正常退出均有独立阶段证据；最终交付见 [FOREST_DENSITY_20261026.md](D:/灯影山海/Docs/FOREST_DENSITY_20261026.md)，不宣称独立人测或全面美术/性能通过。
+
+| 实际内容 | 来源与处理 | 证据 |
+| --- | --- | --- |
+| `SM_DY_ForestCrown_Dense_v1` | 本地Blender Python程序几何，3136源顶点/5076三角形，60×240×100cm，Wood/Leaf两槽；无第三方网格或贴图下载 | `Source/ForestCrownDense.blend`、FBX、MODEL.json、`Tools/Build-Forest-Crown.py` |
+| `M_DY_ForestLeafDense` | 新建本地常量PBR：BaseColor(0.055,0.115,0.04)、Roughness0.88、Specular0.12；不使用新位图 | `Stage/ForestDensity_20261026/M_DY_ForestLeafDense`与 `Tools/Apply-Forest.py` |
+| 新冠Wood槽 | 复用已有 `MI_DY_M04_CanopyWood`；原M04网格与Wood/Leaf资产均保留，不将复用误写为新原创纹理 | [20261019冠接入记录](D:/灯影山海/Docs/FORMAL_M02_M04_TARGETS_CANOPY_20261019.md)注明旧材料为常量PBR、无新贴图 |
+| 地图冠配置 | 仅 `M3_RuntimeForest`的冠网格、8冠索引及逐冠缩放，保留15项BranchLayout及全部1809 Actor变换/组件/材质 | [Forest-Apply.json](D:/灯影山海/Saved/ForestDensity-2026-10-26/Attempt1/Forest-Apply.json)，保存成功不等于包内验收 |
+
+最终源、两项新UE资产与接入脚本的哈希见 [FOREST-ASSET-SOURCES-FINAL.json](D:/灯影山海/Saved/ForestDensity-2026-10-26/Attempt1/FOREST-ASSET-SOURCES-FINAL.json)。名称中的FINAL指源与采用清单；当前发布验收由独立列出的本轮运行、图像及正式入口证据支持，早期阶段快照另存Backup/Before-Final-Acceptance-20261027。初始来源草稿、单位修正前与加宽前源文件均保留；旧Gate证据继续作为Run171历史，不移作本轮通过记录。AI范围见 [AI-USAGE-FOREST.md](D:/灯影山海/Saved/ForestDensity-2026-10-26/Attempt1/AI-USAGE-FOREST.md)。本轮没有新外部下载、付费资产或在线生成服务，唯一人类作者与最终责任人为用户。
+
+## 10. 林影茂密感与枝叶衔接实际采用记录（SELF-012，2026-10-27）
+
+本轮新v2冠已采用至Development RunD16及正式Shipping Run173；保存、冷加载、实际PIE接触/生长、187项自动化、两包打包与哈希、候选辅助完整/跳过/真实重玩、Shipping森林专项图像和实际公开CMD入口均有本轮证据。正式入口菜单及输入响应正常，原生与外层CMD均正常退出0。结果见 [最终交付](D:/灯影山海/Docs/FOREST_POLISH_20261027.md) 和 [公开入口证据](D:/灯影山海/Saved/ForestPolish-2026-10-27/Attempt1/PUBLIC-ENTRY-SMOKE.json)，不据此宣称独立人测、全面美术或性能验收。
+
+| 实际内容 | 来源与处理 | 证据 |
+| --- | --- | --- |
+| `SM_DY_ForestCrown_Connected_v2` | 本地Blender Python确定性程序几何；3706源顶点/6064三角形、60×240×100cm、Wood/Leaf两槽；51段内部枝、22叶簇、264实体叶；没有第三方网格/纹理下载 | [原生源](D:/灯影山海/Saved/ForestPolish-2026-10-27/Attempt1/Source/ForestCrownConnected_v2.blend)、[FBX](D:/灯影山海/Saved/ForestPolish-2026-10-27/Attempt1/Source/SM_DY_ForestCrown_Connected_v2.fbx)、[MODEL](D:/灯影山海/Saved/ForestPolish-2026-10-27/Attempt1/Source/MODEL.json)、[生成器](D:/灯影山海/Saved/ForestPolish-2026-10-27/Attempt1/Tools/Build-Forest-Crown-v2.py) |
+| Wood槽 | 复用原 `MI_DY_M04_CanopyWood`常量PBR，不改旧资产 | [20261019接入来源](D:/灯影山海/Docs/FORMAL_M02_M04_TARGETS_CANOPY_20261019.md) |
+| Leaf槽 | 复用Run172/SELF-011的 `M_DY_ForestLeafDense`常量PBR，不生成新材质或位图 | 本文件§9及LICENSES §15/SELF-011 |
+| 装饰冠配置 | 原8冠换v2，额外在branch5/6端点挂两枚小冠，indices5至14、scales[.60,.62,.85,.90,.90,.88,1.05,1.05,1.55,1.45]；只写CanopyMesh/CanopyBranches/CanopyScales，不变更15项BranchLayout、C++、Config或已有材质 | [Forest-Apply](D:/灯影山海/Saved/ForestPolish-2026-10-27/Attempt1/Forest-Apply.json)、[Cold-After](D:/灯影山海/Saved/ForestPolish-2026-10-27/Attempt1/Cold-After.json)、[Scope-Delta](D:/灯影山海/Saved/ForestPolish-2026-10-27/Attempt1/Scope-Delta.json) |
+
+实际只新增一个UE网格，两种既有材质和原Run172源/资产保留。完整源、最终接入文件、UE网格与保存地图的字节数/SHA256见 [FOREST-ASSET-SOURCES-FINAL.json](D:/灯影山海/Saved/ForestPolish-2026-10-27/Attempt1/FOREST-ASSET-SOURCES-FINAL.json)；原MODEL/DRAFT保持原始阶段字段，当前运行/公开入口验收由独立证据说明。本轮没有新增付费资源、第三方下载、在线生成服务或运行时在线服务；唯一人类作者与最终责任人为用户，AI辅助范围见 [AI-USAGE-FOREST-POLISH.md](D:/灯影山海/Saved/ForestPolish-2026-10-27/Attempt1/AI-USAGE-FOREST-POLISH.md)。
+
+## 11. 影戏剪影树林重新建模实际采用记录（SELF-013，2026-10-28任务，2026-10-30 R5采用）
+
+本轮R5新源已采用至Development RunD17及正式Shipping Run174，登记为SELF-013。保存/冷加载、187项自动化、两包与693项输入/产物核验、Development跳过/重玩、Shipping完整/跳过各两轮四幕真实重玩、实际树林图及公开CMD菜单/输入/原生与外层退出0均有本轮证据，不借用旧包结果。
+
+| 实际内容 | 来源与处理 | 当前证据 |
+| --- | --- | --- |
+| `SM_DY_ForestStem_Silhouette_v3` | 本地Blender Python生成，110源顶点/216三角形，20×20×100cm，XY bounds中心及首尾轴心正确 | [MODEL](D:/灯影山海/Saved/ForestRedesign-2026-10-28/Attempt1/Source/MODEL.json)、[轴心检查](D:/灯影山海/Saved/ForestRedesign-2026-10-28/Attempt1/Source/GEOMETRY-CHECK.json) |
+| `SM_DY_ForestCrown_Pierced_v3` | 本地程序几何，2244源顶点/4288三角形，40×180×140cm，34大叶/34真孔，50内部木段含22叶柄；Wood/Leaf两槽，无球团、Alpha卡片或不透明底板 | [生成器](D:/灯影山海/Saved/ForestRedesign-2026-10-28/Attempt1/Tools/Build-Forest-Silhouette-v3.py)、[源采用快照](D:/灯影山海/Saved/ForestRedesign-2026-10-28/Attempt1/FOREST-ASSET-SOURCES-FINAL.json) |
+| `M_DY_ForestLeather_Silhouette` | 新局部Opaque/DefaultLit常量PBR：BaseColor(.012,.009,.006)、Roughness.88、Specular.12；Branch/Canopy及各槽统一用它，没有新纹理 | [接入脚本](D:/灯影山海/Saved/ForestRedesign-2026-10-28/Attempt1/Tools/Apply-Forest.py)、[保存记录](D:/灯影山海/Saved/ForestRedesign-2026-10-28/Attempt1/Forest-Apply.json) |
+| 三株布局 | 改森林七项表现属性、端点/直径/父子拓扑，仍15枝、原逐行GrowthBegin/End、同Contact/Token和重玩；三冠[3,4,5]、scale[1.75,1.75,1.65] | [LAYOUT](D:/灯影山海/Saved/ForestRedesign-2026-10-28/Attempt1/Tools/LAYOUT.json)、[冷加载](D:/灯影山海/Saved/ForestRedesign-2026-10-28/Attempt1/Cold-After.json)、[实际生长](D:/灯影山海/Saved/ForestRedesign-2026-10-28/Attempt1/After-PIE.json) |
+
+全部旧资源保留。693项输入相对Run173只改主图并新增3项美术资产，生产C++/Config/既有美术不变；临时诊断源已恢复，112个Source哈希一致。证据见[Scope-Delta](D:/灯影山海/Saved/ForestRedesign-2026-10-28/Attempt1/Scope-Delta.json)、[Source-Restore-Check](D:/灯影山海/Saved/ForestRedesign-2026-10-28/Attempt1/Source-Restore-Check.json)。唯一人类作者与最终责任人为用户，AI辅助范围见[本轮补记](D:/灯影山海/Saved/ForestRedesign-2026-10-28/Attempt1/AI-USAGE-FOREST-REDESIGN.md)；没有新第三方下载、付费资产或在线服务，不称流派正统复原。来源快照中的FINAL包含当前源/采用身份与独立列出的本轮发布验收；不代表独立人测、全角度美术或性能通过。
+
+最终验收见[本轮交付](D:/灯影山海/Docs/FOREST_REDESIGN_20261028.md)与[实际公开入口](D:/灯影山海/Saved/ForestRedesign-2026-10-28/Attempt1/PUBLIC-ENTRY-SMOKE.json)：187成功/0失败，两包693项输入和全部产物重哈希一致，Development跳过/重玩及Shipping完整/跳过各两轮四幕真实重玩均正常退出0。候选自身Shipping森林图采用独立审查机位，与完整步行流程分开留证；原MODEL、DRAFT和构建/运行阶段false字段保留。
+
+
+## 12. 批准概念树林实际采用（SELF-014，2026-10-30任务，2026-10-31发布）
+
+当前主图采用本轮R4新源，正式入口已转Run175；前文Run174及更早记录为各自历史版本。新增 `SM_DY_ForestStem_Curved_v4`、`SM_DY_ForestGrove_Ancient_v4`、`M_DY_ForestWood_Ancient`、`M_DY_ForestLeaf_Ancient`，位于 `Content/DengYingShanHai/Stage/ForestConcept_20261030/`。源为本地确定性Blender Python几何和UE常量PBR，无第三方模型/纹理下载及外部付费资产。批准概念由本会话内置image_gen生成，像素没有作为运行时纹理；底层模型/费用不猜写。
+
+源grove五株（2主干+3次干）、600实心叶/60群、45,632源三角；弯干256源三角。实际15个Runtime BranchComponents，1个装饰grove，原逐行GrowthBegin/End保留。两局部Masked/DefaultLit材质以CPD0与LocalPosition.Z/560显现完整grove；原SELF-013 Opaque材质仅复用到枝组件。当前CanopyMaterial=None、scales[.85]、indices[0]、WorldOffset[0,0,0]；grove到branch0 tip零差，到实际杖根Z差约+.364cm。
+
+本轮不是Source不变：仅DYForestPresentationActor.h/.cpp及同组自动化测试共3文件增加默认false的可选高度显现，以固定尺寸保留夸父中央留白；仅当前森林启用。其余Config/旧资产不变。保存/冷加载、188项自动化、D18/175两包与697项输入/产物、Shipping完整/跳过及Development跳过各两轮四幕真实重玩均通过。正式CMD已实际显示菜单、响应退出，原生和CMD退出0。证据见 [最终来源与文件SHA](D:/灯影山海/Saved/ForestConceptImpl-2026-10-30/Attempt1/FOREST-ASSET-SOURCES-FINAL.json)、[AI辅助补记](D:/灯影山海/Saved/ForestConceptImpl-2026-10-30/Attempt1/AI-USAGE-FOREST-CONCEPT.md) 和 [交付报告](D:/灯影山海/Docs/FOREST_CONCEPT_IMPL_20261030.md)。
+
+唯一人类作者与最终责任人为用户，Codex为辅助工具。原MODEL/ADOPTION阶段false、DRAFT、原型和诊断保留。Ship实图是生长阶段，完整终态PIE另标；远景冠团、水平显现边缘、台翼裁切、概念细节简化仍有记录，不声明独立人测、全游戏美术或性能通过。

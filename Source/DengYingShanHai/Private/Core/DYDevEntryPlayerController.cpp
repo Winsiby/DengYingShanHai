@@ -358,7 +358,6 @@ void ADYDevEntryPlayerController::EndPlay(const EEndPlayReason::Type Reason)
 		GetWorld()->GetTimerManager().ClearTimer(ReadyRefreshHandle);
 		GetWorld()->GetTimerManager().ClearTimer(ReplayHandle);
 		GetWorld()->GetTimerManager().ClearTimer(EntryWalkHandle);
-		GetWorld()->GetTimerManager().ClearTimer(EntryWalkTimeoutHandle);
 		GetWorld()->GetTimerManager().ClearTimer(FlowVerificationHandle);
 	}
 	if (GEngine) { GEngine->OnTravelFailure().Remove(TravelFailureHandle); }
@@ -663,8 +662,15 @@ bool ADYDevEntryPlayerController::IsTheaterEntryMap() const
 	return World && World->GetMapName().Contains(TEXT("L_DY_Main"));
 }
 
+void ADYDevEntryPlayerController::SetPerformancePresentation(const bool bActive)
+{
+	bPerformancePresentationActive = bActive;
+	SetEntryIntroCueVisible(!bActive && bEntryWalkSettled);
+}
+
 int32 ADYDevEntryPlayerController::SetEntryIntroCueVisible(bool bVisible)
 {
+	bVisible = bVisible && !bPerformancePresentationActive;
 	UWorld* World = GetWorld();
 	if (!World) { return 0; }
 	// The act hint line is authored inside BP presentation widgets and its text is fed at runtime,
@@ -676,6 +682,8 @@ int32 ADYDevEntryPlayerController::SetEntryIntroCueVisible(bool bVisible)
 	{
 		UUserWidget* Widget = *It;
 		if (!IsValid(Widget) || Widget->GetWorld() != World || !Widget->WidgetTree) { continue; }
+		// The native HUD owns its performance children; keep its subtitle root visible.
+		if (bPerformancePresentationActive && Widget->IsA<UDYInteractionHUDWidget>()) { continue; }
 		const FString WidgetClass = Widget->GetClass()->GetName();
 		TArray<UWidget*> Widgets;
 		Widget->WidgetTree->GetAllWidgets(Widgets);
@@ -697,6 +705,7 @@ int32 ADYDevEntryPlayerController::SetEntryIntroCueVisible(bool bVisible)
 			WidgetClass.Contains(TEXT("ThreeActHUD")) || WidgetClass.Contains(TEXT("ThreeActCue"));
 		if (bPresentationWidget)
 		{
+			Widget->SetRenderOpacity(bVisible ? 1.0f : 0.0f);
 			Widget->SetVisibility(bVisible ? ESlateVisibility::SelfHitTestInvisible : ESlateVisibility::Collapsed);
 			++Touched;
 		}
@@ -729,7 +738,7 @@ int32 ADYDevEntryPlayerController::SetEntryIntroCueVisible(bool bVisible)
 
 void ADYDevEntryPlayerController::EnsureEntryWalkHint()
 {
-	if (bEntryWalkSettled || bEntryHintRetired) { return; }
+	if (bEntryWalkSettled) { return; }
 	// The exterior cue must survive widget construction order: the presentation HUD can be
 	// created after BeginPlay, and in that window ShowHint would silently drop the text.
 	const double Now = FPlatformTime::Seconds();
@@ -770,7 +779,6 @@ void ADYDevEntryPlayerController::BeginEntryWalkGuidance()
 	APawn* ControlledPawn = GetPawn();
 	const bool bAlreadyInside = ControlledPawn && ControlledPawn->GetActorLocation().X > DYEntryWalk::TheaterThresholdX;
 	bEntryWalkSettled = bAlreadyInside;
-	bEntryHintRetired = bAlreadyInside;
 	if (bAlreadyInside)
 	{
 		// A chapter picked from pause is already on stage. Show that chapter, don't replay the door hint.
@@ -786,7 +794,6 @@ void ADYDevEntryPlayerController::BeginEntryWalkGuidance()
 	const int32 HiddenCues = SetEntryIntroCueVisible(false);
 	UE_LOG(LogDengYingShanHai, Log, TEXT("Entry walk: stage cue labels hidden=%d"), HiddenCues);
 	World->GetTimerManager().SetTimer(EntryWalkHandle, this, &ADYDevEntryPlayerController::HandleEntryWalkCheck, 0.25f, true);
-	World->GetTimerManager().SetTimer(EntryWalkTimeoutHandle, this, &ADYDevEntryPlayerController::RestoreStageHud, 60.0f, false);
 	HandleEntryWalkCheck();
 }
 
@@ -807,13 +814,12 @@ void ADYDevEntryPlayerController::HandleEntryWalkCheck()
 	if (ControlledPawn->GetActorLocation().X <= DYEntryWalk::TheaterThresholdX)
 	{
 		SetEntryIntroCueVisible(false); // the presentation widget may rebuild its text while walking
-		if (!bEntryHintRetired) { EnsureEntryWalkHint(); }
+		EnsureEntryWalkHint();
 		return;
 	}
 	bEntryWalkSettled = true;
 	SetEntryIntroCueVisible(true);
 	World->GetTimerManager().ClearTimer(EntryWalkHandle);
-	World->GetTimerManager().ClearTimer(EntryWalkTimeoutHandle);
 	if (ADYInteractionHUD* Hud = Cast<ADYInteractionHUD>(GetHUD()))
 	{
 		Hud->SetEntryWalkGuide(false, FText::GetEmpty());
@@ -824,23 +830,6 @@ void ADYDevEntryPlayerController::HandleEntryWalkCheck()
 	}
 	UE_LOG(LogDengYingShanHai, Log, TEXT("Entry walk: player crossed into the theater at %s"),
 		*ControlledPawn->GetActorLocation().ToCompactString());
-}
-
-void ADYDevEntryPlayerController::RestoreStageHud()
-{
-	if (bEndingPlay || bEntryWalkSettled) { return; }
-	// The stage HUD may return, but the blueprint cue stays down until the door check.
-	bEntryHintRetired = true;
-	if (UWorld* World = GetWorld())
-	{
-		World->GetTimerManager().ClearTimer(EntryWalkTimeoutHandle);
-	}
-	if (ADYInteractionHUD* Hud = Cast<ADYInteractionHUD>(GetHUD()))
-	{
-		Hud->SetEntryWalkGuide(false, FText::GetEmpty());
-		Hud->SetStageHudVisible(true);
-	}
-	SetEntryIntroCueVisible(false);
 }
 
 bool ADYDevEntryPlayerController::RequestReplayExperience()

@@ -70,6 +70,10 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "DY|Forest Presentation", meta = (AllowPrivateAccess = "true"))
 	TArray<double> CanopyScales;
 
+	/** Keep the authored scale and reveal height through material Custom Primitive Data 0. */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "DY|Forest Presentation", meta = (AllowPrivateAccess = "true"))
+	bool bCanopyHeightReveal = false;
+
 	/** Optional material applied to every canopy slot; keeps the crown inside the ink palette. */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "DY|Forest Presentation", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<UMaterialInterface> CanopyMaterial;
@@ -105,5 +109,6 @@ private:
 	FVector MeshLocalMax = FVector::ZeroVector;
 	FVector CanopyLocalMin = FVector::ZeroVector;
 	FVector CanopyLocalMax = FVector::ZeroVector;
+	bool bSessionCanopyHeightReveal = false;
 	bool bEndingPlay = false;
 };

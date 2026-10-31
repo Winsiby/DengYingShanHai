@@ -295,7 +295,7 @@ void UDYDevEntryWidget::BuildView()
 	WidgetTree->RootWidget = RootCanvas;
 
 	Backdrop = WidgetTree->ConstructWidget<UBorder>(UBorder::StaticClass(), TEXT("Backdrop"));
-	Backdrop->SetBrushColor(FLinearColor(0.f, 0.f, 0.f, .92f));
+	Backdrop->SetBrushColor(FLinearColor::Black);
 	UCanvasPanelSlot* BackdropSlot = RootCanvas->AddChildToCanvas(Backdrop);
 	BackdropSlot->SetAnchors(FAnchors(0, 0, 1, 1));
 	BackdropSlot->SetOffsets(FMargin(0));
@@ -400,7 +400,7 @@ UButton* UDYDevEntryWidget::MakeMenuItem(EDYDevEntryItem Item, const FText& Labe
 	Button->SetBackgroundColor(FLinearColor::White);
 	OutLabel = WidgetTree->ConstructWidget<UTextBlock>(UTextBlock::StaticClass(), LabelName);
 	OutLabel->SetFont(FSlateFontInfo(ChineseFont, 34, TEXT("Regular")));
-	OutLabel->SetColorAndOpacity(FSlateColor(Ink));
+	OutLabel->SetColorAndOpacity(FSlateColor::UseForeground());
 	OutLabel->SetJustification(ETextJustify::Center);
 	OutLabel->SetText(Label);
 	Button->SetContent(OutLabel);
@@ -494,7 +494,8 @@ void UDYDevEntryWidget::RefreshView()
 {
 	SetVisibility(CurrentPanel == EDYDevEntryPanel::Hidden ? ESlateVisibility::Collapsed : ESlateVisibility::Visible);
 	const bool bEnd = CurrentPanel == EDYDevEntryPanel::End || CurrentPanel == EDYDevEntryPanel::Reloading;
-	if (Backdrop) { Backdrop->SetVisibility(!MenuBackgroundTexture ? ESlateVisibility::Visible : ESlateVisibility::Collapsed); }
+	// Opaque viewport matte keeps the fitted illustration's unused margins from exposing the world.
+	if (Backdrop) { Backdrop->SetVisibility(ESlateVisibility::HitTestInvisible); }
 	// T_MenuBackground already has a menu column and a guide card painted into the art, so both
 	// of ours must stay opaque on top of it even on the ending panel; collapsing them exposed
 	// the baked "章节选择" column underneath.
@@ -530,7 +531,7 @@ void UDYDevEntryWidget::RefreshView()
 			{
 				// Disabled plaques use the grey stamped texture, where the plain ink label reads as a
 				// smudge; lift the disabled label to the pale stamp colour so 「继续游戏」 stays legible.
-				MenuLabels[Index]->SetColorAndOpacity(FSlateColor(bAvailable ? Ink : FLinearColor(.80f, .75f, .66f, 1.f)));
+				MenuLabels[Index]->SetColorAndOpacity(bAvailable ? FSlateColor::UseForeground() : FSlateColor(FLinearColor(.80f, .75f, .66f, 1.f)));
 				// Tinting the plate alone was too subtle, so the focused plaque also gains a gold lozenge.
 				if (MenuBaseLabels.IsValidIndex(Index))
 				{
@@ -707,7 +708,7 @@ void UDYDevEntryWidget::BuildOverlay()
 	DimSlot->SetOffsets(FMargin(0.f));
 
 	OverlayCard = WidgetTree->ConstructWidget<UBorder>(UBorder::StaticClass(), TEXT("OverlayCard"));
-	OverlayCard->SetBrushColor(FLinearColor(.955f, .906f, .816f, 1.f));
+	OverlayCard->SetBrush(MakePlaqueBrush(PlaqueNormalTexture, FLinearColor(.955f, .906f, .816f, 1.f)));
 	OverlayCard->SetPadding(FMargin(46.f, 34.f, 46.f, 30.f));
 	OverlayCard->SetHorizontalAlignment(HAlign_Fill);
 	OverlayCard->SetVerticalAlignment(VAlign_Top);
@@ -718,7 +719,7 @@ void UDYDevEntryWidget::BuildOverlay()
 	CardBox->SetHeightOverride(1000.f);
 	UScaleBox* CardScaler = WidgetTree->ConstructWidget<UScaleBox>(UScaleBox::StaticClass(), TEXT("OverlayCardScaler"));
 	CardScaler->SetStretch(EStretch::ScaleToFit);
-	CardScaler->SetStretchDirection(EStretchDirection::Both);
+	CardScaler->SetStretchDirection(EStretchDirection::DownOnly);
 	CardScaler->SetContent(OverlayCard);
 	CardBox->SetContent(CardScaler);
 	UCanvasPanelSlot* CardSlot = OverlayRoot->AddChildToCanvas(CardBox);
@@ -742,6 +743,7 @@ void UDYDevEntryWidget::BuildOverlay()
 		return Text;
 	};
 	OverlayTitle = AddLine(Lines, TEXT("OverlayTitle"), 32, Ink, false);
+	if (GuideSerifBoldFont) { OverlayTitle->SetFont(FSlateFontInfo(GuideSerifBoldFont, 32, TEXT("Regular"))); }
 
 	// The codex leaf is the one page that carries an illustration: the delivered concept art sits
 	// left of the entry text. Every other leaf collapses the art box, so it keeps the full width.
@@ -789,7 +791,7 @@ void UDYDevEntryWidget::BuildOverlay()
 		else { Row->OnClicked.AddUniqueDynamic(this, &UDYDevEntryWidget::HandleOverlayRow4Click); }
 	}
 
-	OverlayHint = AddLine(Lines, TEXT("OverlayHint"), 16, Muted, true);
+	OverlayHint = AddLine(Lines, TEXT("OverlayHint"), 16, FLinearColor(.27f, .20f, .13f, 1.f), true);
 
 	UHorizontalBox* Footer = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass(), TEXT("OverlayFooter"));
 	Lines->AddChildToVerticalBox(Footer)->SetPadding(FMargin(0.f, 6.f, 0.f, 0.f));
@@ -863,17 +865,17 @@ void UDYDevEntryWidget::RefreshOverlay()
 	if (CurrentOverlay == EDYMenuOverlay::Chapters)
 	{
 		Title = FText::FromString(TEXT("演出篇章"));
-		Body = FText::FromString(TEXT("第一幕 · 夸父逐日 —— 以灯为日，以影为夸父\n第二幕 · 精卫填海 —— 光位与石影连成通路\n第三幕 · 刑天舞干戚 —— 盾影合击，舞动干戚\n第四幕 · 烛龙昼夜 —— 昼夜交替，晦明同光\n\n四幕共用一座戏台，可逐幕连演。\n第四幕落幕，才是真结局。"));
+		Body = FText::FromString(TEXT("夸父逐日　以灯为日，杖落成林\n精卫填海　衔石入海，石影成洲\n刑天舞干戚　举盾成影，舞动干戚\n烛龙昼夜　闭目为夜，睁眼为昼\n\n四幕共用一座戏台，第四幕落幕后结束。"));
 		const ADYDevEntryPlayerController* ChapterPC = Cast<ADYDevEntryPlayerController>(GetOwningPlayer());
 		Hint = (ChapterPC && ChapterPC->HasAnyPlayedChapter())
-			? TEXT("点选任一幕即可直接开演；「开始游戏」从第一幕起。（已演）表示这一幕演完过。")
-			: TEXT("点选任一幕即可直接开演；「开始游戏」从第一幕起。");
+			? TEXT("点选篇章直接重演；（已演）表示已完成。")
+			: TEXT("点选篇章，直接开演。\n「开始游戏」从第一幕起。");
 	}
 	else if (CurrentOverlay == EDYMenuOverlay::Guide)
 	{
 		Title = FText::FromString(TEXT("游戏说明"));
-		Body = FText::FromString(TEXT("复演者走进戏台，操纵同一盏灯和同一具影偶，把未完的四幕演完。\n\n第一幕夸父逐日。第二幕精卫填海。\n第三幕刑天舞干戚。第四幕烛龙昼夜。\n四幕共用一座戏台。第四幕落幕，才是结局。\n\nW A S D 移动。按住鼠标右键转向。\n对准灯或皮影，按 E 开始调整，再用 A / D 移动。\n灯和偶都到位后松开，保持片刻。\nR 把灯和偶复位。Esc 暂停。\n\n锣鼓和背景只作气氛。谜题不靠听声完成。\n四幕演完后，结束页的「游戏说明」打开影偶图鉴。\n重开游戏时，标题面板的「继续游戏」从上次停下的那一幕接上。"));
-		Hint = TEXT("四幕用同一盏灯、同一具影偶。先对灯，再对偶，最后一起稳住。");
+		Body = FText::FromString(TEXT("走进戏台，用同一套灯—偶—幕操作，\n依次复演夸父、精卫、刑天与烛龙。\n\nW A S D　移动　　鼠标右键　按住转向\nE　操纵或放开灯、偶　　A / D　调整\n灯、偶到位后松开按键，保持片刻。\nR　复位灯、偶　　Esc　暂停\n\n四幕结束后可在「游戏说明」查看影偶图鉴。\n「继续游戏」从上次停下的篇章重新开演。\n关键提示都有画面反馈，静音也可完成。"));
+		Hint = TEXT("先调灯，再调偶，最后稳住灯与影。");
 	}
 	else if (CurrentOverlay == EDYMenuOverlay::Codex)
 	{
@@ -895,7 +897,7 @@ void UDYDevEntryWidget::RefreshOverlay()
 	else
 	{
 		Title = FText::FromString(TEXT("设置"));
-		Body = FText::FromString(TEXT("改动会立即预览；留在本页未确认时会自动还原。"));
+		Body = FText::FromString(TEXT("修改即时预览；超时未确认会还原。"));
 		if (bSettingsDirty)
 		{
 			const int32 Left = FMath::Max(0, FMath::CeilToInt(static_cast<float>(SettingsDeadlineSeconds - FPlatformTime::Seconds())));

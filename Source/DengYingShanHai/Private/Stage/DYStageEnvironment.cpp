@@ -137,6 +137,19 @@ void ADYStageEnvironment::BeginPlay()
 	LayReadableEntry(this);
 }
 
+void ADYStageEnvironment::ApplyChapterScenery(const int32 ChapterIndex, const int32 StepIndex, const bool bStepResolved)
+{
+	for (AActor* Prop : JingweiSeaProps) { if (IsValid(Prop)) { Prop->SetActorHiddenInGame(ChapterIndex != 1); } }
+	const int32 StoneCount = ChapterIndex == 1 ? FMath::Clamp(StepIndex + (bStepResolved ? 1 : 0), 0, 3) : 0;
+	for (int32 Index = 0; Index < JingweiStoneProps.Num(); ++Index)
+	{
+		if (IsValid(JingweiStoneProps[Index])) { JingweiStoneProps[Index]->SetActorHiddenInGame(Index >= StoneCount); }
+	}
+	const bool bDaylight = StepIndex > 1 || (StepIndex == 1 && bStepResolved);
+	if (IsValid(ZhulongDaySymbol)) { ZhulongDaySymbol->SetActorHiddenInGame(ChapterIndex != 3 || !bDaylight); }
+	if (IsValid(ZhulongNightSymbol)) { ZhulongNightSymbol->SetActorHiddenInGame(ChapterIndex != 3 || bDaylight); }
+}
+
 void ADYStageEnvironment::ApplyState(const EDYStageEnvironmentState NewState)
 {
 	UE_LOG(LogTemp, Warning, TEXT("[DYExterior] apply state new=%d cur=%d"), static_cast<int32>(NewState), static_cast<int32>(CurrentState));

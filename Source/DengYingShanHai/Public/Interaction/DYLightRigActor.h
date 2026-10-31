@@ -26,6 +26,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "DY|Light Rig")
 	void ApplyResolvedDevFeedback(bool bResolved);
 
+	/** Keeps the chapter palette when feedback changes intensity. */
+	void SetChapterKeyColor(const FLinearColor& Color);
+
 	virtual bool CanBeginControl_Implementation(const FDYControlContext& Context) const override;
 	virtual void BeginControl_Implementation(const FDYControlContext& Context) override;
 	virtual void ApplyControlIntent_Implementation(const FDYControlIntent& Intent) override;
@@ -39,6 +42,9 @@ public:
 	FDYLightRigResetRequestedSignature OnResetRequested;
 
 private:
+	FLinearColor ChapterKeyColor = FLinearColor::White;
+	bool bHasChapterKeyColor = false;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "DY|Light Rig", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<USceneComponent> SceneRoot;
 

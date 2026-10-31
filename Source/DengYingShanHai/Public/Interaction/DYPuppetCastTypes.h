@@ -35,6 +35,10 @@ struct FDYPuppetFigureEntry
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "DY|Puppet")
 	FVector MeshRelativeScale = FVector::OneVector;
+
+	/** Trace-only proxy follows display framing without changing the control rail or puzzle values. */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "DY|Puppet")
+	FVector ControlProxyRelativeLocation = FVector::ZeroVector;
 };
 
 /** Ordered per-chapter cast, index 0 is chapter one. Appearance only: puzzle judgement stays in the Director. */

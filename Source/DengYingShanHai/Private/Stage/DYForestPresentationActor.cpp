@@ -54,6 +54,7 @@ bool ADYForestPresentationActor::BeginSession(ADYStagePresentation* Presentation
 	SessionContact = Contact;
 	SessionLayout = BranchLayout; // Freeze content for this session, not future author edits.
 	SessionCanopyScales = CanopyScales;
+	bSessionCanopyHeightReveal = bCanopyHeightReveal;
 	SessionMesh = BranchMesh;
 	MeshLocalMin = Bounds.Min;
 	MeshLocalMax = Bounds.Max;
@@ -195,10 +196,14 @@ bool ADYForestPresentationActor::ApplyNormalizedGrowth(ADYStagePresentation* Pre
 		const bool bVisible = Sample.Branches[BranchIndex].bVisible && Growth > 0.0;
 		const double ClusterScale = (SessionCanopyScales.IsValidIndex(CanopyIndex) && SessionCanopyScales[CanopyIndex] > 0.0)
 			? SessionCanopyScales[CanopyIndex] : CanopyWorldScale;
-		const double Scale = ClusterScale * FMath::Max(Growth, 0.05);
+		const double Scale = bSessionCanopyHeightReveal ? ClusterScale : ClusterScale * FMath::Max(Growth, 0.05);
 		const FVector BaseOffset(0.0, 0.0, -CanopyLocalMin.Z * Scale);
 		Canopy->SetWorldScale3D(FVector(Scale));
-		Canopy->SetWorldLocationAndRotationNoPhysics(TipWorld + BaseOffset + WorldOffset, FRotator::ZeroRotator);
+		Canopy->SetWorldLocationAndRotationNoPhysics(TipWorld + BaseOffset, FRotator::ZeroRotator);
+		if (bSessionCanopyHeightReveal)
+		{
+			Canopy->SetCustomPrimitiveDataFloat(0, static_cast<float>(Growth));
+		}
 		Canopy->SetVisibility(bVisible);
 		Canopy->SetHiddenInGame(!bVisible);
 		Canopy->SetCastShadow(bVisible);
@@ -222,6 +227,7 @@ void ADYForestPresentationActor::ReleaseResources()
 	SessionMesh = nullptr;
 	CanopySessionMesh = nullptr;
 	SessionCanopyBranches.Reset();
+	bSessionCanopyHeightReveal = false;
 	CanopyLocalMin = FVector::ZeroVector;
 	CanopyLocalMax = FVector::ZeroVector;
 	LastSample = FDYForestGeometrySample();

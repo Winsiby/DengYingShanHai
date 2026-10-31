@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include "CoreMinimal.h"
 #include "Core/DYStagePlayerController.h"
@@ -21,6 +21,8 @@ class DENGYINGSHANHAI_API ADYDevEntryPlayerController : public ADYStagePlayerCon
 	GENERATED_BODY()
 public:
 	ADYDevEntryPlayerController();
+	/** Cosmetic only: suppress authored operation cues while the puppet performs. */
+	void SetPerformancePresentation(bool bActive);
 	UFUNCTION(BlueprintCallable, Category = "DY|Dev Entry") bool RequestStartExperience();
 	/** Four-act campaign: open the selected chapter (0-based) straight from the chapter list. */
 	UFUNCTION(BlueprintCallable, Category = "DY|Dev Entry") bool RequestChapterExperience(int32 ChapterIndex);
@@ -68,8 +70,6 @@ private:
 	/** L_DY_Main only: point the player down the lantern path and confirm the theater entry. Cosmetic. */
 	void BeginEntryWalkGuidance();
 	void HandleEntryWalkCheck();
-	/** Safety net: the play instrumentation must never stay hidden after a missed walk. */
-	void RestoreStageHud();
 	/** Blueprint-side stage cue text (no C++ handle exists) hidden from the first frame until the player enters. */
 	int32 SetEntryIntroCueVisible(bool bVisible);
 	/** Re-issues the exterior entry hint until the HUD exists, so spawn order cannot swallow it. */
@@ -122,7 +122,6 @@ private:
 	FTimerHandle ReadyRefreshHandle;
 	FTimerHandle ReplayHandle;
 	FTimerHandle EntryWalkHandle;
-	FTimerHandle EntryWalkTimeoutHandle;
 	FTimerHandle PerfProbeHandle;
 	FTimerHandle AutoReplayHandle;
 	int32 AutoReplayAttempts = 0;
@@ -136,12 +135,11 @@ private:
 	bool bEndingPlay = false;
 	bool bEntryHintIssued = false;
 	bool bEntryWalkSettled = false;
-	/** 60s timeout retires the center hint, but the blueprint cue stays hidden until the door. */
-	bool bEntryHintRetired = false;
 	UPROPERTY(Transient) TObjectPtr<UAudioComponent> AmbienceComponent;
 	UPROPERTY(Transient) TObjectPtr<USoundWave> AmbienceWave;
 	UPROPERTY(Transient) TArray<TObjectPtr<USoundWave>> CueWaves;
 	double LastEntryHintSeconds = 0.0;
+	bool bPerformancePresentationActive = false;
 	bool bMenuInputApplied = false;
 	bool bPausedSession = false;
 	/** 1-based chapter index of the run in progress (0 = none). Chapter granularity only. */

@@ -172,14 +172,14 @@ bool FDYKuafuSCSAssemblyDefaultsTest::RunTest(const FString& Parameters)
 		return false;
 	}
 
-	// A1: its skeletal mesh must be the M-01 v04 Kuafu, not null and not a fallback.
+	// A1: its skeletal mesh must be the current refined Kuafu, not null and not a fallback.
 	const USkeletalMesh* AssignedMesh = KuafuMesh->GetSkeletalMeshAsset();
 	TestNotNull(TEXT("KuafuMesh has a skeletal mesh assigned"), AssignedMesh);
 	if (AssignedMesh)
 	{
 		TestTrue(
-			TEXT("KuafuMesh is assigned SK_DY_Kuafu_M01_LeftGrip_v04"),
-			AssignedMesh->GetPathName().Contains(TEXT("SK_DY_Kuafu_M01_LeftGrip_v04")));
+			TEXT("KuafuMesh is assigned SK_DY_Kuafu_Refined"),
+			AssignedMesh->GetPathName() == TEXT("/Game/DengYingShanHai/Dev/KuafuAppearance/Puppet/SK_DY_Kuafu_Refined.SK_DY_Kuafu_Refined"));
 	}
 
 	// Transform evidence for the review record (values recorded, not judged here).
@@ -204,8 +204,8 @@ bool FDYKuafuSCSAssemblyDefaultsTest::RunTest(const FString& Parameters)
 		if (StaffMesh)
 		{
 			TestTrue(
-				TEXT("Staff uses the real SM_DY_Kuafu_Staff_M01_v04 asset"),
-				StaffMesh->GetPathName().Contains(TEXT("SM_DY_Kuafu_Staff_M01_v04")));
+				TEXT("Staff uses the real SM_DY_Kuafu_Staff asset"),
+				StaffMesh->GetPathName() == TEXT("/Game/DengYingShanHai/Dev/KuafuArt/Meshes/SM_DY_Kuafu_Staff.SM_DY_Kuafu_Staff"));
 		}
 	}
 
@@ -277,8 +277,8 @@ bool FDYKuafuReconstructionConsistencyTest::RunTest(const FString& Parameters)
 		if (MeshAfter)
 		{
 			TestTrue(
-					TEXT("KuafuMesh keeps SK_DY_Kuafu_M01_LeftGrip_v04 after rerun"),
-					MeshAfter->GetPathName().Contains(TEXT("SK_DY_Kuafu_M01_LeftGrip_v04")));
+					TEXT("KuafuMesh keeps SK_DY_Kuafu_Refined after rerun"),
+					MeshAfter->GetPathName() == TEXT("/Game/DengYingShanHai/Dev/KuafuAppearance/Puppet/SK_DY_Kuafu_Refined.SK_DY_Kuafu_Refined"));
 		}
 	}
 

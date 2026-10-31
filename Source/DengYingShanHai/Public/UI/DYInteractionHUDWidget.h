@@ -25,6 +25,10 @@ public:
 	void ApplyAlignmentSnapshot(const FDYPlayerAlignmentDisplay& Snapshot);
 	/** Transient guidance line (entry walk). Cosmetic only; never a puzzle hint or flow state. */
 	void ShowHint(const FText& InText, float Seconds);
+	/** Explicit show state from the performance component; independent of transient walk hints. */
+	void SetPerformancePresentation(bool bActive);
+	void ShowPerformanceCaption(const FText& InText);
+	bool IsPerformancePresentationActive() const { return bPerformancePresentation; }
 	/** Entry walk shows only the transient hint; stage instrumentation returns on arrival. */
 	void SetStageHudVisible(bool bVisible);
 	/** Keeps the widget itself visible (so UMG still lays it out) while showing only the walk copy. */
@@ -80,6 +84,8 @@ private:
 	bool bChapterCardActive = false;
 	bool bChapterCardCountdown = false;
 	static constexpr float ChapterCardSeconds = 2.8f;
+	bool bPerformancePresentation = false;
+	FText PerformanceCaptionText;
 	/** While set, the bottom plaque shows entry guidance instead of stage instrumentation. */
 	bool bHintOverride = false;
 	FText HintOverrideText;
